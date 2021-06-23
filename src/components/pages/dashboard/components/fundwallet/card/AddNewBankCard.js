@@ -7,6 +7,13 @@ import { StyledBankTransferFormButton } from "../../../../../Syles/styles";
 const AddNewBankCard = ({ setStage }) => {
   return (
     <div className="addnewcard">
+    <div className="" style={{
+          marginTop: "40px",
+          marginBottom: "23px",
+          width: "90%",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }}>
       <div className="addnewcard-header">
         <h5>By Card</h5>
         <p>Fund your OVest wallet with your debit card.</p>
@@ -30,6 +37,7 @@ const AddNewBankCard = ({ setStage }) => {
       >
         Confirm
       </StyledBankTransferFormButton>
+    </div>
     </div>
   );
 };

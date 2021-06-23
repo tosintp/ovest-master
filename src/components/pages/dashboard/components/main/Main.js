@@ -128,7 +128,7 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
               <div className="main__cards col-lg-4">
                 <div className="wallet w2">
                   <div className="card_inner">
-                    <p className="card-tit">OVest Wallet Balance</p>
+                    <p className="card-tit">Savest Total Balance</p>
                     <p className="amount">&#36; 0.00</p>
                     <p className="change">0.0% portfolio change today</p>
 
@@ -142,7 +142,7 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
               <div className="main__cards col-lg-4">
                 <div className="wallet w3">
                   <div className="card_inner">
-                    <p className="card-tit">OVest Wallet Balance</p>
+                    <p className="card-tit">Total Amount Invested</p>
                     <p className="amount">&#36; 0.00</p>
                     <p className="change">0.0% portfolio change today</p>
                     <div className="wallet-footer2">

@@ -33,7 +33,7 @@ const FundWalletLogic = ({ stage, setStage }) => {
           >
             <img src={backicon} alt="back icon" />
           </button>
-          <BankTransfer setStage={setStage} />;
+          <BankTransfer setStage={setStage} />
         </>
       );
       break;
@@ -65,7 +65,7 @@ const FundWalletLogic = ({ stage, setStage }) => {
           >
             <img src={backicon} alt="back icon" />
           </button>
-          <BankTranferVerify setStage={setStage} />;
+          <BankTranferVerify setStage={setStage} />
         </>
       );
       break;
@@ -80,7 +80,7 @@ const FundWalletLogic = ({ stage, setStage }) => {
           >
             <img src={backicon} alt="back icon" />
           </button> */}
-          <BankTransferSucces setStage={setStage} />;
+          <BankTransferSucces setStage={setStage} />
         </>
       );
       break;
@@ -128,19 +128,19 @@ const FundWalletLogic = ({ stage, setStage }) => {
       break;
 
     case 7:
-      currentStage = <CardAmountInput setStage={setStage} />;
+      currentStage = <CardAmountInput setStage={setStage} />
       break;
 
     case 8:
-      currentStage = <CardPaymentSuccess setStage={setStage} />;
+      currentStage = <CardPaymentSuccess setStage={setStage} />
       break;
 
     default:
-      currentStage = <FundWalletMethod setStage={setStage} />;
+      currentStage = <FundWalletMethod setStage={setStage} />
       break;
   }
 
-  return <>{currentStage}</>;
+  return <div className='current-stage'>{currentStage}</div>
 };
 
 export default FundWalletLogic;

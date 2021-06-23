@@ -19,12 +19,22 @@ import {
 const BankTranferVerify = ({ setStage }) => {
   return (
     <div className="banktransferverify">
+    <div style={{
+          marginTop: "40px",
+          marginBottom: "23px",
+          width: "90%",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }} >
       <div
         style={{
           marginTop: "40px",
           marginBottom: "23px",
           width: "100%",
+          marginLeft: "auto",
+          marginRight: "auto",
         }}
+        
         className="w3-blue"
       >
         <div
@@ -67,6 +77,7 @@ const BankTranferVerify = ({ setStage }) => {
       >
         Verify
       </StyledBankTransferFormButton>
+    </div>
     </div>
   );
 };

@@ -11,7 +11,7 @@ function MainCenL() {
   return (
     <div className="main-cen-l">
       <CompleteSetup />
-      {/* <RecentTransaction /> */}
+      <RecentTransaction />
       {/* <TransactionChart /> */}
       <NoRecentTransaction />
     </div>

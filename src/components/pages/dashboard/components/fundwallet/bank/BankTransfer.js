@@ -20,6 +20,13 @@ import {
 const BankTransfer = ({ setStage }) => {
   return (
     <div className="Bank-transfer">
+    <div className="" style={{
+          marginTop: "40px",
+          marginBottom: "23px",
+          width: "90%",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }}>
       <div className="bank-transfer-header">
         <h5>By Bank Transfer</h5>
         <p>
@@ -57,6 +64,7 @@ const BankTransfer = ({ setStage }) => {
         Yes, I have Paid
       </StyledBankTransferFormButton>
       {/* </ButtonGroup> */}
+    </div>
     </div>
   );
 };
