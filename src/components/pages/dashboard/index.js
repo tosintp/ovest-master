@@ -9,14 +9,20 @@ import Sidebar from "./components/sidebar/Sidebar";
 import FundWallet from "./components/fundwallet/FundWallet";
 import "./dashboardIndex.css";
 import DashBoardRoute from "./dashboardRoute/DashBoardRoute";
-import { showModalState } from "../../../redux/selectors/modal.selector";
+import { showModalState, showWithdrawalModalState } from "../../../redux/selectors/modal.selector";
+import Withdrawal from "./components/withdrawal/Withdrawal";
 
 const Dashboard = () => {
   const [sidebarOpen, setsidebarOpen] = useState(false);
   const showModal = useSelector(showModalState);
+  const showWithdrawalModal = useSelector(showWithdrawalModalState);
 
+
+  // useEffect(() => {
+  //   console.log("showModal: ", showModal);
+  // }, []);
   useEffect(() => {
-    console.log("showModal: ", showModal);
+    console.log("showModal: ", showWithdrawalModal);
   }, []);
 
   const openSidebar = () => {
@@ -33,7 +39,18 @@ const Dashboard = () => {
         className="blurEffect"
         style={{ display: showModal ? "block" : "none" }}
       >
-        <FundWallet />
+
+        {/* <FundWallet /> */}
+      <Withdrawal/>
+
+
+      </div>
+      <div
+        className="blurEffect"
+        style={{ display: showWithdrawalModal ? "block" : "none" }}
+      >
+
+
       </div>
 
       <DashBoardRoute />

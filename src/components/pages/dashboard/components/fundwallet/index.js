@@ -49,7 +49,7 @@ const FundWalletLogic = ({ stage, setStage }) => {
           >
             <img src={backicon} alt="back icon" />
           </button>
-          <BankTransferDetails setStage={setStage} /> ;
+          <BankTransferDetails setStage={setStage} /> 
         </>
       );
       break;

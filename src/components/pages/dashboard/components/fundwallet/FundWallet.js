@@ -8,7 +8,7 @@ import backicon from "../../../../Assets/backicon.svg";
 
 import closemodalicon from "../../../../Assets/closemodalicon.svg";
 
-const FundWallet = ({ toggleModalAppearance }) => {
+const FundWallet = ({toggleModalAppearance }) => {
   const [stage, setStage] = useState( 0 );
   const dispatch = useDispatch()
   

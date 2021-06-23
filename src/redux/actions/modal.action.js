@@ -5,7 +5,7 @@ export const showModal = () => ({
   payload: true,
 });
 export const showWithdrawalModal = () => ({
-  type: modalActionTypes.SHOW_MODAL,
+  type: modalActionTypes.SHOW_WITHDRAWAL_MODAL,
   payload: true,
 });
 export const hideModal = () => ({
@@ -13,6 +13,6 @@ export const hideModal = () => ({
   payload: false,
 });
 export const hideWithdrawalModal = () => ({
-  type: modalActionTypes.HIDE_MODAL,
+  type: modalActionTypes.HIDE_WITHDRAWAL_MODAL,
   payload: false,
 });

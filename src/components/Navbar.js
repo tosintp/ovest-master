@@ -87,31 +87,31 @@ function Navbar() {
               </a>
             </li>
             <li>
-              <a
-                href="https://ovest.ng/login"
+              <Link
+                to="signin"
                 className="nav-links-mobile"
                 onClick={closeMobileMenu}
               >
                 Login
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://ovest.ng/register"
+              <Link
+                to="/signup"
                 className="nav-links-mobile"
                 onClick={closeMobileMenu}
               >
                 Start Investing Now
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="btn-cta">
-            <a href="https://ovest.ng/login">
+            <Link to="/signin">
               <button className="btn2">Login</button>
-            </a>
-            <a href="https://ovest.ng/register">
+            </Link>
+            <Link to="/signup">
               <button className="btn1">Start Investing Now</button>
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
