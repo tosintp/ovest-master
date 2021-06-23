@@ -27,10 +27,15 @@ const authReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         success: action.payload,
-        token: action.payload.token,
+        token: action.payload.access_token || action.payload.token,
         error: null,
         isLoading: false,
       };
+
+
+
+
+
     // case authActionTypes.EDIT__PROFILE__SUCCESS:
     // case authActionTypes.FORGOT_PASSWORD_SUCCESS:
     // return {

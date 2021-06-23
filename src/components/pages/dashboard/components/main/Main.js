@@ -23,6 +23,7 @@ import {
 } from "../../../../../redux/actions/modal.action";
 import DashboardLayout from "../../dashboardDefaultLayout/DashboardLayout";
 import { selectCurrentUser } from "../../../../../redux/selectors/auth.selector";
+import useAuth from "../../../../../hooks/useAuth";
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -34,10 +35,11 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
   const classes = useStyles();
   const [showModal, setShowModal] = useState(false);
   const CurrentUser = useSelector(selectCurrentUser);
+  const {user} = useAuth()
 
-  useEffect(() => {
-    console.log("CurrentUser: ", CurrentUser);
-  }, []);
+  // useEffect(() => {
+  //   console.log("CurrentUser: ", user);
+  // }, []);
 
   const openModal = () => {
     toggleModalAppearance();
@@ -57,7 +59,7 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
             <div className="main__title" style={{ marginBottom: "30px" }}>
               {/* <img src={hello} alt="hello" /> */}
               <div className="main__greeting">
-                <h1>Morning, Angela</h1>
+                <h1>Morning, {user.currentUser.firstname}</h1>
                 <p>Welcome to your OVest account. View your progress</p>
               </div>
               <div className="hero-btns">

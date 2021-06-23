@@ -30,7 +30,7 @@ import {
   error,
   token,
 } from "../../../redux/selectors/auth.selector";
-import { useHistory } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 
 const SignIn = ({ error, success, loading, user, token }) => {
   const [showLoader, setShowLoader] = useState(false);
@@ -39,10 +39,15 @@ const SignIn = ({ error, success, loading, user, token }) => {
 
   useEffect(() => {
     setShowLoader(loading);
+    console.log(success);
   }, [loading]);
 
   const phoneRegExp =
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+
+    if (success){
+      return <Redirect to='/dashboard'/>
+    }
   return (
     <StyledContainer>
       <div className="Sign-in">

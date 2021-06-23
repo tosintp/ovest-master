@@ -15,6 +15,9 @@ const FundWallet = ({ toggleModalAppearance }) => {
   return (
     <div className="Fund-wallet-method">
       <div className="Fund-wallet-method-head">
+      <div className="
+      ">
+
         {stage === 0 ? (
           <button
             className='closemodalicon-btn'
@@ -27,6 +30,7 @@ const FundWallet = ({ toggleModalAppearance }) => {
           </button>
         ) : null}
 
+      </div>
         <FundWalletLogic {...{ stage, setStage }}  />
       </div>
     </div>

@@ -21,16 +21,17 @@ import { apiPost, apiGet } from "../../helpers";
 export const SignUp = (user) => {
   return (dispatch) => {
     dispatch(signUpStart(user));
-    return apiPost(`/register`, user)
+    return apiPost(`create`, user)
       .then((response) => {
-        if (response.statusCode === 201) {
-          dispatch(signUpSuccess(response.data.data));
-          dispatch(setCurrentUser(response.data.data.user));
-          dispatch(setUserToken(response.data.data.token));
-          setTimeout(function () {
-            window.location.reload();
-          }, 3000);
-          window.location.href = "/intern/update-profile";
+        if (response.statusCode === 200) {
+          console.log(response.data.message);
+          dispatch(setCurrentUser(response.data.message.user));
+          dispatch(setUserToken(response.data.message.token));
+          dispatch(signUpSuccess(response.data.message));
+          // setTimeout(function () {
+          //   window.location.reload();
+          // }, 3000);
+          // window.location.href = "/dashboard";
         } else {
           dispatch(signUpFailure());
         }
@@ -41,20 +42,24 @@ export const SignUp = (user) => {
   };
 };
 
+
+
+
 export const SignIn = (user) => {
   return (dispatch) => {
     dispatch(SignInStart(user));
     return apiPost(`login`, user)
       .then((response) => {
         const { data } = response.data;
+        console.log(data);
         if (response.statusCode === 200) {
           dispatch(signInSuccess(data));
           dispatch(setCurrentUser(data.user));
           dispatch(setUserToken(data.access_token));
 
           setTimeout(() => {
-            window.location.href = "/dashboard";
-          }, 3000);
+            // window.location.href = "/dashboard";
+          }, 1000);
         }
       })
       .catch((e) => {

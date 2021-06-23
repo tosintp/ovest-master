@@ -17,6 +17,9 @@ const DashBoardRoute = ({ sidebarOpen, openSidebar, closeSidebar }) => {
 
         <Route path={match.path} exact component={Main} />
         <Route path={`${match.path}/invest`} exact component={Investment} />
+        <Route path={`${match.path}/invest`} exact component={Investment} />
+
+        
       </Switch>
 
       {/* <Sidebar {...{sidebarOpen, closeSidebar, match}} /> */}

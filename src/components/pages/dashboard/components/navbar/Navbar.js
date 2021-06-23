@@ -6,6 +6,7 @@ import profile from "../../assets/profile.png";
 import caret from "../../assets/caret.svg";
 
 import notification from "../../assets/Notification.svg";
+import useAuth from "../../../../../hooks/useAuth";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Navbar = ({ sidebarOpen, openSidebar }) => {
+  const {user} = useAuth()
   const classes = useStyles();
   return (
     <nav className="navbar">
@@ -47,7 +49,7 @@ const Navbar = ({ sidebarOpen, openSidebar }) => {
           />
         </a>
         <a href="#!" className="ml-2">
-          Angela Dee
+          {user.currentUser.firstname}  {user.currentUser.lastname}
           <img width="10" className="ml-1" src={caret} alt="avatar" />
         </a>
       </div>

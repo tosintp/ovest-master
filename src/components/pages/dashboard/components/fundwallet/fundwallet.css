@@ -6,10 +6,12 @@
   /* left: 1002px; */
   top: 0px;
 
-  background: #ffffff;
+  background: #fff0;
   box-shadow: 1px 0px 20px rgba(153, 153, 153, 0.34);
 }
-
+.Fund-wallet-method-head > div{
+background-color: #fff;
+}
 .Fund-wallet-method-head > img {
   width: 20px;
   margin-top: 20px;
@@ -31,7 +33,7 @@
   /* Body header color */
 
   color: #121212;
-  margin-top: 25px;
+  padding-top: 25px;
   margin-left: 25px;
 }
 .fundovestwallet > p {

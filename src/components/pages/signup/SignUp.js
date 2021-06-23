@@ -1,9 +1,10 @@
-import React, {useEffect} from "react";
+import React, { useEffect, useState } from "react";
+import { connect, useDispatch } from "react-redux";
+import { SignUp as DispatchSignUp } from "../../../redux/operators/auth.op";
+import * as Yup from "yup";
 import {
   StyledContainer,
   StyledFormArea,
-  StyledLabel,
-  StyledTextInput,
   StyledFormButton,
   StyledTitle,
   ButtonGroup,
@@ -12,41 +13,47 @@ import {
   TextLink,
   colors,
 } from "../../Syles/styles";
-import * as Yup from "yup";
-// auth & redux
-import { connect, useDispatch } from "react-redux";
-import { signUpUser } from "./../../../auth/actions/userAction";
-import { useHistory } from "react-router-dom";
-import Logo from "../../Logo/Logo";
-import "./SignUp.css";
-import { Formik, Form } from "formik";
+
+// import "../../../";
 import LogoIcon from "../../Logo/Logo";
 import { TextInput } from "../../pages/Formik/FormLib";
 import applecircle from "../../Assets/applecirlce.png";
 import fbcircle from "../../Assets/fb-circle.png";
 import googlecircle from "../../Assets/googlecircle.png";
 import Loader from "react-loader-spinner";
-import { getCountries } from "../../../redux/operators/auth.op";
+import { Form, Formik } from "formik";
+import { createStructuredSelector } from "reselect";
+import {
+  isLoading,
+  selectCurrentUser,
+  success,
+  error,
+  token,
+} from "../../../redux/selectors/auth.selector";
+import { Redirect, useHistory } from "react-router-dom";
 
-const SignUp = ({ signUpUser }) => {
-  const dispatch = useDispatch()
-
-
+const SignUp = ({ error, success, loading, user, token }) => {
+  const [showLoader, setShowLoader] = useState(false);
+  const dispatch = useDispatch();
   const history = useHistory();
 
   useEffect(() => {
-   dispatch(getCountries())
-  }, [])
+    setShowLoader(loading);
+  }, [loading]);
 
   const phoneRegExp =
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+    if (success){
+      return <Redirect to='/dashboard'/>
+
+    }
   return (
     <StyledContainer>
       <div className="Sign-in">
         <LogoIcon />
 
         <StyledFormArea>
-          <StyledTitle size={20}>Create a Secure Account</StyledTitle>
+        <StyledTitle size={20}>Create a Secure Account</StyledTitle>
           <SubTitle>
             Let’s meet you. A step towards achieving your goals!
           </SubTitle>
@@ -56,15 +63,16 @@ const SignUp = ({ signUpUser }) => {
               lastname: "",
               email: "",
               phone: "",
-              city: "",
+              referal: "",
               country: "",
               password: "",
-              confirm_password: "",
+              password_confirmation: "",
               username: "",
             }}
             onSubmit={(values, { setSubmitting, setFieldError }) => {
               console.log(values);
-              signUpUser(values, history, setFieldError, setSubmitting);
+              dispatch(DispatchSignUp(values));
+              // loginUser(values, history, setFieldError, setSubmitting);
             }}
             validationSchema={Yup.object({
               firstname: Yup.string().required("Firstname is Required"),
@@ -72,24 +80,28 @@ const SignUp = ({ signUpUser }) => {
               email: Yup.string()
                 .email("Invalid email address")
                 .required("email is Required"),
-              city: Yup.string().required("City is Required"),
-              country: Yup.string().required("Country is Required"),
-              phone: Yup.string()
+                phone: Yup.string()
                 .matches(phoneRegExp, "Phone number is not valid")
                 .required("Phone Number is Required"),
+              // referral: Yup.string().required("City is Required"),
+              country: Yup.string().required("Country is Required"),
+              
+         
+            
               password: Yup.string()
                 .min(8, "password is too short")
                 .max(30, "password is too long")
                 .required("Password is Required"),
+                password_confirmation: Yup.string()
+               .required("confirm_password is Required")
+               .oneOf([Yup.ref("password"), "Passwords must match"]),
               username: Yup.string().required("Username is Required"),
-              confirm_password: Yup.string()
-                .required("confirm_password is Required")
-                .oneOf([Yup.ref("password"), "Passwords must match"]),
+
             })}
           >
             {({ isSubmitting }) => (
               <Form>
-                <TextInput
+              <TextInput
                   type="text"
                   name="firstname"
                   placeholder="First Name"
@@ -99,39 +111,41 @@ const SignUp = ({ signUpUser }) => {
                   name="lastname"
                   placeholder="Last Name"
                 />{" "}
-                <TextInput
+                 <TextInput
                   type="email"
                   name="email"
                   placeholder="email@mail.com"
                 />{" "}
                 <TextInput
-                  type="number"
+                  type="tel"
                   name="phone"
                   placeholder="Phone Number"
                 />{" "}
-                <TextInput type="text" name="referal" placeholder="Referal" />{" "}
+                <TextInput type="text" name="referal" placeholder="Referral" />{" "}
                 <TextInput name="country" type="text" placeholder=" Country" />
                 <TextInput
                   name="password"
                   type="password"
                   placeholder="Password"
                 />
-                <TextInput
-                  name="confirm_password"
+                    <TextInput
+                  name="password_confirmation"
                   type="password"
                   placeholder="Confirm Password"
                 />
-                <TextInput
+
+<TextInput
                   name="username"
                   type="text"
                   placeholder=" Username"
                 />
+                
                 <ButtonGroup>
-                  {!isSubmitting && (
-                    <StyledFormButton type="submit">Login</StyledFormButton>
+                  {!showLoader && (
+                    <StyledFormButton type="submit">Sign Up</StyledFormButton>
                   )}
 
-                  {isSubmitting && (
+                  {showLoader && (
                     <Loader
                       type="ThreeDots"
                       color={colors.primary}
@@ -159,4 +173,12 @@ const SignUp = ({ signUpUser }) => {
   );
 };
 
-export default connect(null, signUpUser)(SignUp);
+const mapStateToProps = createStructuredSelector({
+  error,
+  success,
+  loading: isLoading,
+  user: selectCurrentUser,
+  token,
+});
+
+export default connect(mapStateToProps)(SignUp);
