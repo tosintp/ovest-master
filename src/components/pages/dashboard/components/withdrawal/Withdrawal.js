@@ -7,8 +7,9 @@ import { connect, useDispatch } from "react-redux";
 // import backicon from "../../../../Assets/backicon.svg";
 
 import closemodalicon from "../../../../Assets/closemodalicon.svg";
+import WithdrawalMethod from "./WithdrawalMethod";
 
-const Withdrawal = ({ toggleWithdrawalModalAppearance  }) => {
+const WithDrawal = ({ toggleWithdrawalModalAppearance  }) => {
   const [stage, setStage] = useState( 0 );
   const dispatch = useDispatch()
   
@@ -29,9 +30,9 @@ const Withdrawal = ({ toggleWithdrawalModalAppearance  }) => {
         ) : null}
 
      <div className="">
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias nihil quae corrupti eius, recusandae dicta doloribus rem dolores a illum!
      </div>
         {/* <FundWalletLogic {...{ stage, setStage }}  /> */}
+        <WithdrawalMethod {...{stage, setStage}}/>
         </div>
       </div>
     </div>
@@ -39,4 +40,4 @@ const Withdrawal = ({ toggleWithdrawalModalAppearance  }) => {
 };
 
 
-export default Withdrawal;
+export default WithDrawal;

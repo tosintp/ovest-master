@@ -1,18 +1,25 @@
 .Fund-wallet-method {
-  position: absolute;
+  /* position: absolute; */
   width: 438px;
   height: 100vh;
-  left: 840px;
+  
+  /* left: 930px; */
   /* left: 1002px; */
   top: 0px;
 
   background: #fff0;
   /* box-shadow: 1px 0px 20px rgba(153, 153, 153, 0.34); */
+
+  float: right;
 }
+
+
+
 .Fund-wallet-method-head{
   /* background-color: #fff; */
   height: 100vh;
 }
+
 .Fund-wallet-method-head > div{
 background-color: #fff;
 position: absolute;

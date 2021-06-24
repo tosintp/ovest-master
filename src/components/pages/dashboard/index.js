@@ -40,8 +40,8 @@ const Dashboard = () => {
         style={{ display: showModal ? "block" : "none" }}
       >
 
-        {/* <FundWallet /> */}
-      <Withdrawal/>
+        <FundWallet />
+      {/* <Withdrawal/> */}
 
 
       </div>

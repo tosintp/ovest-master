@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, useRouteMatch } from "react-rou
 import Main from "../components/main/Main";
 import Navbar from "../components/navbar/Navbar";
 import Sidebar from "../components/sidebar/Sidebar";
-import Investment from "../investment/Investment";
+import Investment from "../../dashboard/components/investment/Investment";
 
 const DashBoardRoute = ({ sidebarOpen, openSidebar, closeSidebar }) => {
   let match = useRouteMatch();

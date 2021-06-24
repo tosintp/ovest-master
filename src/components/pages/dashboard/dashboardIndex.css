@@ -65,7 +65,7 @@ body {
 
 .contain {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 5px;
   height: 100vh;
   grid-template-columns: 0.8fr 1fr 1fr 1fr;
   grid-template-rows: 0.2fr 3fr;
@@ -81,6 +81,7 @@ body {
   right: 0;
   width: 100% !important;
   margin: 0 auto 0rem auto !important;
+  max-width: 1440px;
 }
 
 @media only screen and (max-width: 978px) {
@@ -94,6 +95,8 @@ body {
 }
 
 .blurEffect {
+  display: flex;
+  justify-content: end;
   width: 100vw;
   height: 130vh;
   backdrop-filter: blur(0px);
