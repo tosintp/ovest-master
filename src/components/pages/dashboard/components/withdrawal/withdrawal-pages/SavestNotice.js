@@ -1,6 +1,6 @@
 import React from 'react'
 
-const InvestPlan = () => {
+const SavestNotice = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const InvestPlan = () => {
     )
 }
 
-export default InvestPlan
+export default SavestNotice

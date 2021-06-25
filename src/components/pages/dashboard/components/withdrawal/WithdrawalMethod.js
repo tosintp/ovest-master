@@ -1,6 +1,9 @@
 import React from "react";
 import "./withdrawal.css";
 import savesticon1 from "../../../../Assets/savesticon.svg";
+import investicon1 from "../../../../Assets/investmenticon.svg";
+import bankicon1 from "../../../../Assets/bankicon.svg";
+import tranfericon1 from "../../../../Assets/tranfericon.svg";
 
 const WithdrawalMethod = ({ setStage1 }) => {
   return (
@@ -13,19 +16,19 @@ const WithdrawalMethod = ({ setStage1 }) => {
       <div className="withdraw-method">
         <div className="savestplan" onClick={() => setStage1(1)}>
           <img src={savesticon1} alt="saves-icon" />
-          <p className='withdrawplan-p'>My Savest Account</p>
+          <p className="withdrawplan-p">My Savest Plan</p>
         </div>
         <div className="investplan" onClick={() => setStage1(1)}>
-          <img src={savesticon1} alt="saves-icon" />
-          <p className='withdrawplan-p'>My Savest Account</p>
+          <img src={investicon1} alt="saves-icon" />
+          <p className="withdrawplan-p">Investment Plan</p>
         </div>
         <div className="bankplan" onClick={() => setStage1(1)}>
-          <img src={savesticon1} alt="saves-icon" />
-          <p className='withdrawplan-p'>My Savest Account</p>
+          <img src={bankicon1} alt="saves-icon" />
+          <p className="withdrawplan-p">Bank Account</p>
         </div>
         <div className="transferplan" onClick={() => setStage1(1)}>
-          <img src={savesticon1} alt="saves-icon" />
-          <p className='withdrawplan-p'>My Savest Account</p>
+          <img src={tranfericon1} alt="saves-icon" />
+          <p className="withdrawplan-p">Transfer to Ovestor</p>
         </div>
       </div>
 

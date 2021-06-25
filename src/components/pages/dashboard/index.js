@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {useSelector} from 'react-redux';
+import { useSelector } from "react-redux";
 import { connect } from "react-redux";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./dashboardIndex.css";
@@ -9,14 +9,16 @@ import Sidebar from "./components/sidebar/Sidebar";
 import FundWallet from "./components/fundwallet/FundWallet";
 import "./dashboardIndex.css";
 import DashBoardRoute from "./dashboardRoute/DashBoardRoute";
-import { showModalState, showWithdrawalModalState } from "../../../redux/selectors/modal.selector";
+import {
+  showModalState,
+  showWithdrawalModalState,
+} from "../../../redux/selectors/modal.selector";
 import Withdrawal from "./components/withdrawal/Withdrawal";
 
 const Dashboard = () => {
   const [sidebarOpen, setsidebarOpen] = useState(false);
   const showModal = useSelector(showModalState);
   const showWithdrawalModal = useSelector(showWithdrawalModalState);
-
 
   // useEffect(() => {
   //   console.log("showModal: ", showModal);
@@ -39,19 +41,14 @@ const Dashboard = () => {
         className="blurEffect"
         style={{ display: showModal ? "block" : "none" }}
       >
-
-        {/* <FundWallet /> */}
-      <Withdrawal/>
-
-
+        <FundWallet />
       </div>
-      {/* <div
+      <div
         className="blurEffect"
         style={{ display: showWithdrawalModal ? "block" : "none" }}
       >
-
-
-      </div> */}
+        <Withdrawal />
+      </div>
 
       <DashBoardRoute />
       {/* <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />

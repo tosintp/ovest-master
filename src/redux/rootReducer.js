@@ -4,7 +4,6 @@ import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import authReducer from "./reducers/auth.reducer";
 import DashModalReducer from "./reducers/modal.reducer";
-import WithdrawalModalReducer from "./reducers/withdrawalModal.reducer";
 
 import { sessionReducer } from "redux-react-session";
 
@@ -31,7 +30,7 @@ const authPersistConfig = {
 const rootReducer = combineReducers({
   user: persistReducer(authPersistConfig, authReducer),
   DashModalReducer,
-  WithdrawalModalReducer,
+  // WithdrawalModalReducer,
 });
 
 export default persistReducer(rootPersistConfig, rootReducer);
