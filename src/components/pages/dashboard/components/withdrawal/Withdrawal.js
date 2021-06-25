@@ -10,18 +10,18 @@ import closemodalicon from "../../../../Assets/closemodalicon.svg";
 import WithdrawalMethod from "./WithdrawalMethod";
 
 const WithDrawal = ({ toggleWithdrawalModalAppearance  }) => {
-  const [stage, setStage] = useState( 0 );
+  const [stage1, setStage1] = useState( 0 );
   const dispatch = useDispatch()
   
   return (
     <div className="Fund-wallet-method">
       <div className="Fund-wallet-method-head">
       <div className="">
-        {stage === 0 ? (
+        {stage1 === 0 ? (
           <button
             className='closemodalicon-btn'
             onClick={() => {
-              setStage(0);
+              setStage1(0);
               dispatch(hideModal());
             }}
           >
@@ -32,7 +32,7 @@ const WithDrawal = ({ toggleWithdrawalModalAppearance  }) => {
      <div className="">
      </div>
         {/* <FundWalletLogic {...{ stage, setStage }}  /> */}
-        <WithdrawalMethod {...{stage, setStage}}/>
+        <WithdrawalMethod {...{stage1, setStage1}}/>
         </div>
       </div>
     </div>

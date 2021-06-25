@@ -2,7 +2,7 @@
   /* position: absolute; */
   width: 438px;
   height: 100vh;
-  
+
   /* left: 930px; */
   /* left: 1002px; */
   top: 0px;
@@ -13,21 +13,18 @@
   float: right;
 }
 
-
-
-.Fund-wallet-method-head{
+.Fund-wallet-method-head {
   /* background-color: #fff; */
   height: 100vh;
 }
 
-.Fund-wallet-method-head > div{
-background-color: #fff;
-position: absolute;
-height: 100%;
-margin-top: 0px;
+.Fund-wallet-method-head > div {
+  background-color: #fff;
+  position: absolute;
+  height: 100%;
+  margin-top: 0px;
 
-/* bottom: 30px; */
-
+  /* bottom: 30px; */
 }
 .Fund-wallet-method-head > img {
   width: 20px;
@@ -167,14 +164,13 @@ margin-top: 0px;
   margin-left: 26px;
 }
 
-
-.current-stage{
+.current-stage {
   background-color: #fff;
   height: 100%;
   /*  */
 }
 
-.current-stage > div{
+.current-stage > div {
   width: 438px;
   margin-right: auto;
   margin-left: auto;

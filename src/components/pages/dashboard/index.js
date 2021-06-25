@@ -40,18 +40,18 @@ const Dashboard = () => {
         style={{ display: showModal ? "block" : "none" }}
       >
 
-        <FundWallet />
-      {/* <Withdrawal/> */}
+        {/* <FundWallet /> */}
+      <Withdrawal/>
 
 
       </div>
-      <div
+      {/* <div
         className="blurEffect"
         style={{ display: showWithdrawalModal ? "block" : "none" }}
       >
 
 
-      </div>
+      </div> */}
 
       <DashBoardRoute />
       {/* <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
