@@ -43,20 +43,26 @@ const SignUp = ({ error, success, loading, user, token }) => {
 
   const phoneRegExp =
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
-    if (success){
-      return <Redirect to='/dashboard'/>
-
-    }
+  if (success) {
+    return <Redirect to="/dashboard" />;
+  }
   return (
     <StyledContainer>
       <div className="Sign-in">
         <LogoIcon />
 
         <StyledFormArea>
-        <StyledTitle size={20}>Create a Secure Account</StyledTitle>
-          <SubTitle>
-            Let’s meet you. A step towards achieving your goals!
-          </SubTitle>
+          <div
+            style={{
+              paddingBottom: "10px",
+              paddingTop: "5px",
+            }}
+          >
+            <StyledTitle size={20}>Create a Secure Account</StyledTitle>
+            <SubTitle>
+              Let’s meet you. A step towards achieving your goals!
+            </SubTitle>
+          </div>
           <Formik
             initialValues={{
               firstname: "",
@@ -80,28 +86,26 @@ const SignUp = ({ error, success, loading, user, token }) => {
               email: Yup.string()
                 .email("Invalid email address")
                 .required("email is Required"),
-                phone: Yup.string()
+              phone: Yup.string()
                 .matches(phoneRegExp, "Phone number is not valid")
                 .required("Phone Number is Required"),
               // referral: Yup.string().required("City is Required"),
               country: Yup.string().required("Country is Required"),
-              
-         
-            
+
               password: Yup.string()
                 .min(8, "password is too short")
                 .max(30, "password is too long")
                 .required("Password is Required"),
-                password_confirmation: Yup.string()
-               .required("confirm_password is Required")
-               .oneOf([Yup.ref("password"), "Passwords must match"]),
+              password_confirmation: Yup.string()
+                .required("confirm_password is Required")
+                .oneOf([Yup.ref("password"), "Passwords must match"]),
               username: Yup.string().required("Username is Required"),
-
             })}
           >
             {({ isSubmitting }) => (
               <Form>
-              <TextInput
+                <TextInput name="country" type="text" placeholder=" Country" />
+                <TextInput
                   type="text"
                   name="firstname"
                   placeholder="First Name"
@@ -111,35 +115,32 @@ const SignUp = ({ error, success, loading, user, token }) => {
                   name="lastname"
                   placeholder="Last Name"
                 />{" "}
-                 <TextInput
+                <TextInput
                   type="email"
                   name="email"
                   placeholder="email@mail.com"
                 />{" "}
                 <TextInput
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone Number"
+                  name="username"
+                  type="text"
+                  placeholder=" Username"
+                />
+                <TextInput type="tel" name="phone" placeholder="Phone Number" />{" "}
+                <TextInput
+                  type="text"
+                  name="referal"
+                  placeholder="Referral Code"
                 />{" "}
-                <TextInput type="text" name="referal" placeholder="Referral" />{" "}
-                <TextInput name="country" type="text" placeholder=" Country" />
                 <TextInput
                   name="password"
                   type="password"
                   placeholder="Password"
                 />
-                    <TextInput
+                <TextInput
                   name="password_confirmation"
                   type="password"
                   placeholder="Confirm Password"
                 />
-
-<TextInput
-                  name="username"
-                  type="text"
-                  placeholder=" Username"
-                />
-                
                 <ButtonGroup>
                   {!showLoader && (
                     <StyledFormButton type="submit">Sign Up</StyledFormButton>
@@ -161,7 +162,20 @@ const SignUp = ({ error, success, loading, user, token }) => {
           <ExtraText>
             Already an OVestor? <TextLink to="/signin  ">Login</TextLink>
           </ExtraText>
-
+          <p
+            style={{
+              fontFamily: "Inter",
+              fontStyle: "normal",
+              fontWeight: "normal",
+              fontSize: "16px",
+              lineHeight: "19px",
+              textAlign: "center",
+              padding: "10px",
+              color: "#121212",
+            }}
+          >
+            OR
+          </p>
           <div className="form-icon">
             <img src={fbcircle} className="formicon2" alt="fb-icon" />
             <img src={applecircle} className="formicon1" alt="apple-icon" />

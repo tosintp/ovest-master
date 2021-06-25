@@ -1,0 +1,162 @@
+.transaction {
+  display: flex;
+  justify-content: space-between;
+}
+
+.transactionDetails {
+  width: 675px;
+  height: 400px;
+  background-color: #ffffff;
+  margin-top: 35px;
+  /* margin-left: 20px; */
+}
+
+
+.trans-text {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 1.8rem;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #0768f6;
+  margin-top: 20px;
+}
+.transText {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #666666;
+  margin-top: 12px;
+}
+.centerImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+.detailsText {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-top: 21px;
+  margin-left: 16px;
+  line-height: 22px;
+  letter-spacing: 0.03em;
+  color: #121212;
+}
+
+.Savings {
+  display: flex;
+  justify-content: space-between;
+  width: 345px;
+  height: 421px;
+  background: #ffffff;
+  border-radius: 4px;
+  margin-top: 25px;
+  margin-right: 2rem;
+}
+.Savings-details {
+  margin-left: 24px;
+}
+
+.infoText {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  margin-top: 34px;
+  font-size: 1.8rem;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #121212;
+}
+.start-text {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.8rem;
+  line-height: 22px;
+  letter-spacing: 0.03em;
+  color: #666666;
+  margin-top: 39px;
+}
+
+.withdraw-text {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.8rem;
+  line-height: 22px;
+  letter-spacing: 0.03em;
+  color: #666666;
+  margin-top: 40px;
+}
+
+.textNumber {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 22px;
+  letter-spacing: 0.03em;
+  margin-top: 14px;
+  color: #0768f6;
+}
+.textMonth{
+  color: black;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 22px;
+  letter-spacing: 0.03em;
+  margin-top: 12px;
+}
+
+
+.activeText {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #dd0707;
+  margin-top: 39px;
+  margin-left: 65px;
+}
+
+.withdraw-texts {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.8rem;
+  line-height: 22px;
+  letter-spacing: 0.03em;
+  color: #666666;
+  margin-top: 40px;
+  margin-right: 13px !important;
+}
+
+.frequency-texts {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.8rem;
+  /* line-height: 22px;
+  letter-spacing: 0.03em; */
+  color: #666666;
+  margin-top: 40px;
+  margin-left: 30px;
+}
+
+.sectionDetails img{
+margin-left: 115px;
+}

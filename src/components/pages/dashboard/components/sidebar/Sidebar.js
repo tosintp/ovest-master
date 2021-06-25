@@ -34,10 +34,10 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
         <Link to="/dashboard">
           <SidebarContent image={dashboard} title="Dashboard" />
         </Link>
-        <Link to={`/dashboard/invest`}>
+        <Link to="/dashboard/invest">
           <SidebarContent image={invest} title="Invest" />
         </Link>{" "}
-        <Link to="#">
+        <Link to="/dashboard/savest">
           <SidebarContent image={savest} title="Savest" />
         </Link>{" "}
         <Link to="#">

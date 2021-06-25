@@ -4,19 +4,19 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  margin-top: 97px;
-  margin-bottom: 60px;
+  margin-top: 45px;
+  /* margin-bottom: 60px; */
   text-decoration: none;
   font-weight: 500;
   text-decoration: none !important;
 }
 .navba-logo1 > img {
-  width: 5.3rem;
+  width: 4rem;
 }
 .navba-logo1 > p {
-  color: #fff;
+  color: #0768f6;
   margin-top: 0.9rem;
   margin-left: 0.4rem;
-  /* font-weight: bold; */
-  font-size: 4.7rem;
+  font-weight: bold;
+  font-size: 3.3rem;
 }

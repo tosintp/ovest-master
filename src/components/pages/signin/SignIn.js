@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { connect, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { SignIn as DispatchSignIn } from "../../../redux/operators/auth.op";
 import * as Yup from "yup";
 import {
@@ -21,7 +22,8 @@ import applecircle from "../../Assets/applecirlce.png";
 import fbcircle from "../../Assets/fb-circle.png";
 import googlecircle from "../../Assets/googlecircle.png";
 import Loader from "react-loader-spinner";
-import { Form, Formik } from "formik";
+import { Form, Formik, Field } from "formik";
+// import { Formik, , Form } from 'formik';
 import { createStructuredSelector } from "reselect";
 import {
   isLoading,
@@ -45,21 +47,38 @@ const SignIn = ({ error, success, loading, user, token }) => {
   const phoneRegExp =
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
-    if (success){
-      return <Redirect to='/dashboard'/>
-    }
+  if (success) {
+    return <Redirect to="/dashboard" />;
+  }
   return (
     <StyledContainer>
       <div className="Sign-in">
         <LogoIcon />
 
         <StyledFormArea>
-          <StyledTitle size={20}>Login to your Account</StyledTitle>
-          <SubTitle>Welcome back. Let’s help you achieve more today! </SubTitle>
+          <div
+            style={{
+              paddingBottom: "10px",
+              paddingTop: "5px",
+            }}
+          >
+            <StyledTitle
+              size={20}
+              style={{
+                fontWeight: "700",
+              }}
+            >
+              Login to your Account
+            </StyledTitle>
+            <SubTitle>
+              Welcome back. Let’s help you achieve more today!{" "}
+            </SubTitle>
+          </div>
           <Formik
             initialValues={{
               phone: "",
               password: "",
+              checked: [],
             }}
             onSubmit={(values, { setSubmitting, setFieldError }) => {
               console.log(values);
@@ -81,17 +100,65 @@ const SignIn = ({ error, success, loading, user, token }) => {
           >
             {({ isSubmitting }) => (
               <Form>
-                <TextInput
-                  name="phone"
-                  type="number"
-                  placeholder="Phone Number"
-                />
+                <TextInput name="phone" type="tel" placeholder="Phone Number" />
 
                 <TextInput
                   name="password"
                   type="password"
                   placeholder="Password"
                 />
+                <div
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <label style={{ display: "flex" }}>
+                    <Field
+                      type="checkbox"
+                      name="checked"
+                      value="Two"
+                      style={{
+                        width: "16px",
+                        height: "16px",
+                        background: "#ff0000",
+                      }}
+                    />
+                    <p
+                      style={{
+                        marginLeft: "10px",
+                        fontFamily: "Inter",
+                        fontStyle: "normal",
+                        fontWeight: "normal",
+                        fontSize: "16px",
+                        lineHeight: "19px",
+                        textTransform: "capitalize",
+
+                        color: "#666666",
+                      }}
+                    >
+                      Rememeber Me
+                    </p>
+                  </label>
+
+                  <Link to="#">
+                    {" "}
+                    <p
+                      style={{
+                        fontFamily: "Inter",
+                        fontStyle: "normal",
+                        fontWeight: "normal",
+                        fontSize: "16px",
+                        lineHeight: "19px",
+                        textTransform: "capitalize",
+
+                        color: "#666666",
+                      }}
+                    >
+                      Forget Password ?
+                    </p>
+                  </Link>
+                </div>
+
+                {/* <input type="checkbox"> */}
+
                 <ButtonGroup>
                   {!showLoader && (
                     <StyledFormButton type="submit">Login</StyledFormButton>
@@ -113,7 +180,20 @@ const SignIn = ({ error, success, loading, user, token }) => {
           <ExtraText>
             Not yet an OVestor? <TextLink to="/signup">Register</TextLink>
           </ExtraText>
-
+          <p
+            style={{
+              fontFamily: "Inter",
+              fontStyle: "normal",
+              fontWeight: "normal",
+              fontSize: "16px",
+              lineHeight: "19px",
+              textAlign: "center",
+              padding: "10px",
+              color: "#121212",
+            }}
+          >
+            OR
+          </p>
           <div className="form-icon">
             <img src={fbcircle} className="formicon2" alt="fb-icon" />
             <img src={applecircle} className="formicon1" alt="apple-icon" />

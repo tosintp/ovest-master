@@ -19,32 +19,34 @@ export const StyledContainer = styled.div`
   display: flex;
   justify-content: center;
   /* align-items: center; */
-  background: linear-gradient(
+  /* background: linear-gradient(
       0deg,
       rgba(7, 104, 246, 0.973),
       rgba(7, 104, 246, 0.973)
     ),
     url(${background});
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 `;
 
 export const StyledTextInput = styled.input`
   width: 458px;
-  padding: 16px;
+  height: 48px;
+  /* padding: 16px; */
   padding-left: 16px;
   font-size: 12px;
   color: #c4c4c4;
   border: 1px solid #c4c4c4;
   border-radius: 4px;
   display: block;
-  margin: 19px auto 19px auto;
+  margin: 19px auto 10px auto;
   transition: ease-in-out 0.3s;
   outline: none;
+  /* background-color: #fcf5f5; */
 
-  ${(props) => props.invalid && `background-color: ${colors.light1};`}
   &:focus {
-    background-color: ${colors.focusColor};
+    /* border: 1px solid #dd0707; */
+    background-color: #fcf5f5;
     color: ${colors.textColor};
   }
 `;
@@ -98,15 +100,15 @@ export const SubTitle = styled.p`
   line-height: 19px;
   text-align: center;
   color: #666666;
-  margin-top: 14px;
+  margin-top: 4px;
 `;
 
 export const StyledFormArea = styled.div`
   background-color: ${(props) => props.bg || colors.light1};
   text-align: center;
-  padding: 45px 55px;
+  padding: 10px 55px;
   border-radius: 2px;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 `;
 
 export const StyledFormButton = styled.button`

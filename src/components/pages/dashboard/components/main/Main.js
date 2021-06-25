@@ -35,7 +35,7 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
   const classes = useStyles();
   const [showModal, setShowModal] = useState(false);
   const CurrentUser = useSelector(selectCurrentUser);
-  const {user} = useAuth()
+  const { user } = useAuth();
 
   // useEffect(() => {
   //   console.log("CurrentUser: ", user);
@@ -59,7 +59,7 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
             <div className="main__title" style={{ marginBottom: "30px" }}>
               {/* <img src={hello} alt="hello" /> */}
               <div className="main__greeting">
-                <h1>Morning, {user.currentUser.firstname}</h1>
+                <h1>Morning, {user.currentUser.lastname}</h1>
                 <p>Welcome to your OVest account. View your progress</p>
               </div>
               <div className="hero-btns">

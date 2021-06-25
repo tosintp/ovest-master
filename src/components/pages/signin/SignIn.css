@@ -1,7 +1,8 @@
 .form-icon {
-  margin-top: 90px;
+  margin-top: 20px;
 }
 .form-icon > img {
+  cursor: pointer;
   /* height: 30px; */
   margin-left: 26px;
 }
