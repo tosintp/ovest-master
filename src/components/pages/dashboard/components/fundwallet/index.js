@@ -23,7 +23,7 @@ const FundWalletLogic = ({ stage, setStage }) => {
       break;
 
     case 1:
-      currentStage = currentStage = (
+      currentStage = (
         <>
           <button
             className="backicon"

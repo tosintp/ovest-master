@@ -85,7 +85,7 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
 
                 <Button
                   startIcon={<BackupOutlinedIcon />}
-                  onClick={openWithdrawalModal}
+                  // onClick={openWithdrawalModal}
                   style={{
                     border: "1px solid #0768F6",
                     color: "#0768F6",

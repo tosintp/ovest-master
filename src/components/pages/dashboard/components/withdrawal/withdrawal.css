@@ -65,6 +65,7 @@
 }
 
 .transferplan > img {
+  margin-top: 20px;
   height: 30px;
   margin-bottom: 20px;
 }
@@ -84,6 +85,21 @@
   margin-bottom: 20px;
 }
 
+.withdrawplan-pa {
+  /* width: 104px;
+  height: 48px; */
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #121212;
+}
 .withdrawplan-p {
   width: 104px;
   height: 48px;

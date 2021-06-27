@@ -1,16 +1,11 @@
 import React, { useState } from "react";
-import BankTransfer from "./bank/BankTransfer";
-import BankTransferDetails from "./bank/BankTransferDetails";
-import BankTransferSucces from "./bank/BankTransferSucces";
-import BankTranferVerify from "./bank/BankTransferVerify";
-import AddNewBankCard from "./card/AddNewBankCard";
-import CardAmountInput from "./card/CardAmountInput";
-import CardPayment from "./card/CardAmountInput";
-import CardFunding from "./card/CardFunding";
-import CardSuccess from "./card/CardPayment";
-import CardPaymentSuccess from "./card/CardPaymentSuccess";
-import FundWalletMethod from "./FundWalletMethod";
-import "./fundwallet.css";
+import BAnkAccountMethod from "./withdrawal-pages/BankAccountMethod";
+import BankConfirmPassword from "./withdrawal-pages/BankConfirmPassword";
+import InvestPlan from "./withdrawal-pages/InvestPlan";
+import SavestForm from "./withdrawal-pages/SavestForm";
+import SavestNotice from "./withdrawal-pages/SavestNotice";
+import TransferToInvestor from "./withdrawal-pages/TransferToInvestor";
+import "./withdrawal.css";
 
 import backicon from "../../../../Assets/backicon.svg";
 
@@ -23,7 +18,7 @@ const WithdrawalLogic = ({ stage, setStage }) => {
       break;
 
     case 1:
-      currentStage = currentStage = (
+      currentStage = (
         <>
           <button
             className="backicon"
@@ -33,7 +28,7 @@ const WithdrawalLogic = ({ stage, setStage }) => {
           >
             <img src={backicon} alt="back icon" />
           </button>
-          <BankTransfer setStage={setStage} />
+          <SavestForm setStage={setStage} />
         </>
       );
       break;

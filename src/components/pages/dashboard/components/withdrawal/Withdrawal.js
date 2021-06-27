@@ -9,19 +9,19 @@ import { hideWithdrawalModal } from "../../../../../redux/actions/modal.action";
 import closemodalicon from "../../../../Assets/closemodalicon.svg";
 import WithdrawalMethod from "./WithdrawalMethod";
 
-const WithDrawal = ({ toggleWithdrawalModalAppearance }) => {
-  const [stage1, setStage1] = useState(0);
+const WithDrawal = ({ toggleWithdrawalModalAppearance, stage, setStage }) => {
+  // const [stage1, setStage1] = useState(0);
   const dispatch = useDispatch();
 
   return (
     <div className="Fund-wallet-method">
       <div className="Fund-wallet-method-head">
         <div className="">
-          {stage1 === 0 ? (
+          {stage === 0 ? (
             <button
               className="closemodalicon-btn"
               onClick={() => {
-                setStage1(0);
+                setStage(0);
                 dispatch(hideWithdrawalModal());
               }}
             >
@@ -35,7 +35,7 @@ const WithDrawal = ({ toggleWithdrawalModalAppearance }) => {
 
           <div className=""></div>
           {/* <FundWalletLogic {...{ stage, setStage }}  /> */}
-          <WithdrawalMethod {...{ stage1, setStage1 }} />
+          <WithdrawalMethod {...{ stage, setStage }} />
         </div>
       </div>
     </div>
