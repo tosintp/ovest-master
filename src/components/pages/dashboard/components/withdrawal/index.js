@@ -52,17 +52,17 @@ const WithdrawalLogic = ({ stage, setStage }) => {
 
     case 3:
       currentStage = (
-        <>
+        <div className="invest-plan-logic">
           <button
             className="backicon"
             onClick={() => {
-              setStage(2);
+              setStage(0);
             }}
           >
             <img src={backicon} alt="back icon" />
           </button>
           <InvestPlan setStage={setStage} />
-        </>
+        </div>
       );
       break;
     case 4:

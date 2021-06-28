@@ -40,7 +40,7 @@ const CardPaymentSuccess = ({ setStage }) => {
         <div className="decide-session">
           <p
             onClick={() => {
-              setStage(0);
+              setStage(1);
             }}
             className="No"
           >
@@ -48,7 +48,7 @@ const CardPaymentSuccess = ({ setStage }) => {
           </p>
           <p
             onClick={() => {
-              setStage(1);
+              setStage(0);
             }}
             className="yes"
           >

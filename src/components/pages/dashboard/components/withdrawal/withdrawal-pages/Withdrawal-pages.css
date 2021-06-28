@@ -120,3 +120,118 @@
 
   color: #0768f6;
 }
+
+/* invest plan */
+
+.investplan-header > h5 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  /* identical to box height, or 167% */
+
+  text-align: left;
+  letter-spacing: 0.03em;
+
+  /* Body header color */
+
+  color: #121212;
+}
+
+.investplan-header > p {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  letter-spacing: 0.03em;
+
+  /* body text color */
+
+  color: #666666;
+}
+
+.investplan-inner > .investcard1 {
+  /* width: 395px;
+  height: 171px; */
+  background-size: 10vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../../../../../Assets/team1.png");
+  margin-top: 40px;
+  padding: 10px;
+
+  background: rgba(159, 191, 237, 0.13);
+}
+
+.savestplanhead {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+  margin-bottom: 12px;
+}
+.savestplanhead > h5 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: left;
+  letter-spacing: 0.03em;
+
+  color: #002163;
+}
+.savestplanhead > small {
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+  text-align: right;
+
+  letter-spacing: 0.03em;
+
+  color: #002163;
+}
+
+.savestplanbody {
+  padding: 10px 50px 10px 0px;
+}
+.savestplanbody > p {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  /* or 157% */
+
+  letter-spacing: 0.03em;
+  text-align: left;
+
+  color: #666666;
+}
+
+.savestplanbody > p > span {
+  color: #faa567;
+}
+
+.savestplanbody > footer {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  /* identical to box height, or 100% */
+
+  letter-spacing: 0.03em;
+
+  color: #0768f6;
+}
+.savestplanbody > footer > i {
+  padding-left: 9px;
+  color: #0768f6;
+}

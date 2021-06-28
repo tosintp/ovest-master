@@ -23,7 +23,12 @@ const WithdrawalMethod = ({ setStage }) => {
           <img src={savesticon1} alt="saves-icon" />
           <p className="withdrawplan-p">My Savest Plan</p>
         </div>
-        <div className="investplan">
+        <div
+          className="investplan"
+          onClick={() => {
+            setStage(3);
+          }}
+        >
           <img src={investicon1} alt="saves-icon" />
           <p className="withdrawplan-p">Investment Plan</p>
         </div>

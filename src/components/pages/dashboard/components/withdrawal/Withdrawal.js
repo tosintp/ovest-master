@@ -5,7 +5,7 @@ import { hideWithdrawalModal } from "../../../../../redux/actions/modal.action";
 // import "./fundwallet.css";
 // import FundWalletLogic from "../fundwallet/index";
 // import backicon from "../../../../Assets/backicon.svg";
-
+import "./withdrawal.css";
 import closemodalicon from "../../../../Assets/closemodalicon.svg";
 import WithdrawalMethod from "./WithdrawalMethod";
 import WithdrawalLogic from "./index";
@@ -15,8 +15,8 @@ const WithDrawal = ({ toggleModalAppearance }) => {
   const dispatch = useDispatch();
 
   return (
-    <div className="Fund-wallet-method">
-      <div className="Fund-wallet-method-head">
+    <div className="Fund-wallet-method withdrawheading ">
+      <div className="Fund-wallet-method-head ">
         <div className="">
           {stage === 0 ? (
             <button
