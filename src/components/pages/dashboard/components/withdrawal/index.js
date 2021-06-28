@@ -5,6 +5,7 @@ import InvestPlan from "./withdrawal-pages/InvestPlan";
 import SavestForm from "./withdrawal-pages/SavestForm";
 import SavestNotice from "./withdrawal-pages/SavestNotice";
 import TransferToInvestor from "./withdrawal-pages/TransferToInvestor";
+import WithdrawalMethod from "./WithdrawalMethod";
 import "./withdrawal.css";
 
 import backicon from "../../../../Assets/backicon.svg";
@@ -14,7 +15,7 @@ const WithdrawalLogic = ({ stage, setStage }) => {
 
   switch (stage) {
     case 0:
-      currentStage = <FundWalletMethod setStage={setStage} />;
+      currentStage = <WithdrawalMethod setStage={setStage} />;
       break;
 
     case 1:
@@ -36,15 +37,15 @@ const WithdrawalLogic = ({ stage, setStage }) => {
     case 2:
       currentStage = (
         <>
-          <button
+          {/* <button
             className="backicon"
             onClick={() => {
               setStage(1);
             }}
           >
             <img src={backicon} alt="back icon" />
-          </button>
-          <BankTransferDetails setStage={setStage} />
+          </button> */}
+          <SavestNotice setStage={setStage} />
         </>
       );
       break;
@@ -60,7 +61,7 @@ const WithdrawalLogic = ({ stage, setStage }) => {
           >
             <img src={backicon} alt="back icon" />
           </button>
-          <BankTranferVerify setStage={setStage} />
+          <InvestPlan setStage={setStage} />
         </>
       );
       break;
@@ -75,7 +76,7 @@ const WithdrawalLogic = ({ stage, setStage }) => {
           >
             <img src={backicon} alt="back icon" />
           </button> */}
-          <BankTransferSucces setStage={setStage} />
+          <BAnkAccountMethod setStage={setStage} />
         </>
       );
       break;
@@ -96,7 +97,7 @@ const WithdrawalLogic = ({ stage, setStage }) => {
           >
             <img src={backicon} alt="back icon" />
           </button>
-          <CardFunding setStage={setStage} />
+          <BankConfirmPassword setStage={setStage} />
         </>
       );
       break;
@@ -117,21 +118,9 @@ const WithdrawalLogic = ({ stage, setStage }) => {
           >
             <img src={backicon} alt="back icon" />
           </button>
-          <AddNewBankCard setStage={setStage} />
+          <TransferToInvestor setStage={setStage} />
         </>
       );
-      break;
-
-    case 7:
-      currentStage = <CardAmountInput setStage={setStage} />;
-      break;
-
-    case 8:
-      currentStage = <CardPaymentSuccess setStage={setStage} />;
-      break;
-
-    default:
-      currentStage = <FundWalletMethod setStage={setStage} />;
       break;
   }
 

@@ -59,7 +59,9 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
             <div className="main__title" style={{ marginBottom: "30px" }}>
               {/* <img src={hello} alt="hello" /> */}
               <div className="main__greeting">
-                <h1>Morning, {user.currentUser.lastname}</h1>
+                {/* <h1>Morning, {user.currentUser.lastname}</h1> */}
+                <h1>Morning, ope</h1>
+
                 <p>Welcome to your OVest account. View your progress</p>
               </div>
               <div className="hero-btns">
@@ -85,7 +87,7 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
 
                 <Button
                   startIcon={<BackupOutlinedIcon />}
-                  // onClick={openWithdrawalModal}
+                  onClick={openWithdrawalModal}
                   style={{
                     border: "1px solid #0768F6",
                     color: "#0768F6",

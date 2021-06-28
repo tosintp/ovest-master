@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Navbar = ({ sidebarOpen, openSidebar }) => {
-  const {user} = useAuth()
+  const { user } = useAuth();
   const classes = useStyles();
   return (
     <nav className="navbar">
@@ -49,7 +49,8 @@ const Navbar = ({ sidebarOpen, openSidebar }) => {
           />
         </a>
         <a href="#!" className="ml-2">
-          {user.currentUser.firstname}  {user.currentUser.lastname}
+          {/* {user.currentUser.firstname}  {user.currentUser.lastname} */}
+          opeyemi peter
           <img width="10" className="ml-1" src={caret} alt="avatar" />
         </a>
       </div>

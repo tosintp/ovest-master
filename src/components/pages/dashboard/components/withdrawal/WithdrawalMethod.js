@@ -5,7 +5,7 @@ import investicon1 from "../../../../Assets/investmenticon.svg";
 import bankicon1 from "../../../../Assets/bankicon.svg";
 import tranfericon1 from "../../../../Assets/tranfericon.svg";
 
-const WithdrawalMethod = ({}) => {
+const WithdrawalMethod = ({ setStage }) => {
   return (
     <div>
       <div className="WithdrawalMethod">
@@ -14,7 +14,12 @@ const WithdrawalMethod = ({}) => {
       </div>
 
       <div className="withdraw-method">
-        <div className="savestplan">
+        <div
+          className="savestplan"
+          onClick={() => {
+            setStage(1);
+          }}
+        >
           <img src={savesticon1} alt="saves-icon" />
           <p className="withdrawplan-p">My Savest Plan</p>
         </div>

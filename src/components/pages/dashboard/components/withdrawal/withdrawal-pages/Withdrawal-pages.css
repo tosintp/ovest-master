@@ -1,0 +1,122 @@
+/* savest form */
+
+.savestform > h5 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  /* identical to box height, or 167% */
+
+  text-align: left;
+  letter-spacing: 0.03em;
+
+  /* Body header color */
+
+  color: #121212;
+  margin-bottom: 25px;
+}
+
+.savestform > p {
+  margin-top: 25px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 143% */
+
+  letter-spacing: 0.03em;
+
+  /* Body header color */
+
+  color: #121212;
+}
+
+.savestform-p {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: right;
+  letter-spacing: 0.03em;
+
+  /* body text color */
+
+  color: #666666;
+  margin-bottom: 89px;
+}
+
+.savestform-p > span {
+  color: #fe9f59;
+}
+
+/* savest notice */
+.notice-head > h5 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  /* identical to box height, or 187% */
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  /* Body header color */
+
+  color: #121212;
+  margin-bottom: 18px;
+}
+
+.notice-head > p {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 143% */
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  /* body text color */
+
+  color: #666666;
+  margin-top: 9px;
+}
+
+.decide-session {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.No {
+  cursor: pointer;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #eb5757;
+}
+
+.yes {
+  cursor: pointer;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  /* Primary color */
+
+  color: #0768f6;
+}

@@ -20,9 +20,9 @@ const Dashboard = () => {
   const showModal = useSelector(showModalState);
   const showWithdrawalModal = useSelector(showWithdrawalModalState);
 
-  // useEffect(() => {
-  //   console.log("showModal: ", showModal);
-  // }, []);
+  useEffect(() => {
+    console.log("showModal: ", showModal);
+  }, []);
   useEffect(() => {
     console.log("showModal: ", showWithdrawalModal);
   }, []);
