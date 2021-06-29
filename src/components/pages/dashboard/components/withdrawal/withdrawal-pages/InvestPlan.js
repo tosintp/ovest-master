@@ -1,4 +1,5 @@
 import React from "react";
+import "./Withdrawal-pages.css";
 
 const InvestPlan = () => {
   return (

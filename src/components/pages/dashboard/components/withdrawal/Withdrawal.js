@@ -16,8 +16,8 @@ const WithDrawal = ({ toggleModalAppearance }) => {
 
   return (
     <div className="Fund-wallet-method withdrawheading ">
-      <div className="Fund-wallet-method-head ">
-        <div className="">
+      <div className="Fund-wallet-method-head withdrawal-wallet-head ">
+        <div style={{}}>
           {stage === 0 ? (
             <button
               className="closemodalicon-btn"

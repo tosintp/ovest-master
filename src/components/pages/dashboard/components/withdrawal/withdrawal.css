@@ -116,13 +116,6 @@
   color: #121212;
 }
 
-/* .current-stage {
-  overflow-y: auto;
-} */
-.invest-plan-logic {
-  /* overflow-y: auto; */
-}
-
-.withdrawheading {
-  /* overflow-y: auto; */
+.withdrawal-sub-head {
+  overflow-y: scroll;
 }

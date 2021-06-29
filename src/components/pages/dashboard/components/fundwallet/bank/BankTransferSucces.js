@@ -18,10 +18,13 @@ import successicon from "../../../../../Assets/success.svg";
 
 const BankTransferSucces = ({ setStage }) => {
   return (
-    <div className="banktranfersuccess" style={{
-      marginLeft: "-400px",
-
-    }}>
+    <div
+      className="banktranfersuccess"
+      style={{
+        marginLeft: "-400px",
+        // position: "absolute",
+      }}
+    >
       <img src={successicon} alt=" success icon" />
 
       <p>

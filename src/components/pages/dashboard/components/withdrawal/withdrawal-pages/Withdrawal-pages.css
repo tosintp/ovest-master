@@ -122,6 +122,9 @@
 }
 
 /* invest plan */
+.investplan-inner {
+  /* overflow-y: scroll; */
+}
 
 .investplan-header > h5 {
   font-family: Inter;

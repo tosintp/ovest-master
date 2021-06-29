@@ -5,7 +5,6 @@ import {CopyToClipboard} from 'react-copy-to-clipboard';
 import "./fundwallet.css";
 import FundWalletLogic from "../fundwallet/index";
 import backicon from "../../../../Assets/backicon.svg";
-
 import closemodalicon from "../../../../Assets/closemodalicon.svg";
 
 const FundWallet = ({toggleModalAppearance }) => {

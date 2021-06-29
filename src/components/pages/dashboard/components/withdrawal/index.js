@@ -68,14 +68,14 @@ const WithdrawalLogic = ({ stage, setStage }) => {
     case 4:
       currentStage = (
         <>
-          {/* <button
+          <button
             className="backicon"
             onClick={() => {
-              setStage(2);
+              setStage(0);
             }}
           >
             <img src={backicon} alt="back icon" />
-          </button> */}
+          </button>
           <BAnkAccountMethod setStage={setStage} />
         </>
       );

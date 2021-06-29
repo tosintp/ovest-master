@@ -24,7 +24,7 @@ const Dashboard = () => {
     console.log("showModal: ", showModal);
   }, []);
   useEffect(() => {
-    console.log("showModal: ", showWithdrawalModal);
+    console.log("showWithModal: ", showWithdrawalModal);
   }, []);
 
   const openSidebar = () => {
@@ -49,6 +49,7 @@ const Dashboard = () => {
       >
         <Withdrawal />
       </div>
+      
 
       <DashBoardRoute />
       {/* <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />

@@ -4,5 +4,6 @@ const modalActionTypes = {
 
   SHOW_WITHDRAWAL_MODAL: "SHOW_WITHDRAWAL_MODAL",
   HIDE_WITHDRAWAL_MODAL: "HIDE_WITHDRAWAL_MODAL",
+  
 };
 export default modalActionTypes;
