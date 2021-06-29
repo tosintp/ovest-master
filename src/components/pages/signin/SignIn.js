@@ -23,7 +23,6 @@ import fbcircle from "../../Assets/fb-circle.png";
 import googlecircle from "../../Assets/googlecircle.png";
 import Loader from "react-loader-spinner";
 import { Form, Formik, Field } from "formik";
-// import { Formik, , Form } from 'formik';
 import { createStructuredSelector } from "reselect";
 import {
   isLoading,

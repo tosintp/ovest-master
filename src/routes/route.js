@@ -7,6 +7,7 @@ import Services from "../components/pages/Services";
 import AboutUs from "../components/pages/AboutUs";
 import ContactUs from "../components/pages/ContactUs";
 import SignIn from "../components/pages/signin/SignIn";
+import EmailVerification from "../components/pages/signup-verify/EmailVerification";
 import SignUp from "../components/pages/signup/SignUp";
 
 import Marketing from "../components/pages/Marketing";
@@ -30,6 +31,8 @@ const AppRoute = () => {
         {/* <Route path="/dashboard" component={Dashboard} /> */}
         <ProtectedRoute path="/dashboard" component={Dashboard} />
         <Route path="/signin" component={SignIn} />
+        <Route path="/signupverify" component={EmailVerification} />
+
         <Route path="/signup" component={SignUp} />
         {/* <Route path="/founder" component={Founder} /> */}
       </Switch>
