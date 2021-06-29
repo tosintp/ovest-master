@@ -27,8 +27,8 @@ const AppRoute = () => {
         {/* <Route path="/sign-up" component={SignUp} /> */}
         <Route path="/marketing" component={Marketing} />
         <Route path="/consulting" component={Consulting} />
-        <Route path="/dashboard" component={Dashboard} />
-        {/* <ProtectedRoute path="/dashboard" component={Dashboard} /> */}
+        {/* <Route path="/dashboard" component={Dashboard} /> */}
+        <ProtectedRoute path="/dashboard" component={Dashboard} />
         <Route path="/signin" component={SignIn} />
         <Route path="/signup" component={SignUp} />
         {/* <Route path="/founder" component={Founder} /> */}

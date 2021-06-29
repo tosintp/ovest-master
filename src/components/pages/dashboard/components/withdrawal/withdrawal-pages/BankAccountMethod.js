@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
 
-const BAnkAccountMethod = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+const BAnkAccountMethod = ({ setstage }) => {
+  return (
+    <div>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque,
+      blanditiis!
+    </div>
+  );
+};
 
-export default BAnkAccountMethod
+export default BAnkAccountMethod;

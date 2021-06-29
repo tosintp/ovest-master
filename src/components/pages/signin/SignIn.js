@@ -44,8 +44,18 @@ const SignIn = ({ error, success, loading, user, token }) => {
     console.log(success);
   }, [loading]);
 
-  const phoneRegExp =
-    /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+  useEffect(() => {
+    if (error) {
+      if (error.statusCode === 500) {
+        alert(error.message);
+      } else if (error.statusCode === 401) {
+        alert("Invalid email or Password");
+      }
+    }
+  }, [error]);
+
+  // const phoneRegExp =
+  // /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
   if (success) {
     return <Redirect to="/dashboard" />;
@@ -76,7 +86,7 @@ const SignIn = ({ error, success, loading, user, token }) => {
           </div>
           <Formik
             initialValues={{
-              phone: "",
+              email: "",
               password: "",
               checked: [],
             }}
@@ -86,9 +96,10 @@ const SignIn = ({ error, success, loading, user, token }) => {
               // loginUser(values, history, setFieldError, setSubmitting);
             }}
             validationSchema={Yup.object({
-              phone: Yup.string()
-                .matches(phoneRegExp, "Phone number is not valid")
-                .required("Phone Number is Required"),
+              email: Yup.string()
+                .email("Must be a valid email")
+                .max(255)
+                .required("Email is required"),
               // phone: Yup.string()
               //   .number("Invalid phone address")
               //   .required("phone is Required"),
@@ -100,7 +111,7 @@ const SignIn = ({ error, success, loading, user, token }) => {
           >
             {({ isSubmitting }) => (
               <Form>
-                <TextInput name="phone" type="tel" placeholder="Phone Number" />
+                <TextInput name="email" type="email" placeholder="Email" />
 
                 <TextInput
                   name="password"
