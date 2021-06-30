@@ -45,7 +45,7 @@
   /* body text color */
 
   color: #666666;
-  margin-bottom: 89px;
+  margin-bottom: 33px;
 }
 
 .savestform-p > span {
@@ -237,4 +237,59 @@
 .savestplanbody > footer > i {
   padding-left: 9px;
   color: #0768f6;
+}
+
+/* BAnkAccountMethod */
+
+.bam-h5 {
+  margin-top: 50px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  /* identical to box height, or 167% */
+
+  text-align: left;
+  letter-spacing: 0.03em;
+
+  /* Body header color */
+
+  color: #121212;
+}
+
+.bam-p {
+  margin-top: 40px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 143% */
+
+  letter-spacing: 0.03em;
+
+  /* Body header color */
+
+  color: #121212;
+}
+
+.bnm-notice {
+  background: #f4f8fd;
+  border: 1px solid #64a0f7;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 9px 31px 2px 32px;
+}
+
+.bnm-notice > p {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  /* or 167% */
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #999999;
 }

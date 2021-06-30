@@ -91,7 +91,26 @@ export const StyledTextInputBankTransfer = styled.input`
     color: ${colors.textColor};
   }
 `;
+export const StyledTextSelectBankTransfer = styled.select`
+  width: 380px;
+  padding: 16px;
+  padding-left: 16px;
+  font-size: 12px;
+  color: #c4c4c4;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  display: block;
+  margin: 19px auto 19px auto;
+  transition: ease-in-out 0.3s;
+  outline: none;
+  box-sizing: border-box;
 
+  ${(props) => props.invalid && `background-color: ${colors.light1};`}
+  &:focus {
+    background-color: ${colors.focusColor};
+    color: ${colors.textColor};
+  }
+`;
 export const StyledTextInputCardFunding = styled.input`
   /* width: 380px; */
   padding: 16px;

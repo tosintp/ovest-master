@@ -17,7 +17,6 @@ const WithdrawalLogic = ({ stage, setStage }) => {
     case 0:
       currentStage = <WithdrawalMethod setStage={setStage} />;
       break;
-
     case 1:
       currentStage = (
         <>
