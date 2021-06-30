@@ -144,7 +144,7 @@ const SignIn = ({ error, success, loading, user, token }) => {
                         color: "#666666",
                       }}
                     >
-                      Rememeber Me
+                      Remember Me
                     </p>
                   </label>
 
