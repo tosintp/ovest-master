@@ -3,10 +3,9 @@ main {
   grid-area: main;
   overflow-y: auto;
   overflow-x: hidden;
-  /* max-width:1440px; */
-  width: 100%;
+  max-width: 1440px;
+  /* width: 100%; */
   padding: 0 10px 0 0;
-
 }
 
 .main__container {

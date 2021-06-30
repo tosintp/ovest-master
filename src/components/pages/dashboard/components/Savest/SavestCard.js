@@ -13,10 +13,8 @@ const SavestCard = () => {
         <h6>Total Amount Saved</h6>
         <p>$0.00</p>
       </div>
-      <div
-        className="savestCard1
-      "
-      >
+      <div className="savestCard1
+      ">
         <div className="savestImage">
           <img src={Savest1} alt="" className="saveImg" width="27px" />
         </div>

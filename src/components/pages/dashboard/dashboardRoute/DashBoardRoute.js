@@ -9,6 +9,7 @@ import Main from "../components/main/Main";
 import Navbar from "../components/navbar/Navbar";
 import Sidebar from "../components/sidebar/Sidebar";
 import Savest from "../components/Savest/savest";
+import Transaction from "../../dashboard/components/investment/Investment";
 import Investment from "../../dashboard/components/investment/Investment";
 
 const DashBoardRoute = ({ sidebarOpen, openSidebar, closeSidebar }) => {
@@ -24,6 +25,11 @@ const DashBoardRoute = ({ sidebarOpen, openSidebar, closeSidebar }) => {
         <Route path={match.path} exact component={Main} />
         <Route path={`${match.path}/invest`} exact component={Investment} />
         <Route path={`${match.path}/savest`} exact component={Savest} />
+        <Route
+          path={`${match.path}/transaction`}
+          exact
+          component={Transaction}
+        />
       </Switch>
 
       {/* <Sidebar {...{sidebarOpen, closeSidebar, match}} /> */}
