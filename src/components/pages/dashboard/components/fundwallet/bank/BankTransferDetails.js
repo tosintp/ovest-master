@@ -1,20 +1,20 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./bank.css";
 import Loader from "react-loader-spinner";
 
 import { Formik, Form } from "formik";
 import {
-  StyledContainer,
-  StyledFormArea,
-  StyledLabel,
-  StyledTextInput,
-  StyledFormButton,
-  StyledTitle,
+  // StyledContainer,
+  // StyledFormArea,
+  // StyledLabel,
+  // StyledTextInput,
+  // StyledFormButton,
+  // StyledTitle,
   ButtonGroup,
   StyledBankTransferFormButton,
-  SubTitle,
-  ExtraText,
-  TextLink,
+  // SubTitle,
+  // ExtraText,
+  // TextLink,
   colors,
 } from "../../../../../Syles/styles";
 import { BankTranferDetailsTextInput } from "../../../../Formik/FormLib";
@@ -96,7 +96,11 @@ const BankTransferDetails = ({ setStage }) => {
             />
             <ButtonGroup>
               {!isSubmitting && (
-                <StyledBankTransferFormButton type="submit" onClick={()=>{setStage(3)}}
+                <StyledBankTransferFormButton
+                  type="submit"
+                  onClick={() => {
+                    setStage(3);
+                  }}
                 >
                   Proceed
                 </StyledBankTransferFormButton>

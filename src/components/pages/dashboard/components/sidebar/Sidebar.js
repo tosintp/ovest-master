@@ -1,7 +1,7 @@
 import React from "react";
 import "./Sidebar.css";
 import { Link } from "react-router-dom";
-import { useRouteMatch } from "react-router-dom";
+// import { useRouteMatch } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 import dashboard from "../../assets/home-icon-whitr.png";
 import invest from "../../assets/2.svg";
@@ -14,7 +14,7 @@ import logout from "../../../../Assets/Logout.svg";
 import SidebarContent from "./SidebarContent";
 
 const Sidebar = ({ sidebarOpen, closeSidebar }) => {
-  let match = useRouteMatch();
+  // let match = useRouteMatch();
   return (
     <div className={sidebarOpen ? "sidebar_responsive" : ""} id="sidebar">
       <div className="sidebar__title">

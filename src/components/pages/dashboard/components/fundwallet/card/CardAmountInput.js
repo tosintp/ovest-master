@@ -1,23 +1,23 @@
 import React from "react";
 import { Formik, Form } from "formik";
-import { CardFundingTextInput } from "../../../../Formik/FormLib";
+// import { CardFundingTextInput } from "../../../../Formik/FormLib";
 import * as Yup from "yup";
 import flutter from "../../../../../Assets/flutter.svg";
 import {
-  StyledContainer,
-  StyledFormArea,
-  StyledLabel,
-  StyledTextInput,
-  StyledFormButton,
-  StyledTitle,
+  // StyledContainer,
+  // StyledFormArea,
+  // StyledLabel,
+  // StyledTextInput,
+  // StyledFormButton,
+  // StyledTitle,
   ButtonGroup,
   StyledTextInputBankTransfer,
   StyledBankTransferFormButton,
-  SubTitle,
-  ExtraText,
-  TextLink,
-  colors,
-  StyledTextInputCardFunding,
+  // SubTitle,
+  // ExtraText,
+  // TextLink,
+  // colors,
+  // StyledTextInputCardFunding,
 } from "../../../../../Syles/styles.js";
 import cardlogo from "../../../../../Assets/cardlogo.svg";
 import cardcloseicon from "../../../../../Assets/cardcloseicon.svg";

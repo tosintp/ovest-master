@@ -1,18 +1,18 @@
 import React from "react";
 import "./bank.css";
 import {
-  StyledContainer,
-  StyledFormArea,
-  StyledLabel,
-  StyledTextInput,
-  StyledFormButton,
-  StyledTitle,
-  ButtonGroup,
+  // StyledContainer,
+  // StyledFormArea,
+  // StyledLabel,
+  // StyledTextInput,
+  // StyledFormButton,
+  // StyledTitle,
+  // ButtonGroup,
   StyledBankTransferFormButton,
-  SubTitle,
-  ExtraText,
-  TextLink,
-  colors,
+  // SubTitle,
+  // ExtraText,
+  // TextLink,
+  // colors,
 } from "../../../../../Syles/styles";
 import successicon from "../../../../../Assets/success.svg";
 

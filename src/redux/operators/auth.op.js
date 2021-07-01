@@ -8,9 +8,6 @@ import {
   SignInStart,
   signInFailure,
   signOutSuccess,
-  forgotPasswordStart,
-  forgotPasswordSuccess,
-  forgotPasswordFailure,
   signUpGetCountries,
   signUpGetCountriesFailure,
   // signOutFailure

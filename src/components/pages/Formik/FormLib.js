@@ -4,10 +4,10 @@ import { useField } from "formik";
 import {
   StyledTextInput,
   StyledTextInputBankTransfer,
-  StyledLabel,
+  // StyledLabel,
   StyledIcon,
   ErrorMsg,
-  StyledTextInputCardFunding,
+  // StyledTextInputCardFunding,
 } from "../../Syles/styles";
 
 import { FiEyeOff, FiEye } from "react-icons/fi";

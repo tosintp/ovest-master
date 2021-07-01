@@ -1,13 +1,13 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
+  // BrowserRouter as Router,
   Switch,
   Route,
   useRouteMatch,
 } from "react-router-dom";
 import Main from "../components/main/Main";
-import Navbar from "../components/navbar/Navbar";
-import Sidebar from "../components/sidebar/Sidebar";
+// import Navbar from "../components/navbar/Navbar";
+// import Sidebar from "../components/sidebar/Sidebar";
 import Savest from "../components/Savest/savest";
 import Referral from "../components/Referral/ReferralSection"
 import Transaction from "../../dashboard/components/Transaction/Transaction";

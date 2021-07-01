@@ -1,8 +1,8 @@
 import React from 'react'
 import './Withdrawals.css'
 import TransactionDetails from '../../main/TransactionDetails'
-import uppink from "../../../assets/Uppink.svg";
-import upgreen from "../../../assets/upgreen.svg";
+// import uppink from "../../../assets/Uppink.svg";
+// import upgreen from "../../../assets/upgreen.svg";
 import downred from "../../../assets/downred.svg";
 
 const Withdrawals = () =>{

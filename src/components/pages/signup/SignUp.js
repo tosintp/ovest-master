@@ -30,12 +30,12 @@ import {
   error,
   token,
 } from "../../../redux/selectors/auth.selector";
-import { Redirect, useHistory } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 const SignUp = ({ error, success, loading, user, token }) => {
   const [showLoader, setShowLoader] = useState(false);
   const dispatch = useDispatch();
-  const history = useHistory();
+  // const history = useHistory();
 
   useEffect(() => {
     setShowLoader(loading);

@@ -3,7 +3,6 @@ import { Formik, Form } from "formik";
 import Loader from "react-loader-spinner";
 import * as Yup from "yup";
 import "./Withdrawal-pages.css";
-import { FormControl } from "react-bootstrap";
 import {
   StyledBankTransferFormButton,
   ButtonGroup,

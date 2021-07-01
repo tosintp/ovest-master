@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.css";
-import { makeStyles } from "@material-ui/core/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
 import profile from "../../assets/profile.png";
 import caret from "../../assets/caret.svg";
@@ -8,19 +8,18 @@ import caret from "../../assets/caret.svg";
 import notification from "../../assets/Notification.svg";
 import useAuth from "../../../../../hooks/useAuth";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    "& > *": {
-      margin: theme.spacing(1),
-    },
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     display: "flex",
+//     "& > *": {
+//       margin: theme.spacing(1),
+//     },
+//   },
+// }));
 
 const Navbar = ({ sidebarOpen, openSidebar }) => {
   const { user } = useAuth();
-  const {lastname, firstname} = user.currentUser;
-  const classes = useStyles();
+  const { lastname, firstname } = user.currentUser;
   return (
     <nav className="navbar">
       <div className="nav_icon" onClick={() => openSidebar()}>
@@ -50,7 +49,7 @@ const Navbar = ({ sidebarOpen, openSidebar }) => {
           />
         </a>
         <a href="#!" className="ml-2">
-          {firstname}  {lastname}
+          {firstname} {lastname}
           <img width="10" className="ml-1" src={caret} alt="avatar" />
         </a>
       </div>

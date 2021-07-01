@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+// import Navbar from "../components/Navbar";
 import Home from "../components/pages/Home";
-import FooterContainer from "../components/pages/FooterContainer";
+// import FooterContainer from "../components/pages/FooterContainer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Services from "../components/pages/Services";
 import AboutUs from "../components/pages/AboutUs";
@@ -12,7 +12,7 @@ import SignUp from "../components/pages/signup/SignUp";
 
 import Marketing from "../components/pages/Marketing";
 import Consulting from "../components/pages/Consulting";
-import Founder from "../components/pages/Founder";
+// import Founder from "../components/pages/Founder";
 
 import Dashboard from "../components/pages/dashboard/index";
 import { ProtectedRoute } from "./protectedRoute";

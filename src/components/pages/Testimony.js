@@ -7,7 +7,7 @@ import ovest3 from "../Assets/ovest3.svg";
 import ovest4 from "../Assets/ovest4.svg";
 import ovest5 from "../Assets/ovest5.svg";
 
-import { Col, Row } from "react-bootstrap";
+// import { Col, Row } from "react-bootstrap";
 
 const Testimony = () => {
   return (

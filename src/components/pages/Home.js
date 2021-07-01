@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 // import NavBar from "../Navbar";
-import Group from "../Assets/landingImg.png";
+// import Group from "../Assets/landingImg.png";
 import secure from "../Assets/secure.svg";
 import returns from "../Assets/returns.svg";
 import support from "../Assets/support.svg";

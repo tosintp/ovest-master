@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { connect, useDispatch } from "react-redux";
+import {  useDispatch } from "react-redux";
 import { hideWithdrawalModal } from "../../../../../redux/actions/modal.action";
 // import {CopyToClipboard} from 'react-copy-to-clipboard';
 // import "./fundwallet.css";
@@ -7,7 +7,7 @@ import { hideWithdrawalModal } from "../../../../../redux/actions/modal.action";
 // import backicon from "../../../../Assets/backicon.svg";
 import "./withdrawal.css";
 import closemodalicon from "../../../../Assets/closemodalicon.svg";
-import WithdrawalMethod from "./WithdrawalMethod";
+// import WithdrawalMethod from "./WithdrawalMethod";
 import WithdrawalLogic from "./index";
 
 const WithDrawal = ({ toggleModalAppearance }) => {

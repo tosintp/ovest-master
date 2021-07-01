@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import LogoIcon from "../../Logo/Logo";
 import { TextInput } from "../../pages/Formik/FormLib";
 import Loader from "react-loader-spinner";
 import { Form, Formik, Field } from "formik";
 import * as Yup from "yup";
-import {
-  isLoading,
-  selectCurrentUser,
-  success,
-  error,
-  token,
-} from "../../../redux/selectors/auth.selector";
-import { Redirect, useHistory } from "react-router-dom";
+// import {
+//   isLoading,
+//   selectCurrentUser,
+//   success,
+//   error,
+//   token,
+// } from "../../../redux/selectors/auth.selector";
+// import { Redirect, useHistory } from "react-router-dom";
 import {
   StyledContainer,
   StyledFormArea,
@@ -19,18 +19,18 @@ import {
   StyledTitle,
   ButtonGroup,
   SubTitle,
-  ExtraText,
-  TextLink,
+  // ExtraText,
+  // TextLink,
   colors,
 } from "../../Syles/styles";
 import useAuth from "../../../hooks/useAuth";
 import "../signin/SignIn.css";
 
 const EmailVerification = ({ loading, success }) => {
-  const [showLoader, setShowLoader] = useState(false);
+  const [showLoader] = useState(false);
   const {user} = useAuth();
   // const { email } = user.currentUser;
-  const { lastname, firstname } = user.currentUser;
+  const { lastname } = user.currentUser;
 
   return (
     <StyledContainer>

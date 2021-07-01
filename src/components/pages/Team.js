@@ -1,6 +1,6 @@
 import React from "react";
 import "./team.css";
-import { Row, Col } from "react-bootstrap";
+// import { Row, Col } from "react-bootstrap";
 import team1 from "../Assets/team1.png";
 const Team = () => {
   return (

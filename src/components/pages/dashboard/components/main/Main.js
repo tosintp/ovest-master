@@ -1,28 +1,28 @@
-import React, { useState, useEffect } from "react";
-import { connect, useSelector } from "react-redux";
+import React from "react";
+import { connect } from "react-redux";
 import "./Main.css";
-import hello from "../../assets/hello.svg";
+// import hello from "../../assets/hello.svg";
 // import "./../main/";
 import AddIcon from "@material-ui/icons/Add";
 import BackupOutlinedIcon from "@material-ui/icons/BackupOutlined";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 
-import AccountBal from "./AccountBal";
-import MainTitle from "./MainTitle";
+// import AccountBal from "./AccountBal";
+// import MainTitle from "./MainTitle";
 import download from "../../assets/Download.svg";
 import upload from "../../assets/Upload.svg";
 import MainCenL from "./MainCenL";
 import PackageWrap from "./PackageWrap";
 import apple from "../../assets/apple-btn.png";
 import android from "../../assets/apple-btn.png";
-import MainHeader from "./main-header/MainHeader";
+// import MainHeader from "./main-header/MainHeader";
 import {
   showModal,
   showWithdrawalModal,
 } from "../../../../../redux/actions/modal.action";
 import DashboardLayout from "../../dashboardDefaultLayout/DashboardLayout";
-import { selectCurrentUser } from "../../../../../redux/selectors/auth.selector";
+// import { selectCurrentUser } from "../../../../../redux/selectors/auth.selector";
 import useAuth from "../../../../../hooks/useAuth";
 
 const useStyles = makeStyles((theme) => ({
@@ -33,10 +33,10 @@ const useStyles = makeStyles((theme) => ({
 
 const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
   const classes = useStyles();
-  const [showModal, setShowModal] = useState(false);
-  const CurrentUser = useSelector(selectCurrentUser);
+  // const [showModal, setShowModal] = useState(false);
+  // const CurrentUser = useSelector(selectCurrentUser);
   const { user } = useAuth();
-  const { lastname, firstname } = user.currentUser;
+  const { lastname } = user.currentUser;
 
   // useEffect(() => {
   //   console.log("CurrentUser: ", user);

@@ -28,7 +28,7 @@
 }
 .one {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: left;
   margin-bottom: 88px;
   margin-top: 1rem;

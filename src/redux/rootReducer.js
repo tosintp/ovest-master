@@ -5,7 +5,7 @@ import storage from "redux-persist/lib/storage";
 import authReducer from "./reducers/auth.reducer";
 import DashModalReducer from "./reducers/modal.reducer";
 
-import { sessionReducer } from "redux-react-session";
+// import { sessionReducer } from "redux-react-session";
 
 // const encryptor = encryptTransform({
 //   secretKey: "why-are-you-looking-around",

@@ -1,8 +1,8 @@
 import React from "react";
 import "./Withdrawal-pages.css";
-import successicon from "../../../../../Assets/success.svg";
+// import successicon from "../../../../../Assets/success.svg";
 import cardcloseicon from "../../../../../Assets/cardcloseicon.svg";
-import { StyledBankTransferFormButton } from "../../../../../Syles/styles.js";
+// import { StyledBankTransferFormButton } from "../../../../../Syles/styles.js";
 
 const CardPaymentSuccess = ({ setStage }) => {
   return (

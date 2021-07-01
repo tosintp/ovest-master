@@ -1,13 +1,13 @@
 .popInfo {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   border: 1px solid #dd0707;
   background: #faf0f0;
   box-sizing: border-box;
   height: 60px;
   border-radius: 4px;
-  width: 657px;
+  width: 92%;
 }
 .pop-text-red {
   font-family: Inter;

@@ -1,11 +1,11 @@
 import React from 'react';
-import NoTransaction from './NoTransaction';
+// import NoTransaction from './NoTransaction';
 import Deposits from './Deposits';
 import InvestmentTransaction from './InvestmentTransaction';
 import Withdrawals from './Withdrawals';
 import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
+// import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
@@ -70,9 +70,9 @@ export default function FullWidthTabs() {
     setValue(newValue);
   };
 
-  const handleChangeIndex = (index) => {
-    setValue(index);
-  };
+  // const handleChangeIndex = (index) => {
+  //   setValue(index);
+  // };
 
   return (
     <div className={classes.root}>
@@ -88,18 +88,18 @@ export default function FullWidthTabs() {
         >
           <Tab label="All Transactions" {...a11yProps(0)} style={{fontSize:"15px",textTransform:'none',
         fontWeight: '500',
-        fontSize: '18px',
+        // fontSize: '18px',
         paddingTop: '30px',
         paddingLeft: '25px'
         }} />
           <Tab label="Investments" {...a11yProps(1)} style={{fontSize:"15px",textTransform:'none',
         fontWeight: '500',
-        fontSize: '18px',
+        // fontSize: '18px',
         paddingTop: '30px'
         }}/>
           <Tab label="Withdrawals" {...a11yProps(2)} style={{fontSize:"15px",textTransform:'none',
         fontWeight: '500',
-        fontSize: '18px',
+        // fontSize: '18px',
         paddingTop: '30px'
          }}/>
         </Tabs>

@@ -8,7 +8,7 @@ const RecentTransaction = () => {
   return (
     <div
       style={{
-        width: "657px",
+        width: "92%",
       }}
     >
       <div className="recent-transact">

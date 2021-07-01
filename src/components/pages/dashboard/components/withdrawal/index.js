@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import BAnkAccountMethod from "./withdrawal-pages/BankAccountMethod";
 import BankConfirmPassword from "./withdrawal-pages/BankConfirmPassword";
 import InvestPlan from "./withdrawal-pages/InvestPlan";
@@ -17,6 +17,7 @@ const WithdrawalLogic = ({ stage, setStage }) => {
     case 0:
       currentStage = <WithdrawalMethod setStage={setStage} />;
       break;
+
     case 1:
       currentStage = (
         <>
@@ -120,6 +121,10 @@ const WithdrawalLogic = ({ stage, setStage }) => {
           <TransferToInvestor setStage={setStage} />
         </>
       );
+      break;
+
+    default:
+      currentStage = <WithdrawalMethod setStage={setStage} />;
       break;
   }
 

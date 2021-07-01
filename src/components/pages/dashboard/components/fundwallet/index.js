@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import BankTransfer from "./bank/BankTransfer";
 import BankTransferDetails from "./bank/BankTransferDetails";
 import BankTransferSucces from "./bank/BankTransferSucces";
 import BankTranferVerify from "./bank/BankTransferVerify";
 import AddNewBankCard from "./card/AddNewBankCard";
 import CardAmountInput from "./card/CardAmountInput";
-import CardPayment from "./card/CardAmountInput";
+// import CardPayment from "./card/CardAmountInput";
 import CardFunding from "./card/CardFunding";
-import CardSuccess from "./card/CardPayment";
+// import CardSuccess from "./card/CardPayment";
 import CardPaymentSuccess from "./card/CardPaymentSuccess";
 import FundWalletMethod from "./FundWalletMethod";
 import "./fundwallet.css";

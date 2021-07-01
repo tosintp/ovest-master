@@ -4,7 +4,7 @@ import "./maincen.css";
 
 import CompleteSetup from "./complete-setup/CompleteSetup";
 import RecentTransaction from "./RecentTransaction/RecentTransaction";
-import TransactionChart from "./RecentTransaction/transactionchart/TransactionChart";
+//import TransactionChart from "./RecentTransaction/transactionchart/TransactionChart";
 import NoRecentTransaction from "./no-recent-transaction/NoRecentTransaction";
 
 function MainCenL() {

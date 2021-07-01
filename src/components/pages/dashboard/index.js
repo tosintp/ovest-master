@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { connect } from "react-redux";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import { connect } from "react-redux";
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./dashboardIndex.css";
-import Main from "./components/main/Main";
-import Navbar from "./components/navbar/Navbar";
-import Sidebar from "./components/sidebar/Sidebar";
+// import Main from "./components/main/Main";
+// import Navbar from "./components/navbar/Navbar";
+// import Sidebar from "./components/sidebar/Sidebar";
 import FundWallet from "./components/fundwallet/FundWallet";
 import "./dashboardIndex.css";
 import DashBoardRoute from "./dashboardRoute/DashBoardRoute";
@@ -16,24 +16,24 @@ import {
 import Withdrawal from "./components/withdrawal/Withdrawal";
 
 const Dashboard = () => {
-  const [sidebarOpen, setsidebarOpen] = useState(false);
+  // const [sidebarOpen, setsidebarOpen] = useState(false);
   const showModal = useSelector(showModalState);
   const showWithdrawalModal = useSelector(showWithdrawalModalState);
 
   useEffect(() => {
     console.log("showModal: ", showModal);
-  }, []);
+  });
   useEffect(() => {
     console.log("showWithModal: ", showWithdrawalModal);
-  }, []);
+  });
 
-  const openSidebar = () => {
-    setsidebarOpen(true);
-  };
+  // const openSidebar = () => {
+  //   setsidebarOpen(true);
+  // };
 
-  const closeSidebar = () => {
-    setsidebarOpen(false);
-  };
+  // const closeSidebar = () => {
+  //   setsidebarOpen(false);
+  // };
 
   return (
     <div className="contain">
@@ -49,7 +49,6 @@ const Dashboard = () => {
       >
         <Withdrawal />
       </div>
-      
 
       <DashBoardRoute />
       {/* <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />

@@ -96,7 +96,7 @@ body {
 
 .blurEffect {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   width: 100vw;
   height: 130vh;
   backdrop-filter: blur(0px);

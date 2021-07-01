@@ -1,24 +1,24 @@
 import React from "react";
 import "./card.css";
 import { Formik, Form } from "formik";
-import { CardFundingTextInput } from "../../../../Formik/FormLib";
+// import { CardFundingTextInput } from "../../../../Formik/FormLib";
 import * as Yup from "yup";
 
 import {
-  StyledContainer,
-  StyledFormArea,
-  StyledLabel,
-  StyledTextInput,
-  StyledFormButton,
-  StyledTitle,
+  // StyledContainer,
+  // StyledFormArea,
+  // StyledLabel,
+  // StyledTextInput,
+  // StyledFormButton,
+  // StyledTitle,
   ButtonGroup,
   StyledTextInputBankTransfer,
   StyledBankTransferFormButton,
-  SubTitle,
-  ExtraText,
-  TextLink,
-  colors,
-  StyledTextInputCardFunding,
+  // SubTitle,
+  // ExtraText,
+  // TextLink,
+  // colors,
+  // StyledTextInputCardFunding,
 } from "../../../../../Syles/styles.js";
 
 const CardFunding = ({ setStage }) => {
