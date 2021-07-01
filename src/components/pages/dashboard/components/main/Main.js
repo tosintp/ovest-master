@@ -36,7 +36,7 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
   const [showModal, setShowModal] = useState(false);
   const CurrentUser = useSelector(selectCurrentUser);
   const { user } = useAuth();
-  const {lastname, firstname} = user.currentUser
+  const { lastname, firstname } = user.currentUser;
 
   // useEffect(() => {
   //   console.log("CurrentUser: ", user);
@@ -58,7 +58,6 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
           <div className="main__container">
             {/* <!-- MAIN TITLE STARTS HERE --> */}
             <div className="main__title" style={{ marginBottom: "30px" }}>
-              {/* <img src={hello} alt="hello" /> */}
               <div className="main__greeting">
                 <h1>Morning, {lastname}</h1>
 
@@ -97,6 +96,7 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
                     fontWeight: "500",
                     lineHeight: "30px",
                     textTransform: "capitalize",
+                    marginRight: "5px",
                   }}
                 >
                   Withdraw
@@ -107,7 +107,7 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
             {/* <!-- MAIN TITLE ENDS HERE --> */}
             {/* <!-- MAIN CARDS STARTS HERE --> */}
             <div className=" wallet-card " style={{ marginTop: "10px" }}>
-              <div className="main__cards col-lg-4 ">
+              <div className="main__cards  ">
                 <div className=" w1">
                   <div className="card_inner1">
                     <p className="card-tit ">OVest Wallet Balance</p>
@@ -127,7 +127,7 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
                   </div>
                 </div>
               </div>
-              <div className="main__cards col-lg-4">
+              <div className="main__cards ">
                 <div className="wallet w2">
                   <div className="card_inner">
                     <p className="card-tit">Savest Total Balance</p>
@@ -141,7 +141,7 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
                   </div>
                 </div>
               </div>{" "}
-              <div className="main__cards col-lg-4">
+              <div className="main__cards">
                 <div className="wallet w3">
                   <div className="card_inner">
                     <p className="card-tit">Total Amount Invested</p>
@@ -156,11 +156,11 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
               </div>
             </div>
 
-            <div className="main-center row">
-              <div className="main-center-l col-lg-8">
+            <div className="main-center ">
+              <div className="main-center-l ">
                 <MainCenL />
               </div>
-              <div className="main-center-r col-lg-4">
+              <div className="main-center-r ">
                 <PackageWrap />
                 <div className="mobile-download mt-5">
                   <p>Download the Mobile App</p>

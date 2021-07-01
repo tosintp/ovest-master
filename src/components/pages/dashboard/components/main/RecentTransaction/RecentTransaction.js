@@ -6,7 +6,11 @@ import TransactionDetails from "./../TransactionDetails";
 
 const RecentTransaction = () => {
   return (
-    <div>
+    <div
+      style={{
+        width: "657px",
+      }}
+    >
       <div className="recent-transact">
         <div className="">
           <div className="recentT">

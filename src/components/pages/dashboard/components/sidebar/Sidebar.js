@@ -43,7 +43,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
         <Link to="/dashboard/transaction">
           <SidebarContent image={transcations} title="Transactions" />
         </Link>{" "}
-        <Link to="#">
+        <Link to="/dashboard/referral">
           <SidebarContent image={refferals} title="Referrals" />
         </Link>{" "}
         <Link to="#">

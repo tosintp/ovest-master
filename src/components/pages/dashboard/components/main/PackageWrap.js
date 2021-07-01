@@ -7,7 +7,11 @@ import arrow from "../../assets/footer-arrow.png";
 
 const PackageWrap = () => {
   return (
-    <div>
+    <div
+      style={{
+        marginRight: "5px",
+      }}
+    >
       <PackageDetails
         style={{
           color: "#fd740e",

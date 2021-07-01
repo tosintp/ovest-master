@@ -3,7 +3,11 @@ import "./NoRecentTransaction.css";
 import recentTransac from "../../../assets/recenttransac.png";
 const NoRecentTransaction = () => {
   return (
-    <div>
+    <div
+      style={{
+        width: "657px",
+      }}
+    >
       <div className="recent-transaction">
         <h4>Recent Transactions</h4>
         <div className="no-transact">
