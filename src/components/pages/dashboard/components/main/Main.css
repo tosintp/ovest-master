@@ -71,7 +71,7 @@ main {
 }
 .wallet-card {
   display: flex;
-  margin-right: 5px;
+  /* margin-right: 5px; */
   justify-content: space-between;
 }
 .wallet {

@@ -1,21 +1,22 @@
 .amounts-invested {
   display: flex;
+  justify-content: space-between;
   margin-top: 2rem;
 }
 .amountsinvested-card {
   background: url("../../assets/Rectangle 62.svg");
-  width: 345px;
-  height: 153px;
-  margin-right: 2rem;
+  width: 320px;
+  height: 138px;
+  /* margin-right: 2rem; */
   border-radius: 4px 4px 4px 0px;
 }
 .icon-image {
   background-color: #f3f5f7;
   border-radius: 30px;
-  padding: 8px;
+  padding: 2%;
 }
 .totalinvestment {
-  margin-top: 1.6rem;
+  margin-top: 0.8rem;
   text-align: center;
 }
 .card-tit {

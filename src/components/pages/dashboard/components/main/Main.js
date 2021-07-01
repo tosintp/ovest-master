@@ -57,7 +57,7 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
         <main>
           <div className="main__container">
             {/* <!-- MAIN TITLE STARTS HERE --> */}
-            <div className="main__title" style={{ marginBottom: "30px" }}>
+            <div className="main__title" style={{ marginTop: "1.7rem" }}>
               <div className="main__greeting">
                 <h1>Morning, {lastname}</h1>
 
@@ -96,7 +96,6 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
                     fontWeight: "500",
                     lineHeight: "30px",
                     textTransform: "capitalize",
-                    marginRight: "5px",
                   }}
                 >
                   Withdraw
