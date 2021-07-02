@@ -107,7 +107,7 @@ const WithdrawalLogic = ({ stage, setStage }) => {
         <>
           <button
             onClick={() => {
-              setStage(5);
+              setStage(0);
             }}
             style={{
               border: "none",

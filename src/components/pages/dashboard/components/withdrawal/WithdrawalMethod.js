@@ -41,7 +41,12 @@ const WithdrawalMethod = ({ setStage }) => {
           <img src={bankicon1} alt="saves-icon" />
           <p className="withdrawplan-pa">Bank Account</p>
         </div>
-        <div className="transferplan">
+        <div
+          className="transferplan"
+          onClick={() => {
+            setStage(6);
+          }}
+        >
           <img src={tranfericon1} alt="saves-icon" />
           <p className="withdrawplan-p">Transfer to Ovestor</p>
         </div>
