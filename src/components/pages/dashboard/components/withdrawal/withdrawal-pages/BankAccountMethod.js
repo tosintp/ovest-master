@@ -128,7 +128,7 @@ const BAnkAccountMethod = ({ setStage }) => {
                   <StyledBankTransferFormButton
                     type="submit"
                     onClick={() => {
-                      setStage(2);
+                      setStage(5);
                     }}
                   >
                     Send

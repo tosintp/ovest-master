@@ -1,8 +1,8 @@
 import modalActionTypes from "../types/modal.types";
 
 const INITIAL_STATE = {
-  showModal: false,
-  showWithdrawalModal: false,
+  showModal: true,
+  showWithdrawalModal: true,
 };
 
 const DashModalReducer = (state = INITIAL_STATE, action) => {

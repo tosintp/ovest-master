@@ -288,3 +288,46 @@
 
   color: #999999;
 }
+
+/* card password */
+
+.cardpassword {
+  height: 400px;
+}
+
+.cardpassword-inner {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardpassword-inner > button {
+  background: none;
+  border: none;
+  margin-bottom: 30px;
+}
+
+.cardpassword-inner > h5 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  color: #121212;
+  margin-bottom: 10px;
+}
+
+.cardpassword-inner > p {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  color: #666666;
+  /* margin-bottom: px; */
+  text-align: center;
+}

@@ -84,7 +84,7 @@ const WithdrawalLogic = ({ stage, setStage }) => {
     case 5:
       currentStage = (
         <>
-          <button
+          {/* <button
             onClick={() => {
               setStage(0);
             }}
@@ -96,7 +96,7 @@ const WithdrawalLogic = ({ stage, setStage }) => {
             }}
           >
             <img src={backicon} alt="back icon" />
-          </button>
+          </button> */}
           <BankConfirmPassword setStage={setStage} />
         </>
       );

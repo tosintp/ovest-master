@@ -19,7 +19,7 @@ const FundWallet = ({ toggleModalAppearance }) => {
             <button
               className="closemodalicon-btn"
               onClick={() => {
-                setStage(0);
+                // setStage(0);
                 dispatch(hideModal());
               }}
             >
