@@ -28,7 +28,7 @@ const TransferToInvestor = ({ setStage }) => {
         <Formik
           initialValues={{
             Amount: "",
-            Password: "",
+            email: "",
           }}
           onSubmit={(values, { setSubmitting, setFieldError }) => {
             console.log(values);
@@ -62,9 +62,9 @@ const TransferToInvestor = ({ setStage }) => {
                 Username or Email
               </p>
               <BankTranferDetailsTextInput
-                name="Password"
-                type="password"
-                placeholder="Enter Ovestor’s email address or username"
+                name="email"
+                type="email"
+                placeholder="Enter Ovestor’s email address"
               />
               <ButtonGroup>
                 {!isSubmitting && (
