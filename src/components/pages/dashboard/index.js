@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+
 import { useSelector } from "react-redux";
 // import { connect } from "react-redux";
 // import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -13,51 +14,50 @@ import {
   showModalState,
   showWithdrawalModalState,
 } from "../../../redux/selectors/modal.selector";
+import EmailVerification from "../signup-verify/EmailVerification";
 import Withdrawal from "./components/withdrawal/Withdrawal";
+import useAuth from "../../../hooks/useAuth";
 
 const Dashboard = () => {
   // const [sidebarOpen, setsidebarOpen] = useState(false);
   const showModal = useSelector(showModalState);
   const showWithdrawalModal = useSelector(showWithdrawalModalState);
-
+  const { user } = useAuth();
+  const userIsVerified = Boolean(user.currentUser.email_verified_at);
   useEffect(() => {
     console.log("showModal: ", showModal);
+    console.log(user);
   });
   useEffect(() => {
     console.log("showWithModal: ", showWithdrawalModal);
   });
 
-  // const openSidebar = () => {
-  //   setsidebarOpen(true);
-  // };
+  if (userIsVerified)
+    return (
+      <div className="contain">
+        <div
+          className="blurEffect"
+          style={{ display: showModal ? "block" : "none" }}
+        >
+          <FundWallet />
+        </div>
+        <div
+          className="blurEffect"
+          style={{ display: showWithdrawalModal ? "block" : "none" }}
+        >
+          <Withdrawal />
+        </div>
 
-  // const closeSidebar = () => {
-  //   setsidebarOpen(false);
-  // };
-
-  return (
-    <div className="contain">
-      <div
-        className="blurEffect"
-        style={{ display: showModal ? "block" : "none" }}
-      >
-        <FundWallet />
-      </div>
-      <div
-        className="blurEffect"
-        style={{ display: showWithdrawalModal ? "block" : "none" }}
-      >
-        <Withdrawal />
-      </div>
-
-      <DashBoardRoute />
-      {/* <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
+        <DashBoardRoute />
+        {/* <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
 
       <Main />
 
       <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} /> */}
-    </div>
-  );
+      </div>
+    );
+
+  return <EmailVerification />;
 };
 
 export default Dashboard;

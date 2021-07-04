@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState, useEffect } from "react";
 import LogoIcon from "../../Logo/Logo";
 import { TextInput } from "../../pages/Formik/FormLib";
 import Loader from "react-loader-spinner";
@@ -25,12 +25,23 @@ import {
 } from "../../Syles/styles";
 import useAuth from "../../../hooks/useAuth";
 import "../signin/SignIn.css";
+import { apiPost } from "../../../helpers";
 
 const EmailVerification = ({ loading, success }) => {
   const [showLoader] = useState(false);
-  const {user} = useAuth();
-  // const { email } = user.currentUser;
-  const { lastname } = user.currentUser;
+  const { user } = useAuth();
+  const { email ,lastname } = user.currentUser;
+
+  const sendEmailOtp = async () => {
+    apiPost(`email/otp/send`, {email} ).then((response) => {
+      console.log( response );
+      
+    });
+  };
+
+  useEffect(() => {
+    sendEmailOtp()  }, [])
+  // const { lastname } = user.currentUser;
 
   return (
     <StyledContainer>
@@ -83,13 +94,12 @@ const EmailVerification = ({ loading, success }) => {
           >
             {({ isSubmitting }) => (
               <Form>
-                <TextInput name="email" type="email" placeholder="Email" />
-
                 <TextInput
-                  name="password"
-                  type="password"
-                  placeholder="Password"
+                  name="verifyEmail"
+                  type="tel"
+                  placeholder="Verify Email"
                 />
+
                 <div
                   style={{ display: "flex", justifyContent: "space-between" }}
                 >

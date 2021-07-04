@@ -13,7 +13,10 @@ const FundWallet = ({ toggleModalAppearance }) => {
 
   return (
     <div className="Fund-wallet-method">
-      <div className="Fund-wallet-method-head">
+      <div
+        className="Fund-wallet-method-head"
+       
+      >
         <div className="">
           {stage === 0 ? (
             <button

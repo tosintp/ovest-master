@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {  useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { hideWithdrawalModal } from "../../../../../redux/actions/modal.action";
 // import {CopyToClipboard} from 'react-copy-to-clipboard';
 // import "./fundwallet.css";
@@ -16,7 +16,12 @@ const WithDrawal = ({ toggleModalAppearance }) => {
 
   return (
     <div className="Fund-wallet-method withdrawheading ">
-      <div className="Fund-wallet-method-head withdrawal-wallet-head ">
+      <div
+        className="Fund-wallet-method-head withdrawal-wallet-head"
+        style={{
+          overflowY: "auto",
+        }}
+      >
         <div style={{}}>
           {stage === 0 ? (
             <button

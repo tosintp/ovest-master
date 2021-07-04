@@ -3,6 +3,11 @@ import { connect, useDispatch } from "react-redux";
 import { SignUp as DispatchSignUp } from "../../../redux/operators/auth.op";
 import * as Yup from "yup";
 import {
+  CountryDropdown,
+  RegionDropdown,
+  CountryRegionData,
+} from "react-country-region-selector";
+import {
   StyledContainer,
   StyledFormArea,
   StyledFormButton,
@@ -34,6 +39,7 @@ import { Redirect } from "react-router-dom";
 
 const SignUp = ({ error, success, loading, user, token }) => {
   const [showLoader, setShowLoader] = useState(false);
+  // const [showCountry, setShowCountry] = useState("");
   const dispatch = useDispatch();
   // const history = useHistory();
 
@@ -102,9 +108,32 @@ const SignUp = ({ error, success, loading, user, token }) => {
               username: Yup.string().required("Username is Required"),
             })}
           >
-            {({ isSubmitting }) => (
+            {({ isSubmitting, values, handleBlur, handleChange }) => (
               <Form>
-                <TextInput name="country" type="text" placeholder=" Country" />
+                {/* <TextInput name="country" type="text" placeholder=" Country" /> */}
+                <CountryDropdown
+                  style={{
+                    width: "458px",
+                    height: "48px",
+                    borderRadius: "4px",
+                    color: "#757575",
+                    border: " 1px solid #c4c4c4",
+                    fontSize: "12px",
+                    display: "block",
+                    outline: "none",
+                    transition: "ease-in-out 0.3s",
+                    margin: "19px auto 10px auto",
+                    paddingLeft: "16px",
+                    "&:focus": {
+                      backgroundColor: "#fcf5f5",
+                      color: "black",
+                    },
+                  }}
+                  name="country"
+                  value={values.country}
+                  onChange={(_, e) => handleChange(e)}
+                  onBlur={handleBlur}
+                />
                 <TextInput
                   type="text"
                   name="firstname"

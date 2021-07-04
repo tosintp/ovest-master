@@ -18,6 +18,7 @@
   /* background: #fff0; */
 
   height: 100vh;
+  overflow-y: auto;
 }
 
 .Fund-wallet-method-head > div {
