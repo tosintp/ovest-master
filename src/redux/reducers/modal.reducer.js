@@ -3,6 +3,7 @@ import modalActionTypes from "../types/modal.types";
 const INITIAL_STATE = {
   showModal: true,
   showWithdrawalModal: true,
+  showInvestModal: true,
 };
 
 const DashModalReducer = (state = INITIAL_STATE, action) => {
@@ -18,6 +19,12 @@ const DashModalReducer = (state = INITIAL_STATE, action) => {
 
     case modalActionTypes.HIDE_WITHDRAWAL_MODAL:
       return { ...state, showWithdrawalModal: false };
+
+    case modalActionTypes.SHOW_INVEST_MODAL:
+      return { ...state, showInvestModal: true };
+
+    case modalActionTypes.HIDE_INVEST_MODAL:
+      return { ...state, showInvestModal: false };
 
     default:
       return state;

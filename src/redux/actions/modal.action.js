@@ -12,3 +12,11 @@ export const hideModal = () => ({
 export const hideWithdrawalModal = () => ({
   type: modalActionTypes.HIDE_WITHDRAWAL_MODAL,
 });
+
+export const showInvestModal = () => ({
+  type: modalActionTypes.SHOW_INVEST_MODAL,
+});
+
+export const hideInvestModal = () => ({
+  type: modalActionTypes.HIDE_INVEST_MODAL,
+});

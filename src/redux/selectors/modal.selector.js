@@ -11,6 +11,11 @@ export const showWithdrawalModalState = createSelector(
   (modal) => modal.showWithdrawalModal
 );
 
+export const showInvestModalState = createSelector(
+  [selectModal],
+  (modal) => modal.showInvestModalState
+);
+
 export const hideModalState = createSelector(
   [selectModal],
   (modal) => modal.hideModal
@@ -18,4 +23,9 @@ export const hideModalState = createSelector(
 export const hideWithdrawalModalState = createSelector(
   [selectModal],
   (modal) => modal.showWithdrawalModal
+);
+
+export const hideInvestModalState = createSelector(
+  [selectModal],
+  (modal) => modal.showInvestModalState
 );
