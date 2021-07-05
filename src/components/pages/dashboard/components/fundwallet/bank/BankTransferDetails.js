@@ -1,7 +1,6 @@
 import React from "react";
 import "./bank.css";
 import Loader from "react-loader-spinner";
-
 import { Formik, Form } from "formik";
 import {
   // StyledContainer,
@@ -17,11 +16,17 @@ import {
   // TextLink,
   colors,
 } from "../../../../../Syles/styles";
-import { BankTranferDetailsTextInput } from "../../../../Formik/FormLib";
-
+import { BankTranferDetailsTextInput } from "../../../../Formik/BankDetailsInput";
+import { apiPost } from "../../../../../../helpers";
+import useAuth from "../../../../../../hooks/useAuth";
 import * as Yup from "yup";
 
 const BankTransferDetails = ({ setStage }) => {
+  const { user } = useAuth();
+
+  const changeStage = () => {
+    setStage(3);
+  };
   return (
     <div>
       <div
@@ -50,13 +55,22 @@ const BankTransferDetails = ({ setStage }) => {
       <Formik
         initialValues={{
           amount: "",
-          accountName: "",
-          accountNumber: "",
-
-          bankName: "",
+          account_name: "",
+          account_no: "",
+          bank: "",
         }}
         onSubmit={(values, { setSubmitting, setFieldError }) => {
-          console.log(values);
+          apiPost(`wallet/deposit/bank`, values)
+            .then((data) => {
+              if ( data.statusCode === 200 )
+              {
+                changeStage();
+              }
+            })
+            .catch((err) => {
+              console.log(err);
+            });
+
           // loginUser(values, history, setFieldError, setSubmitting);
         }}
         validationSchema={Yup.object({
@@ -64,11 +78,9 @@ const BankTransferDetails = ({ setStage }) => {
           //   .matches(phoneRegExp, "Phone number is not valid")
           //   .required("Phone Number is Required"),
           amount: Yup.string().required("Amount deposited Field is Required"),
-          accountName: Yup.string().required("Account Name Field is Required"),
-          accountNumber: Yup.string().required(
-            "Account Name Field is Required"
-          ),
-          bankName: Yup.string().required("Bank Name Field is Required"),
+          account_name: Yup.string().required("Account Name Field is Required"),
+          account_no: Yup.string().required("Account Name Field is Required"),
+          bank: Yup.string().required("Bank Name Field is Required"),
         })}
       >
         {({ isSubmitting }) => (
@@ -80,28 +92,23 @@ const BankTransferDetails = ({ setStage }) => {
             />
 
             <BankTranferDetailsTextInput
-              name="accountName"
+              name="account_name"
               type="text"
               placeholder="Account Name sent from"
             />
             <BankTranferDetailsTextInput
-              name="accountNumber"
+              name="account_no"
               type="number"
               placeholder="Account Number sent from"
             />
             <BankTranferDetailsTextInput
-              name="bankName"
+              name="bank"
               type="text"
               placeholder="Bank Name sent from"
             />
             <ButtonGroup>
               {!isSubmitting && (
-                <StyledBankTransferFormButton
-                  type="submit"
-                  onClick={() => {
-                    setStage(3);
-                  }}
-                >
+                <StyledBankTransferFormButton type="submit">
                   Proceed
                 </StyledBankTransferFormButton>
               )}

@@ -9,7 +9,7 @@ import {
 import { Formik, Form } from "formik";
 import Loader from "react-loader-spinner";
 import * as Yup from "yup";
-import { BankTranferDetailsTextInput } from "../../../../Formik/FormLib";
+import { BankTranferDetailsTextInput } from "../../../../Formik/BankDetailsInput";
 
 const BankConfirmPassword = ({ setStage }) => {
   return (

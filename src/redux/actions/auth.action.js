@@ -66,7 +66,6 @@ export const signUpGetCountries = (countries) => ({
   payload: countries,
 });
 
-
 export const signUpGetCountriesFailure = (error) => ({
   type: authActionTypes.SIGN_UP_GET_COUNTRIES_FAILURE,
   payload: error,

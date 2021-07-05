@@ -9,7 +9,7 @@ import {
   colors,
   StyledTextSelectBankTransfer,
 } from "../../../../../Syles/styles";
-import { BankTranferDetailsTextInput } from "../../../../Formik/FormLib";
+import { BankTranferDetailsTextInput } from "../../../../Formik/BankDetailsInput";
 
 const BAnkAccountMethod = ({ setStage }) => {
   return (

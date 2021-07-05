@@ -9,7 +9,7 @@ import {
   ButtonGroup,
   colors,
 } from "../../../../../Syles/styles";
-import { BankTranferDetailsTextInput } from "../../../../Formik/FormLib";
+import { BankTranferDetailsTextInput } from "../../../../Formik/BankDetailsInput";
 const SavestForm = ({ setStage }) => {
   return (
     <div>
