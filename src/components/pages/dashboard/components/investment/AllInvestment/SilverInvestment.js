@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SilverInvestment.css";
+import "../../investment/investmentModal/investModal.css";
+
 import { connect } from "react-redux";
+import { useDispatch } from "react-redux";
+import { hideInvestModal } from "../../../../../../redux/actions/modal.action";
 import Rectangle64 from "../../../assets/Rectangle 64.svg";
 import Rectangle68 from "../../../assets/Rectangle 68.svg";
 import Rectangle66 from "../../../assets/Rectangle 66.svg";
+import closemodalicon from "../../../../../Assets/closemodalicon.svg";
+
 import { showInvestModal } from "../../../../../../redux/actions/modal.action";
 
 const SilverInvestment = ({ toggleModalInvestAppearance }) => {
+  const dispatch = useDispatch();
+
+  const [stage, setStage] = useState(0);
+
   const openModal = () => {
     toggleModalInvestAppearance();
     console.log("Open redux");
@@ -22,9 +32,12 @@ const SilverInvestment = ({ toggleModalInvestAppearance }) => {
             Lock-away funds safely in our Silvest investment plan for
             <span> 3 months</span> with at least <span>NGN50,000.</span>
           </p>
-          <button className="silverinvestment-button" onClick={openModal}>
-            View Details
-          </button>
+
+          <a href="#invest-modal">
+            <button className="silverinvestment-button" onClick={openModal}>
+              View Details
+            </button>
+          </a>
         </div>
       </div>
 
@@ -50,6 +63,44 @@ const SilverInvestment = ({ toggleModalInvestAppearance }) => {
           </p>
           <button className="silverinvestment-button">View Details</button>
         </div>
+      </div>
+
+      <>
+        <div id="invest-modal" className="invest-modal">
+          <div className="investmodal-head">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
+            debitis culpa vel beatae, ipsa quod consequatur doloribus asperiores
+            ratione alias nostrum, reprehenderit magnam numquam tempore totam
+            voluptate quidem molestiae illum.
+            {stage === 0 ? (
+              <a href="#" className="closemodalicon-btn">
+                <img
+                  className="closemodalicon"
+                  src={closemodalicon}
+                  alt="close modal"
+                />
+              </a>
+            ) : null}
+            <div>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
+              molestiae eaque quod corporis veniam aliquam neque nostrum quo sit
+              corrupti.
+              <button
+                onclick={() => {
+                  setStage(1);
+                }}
+              >
+                next
+              </button>
+            </div>
+          </div>
+        </div>
+      </>
+
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis
+        repellendus quae qui? Doloremque perspiciatis a mollitia inventore
+        voluptatem earum.
       </div>
     </div>
   );

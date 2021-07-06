@@ -1,0 +1,26 @@
+.invest-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(153, 153, 153, 0.48);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  z-index: 999;
+}
+
+.invest-modal:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.invest-modal .investmodal-head {
+  background-color: #fff;
+  margin-left: auto;
+  width: 30%;
+  height: 100vh;
+}

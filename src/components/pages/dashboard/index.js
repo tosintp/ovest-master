@@ -53,10 +53,7 @@ const Dashboard = () => {
           <Withdrawal />
         </div>
 
-        {/* <div
-          className="blurEffect"
-          style={{ display: showInvestModal ? "block" : "none" }}
-        >
+        {/* <div className="blurEffect" style={{ display: "block" }}>
           <InvestModal />
         </div> */}
 
