@@ -60,11 +60,12 @@ const BankTransferDetails = ({ setStage }) => {
           bank: "",
         }}
         onSubmit={(values, { setSubmitting, setFieldError }) => {
+          changeStage();
+
           apiPost(`wallet/deposit/bank`, values)
             .then((data) => {
-              if ( data.statusCode === 200 )
-              {
-                changeStage();
+              if (data.statusCode === 200) {
+                console.log(data);
               }
             })
             .catch((err) => {

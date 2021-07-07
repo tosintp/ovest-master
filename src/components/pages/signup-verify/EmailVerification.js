@@ -29,18 +29,18 @@ import { apiPost } from "../../../helpers";
 
 const EmailVerification = ({ loading, success }) => {
   const [showLoader] = useState(false);
-  const { user } = useAuth();
-  const { email ,lastname } = user.currentUser;
+  // const { user } = useAuth();
+  // const { email, lastname } = user.currentUser;
 
-  const sendEmailOtp = async () => {
-    apiPost(`email/otp/send`, {email} ).then((response) => {
-      console.log( response );
-      
-    });
-  };
+  // const sendEmailOtp = async () => {
+  //   apiPost(`email/otp/send`, { email }).then((response) => {
+  //     console.log(response);
+  //   });
+  // };
 
-  useEffect(() => {
-    sendEmailOtp()  }, [])
+  // useEffect(() => {
+  //   sendEmailOtp();
+  // }, []);
   // const { lastname } = user.currentUser;
 
   return (
@@ -60,12 +60,20 @@ const EmailVerification = ({ loading, success }) => {
               style={{
                 fontWeight: "700",
                 textAlign: "left",
-                marginTop: "",
+                paddingLeft: "0",
               }}
             >
               Verify Email
             </StyledTitle>
-            <SubTitle>Enter the verificaion code sent to {lastname} </SubTitle>
+            <SubTitle
+              style={{
+                fontWeight: "normal",
+                textAlign: "left",
+                marginTop: "",
+              }}
+            >
+              Enter the verificaion code sent to{" "}
+            </SubTitle>
           </div>
           <Formik
             initialValues={{
@@ -97,39 +105,10 @@ const EmailVerification = ({ loading, success }) => {
                 <TextInput
                   name="verifyEmail"
                   type="tel"
-                  placeholder="Verify Email"
+                  placeholder="Enter Verification Code"
                 />
 
-                <div
-                  style={{ display: "flex", justifyContent: "space-between" }}
-                >
-                  <label style={{ display: "flex" }}>
-                    <Field
-                      type="checkbox"
-                      name="checked"
-                      value="Two"
-                      style={{
-                        width: "16px",
-                        height: "16px",
-                        background: "#ff0000",
-                      }}
-                    />
-                    <p
-                      style={{
-                        marginLeft: "10px",
-                        fontFamily: "Inter",
-                        fontStyle: "normal",
-                        fontWeight: "normal",
-                        fontSize: "16px",
-                        lineHeight: "19px",
-                        textTransform: "capitalize",
-
-                        color: "#666666",
-                      }}
-                    >
-                      Rememeber Me
-                    </p>
-                  </label>
+                <div style={{ display: "flex", justifyContent: "center" }}>
                   {/* <Link to="#"> */}{" "}
                   <p
                     style={{
@@ -139,11 +118,12 @@ const EmailVerification = ({ loading, success }) => {
                       fontSize: "16px",
                       lineHeight: "19px",
                       textTransform: "capitalize",
+                      textAlign: "center",
 
-                      color: "#666666",
+                      color: "#FD740E",
                     }}
                   >
-                    Forget Password ?
+                    Resend Code
                   </p>
                   {/* </Link> */}
                 </div>

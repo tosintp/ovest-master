@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./bank.css";
+import { Formik, Form } from "formik";
 import uploadfile from "../../../../../Assets/uploadfile.svg";
 import {
   // StyledContainer,
@@ -15,8 +16,47 @@ import {
   // TextLink,
   // colors,
 } from "../../../../../Syles/styles";
+import { apiPost } from "../../../../../../helpers";
 
 const BankTranferVerify = ({ setStage }) => {
+  const [selectedFile, setSelectedFile] = useState();
+  const [isFilePicked, setIsFilePicked] = useState(false);
+  const changeHandler = (event) => {
+    setSelectedFile(event.target.files[0]);
+  };
+
+  const changeStage = () => {
+    setStage(4);
+  };
+  const handleSubmission = (e) => {
+    e.preventDefault();
+    console.log(selectedFile);
+    const formData = new FormData();
+
+    formData.append("File", selectedFile);
+    var pop = formData.get("File").name;
+    var new_pop = [pop];
+    console.log(new_pop);
+
+    apiPost(`wallet/bank/update/pop`, new_pop, {
+      "content-type": undefined,
+      Accept: "application/json",
+    })
+      // fetch("https://ovest.paym.com.ng/api/user/wallet/bank/update/pop", {
+      //   method: "POST",
+      //   body: formData,
+      // })
+      .then((data) => {
+        console.log(data);
+
+        if (data.status === "success") {
+          changeStage();
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <div className="banktransferverify">
       <div
@@ -53,32 +93,36 @@ const BankTranferVerify = ({ setStage }) => {
           <p>Upload the following document to complete your verification</p>
         </div>
 
-        <div className="verify-payment-card">
-          <input type="file" id="upload" />
-          <label for="upload">
-            <img src={uploadfile} alt="Upload file" />
-          </label>
-          <p>
-            Upload a scanned copy or photo of your details to verify your
-            payment.
-          </p>
-        </div>
+        <form onSubmit={handleSubmission}>
+          <div className="verify-payment-card">
+            <label for="upload" className="custom-file-upload">
+              <img src={uploadfile} alt="Upload file" />
+            </label>
+            <input
+              type="file"
+              id="upload"
+              name="upload"
+              className="inputfile"
+              onChange={changeHandler}
+              required
+            />
 
-        <div className="verify-payment-footer">
-          <p>
-            *Please note that if additional informational is needed, Nebbix will
-            inform you via email.
-          </p>
-        </div>
+            <p>
+              Upload a scanned copy or photo of your details to verify your
+              payment.
+            </p>
+          </div>
 
-        <StyledBankTransferFormButton
-          // type="submit"
-          onClick={() => {
-            setStage(4);
-          }}
-        >
-          Verify
-        </StyledBankTransferFormButton>
+          <div className="verify-payment-footer">
+            <p>
+              *Please note that if additional informational is needed, Nebbix
+              will inform you via email.
+            </p>
+          </div>
+          <StyledBankTransferFormButton type="submit">
+            Verify
+          </StyledBankTransferFormButton>
+        </form>
       </div>
     </div>
   );
