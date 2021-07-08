@@ -46,7 +46,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
         <Link to="/dashboard/referral">
           <SidebarContent image={refferals} title="Referrals" />
         </Link>{" "}
-        <Link to="#">
+        <Link to="/dashboard/account">
           <SidebarContent image={accounts} title="Account" />
         </Link>
         <div className="sidebar__logout">

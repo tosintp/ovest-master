@@ -2,7 +2,7 @@ import React from "react";
 import "./transaction-d.css";
 function TransactionDetails({ icon, title, date, amount, status, style }) {
   return (
-    <div className="transactionD">
+    <div className="transactionD" onclick>
       <div className="transactionD-left">
         <img src={icon} alt="" />
         <div className="">

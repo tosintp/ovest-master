@@ -9,9 +9,10 @@ import Main from "../components/main/Main";
 // import Navbar from "../components/navbar/Navbar";
 // import Sidebar from "../components/sidebar/Sidebar";
 import Savest from "../components/Savest/savest";
-import Referral from "../components/Referral/ReferralSection"
+import Referral from "../components/Referral/ReferralSection";
 import Transaction from "../../dashboard/components/Transaction/Transaction";
 import Investment from "../../dashboard/components/investment/Investment";
+import Account from "../components/AccountPage/Account";
 
 const DashBoardRoute = ({ sidebarOpen, openSidebar, closeSidebar }) => {
   let match = useRouteMatch();
@@ -31,11 +32,9 @@ const DashBoardRoute = ({ sidebarOpen, openSidebar, closeSidebar }) => {
           exact
           component={Transaction}
         />
-          <Route
-          path={`${match.path}/referral`}
-          exact
-          component={Referral}
-        />
+        <Route path={`${match.path}/referral`} exact component={Referral} />
+
+        <Route path={`${match.path}/account`} exact component={Account} />
       </Switch>
 
       {/* <Sidebar {...{sidebarOpen, closeSidebar, match}} /> */}
