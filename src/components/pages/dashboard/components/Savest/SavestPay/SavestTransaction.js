@@ -1,7 +1,8 @@
 import React from 'react'
 import SavestCard from '../SavestCard'
 import './SavesTransaction.css'
-import Tabs from "../SavestPay/Tabs"
+import Tabs from "../SavestPay/Tabs";
+import TransactionCard from './Transactioncard';
 // import Transactiondetails from './Transactiondetails'
 
 const SavestTransaction = () => {
@@ -13,7 +14,13 @@ const SavestTransaction = () => {
           <p>Savest Transactions</p>
           <span>View Earnings</span>
         </div>
-        <Tabs />
+        <div style={{
+          display: "flex",
+          justifyContent: "space-between",
+        }}>
+          <Tabs />
+          <TransactionCard/>
+        </div>
         {/* <Transactiondetails/> */}
       </div>
     </div>

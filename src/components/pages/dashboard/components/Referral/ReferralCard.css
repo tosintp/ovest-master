@@ -10,24 +10,7 @@
   border: 1px solid #e6e6e6;
   box-sizing: border-box;
   border-radius: 4px;
-}
-
-.card-two{
-  width: 320px;
-  height: 153px;
-  border: 1px solid #e6e6e6;
-  box-sizing: border-box;
-  border-radius: 4px;
-  margin-left: 35px;
-}
-
-.card-three{
-   width: 320px;
-  height: 153px;
-  border: 1px solid #e6e6e6;
-  box-sizing: border-box;
-  border-radius: 4px;
-  margin-left: 35px; 
+  margin-top: 2rem;
 }
 
 .referral-card p{

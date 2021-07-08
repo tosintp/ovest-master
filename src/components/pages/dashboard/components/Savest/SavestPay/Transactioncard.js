@@ -1,7 +1,7 @@
 import React from "react";
 import "./Transactioncard.css";
 
-const Transaction = () => {
+const TransactionCard = () => {
   return (
     <div className="TransactionSection">
       <div className="Savings">
@@ -80,4 +80,4 @@ const Transaction = () => {
   );
 };
 
-export default Transaction;
+export default TransactionCard;

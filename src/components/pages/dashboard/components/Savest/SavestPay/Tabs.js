@@ -7,7 +7,6 @@ import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import TransactionDetails from "../SavestPay/Transactiondetails";
-import Transactioncard from "../SavestPay/Transactioncard";
 import "./Tabs.css";
 import Debitransaction from "./DebitTransaction";
 import Creditransaction from "./Creditransaction";
@@ -55,11 +54,11 @@ const useStyles = makeStyles((theme) => ({
   },
   indicator: {
     backgroundColor: "#1890ff",
-    maxWidth: "100px",
-    marginLeft: "10px",
+    maxWidth: "300px",
   },
   tabs: {
-    borderBottom: `1px solid ${theme.palette.divider}`,
+    borderBottom: `1px solid ${ theme.palette.divider }`,
+    width: "670px",
   },
 }));
 
@@ -101,7 +100,7 @@ export default function ScrollableTabsButtonAuto() {
             fontSize: "1.6rem",
             // paddingRight: "240px",
             position: "relative",
-            right: 100,
+            right: 50,
             textTransform: "none",
 
             // paddingRight:"180px",
@@ -115,28 +114,25 @@ export default function ScrollableTabsButtonAuto() {
             paddingRight: "1.6rem",
             fontSize: "1.6rem",
             position: "relative",
-            right: 130,
+            right: 70,
             textTransform: "none",
           }}
         />
       </Tabs>
       <TabPanel value={value} index={0}>
-        <div className="mr-5 transaction">
+        {/* <div className="mr-5 transaction"> */}
           <TransactionDetails />
-          <Transactioncard />
-        </div>
+        {/* </div> */}
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <div className="transaction">
+        {/* <div className="transaction"> */}
           <Creditransaction />
-          <Transactioncard />
-        </div>
+        {/* </div> */}
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <div className="transaction">
+        {/* <div className="transaction"> */}
           <Debitransaction />
-          <Transactioncard />
-        </div>
+        {/* </div> */}
       </TabPanel>
     </div>
   );

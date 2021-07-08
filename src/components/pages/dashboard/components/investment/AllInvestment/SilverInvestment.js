@@ -34,9 +34,7 @@ const SilverInvestment = ({ toggleModalInvestAppearance }) => {
           </p>
 
           <a href="#invest-modal">
-            <button className="silverinvestment-button" onClick={openModal}>
-              View Details
-            </button>
+            <button className="silverinvestment-button">View Details</button>
           </a>
         </div>
       </div>
@@ -68,10 +66,6 @@ const SilverInvestment = ({ toggleModalInvestAppearance }) => {
       <>
         <div id="invest-modal" className="invest-modal">
           <div className="investmodal-head">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
-            debitis culpa vel beatae, ipsa quod consequatur doloribus asperiores
-            ratione alias nostrum, reprehenderit magnam numquam tempore totam
-            voluptate quidem molestiae illum.
             {stage === 0 ? (
               <a href="#" className="closemodalicon-btn">
                 <img
@@ -82,17 +76,18 @@ const SilverInvestment = ({ toggleModalInvestAppearance }) => {
               </a>
             ) : null}
             <div>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
-              molestiae eaque quod corporis veniam aliquam neque nostrum quo sit
-              corrupti.
-              <button
+              {/* <button
                 onclick={() => {
                   setStage(1);
                 }}
               >
                 next
-              </button>
+              </button> */}
             </div>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
+            debitis culpa vel beatae, ipsa quod consequatur doloribus asperiores
+            ratione alias nostrum, reprehenderit magnam numquam tempore totam
+            voluptate quidem molestiae illum.
           </div>
         </div>
       </>

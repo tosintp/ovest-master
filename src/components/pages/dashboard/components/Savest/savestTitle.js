@@ -1,29 +1,39 @@
 import React from 'react'
+import {connect} from 'react-redux'
 import AddIcon from "@material-ui/icons/Add";
 import BackupOutlinedIcon from "@material-ui/icons/BackupOutlined";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
-import './SavestTitle.css'
+import './SavestTitle.css';
+import { showModal } from "../../../../../redux/actions/modal.action";
+import useAuth from "../../../../../hooks/useAuth";
+
 
 const useStyles = makeStyles((theme) => ({
   button: {
     margin: theme.spacing(1),
   },
 }));
-
-export default function IconLabelButtons() {
+const SavestTitle = ( { toggleModalAppearance }) =>
+{
   const classes = useStyles();
+  const openModal = () => {
+    toggleModalAppearance();
+    console.log("open redux");
+  };
+  const { user } = useAuth();
 
   return (
     <div className="savest">
       <div className="savestPage">
         <div className="SavestHeader">
           <h1>Savest</h1>
-          <p>Hi Angela, let’s help you save towards a goal</p>
+          <p>Hi {user.currentUser.lastname}, let’s help you save towards a goal</p>
         </div>
         <div className="buttonSection">
           <div>
             <Button
+              onClick={openModal}
               variant="contained"
               className={classes.button}
               startIcon={<AddIcon />}
@@ -60,5 +70,10 @@ export default function IconLabelButtons() {
       </div>
     </div>
   );
-}
+  };
+const mapDispatchToProps = (dispatch) => ({
+toggleModalAppearance: () => dispatch(showModal()),
+// toggleWithdrawalModalAppearance: () => dispatch(showWithdrawalModal()),
+});
+export default connect(null, mapDispatchToProps)(SavestTitle);
 

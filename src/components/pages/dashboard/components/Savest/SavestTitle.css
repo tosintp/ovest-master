@@ -5,6 +5,7 @@
 .savestPage {
   display: flex;
   justify-content: space-between;
+  margin-top: 1.7rem;
 }
 .SavestHeader > h1 {
   font-family: Inter;
@@ -15,24 +16,21 @@
   text-align: left;
   letter-spacing: 0.03em;
   color: #0768f6;
-  margin-top: 27px;
-  margin-left: 10px;
 }
 
 .SavestHeader > p {
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 19px;
+  font-size: 1.4rem;
+  line-height: 17px;
   letter-spacing: 0.03em;
   color: #666666;
-  margin-top: 12px;
-  margin-left: 10px;
 
 }
 
 .buttonSection {
   display: flex;
-  margin-top: 32px;
+ justify-content: space-between;
+  /* margin-top: 32px; */
 }

@@ -14,6 +14,7 @@ const ReferralSection = () => {
           <div
             style={{
               display: "flex",
+              justifyContent:"space-between"
             }}
           >
             <Paycard />
