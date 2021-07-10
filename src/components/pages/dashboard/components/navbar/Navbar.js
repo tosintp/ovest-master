@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 // import { makeStyles } from "@material-ui/core/styles";
-import Avatar from "@material-ui/core/Avatar";
+// import Avatar from "@material-ui/core/Avatar";
 import profile from "../../assets/profile.png";
 import caret from "../../assets/caret.svg";
 
 import notification from "../../assets/Notification.svg";
 import useAuth from "../../../../../hooks/useAuth";
+import NavLeft from "./NavbarRight";
 
 // const useStyles = makeStyles((theme) => ({
 //   root: {
@@ -18,10 +19,16 @@ import useAuth from "../../../../../hooks/useAuth";
 // }));
 
 const Navbar = ({ sidebarOpen, openSidebar }) => {
+  const [acountOpen, setAccountOpen] = useState(false);
   const { user } = useAuth();
   const { lastname, firstname } = user.currentUser;
   return (
-    <nav className="navbar">
+    <nav
+      className="Navbar"
+      style={{
+        // background: "black",
+      }}
+    >
       <div className="nav_icon" onClick={() => openSidebar()}>
         <i className="fa fa-bars" aria-hidden="true"></i>
       </div>
@@ -29,31 +36,12 @@ const Navbar = ({ sidebarOpen, openSidebar }) => {
       <div className="navbar__left">
         <h1>ACCOUNT OVERVIEW</h1>
       </div>
-      <div className="navbar__right ml-">
-        <a href="#!">
-          <img
-            width="30"
-            className="notification"
-            src={notification}
-            alt="avatar"
-          />
-        </a>
-        <a href="#!">
-          <Avatar
-            alt="Travis Howard"
-            src={profile}
-            style={{
-              border: "5px solid #fec59a",
-              // padding: "px",
-            }}
-          />
-        </a>
-        <a href="#!" className="ml-2">
-          {firstname} {lastname}
-          <img width="10" className="ml-1" src={caret} alt="avatar" />
-        </a>
-      </div>
+
       {/* </div> */}
+
+      <div className="navbar__right ml-2">
+        <NavLeft />
+      </div>
     </nav>
   );
 };

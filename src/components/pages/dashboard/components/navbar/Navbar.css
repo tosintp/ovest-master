@@ -1,4 +1,4 @@
-.navbar {
+.Navbar {
   background: "#E5E5E5";
   grid-area: nav;
   height: 60px;
@@ -37,7 +37,7 @@
 .notification {
   width: 17px;
   height: 15.8px;
-  /* margin-right: 38px; */
+  margin-right: 18px;
 }
 .navbar__left .active_link {
   color: #265acc;
@@ -46,9 +46,9 @@
 }
 
 .navbar__right {
-  display: flex;
+  /* display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: center; */
   margin-right: 40px;
 }
 

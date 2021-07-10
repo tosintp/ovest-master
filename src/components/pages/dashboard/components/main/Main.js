@@ -79,6 +79,7 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
                     fontSize: "15px",
                     fontWeight: "500",
                     lineHeight: "30px",
+                    borderRadius: "4px 4px  4px 0px",
                   }}
                 >
                   Fund Wallet
@@ -96,6 +97,7 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
                     fontWeight: "500",
                     lineHeight: "30px",
                     textTransform: "capitalize",
+                    borderRadius: "4px 4px  4px 0px",
                   }}
                 >
                   Withdraw

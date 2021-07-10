@@ -8,8 +8,6 @@ import "./dashboardIndex.css";
 // import Navbar from "./components/navbar/Navbar";
 // import Sidebar from "./components/sidebar/Sidebar";
 import FundWallet from "./components/fundwallet/FundWallet";
-import InvestModal from "./components/investment/investmentModal/investModal";
-
 import "./dashboardIndex.css";
 import DashBoardRoute from "./dashboardRoute/DashBoardRoute";
 import {

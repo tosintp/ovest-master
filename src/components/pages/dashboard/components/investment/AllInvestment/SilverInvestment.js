@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./SilverInvestment.css";
-import "../../investment/investmentModal/investModal.css";
+import "../../investment/investment-modal/InvestmentModal.css";
 
 import { connect } from "react-redux";
 import { useDispatch } from "react-redux";
@@ -13,9 +13,9 @@ import closemodalicon from "../../../../../Assets/closemodalicon.svg";
 import { showInvestModal } from "../../../../../../redux/actions/modal.action";
 
 const SilverInvestment = ({ toggleModalInvestAppearance }) => {
+  const [stage, setStage] = useState(0);
   const dispatch = useDispatch();
 
-  const [stage, setStage] = useState(0);
 
   const openModal = () => {
     toggleModalInvestAppearance();
@@ -33,7 +33,7 @@ const SilverInvestment = ({ toggleModalInvestAppearance }) => {
             <span> 3 months</span> with at least <span>NGN50,000.</span>
           </p>
 
-          <a href="#invest-modal">
+          <a href="#silver-modal">
             <button className="silverinvestment-button">View Details</button>
           </a>
         </div>
@@ -64,7 +64,7 @@ const SilverInvestment = ({ toggleModalInvestAppearance }) => {
       </div>
 
       <>
-        <div id="invest-modal" className="invest-modal">
+        <div id="silver-modal" className="invest-modal">
           <div className="investmodal-head">
             {stage === 0 ? (
               <a href="#" className="closemodalicon-btn">
@@ -84,10 +84,7 @@ const SilverInvestment = ({ toggleModalInvestAppearance }) => {
                 next
               </button> */}
             </div>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum
-            debitis culpa vel beatae, ipsa quod consequatur doloribus asperiores
-            ratione alias nostrum, reprehenderit magnam numquam tempore totam
-            voluptate quidem molestiae illum.
+        
           </div>
         </div>
       </>
