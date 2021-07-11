@@ -1,8 +1,8 @@
 import React from 'react';
 // import NoTransaction from './NoTransaction';
-import Deposits from './Deposits';
+import Deposits from './AllTransaction';
 import InvestmentTransaction from './InvestmentTransaction';
-import Withdrawals from './Withdrawals';
+import Withdrawals from './WithdrawalTransaction';
 import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 // import AppBar from '@material-ui/core/AppBar';

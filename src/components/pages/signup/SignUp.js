@@ -19,9 +19,13 @@ import {
   colors,
 } from "../../Syles/styles";
 
-// import "../../../";
 import LogoIcon from "../../Logo/Logo";
-import { TextInput } from "../../pages/Formik/FormLib";
+import {
+  TextInput,
+  PhoneNumberTextInput,
+  FlagTextInput,
+  CodeTextInput,
+} from "../../pages/Formik/FormLib";
 import applecircle from "../../Assets/applecirlce.png";
 import fbcircle from "../../Assets/fb-circle.png";
 import googlecircle from "../../Assets/googlecircle.png";
@@ -36,6 +40,9 @@ import {
   token,
 } from "../../../redux/selectors/auth.selector";
 import { Redirect } from "react-router-dom";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+import "./SignUp.css";
 
 const SignUp = ({ error, success, loading, user, token }) => {
   const [showLoader, setShowLoader] = useState(false);
@@ -154,7 +161,19 @@ const SignUp = ({ error, success, loading, user, token }) => {
                   type="text"
                   placeholder=" Username"
                 />
-                <TextInput type="tel" name="phone" placeholder="Phone Number" />{" "}
+                {/* <TextInput type="tel" name="phone" placeholder="Phone Number" />{" "} */}
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-around",
+                  }}
+                >
+                  {/* <FlagTextInput type="tel" name="flag" /> */}
+                  <PhoneInput country="de" regions={"europe"} />
+
+                  {/* <CodeTextInput type="tel" name="code" />
+                  <PhoneNumberTextInput type="tel" name="phone" /> */}
+                </div>
                 <TextInput
                   type="text"
                   name="referal"

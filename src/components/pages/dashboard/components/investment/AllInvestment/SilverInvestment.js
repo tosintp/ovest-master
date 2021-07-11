@@ -8,14 +8,14 @@ import { hideInvestModal } from "../../../../../../redux/actions/modal.action";
 import Rectangle64 from "../../../assets/Rectangle 64.svg";
 import Rectangle68 from "../../../assets/Rectangle 68.svg";
 import Rectangle66 from "../../../assets/Rectangle 66.svg";
-import closemodalicon from "../../../../../Assets/closemodalicon.svg";
+// import closemodalicon from "../../../../../Assets/closemodalicon.svg";
+import backicon from "../../../../../Assets/backicon.svg";
 
 import { showInvestModal } from "../../../../../../redux/actions/modal.action";
 
 const SilverInvestment = ({ toggleModalInvestAppearance }) => {
   const [stage, setStage] = useState(0);
   const dispatch = useDispatch();
-
 
   const openModal = () => {
     toggleModalInvestAppearance();
@@ -68,32 +68,17 @@ const SilverInvestment = ({ toggleModalInvestAppearance }) => {
           <div className="investmodal-head">
             {stage === 0 ? (
               <a href="#" className="closemodalicon-btn">
-                <img
+                {/* <img
                   className="closemodalicon"
-                  src={closemodalicon}
+                  src={backicon}
                   alt="close modal"
-                />
+                /> */}
               </a>
             ) : null}
-            <div>
-              {/* <button
-                onclick={() => {
-                  setStage(1);
-                }}
-              >
-                next
-              </button> */}
-            </div>
-        
+            <div></div>
           </div>
         </div>
       </>
-
-      <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore omnis
-        repellendus quae qui? Doloremque perspiciatis a mollitia inventore
-        voluptatem earum.
-      </div>
     </div>
   );
 };

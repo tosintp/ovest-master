@@ -50,6 +50,71 @@ export const StyledTextInput = styled.input`
     color: ${colors.textColor};
   }
 `;
+
+export const StyledPhoneTextInput = styled.input`
+  width: 300px;
+  height: 48px;
+  /* padding: 16px; */
+  padding-left: 16px;
+  font-size: 12px;
+  color: #c4c4c4;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  display: block;
+  margin: 19px auto 10px auto;
+  transition: ease-in-out 0.3s;
+  outline: none;
+  /* background-color: #fcf5f5; */
+
+  &:focus {
+    /* border: 1px solid #dd0707; */
+    background-color: #fcf5f5;
+    color: ${colors.textColor};
+  }
+`;
+
+export const StyledCodeTextInput = styled.input`
+  width: 70px;
+  height: 48px;
+  /* padding: 16px; */
+  padding-left: 16px;
+  font-size: 12px;
+  color: #c4c4c4;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  display: block;
+  margin: 19px auto 10px auto;
+  transition: ease-in-out 0.3s;
+  outline: none;
+  /* background-color: #fcf5f5; */
+
+  &:focus {
+    /* border: 1px solid #dd0707; */
+    background-color: #fcf5f5;
+    color: ${colors.textColor};
+  }
+`;
+export const StyledFlagTextInput = styled.input`
+  width: 70px;
+  height: 48px;
+  /* padding: 16px; */
+  padding-left: 16px;
+  font-size: 12px;
+  color: #c4c4c4;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  display: block;
+  margin: 19px auto 10px auto;
+  transition: ease-in-out 0.3s;
+  outline: none;
+  /* background-color: #fcf5f5; */
+
+  &:focus {
+    /* border: 1px solid #dd0707; */
+    background-color: #fcf5f5;
+    color: ${colors.textColor};
+  }
+`;
 export const StyledEmailVerifyTextInput = styled.input`
   width: 158px;
   height: 48px;

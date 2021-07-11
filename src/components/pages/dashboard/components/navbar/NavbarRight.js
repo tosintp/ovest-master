@@ -7,19 +7,9 @@ import { CSSTransition } from "react-transition-group";
 import { ReactComponent as ArrowIcon } from "./assests/caret.svg";
 import navlogout from "../../assets/navlogout.svg";
 import navprofile from "../../assets/navprofile.svg";
-
+import { Link } from "react-router-dom";
 import "./navleft.css";
 import useAuth from "../../../../../hooks/useAuth";
-
-// function NavLeft() {
-//   return (
-//     <Navbar>
-//       <NavItem icon={<ArrowIcon />}>
-//         <DropdownMenu></DropdownMenu>
-//       </NavItem>
-//     </Navbar>
-//   );
-// }
 
 function NavRight(props) {
   return (
@@ -60,7 +50,7 @@ function NavItem(props) {
       </li>
 
       <li className="nav-item">
-        <a className="ml-3" href="#" onClick={() => setOpen(!open)}>
+        <a className="ml-3" onClick={() => setOpen(!open)}>
           {firstname} {lastname}
           <img width="10" className="ml-2" src={caret} alt="avatar" />
         </a>
@@ -111,19 +101,21 @@ function DropdownMenu() {
       >
         <div className="menu">
           <DropdownItem style={{ color: "" }}>
-            <img
-              src={navprofile}
-              alt="nav-profile-logo"
-              className="icon-button  pr-3"
-            />
-            <p
-              style={{
-                color: "#666666",
-                marginTop: "8px",
-              }}
-            >
-              Profile
-            </p>
+            <Link to="/dashboard/account" className="menu-item">
+              <img
+                src={navprofile}
+                alt="nav-profile-logo"
+                className="icon-button  pr-3"
+              />
+              <p
+                style={{
+                  color: "#666666",
+                  marginTop: "8px",
+                }}
+              >
+                Profile
+              </p>
+            </Link>
           </DropdownItem>
 
           <DropdownItem>
