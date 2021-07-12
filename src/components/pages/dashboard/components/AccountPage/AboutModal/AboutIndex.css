@@ -1,0 +1,10 @@
+.current-page {
+overflow-y: auto;
+height: 90vh;
+}
+
+.back-icon{
+  margin-top: 31px;
+}
+
+

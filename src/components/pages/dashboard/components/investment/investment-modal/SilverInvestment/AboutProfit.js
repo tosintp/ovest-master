@@ -9,7 +9,7 @@ const AboutProfit = ({ setPage }) => {
         {/* <button
           className="closemodaliconsucess-btn"
           onClick={() => {
-            setPage(0);
+            setPage(0); 
           }}
         >
           <img

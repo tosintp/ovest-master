@@ -147,6 +147,10 @@
     background: #fff;
     float: right;
   }
+  .startinvestment-main {
+      width: 90%;
+      margin: auto;
+  }
   
 .startinvestment-body {
     width: 90%;
@@ -254,6 +258,7 @@
 }
 
 /* CONFIRM INVESTMENT */
+
 .confirminvestment-main {
     margin-top: 2rem;
 }

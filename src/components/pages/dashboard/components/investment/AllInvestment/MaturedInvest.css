@@ -1,0 +1,35 @@
+.matured {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: #038830;
+    margin-left: 2.3rem;
+}
+.matured-main {
+    margin-left: 9rem;
+    margin-top: 3rem;
+}
+.matured-naira {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    color: #0768F6;
+    margin-top: 8rem;
+    margin-left: 1.1rem;
+}
+.matured-balance {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    color: #666666;
+    margin-left: 2.1rem;
+}

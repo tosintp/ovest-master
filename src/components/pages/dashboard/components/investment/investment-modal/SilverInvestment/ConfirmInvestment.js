@@ -3,7 +3,8 @@ import './SilverInvestmentDetails.css'
 
 const ConfirmInvestment = ({setPage}) => {
     return (
-        <div className="startinvestment-body">
+        <div className="silvestinvestment-body">
+            <div className="startinvestment-main">
         <div className="confirminvestment-main">
         <h5 className="confirminvestment-h5"> Confirm Investment</h5>
       <p className="confirminvestment-textbody mt-2">Invest in silvest plan and earn 50% interest in 3 months</p>
@@ -60,6 +61,7 @@ const ConfirmInvestment = ({setPage}) => {
             <span> OVest terms and conditions</span></label>
         </div>
         <button className="invest" onClick={() => setPage(3)}>Invest</button>
+        </div>
       </div>
     )
 }

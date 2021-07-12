@@ -38,9 +38,9 @@ const IbadanLandvest = ({setPage}) => {
         </div>
         <p className="landvest-p">Become a land-owner at Moniya, Ibadan in <span>6 months </span>by investing
          <span>N650,000 </span>instead of <span>N1,400,000</span></p>
-         <button className="landvest-button mb-4">View Details</button>
+         <button onClick={() => setPage(3)} className="landvest-button mb-4">View Details</button>
       </div>
-          </div>
+      </div>
         </div>
         </div>
     )

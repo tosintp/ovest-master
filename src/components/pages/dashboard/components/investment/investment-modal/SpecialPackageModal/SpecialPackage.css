@@ -86,4 +86,16 @@ select {
     float: right;
     margin-right: 1rem;
  }
+
+ /* invest now */
+ .investamount-money {
+   font-family: Inter;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 16px;
+   line-height: 16px;
+   letter-spacing: 0.03em;
+   color: #038830;
+   
+ }
  

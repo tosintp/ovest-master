@@ -95,7 +95,7 @@ const InvestmentIndex = ({page , setPage}) => {
  }
 
     return (
-        <div>
+        <div className="current-stage">
             {currentPage}
         </div>
     )

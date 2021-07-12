@@ -2,6 +2,7 @@ import React from 'react'
 import SelectLocation from './SelectLocation';
 import SpecialInvestDetails from './SpecialInvestDetails';
 import IbadanLandvest from './IbadanLandvest'
+import SpecialPackageInvestNow from './SpecialPackageInvestNow';
 import backicon from "../../../../../../Assets/backicon.svg";
 
 
@@ -34,7 +35,7 @@ const SpecialPackageIndex = ({page , setPage}) => {
             <button
               className="backicon"
               onClick={() => {
-                  setPage(0)
+                  setPage(1)
                 }}
             >
               <img src={backicon} alt="back icon" />
@@ -43,10 +44,26 @@ const SpecialPackageIndex = ({page , setPage}) => {
           </>
           );
           break;
+
+          case 3:
+        currentPage = (
+          <>
+            <button
+              className="backicon"
+              onClick={() => {
+                  setPage(2)
+                }}
+            >
+              <img src={backicon} alt="back icon" />
+            </button>
+            <SpecialPackageInvestNow setPage={setPage} />
+          </>
+          );
+          break;
  }
 
     return (
-        <div>
+        <div className="current-stage">
             {currentPage}
         </div>
     )

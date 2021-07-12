@@ -21,7 +21,7 @@ const SelectLocation = ({setPage}) => {
         <div className="note-main">
           <p className="note">Location selected would determine landvest package that will be diisplayed</p>
       </div>
-      <button className="invest" onClick={() => setPage(1)}>Invest</button>
+      <button className="invest" onClick={() => setPage(2)}>Invest</button>
         </div>
         </div>
     )

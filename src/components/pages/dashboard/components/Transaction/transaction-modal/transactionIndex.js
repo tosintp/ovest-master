@@ -1,5 +1,6 @@
 import React from "react";
 import AllTransactionModal from "./AllTransactionModal";
+import MyInvestmentModal from "./MyInvestmentModal";
 
 export const AllTransactionIndex = ({ Transac, setTransac }) => {
   let currentTransacation;
@@ -14,4 +15,17 @@ export const AllTransactionIndex = ({ Transac, setTransac }) => {
   return <div className="current-page">{currentTransacation}</div>;
 };
 
-export const myTransaction = ( { }) => {};
+export const InvestmentTransactionIndex = ({ Transac, setTransac }) => {
+  let currentInvestmentTransacation;
+  switch (Transac) {
+    case 0:
+      currentInvestmentTransacation = (
+        <MyInvestmentModal setTransac={setTransac} />
+      );
+      break;
+
+    default:
+      break;
+  }
+  return <div className="current-page">{currentInvestmentTransacation}</div>;
+};

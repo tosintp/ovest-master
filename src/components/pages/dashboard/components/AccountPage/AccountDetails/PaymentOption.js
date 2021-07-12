@@ -16,7 +16,7 @@ const PaymentOption = () => {
       width: 32,
       height: 20,
       padding: 0,
-      margin: theme.spacing(1),
+      margin: theme.spacing( 1 ),
       marginTop: "19px",
     },
     switchBase: {
