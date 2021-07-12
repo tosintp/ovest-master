@@ -1,3 +1,8 @@
+.current-page > {
+  overflow-y: scroll;
+  height: 90vh;
+}
+
 /* all transaction */
 .alltransac-modal {
   width: 90%;
@@ -163,5 +168,3 @@
   color: cornflowerblue;
   border: none;
 }
-
-
