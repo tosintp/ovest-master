@@ -1,13 +1,15 @@
 import React from 'react'
 import './SilverInvestmentDetails.css'
-import backtick from '../../../../assets/backtick.svg'
-import cardicon from '../../../../assets/card-icon.svg'
+import backtick from '../../../../../assets/backtick.svg'
+import cardicon from '../../../../../assets/card-icon.svg'
 
 
 
 const PaymentMethod = ({setPage}) => {
     return (
         <div className="startinvestment-body">
+            <div className="startinvestment-main">
+
             <div className="paymentmethod-main">
                 <h5 className="paymentmethod-header">Payment Method</h5>
                 <div className="payment-cards">
@@ -32,6 +34,8 @@ const PaymentMethod = ({setPage}) => {
                     </div>
                 </div>
             </div>
+            </div>
+
         </div>
     )
 }

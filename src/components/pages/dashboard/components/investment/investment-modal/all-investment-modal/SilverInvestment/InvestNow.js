@@ -1,11 +1,12 @@
 import React from 'react'
-import './SpecialPackage.css'
-import backtick from '../../../../assets/backtick.svg'
+import './SilverInvestmentDetails.css'
+import backtick from '../../../../../assets/backtick.svg'
 
-const SpecialPackageInvestNow = ({setPage}) => {
+const InvestNow = ({setPage}) => {
     return (
              <div className="startinvestment-body">
-              <div className="startinvestment-main">
+               <div className="startinvestment-main">
+
         <div className="confirminvestment-main">
         <h5 className="confirminvestment-h5"> Invest Now</h5>
       <p className="confirminvestment-textbody mt-2">Choose Payment Method</p>
@@ -17,10 +18,7 @@ const SpecialPackageInvestNow = ({setPage}) => {
             <div className="ovest-wallet">
             <p className="ovestwallet-main">Ovest Wallet</p>
             <div className="investamount">
-              <div>
-              <p className="investamount-balance mt-4">Balance: N0</p>
-              {/* <p className="investamount-money mt-4">Balance: N20,000,000</p> */}
-              </div>
+            <p className="investamount-balance mt-4">Balance: N0</p>
             <p className="investamount-mini mb-2">Change this <span><img src={backtick} alt=""
              className="ml-2"/></span> </p>
             </div>
@@ -44,4 +42,4 @@ const SpecialPackageInvestNow = ({setPage}) => {
     )
 }
 
-export default SpecialPackageInvestNow
+export default InvestNow

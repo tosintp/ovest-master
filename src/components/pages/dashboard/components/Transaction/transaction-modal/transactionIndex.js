@@ -9,6 +9,7 @@ export const AllTransactionIndex = ({ Transac, setTransac }) => {
     case 0:
       currentTransacation = <AllTransactionModal setTransac={setTransac} />;
       break;
+    
 
     default:
       break;

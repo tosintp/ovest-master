@@ -1,6 +1,6 @@
 import React from 'react'
 import './SpecialPackage.css'
-import landvest from '../../../../assets/landvesticon.svg'
+import landvest from '../../../../../assets/landvesticon.svg'
 
 const IbadanLandvest = ({setPage}) => {
     return (

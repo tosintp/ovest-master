@@ -2,10 +2,10 @@ import React,{useState} from 'react'
 import { useDispatch } from 'react-redux';
 import { hideModal } from '../../../../../../../redux/actions/modal.action';
 import closemodalicon from '../../../../../../Assets/closemodalicon.svg'
-import SpecialPackageIndex from './SpecialPackageIndex'
+import MaturedInvestmentIndex from './MyInvestmentIndex'
 
 
-const SpecialPackageModal = () => {
+const MaturedInvestmentModal = () => {
     const [page, setPage] = useState(0)
     const dispatch = useDispatch()
     return (
@@ -23,11 +23,11 @@ const SpecialPackageModal = () => {
                 ) : null
             }
 
-<SpecialPackageIndex {... {page, setPage}}/>
+<MaturedInvestmentIndex {... {page, setPage}}/>
             </div>
             
         </div>
     )
 }
 
-export default SpecialPackageModal
+export default MaturedInvestmentModal

@@ -3,8 +3,8 @@ import {connect} from 'react-redux'
 import './SilverInvestment.css'
 import Button from "@material-ui/core/Button";
 import closemodalicon from '../../../../../Assets/closemodalicon.svg'
-import InvestmentIndex from '../investment-modal/InvestmentIndex';
-import SpecialPackageIndex from '../../investment/investment-modal/SpecialPackageModal/SpecialPackageIndex'
+import InvestmentIndex from '../investment-modal/InvestmentIndex'
+import SpecialPackageIndex from '../investment-modal/all-investment-modal/SpecialPackageModal/SpecialPackageIndex'
 import Rectangle64 from '../../../assets/Rectangle 64.svg'
 import Rectangle68 from '../../../assets/Rectangle 68.svg'
 import Rectangle66 from '../../../assets/Rectangle 66.svg'

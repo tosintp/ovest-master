@@ -5,7 +5,6 @@ const StartInvestment = ({setPage}) => {
     return (
         <div className="startinvestment">
         <div className="startinvestment-body">
-            <div className="startinvestment-main">
             <h5 className="startinvestment-h5"> Invest</h5>
           <p className="startinvestment-textbody">Invest in silvest plan and earn 50% interest in 3 months</p>
            <div className="amountinvest">
@@ -43,7 +42,6 @@ const StartInvestment = ({setPage}) => {
            </div>
         <button className="invest" onClick={() => setPage(2)}>Invest</button>
         </div>
-    </div>
     </div>
     )
 }

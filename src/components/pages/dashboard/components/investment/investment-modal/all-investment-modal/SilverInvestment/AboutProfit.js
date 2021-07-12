@@ -1,8 +1,8 @@
 import React from "react";
 import './SilverInvestmentDetails.css'
-import cardcloseicon from "../../../../../../Assets/cardcloseicon.svg";
+import cardcloseicon from "../../../../../../../Assets/cardcloseicon.svg";
 
-const AboutProfit = ({ setPage }) => {
+const AboutProfit = () => {
   return (
     <div className="card-display">
       <div className="cardsuccesswrapper">

@@ -1,10 +1,10 @@
 import React from 'react'
-import SilverInvestmentDetails from '../investment-modal/SilverInvestment/SilverInvestmentDetails';
-import StartInvestment from './SilverInvestment/StartInvestment';
-import ConfirmInvestment from './SilverInvestment/ConfirmInvestment'
-import InvestNow from './SilverInvestment/InvestNow'
-import PaymentMethod from './SilverInvestment/PaymentMethod'
-import AboutProfit from './SilverInvestment/AboutProfit'
+import SilverInvestmentDetails from '../../investment/investment-modal/all-investment-modal/SilverInvestment/SilverInvestmentDetails';
+import StartInvestment from '../../investment/investment-modal/all-investment-modal/SilverInvestment/StartInvestment';
+import ConfirmInvestment from '../../investment/investment-modal/all-investment-modal/SilverInvestment/ConfirmInvestment'
+import InvestNow from '../../investment/investment-modal/all-investment-modal/SilverInvestment/InvestNow'
+import PaymentMethod from '../../investment/investment-modal/all-investment-modal/SilverInvestment/PaymentMethod'
+import AboutProfit from '../../investment/investment-modal/all-investment-modal/SilverInvestment/AboutProfit'
 import backicon from "../../../../../Assets/backicon.svg";
 
 

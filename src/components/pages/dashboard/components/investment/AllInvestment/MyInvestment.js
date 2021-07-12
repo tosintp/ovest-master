@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import './MyInvestment.css'
-import Rectangle64 from '../../../assets/Rectangle 64.svg'
 import Button from "@material-ui/core/Button";
 import closemodalicon from '../../../../../Assets/closemodalicon.svg'
-import MyInvestmentIndex from '../MyInvestmentModal/MyInvestmentIndex'
+import Rectangle64 from '../../../assets/Rectangle 64.svg'
+import MyInvestmentIndex from '../investment-modal/my-investment-modal/MyInvestmentModal/MyInvestmentIndex'
 
 const MyInvestment = () => {
   const [page, setPage] = useState(0)

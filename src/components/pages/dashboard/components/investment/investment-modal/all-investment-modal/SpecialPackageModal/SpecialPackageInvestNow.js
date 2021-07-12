@@ -1,10 +1,11 @@
 import React from 'react'
-import './SilverInvestmentDetails.css'
-import backtick from '../../../../assets/backtick.svg'
+import './SpecialPackage.css'
+import backtick from '../../../../../assets/backtick.svg'
 
-const InvestNow = ({setPage}) => {
+const SpecialPackageInvestNow = ({setPage}) => {
     return (
              <div className="startinvestment-body">
+              <div className="startinvestment-main">
         <div className="confirminvestment-main">
         <h5 className="confirminvestment-h5"> Invest Now</h5>
       <p className="confirminvestment-textbody mt-2">Choose Payment Method</p>
@@ -16,7 +17,10 @@ const InvestNow = ({setPage}) => {
             <div className="ovest-wallet">
             <p className="ovestwallet-main">Ovest Wallet</p>
             <div className="investamount">
-            <p className="investamount-balance mt-4">Balance: N0</p>
+              <div>
+              <p className="investamount-balance mt-4">Balance: N0</p>
+              {/* <p className="investamount-money mt-4">Balance: N20,000,000</p> */}
+              </div>
             <p className="investamount-mini mb-2">Change this <span><img src={backtick} alt=""
              className="ml-2"/></span> </p>
             </div>
@@ -35,8 +39,9 @@ const InvestNow = ({setPage}) => {
             <span> OVest terms and conditions</span></label>
         </div>
         <button className="invest" onClick={() => setPage(4)}>Invest</button>
+             </div>
         </div>
     )
 }
 
-export default InvestNow
+export default SpecialPackageInvestNow
