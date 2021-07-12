@@ -28,7 +28,7 @@ const Portfolio = () => {
           <p className="ml-3">Savest</p>
         </div>
         <div className="portfolio-text ml-4">
-          <div className="invest"></div>
+          <div className="portfolio-invest"></div>
           <p className="ml-3">Invest</p>
         </div>
       </div>

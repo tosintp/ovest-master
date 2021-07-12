@@ -142,8 +142,6 @@
 /* card payment input */
 .cardpaymentinput {
   position: absolute;
-  width: 453px;
-  height: 395px;
   right: 110%;
   top: 20%;
   background: #ffffff;
@@ -212,6 +210,7 @@
   font-size: 10px;
   line-height: 12px;
   letter-spacing: 0.03em;
+  margin-bottom: 30px;
 
   /* Secondary color */
 

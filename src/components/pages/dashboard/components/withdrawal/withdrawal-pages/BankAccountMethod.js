@@ -13,7 +13,11 @@ import { BankTranferDetailsTextInput } from "../../../../Formik/BankDetailsInput
 
 const BAnkAccountMethod = ({ setStage }) => {
   return (
-    <div className="">
+    <div
+      style={{
+        height: "90vh",
+      }}
+    >
       <div
         className="BankAccountMethod"
         style={{

@@ -125,6 +125,7 @@
   margin-right: auto;
   margin-left: auto;
   overflow-y: scroll;
+}
+.invest-plan-logic {
   height: 90vh;
-  padding-bottom: 60px;
 }

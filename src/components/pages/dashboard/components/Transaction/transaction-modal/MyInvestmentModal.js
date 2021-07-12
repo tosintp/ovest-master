@@ -24,9 +24,9 @@ const MyInvestmentModal = () => {
               <span>N10,000</span>{" "}
             </p>
             <div>
-              {/* <p className="pending">
-              Status: <span>Pending</span>{" "}
-            </p> */}
+              <p className="pending">
+                Status: <span>Pending</span>{" "}
+              </p>
               <p className="processed">
                 Status: <span>Processed</span>{" "}
               </p>

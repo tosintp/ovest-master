@@ -171,16 +171,11 @@
 }
 
 .current-stage {
-  background-color: #fff;
-  height: 150vh;
-  overflow-y: auto;
 }
 
 .current-stage > div {
   width: 438px;
   margin-right: auto;
   margin-left: auto;
-  overflow-y:  ;
-  height: 90vh;
-  padding-bottom: 60px;
+  overflow-y: scroll;
 }

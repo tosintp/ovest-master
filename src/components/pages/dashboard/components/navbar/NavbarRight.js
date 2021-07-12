@@ -49,8 +49,11 @@ function NavItem(props) {
         />
       </li>
 
-      <li className="nav-item">
-        <a className="ml-3" onClick={() => setOpen(!open)}>
+      <li
+        className="nav-item"
+        onClick={() => setOpen(!open)}
+      >
+        <a className="ml-3">
           {firstname} {lastname}
           <img width="10" className="ml-2" src={caret} alt="avatar" />
         </a>
