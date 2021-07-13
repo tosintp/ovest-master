@@ -1,6 +1,5 @@
 .current-page {
-overflow-y: auto;
-height: 90vh;
+overflow-y: scroll;
 }
 
 .back-icon{

@@ -1,16 +1,17 @@
-import React, { useState } from "react";
+import React,{useState} from 'react';
 import { useDispatch } from "react-redux";
 import { hideModal } from "../../../../../../redux/actions/modal.action";
 import closemodalicon from "../../../../../Assets/closemodalicon.svg";
-import VerificationIndex from "./VerificationIndex";
-import './VerificationModal.css'
+import SettingsIndex from '../SettingsModal/SettingsIndex';
 
-const VerificationModal = () => {
-  const [section, setSection] = useState(0);
-  const dispatch = useDispatch();
+const SettingsModal = () =>
+{
+    const [section, setSection] = useState(0);
+    const dispatch = useDispatch();
+  
   return (
     <div>
-      <div className="legal-page">
+      <div className="settings-page">
         {section === 0 ? (
           <button
             className="closemodalicon-btn"
@@ -22,10 +23,10 @@ const VerificationModal = () => {
             <img src={closemodalicon} alt="" className="closemodal" />
           </button>
         ) : null}
-        <VerificationIndex {...{ section, setSection }} />
+        <SettingsIndex {...{ section, setSection }} />
       </div>
     </div>
   );
-};
+}
 
-export default VerificationModal;
+export default SettingsModal

@@ -8,9 +8,7 @@ import FormGroup from "@material-ui/core/FormGroup";
 
 
 const Moden = () =>
-{
-  
-  
+{ 
   //Material-ui Button Styles//
   const IOSSwitch = withStyles((theme) => ({
     root: {
@@ -24,7 +22,7 @@ const Moden = () =>
       "&$checked": {
         transform: "translateX(16px)",
         color: "white",
-
+        
         "& + $track": {
           backgroundColor: "#FD740E",
           opacity: 1,
@@ -45,7 +43,8 @@ const Moden = () =>
       border: `1px solid ${theme.palette.grey[400]}`,
       backgroundColor: theme.palette.grey[500],
       opacity: 1,
-      transition: theme.transitions.create(["background-color", "border"]),
+      transition: theme.transitions.create( ["background-color", "border"] ),
+      
     },
     checked: {},
     focusVisible: {},

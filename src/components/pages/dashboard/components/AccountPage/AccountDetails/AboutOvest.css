@@ -1,6 +1,7 @@
 .about-section {
   width: 90%;
   margin: auto;
+  height: 90vh;
 }
 
 .about-header {
@@ -63,7 +64,11 @@
 .about-icon {
   cursor: pointer;
   margin-top: 28px;
+  padding-bottom: 50px;
 }
 .social-icon {
   margin-left: 35px;
+  /* margin-bottom: 40px; */
 }
+
+

@@ -24,11 +24,11 @@ const Portfolio = () => {
           <p className="ml-3">Wallet</p>
         </div>
         <div className="portfolio-text ml-4">
-          <div className="savest"></div>
+          <div className="savest-color"></div>
           <p className="ml-3">Savest</p>
         </div>
         <div className="portfolio-text ml-4">
-          <div className="portfolio-invest"></div>
+          <div className="invest"></div>
           <p className="ml-3">Invest</p>
         </div>
       </div>
@@ -59,9 +59,9 @@ const Portfolio = () => {
             <p>Total investment balance</p>
             <p className="mt-2">Current returns</p>
           </div>
-          <div className="summary-details">
+          <div className="summary-detailss">
             <p>N0.00</p>
-            <p className="mt-2">N0.00</p>
+            <p className="mt-2 mb-5">N0.00</p>
           </div>
         </div>
       </div>

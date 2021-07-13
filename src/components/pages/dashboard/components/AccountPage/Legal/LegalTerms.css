@@ -1,6 +1,7 @@
 .legalTerms-section {
- margin-left: 26px;
- margin-right: 42px;
+  width: 90%;
+  margin: auto;
+  height: 90vh;
 }
 
 .legal-header {
@@ -23,4 +24,16 @@
   letter-spacing: 0.03em;
   color: #666666;
   margin-top: 30px;
+}
+
+.legal-textss {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #666666;
+  margin-top: 30px;
+  padding-bottom: 50px;
 }
