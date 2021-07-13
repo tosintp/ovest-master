@@ -161,7 +161,7 @@ const SignUp = ({ error, success, loading, user, token }) => {
                   type="text"
                   placeholder=" Username"
                 />
-                {/* <TextInput type="tel" name="phone" placeholder="Phone Number" />{" "} */}
+                <TextInput type="tel" name="phone" placeholder="Phone Number" />{" "}
                 <div
                   style={{
                     display: "flex",
@@ -169,7 +169,13 @@ const SignUp = ({ error, success, loading, user, token }) => {
                   }}
                 >
                   {/* <FlagTextInput type="tel" name="flag" /> */}
-                  <PhoneInput country="de" regions={"europe"} />
+
+                  {/* <PhoneInput
+                  
+                    inputProps={{
+                      name: "phone",
+                    }}
+                  /> */}
 
                   {/* <CodeTextInput type="tel" name="code" />
                   <PhoneNumberTextInput type="tel" name="phone" /> */}

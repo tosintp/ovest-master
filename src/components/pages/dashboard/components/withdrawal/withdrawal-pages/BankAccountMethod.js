@@ -1,19 +1,16 @@
 import React from "react";
-import { Formik, Form } from "formik";
-import Loader from "react-loader-spinner";
-import * as Yup from "yup";
 import "./Withdrawal-pages.css";
+import Loader from "react-loader-spinner";
+import { Formik, Form } from "formik";
 import {
   StyledBankTransferFormButton,
   ButtonGroup,
   colors,
 } from "../../../../../Syles/styles";
 import { BankTranferDetailsTextInput } from "../../../../Formik/BankDetailsInput";
+import * as Yup from "yup";
 
 const BAnkAccountMethod = ({ setStage }) => {
-  const changeStage = () => {
-    setStage(6);
-  };
   return (
     <div
       style={{
@@ -36,7 +33,7 @@ const BAnkAccountMethod = ({ setStage }) => {
           }}
           onSubmit={(values, { setSubmitting, setFieldError }) => {
             console.log(values);
-            changeStage();
+            // changeStage();
             // loginUser(values, history, setFieldError, setSubmitting);
           }}
           validationSchema={Yup.object({
@@ -74,12 +71,6 @@ const BAnkAccountMethod = ({ setStage }) => {
               >
                 Select bank account{" "}
               </p>
-              {/* <BankTranferDetailsTextInput
-                name="Amount"
-                type="number"
-                placeholder="NGN"
-              /> */}
-
               <div class="select">
                 <BankTranferDetailsTextInput name="banks" id="standard-select">
                   <option value="" disabled selected hidden>
@@ -90,72 +81,9 @@ const BAnkAccountMethod = ({ setStage }) => {
                 </BankTranferDetailsTextInput>
                 <span class="focus"></span>
               </div>
-              <p
-                style={{
-                  marginTop: "20px",
-                  fontSize: "14px",
-                  lineHeight: "22px",
-                  color: "#666666",
-                  letterSpacing: "0.03em",
-                  textAlign: "left",
-                  width: "353px",
-                  height: "44px",
-                }}
-              >
-                Can't find your bank account?
-                <span
-                  style={{
-                    color: "#267bf7",
-                  }}
-                >
-                  Transfer to a new account
-                </span>
-              </p>
-
-              {/* <select
-                name="color"
-                // value={values.color}
-                // onChange={handleChange}
-                // onBlur={handleBlur}
-                style={{ display: "block" }},
-                
-              >
-                <option value="" label="Select a color" />
-                <option value="red" label="red" />
-                <option value="blue" label="blue" />
-                <option value="green" label="green" />
-              </select> */}
-
-              {/* <Form.Control as="select" size="lg">
-                <option>Large select</option>
-              </Form.Control> */}
-
-              <ButtonGroup>
-                {!isSubmitting && (
-                  <StyledBankTransferFormButton type="submit">
-                    Send
-                  </StyledBankTransferFormButton>
-                )}
-
-                {isSubmitting && (
-                  <Loader
-                    type="ThreeDots"
-                    color={colors.primary}
-                    height={49}
-                    width={100}
-                  />
-                )}
-              </ButtonGroup>
             </Form>
           )}
         </Formik>
-
-        <div className="bnm-notice">
-          <p>
-            Kindly note that a transaction fee of N10.00 would be deducted from
-            your wallet
-          </p>
-        </div>
       </div>
     </div>
   );

@@ -27,13 +27,13 @@ const Dashboard = () => {
 
   const { user } = useAuth();
   const userIsVerified = Boolean(user.currentUser.email_verified_at);
-  useEffect(() => {
-    console.log("showModal: ", showModal);
-    console.log(user);
-  });
-  useEffect(() => {
-    console.log("showWithModal: ", showWithdrawalModal);
-  });
+  // useEffect(() => {
+  //   console.log("showModal: ", showModal);
+  //   console.log(user);
+  // });
+  // useEffect(() => {
+  //   console.log("showWithModal: ", showWithdrawalModal);
+  // });
 
   if (userIsVerified)
     return (
@@ -65,6 +65,7 @@ const Dashboard = () => {
     );
 
   return <EmailVerification />;
+  // return null;
 };
 
 export default Dashboard;
