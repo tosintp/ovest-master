@@ -9,7 +9,7 @@ import navlogout from "../../assets/navlogout.svg";
 import navprofile from "../../assets/navprofile.svg";
 
 import "./navleft.css";
-import useAuth from "../../../../../hooks/useAuth";
+import { useUser } from "../../../../../hooks/use-user";
 
 // function NavLeft() {
 //   return (
@@ -34,9 +34,9 @@ function NavRight(props) {
 
 function NavItem(props) {
   const [open, setOpen] = useState(false);
-  const [activeMenu, setActiveMenu] = useState("main");
-  const { user } = useAuth();
-  const { lastname, firstname } = user.currentUser;
+  // const [activeMenu, setActiveMenu] = useState("main");
+  const user = useUser();
+  const { lastname, firstname } = user;
 
   return (
     <>

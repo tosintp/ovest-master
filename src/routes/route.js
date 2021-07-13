@@ -15,7 +15,6 @@ import Consulting from "../components/pages/Consulting";
 // import Founder from "../components/pages/Founder";
 
 import Dashboard from "../components/pages/dashboard/index";
-import { ProtectedRoute } from "./protectedRoute";
 
 const AppRoute = () => {
   return (
@@ -29,7 +28,7 @@ const AppRoute = () => {
         <Route path="/marketing" component={Marketing} />
         <Route path="/consulting" component={Consulting} />
         {/* <Route path="/dashboard" component={Dashboard} /> */}
-        <ProtectedRoute path="/dashboard" component={Dashboard} />
+        <Route path="/dashboard" component={Dashboard} />
         <Route path="/signin" component={SignIn} />
         <Route path="/signupverify" component={EmailVerification} />
 

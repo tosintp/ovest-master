@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { connect, useDispatch } from "react-redux";
-import { SignUp as DispatchSignUp } from "../../../redux/operators/auth.op";
+import React, { useState } from "react";
+import { connect } from "react-redux";
+import { Redirect } from "react-router";
 import * as Yup from "yup";
-import {
-  CountryDropdown,
-  RegionDropdown,
-  CountryRegionData,
-} from "react-country-region-selector";
+import { CountryDropdown } from "react-country-region-selector";
+import Loader from "react-loader-spinner";
+import { Form, Formik } from "formik";
+import { pick, cloneDeep } from "lodash";
+
 import {
   StyledContainer,
   StyledFormArea,
@@ -18,40 +18,45 @@ import {
   TextLink,
   colors,
 } from "../../Syles/styles";
-
-// import "../../../";
 import LogoIcon from "../../Logo/Logo";
 import { TextInput } from "../../pages/Formik/FormLib";
 import applecircle from "../../Assets/applecirlce.png";
 import fbcircle from "../../Assets/fb-circle.png";
 import googlecircle from "../../Assets/googlecircle.png";
-import Loader from "react-loader-spinner";
-import { Form, Formik } from "formik";
-import { createStructuredSelector } from "reselect";
-import {
-  isLoading,
-  selectCurrentUser,
-  success,
-  error,
-  token,
-} from "../../../redux/selectors/auth.selector";
-import { Redirect } from "react-router-dom";
+import { createUserAction } from "../../../store/user/user.action";
+import { Util } from "../../../helpers/util";
 
-const SignUp = ({ error, success, loading, user, token }) => {
+const SignUp = ({ user, createUser, ...props }) => {
   const [showLoader, setShowLoader] = useState(false);
-  // const [showCountry, setShowCountry] = useState("");
-  const dispatch = useDispatch();
-  // const history = useHistory();
 
-  useEffect(() => {
-    setShowLoader(loading);
-  }, [loading]);
+  const isLoggedIn = !!user;
+  if (isLoggedIn) {
+    const { continue_to } = Util.parseQueryString(props.location.search);
+    if (continue_to) {
+      window.location = continue_to;
+      return null;
+    }
+    return <Redirect to="/dashboard" />;
+  }
+
+  const handleSubmit = async (values, { setFieldError }) => {
+    try {
+      setShowLoader(true);
+      await createUser(values);
+    } catch (error) {
+      if (error.isHttpException) {
+        error.data.forEach(([key, message]) => {
+          setFieldError(key, message);
+        });
+      }
+    } finally {
+      setShowLoader(false);
+    }
+  };
 
   const phoneRegExp =
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
-  if (success) {
-    return <Redirect to="/dashboard" />;
-  }
+
   return (
     <StyledContainer>
       <div className="Sign-in">
@@ -81,11 +86,7 @@ const SignUp = ({ error, success, loading, user, token }) => {
               password_confirmation: "",
               username: "",
             }}
-            onSubmit={(values, { setSubmitting, setFieldError }) => {
-              console.log(values);
-              dispatch(DispatchSignUp(values));
-              // loginUser(values, history, setFieldError, setSubmitting);
-            }}
+            onSubmit={handleSubmit}
             validationSchema={Yup.object({
               firstname: Yup.string().required("Firstname is Required"),
               lastname: Yup.string().required("Lastname is Required"),
@@ -216,12 +217,7 @@ const SignUp = ({ error, success, loading, user, token }) => {
   );
 };
 
-const mapStateToProps = createStructuredSelector({
-  error,
-  success,
-  loading: isLoading,
-  user: selectCurrentUser,
-  token,
-});
+const mapStateToProps = (state) => pick(cloneDeep(state), ["user"]);
+const mapDispatchToProps = { createUser: createUserAction };
 
-export default connect(mapStateToProps)(SignUp);
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
