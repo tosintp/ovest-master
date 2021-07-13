@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+
 import { hideModal } from "../../../../../redux/actions/modal.action";
-// import {CopyToClipboard} from 'react-copy-to-clipboard';
 import "./fundwallet.css";
 import FundWalletLogic from "../fundwallet/index";
-// import backicon from "../../../../Assets/backicon.svg";
 import closemodalicon from "../../../../Assets/closemodalicon.svg";
 
 const FundWallet = ({ toggleModalAppearance }) => {
@@ -13,10 +12,7 @@ const FundWallet = ({ toggleModalAppearance }) => {
 
   return (
     <div className="Fund-wallet-method">
-      <div
-        className="Fund-wallet-method-head"
-       
-      >
+      <div className="Fund-wallet-method-head">
         <div className="">
           {stage === 0 ? (
             <button

@@ -19,15 +19,17 @@ import NavLeft from "./NavbarRight";
 // }));
 
 const Navbar = ({ sidebarOpen, openSidebar }) => {
-  const [acountOpen, setAccountOpen] = useState(false);
-  const { user } = useAuth();
-  const { lastname, firstname } = user.currentUser;
+  // const [acountOpen, setAccountOpen] = useState(false);
+  // const { user } = useAuth();
+  // const { lastname, firstname } = user.currentUser;
   return (
     <nav
       className="Navbar"
-      style={{
-        // background: "black",
-      }}
+      style={
+        {
+          // background: "black",
+        }
+      }
     >
       <div className="nav_icon" onClick={() => openSidebar()}>
         <i className="fa fa-bars" aria-hidden="true"></i>

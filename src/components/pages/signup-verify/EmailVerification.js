@@ -1,17 +1,9 @@
-import React, { useState, useEffect } from "react";
-import LogoIcon from "../../Logo/Logo";
-import { TextInput } from "../../pages/Formik/FormLib";
+import React, { useState } from "react";
 import Loader from "react-loader-spinner";
-import { Form, Formik, Field } from "formik";
-import * as Yup from "yup";
-// import {
-//   isLoading,
-//   selectCurrentUser,
-//   success,
-//   error,
-//   token,
-// } from "../../../redux/selectors/auth.selector";
-// import { Redirect, useHistory } from "react-router-dom";
+import { Form, Formik } from "formik";
+import { Redirect } from "react-router-dom";
+import { connect } from "react-redux";
+
 import {
   StyledContainer,
   StyledFormArea,
@@ -19,29 +11,54 @@ import {
   StyledTitle,
   ButtonGroup,
   SubTitle,
-  // ExtraText,
-  // TextLink,
   colors,
 } from "../../Syles/styles";
-import useAuth from "../../../hooks/useAuth";
 import "../signin/SignIn.css";
-import { apiPost } from "../../../helpers";
+import LogoIcon from "../../Logo/Logo";
+import { TextInput } from "../../pages/Formik/FormLib";
+import { useUser } from "../../../hooks/use-user";
+import { Util } from "../../../helpers/util";
+import { getProfileAction } from "../../../store/user/user.action";
+import { $api } from "../../../helpers/$api";
 
-const EmailVerification = ({ loading, success }) => {
-  const [showLoader] = useState(false);
-  // const { user } = useAuth();
-  // const { email, lastname } = user.currentUser;
+const EmailVerification = ({ getProfile, ...props }) => {
+  const [showLoader, setShowLoader] = useState(false);
+  const [error, setError] = useState("");
+  const user = useUser();
 
-  // const sendEmailOtp = async () => {
-  //   apiPost(`email/otp/send`, { email }).then((response) => {
-  //     console.log(response);
-  //   });
-  // };
+  const isVerified = user.email_verified_at;
+  if (isVerified) {
+    const { continue_to } = Util.parseQueryString(props.location.search);
+    if (continue_to) {
+      window.location = continue_to;
+      return null;
+    }
+    return <Redirect to="/dashboard" />;
+  }
 
-  // useEffect(() => {
-  //   sendEmailOtp();
-  // }, []);
-  // const { lastname } = user.currentUser;
+  const handleResendClick = async () => {
+    if (showLoader) return;
+    setShowLoader(true);
+    await $api.user.resendOtp({ email: user.email });
+    setShowLoader(false);
+  };
+
+  const handleSubmit = async (value) => {
+    try {
+      setShowLoader(true);
+      setError("");
+      const res = await $api.user.verifyEmail({ ...value, email: user.email });
+      if (res.status === "error") {
+        throw new Error();
+      }
+
+      await getProfile();
+    } catch (error) {
+      setError("invalid email verification code");
+    } finally {
+      setShowLoader(false);
+    }
+  };
 
   return (
     <StyledContainer>
@@ -72,39 +89,22 @@ const EmailVerification = ({ loading, success }) => {
                 marginTop: "",
               }}
             >
-              Enter the verificaion code sent to{" "}
+              Enter the verificaion code sent to {user.email}
             </SubTitle>
           </div>
           <Formik
             initialValues={{
-              email: "",
-              password: "",
-              checked: [],
+              otp: "",
             }}
-            onSubmit={(values, { setSubmitting, setFieldError }) => {
-              console.log(values);
-              // dispatch(DispatchSignIn(values));
-              // loginUser(values, history, setFieldError, setSubmitting);
-            }}
-            validationSchema={Yup.object({
-              email: Yup.string()
-                .email("Must be a valid email")
-                .max(255)
-                .required("Email is required"),
-              // phone: Yup.string()
-              //   .number("Invalid phone address")
-              //   .required("phone is Required"),
-              password: Yup.string()
-                .min(8, "password is too short")
-                .max(30, "password is too long")
-                .required("Password is Required"),
-            })}
+            onSubmit={handleSubmit}
           >
             {({ isSubmitting }) => (
               <Form>
+                {/* TODO: Get error state design for login form */}
+                <p style={{ fontSize: 14, color: "red" }}>{error}</p>
                 <TextInput
-                  name="verifyEmail"
-                  type="tel"
+                  name="otp"
+                  type="number"
                   placeholder="Enter Verification Code"
                 />
 
@@ -119,9 +119,11 @@ const EmailVerification = ({ loading, success }) => {
                       lineHeight: "19px",
                       textTransform: "capitalize",
                       textAlign: "center",
+                      cursor: "pointer",
 
                       color: "#FD740E",
                     }}
+                    onClick={handleResendClick}
                   >
                     Resend Code
                   </p>
@@ -132,7 +134,7 @@ const EmailVerification = ({ loading, success }) => {
 
                 <ButtonGroup>
                   {!showLoader && (
-                    <StyledFormButton type="submit">Login</StyledFormButton>
+                    <StyledFormButton type="submit">Verify</StyledFormButton>
                   )}
 
                   {showLoader && (
@@ -153,4 +155,6 @@ const EmailVerification = ({ loading, success }) => {
   );
 };
 
-export default EmailVerification;
+const mapDispatchToProps = { getProfile: getProfileAction };
+
+export default connect(null, mapDispatchToProps)(EmailVerification);
