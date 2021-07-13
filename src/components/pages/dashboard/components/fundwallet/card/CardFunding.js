@@ -7,6 +7,7 @@ import * as Yup from "yup";
 
 import {
   ButtonGroup,
+  colors,
   StyledTextInputBankTransfer,
   StyledBankTransferFormButton,
 } from "../../../../../Syles/styles.js";
@@ -41,7 +42,7 @@ const CardFunding = ({ setStage }) => {
           <Form>
             <BankTranferDetailsTextInput
               name="amount"
-              type="number"
+              type="tel"
               placeholder="NGN"
             />
 
@@ -53,6 +54,15 @@ const CardFunding = ({ setStage }) => {
                 >
                   Next
                 </StyledBankTransferFormButton>
+              )}
+
+              {isSubmitting && (
+                <Loader
+                  type="ThreeDots"
+                  color={colors.primary}
+                  height={49}
+                  width={100}
+                />
               )}
             </ButtonGroup>
           </Form>

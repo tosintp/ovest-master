@@ -7,11 +7,13 @@ import {
   StyledBankTransferFormButton,
   ButtonGroup,
   colors,
-  StyledTextSelectBankTransfer,
 } from "../../../../../Syles/styles";
 import { BankTranferDetailsTextInput } from "../../../../Formik/BankDetailsInput";
 
 const BAnkAccountMethod = ({ setStage }) => {
+  const changeStage = () => {
+    setStage(6);
+  };
   return (
     <div
       style={{
@@ -34,6 +36,7 @@ const BAnkAccountMethod = ({ setStage }) => {
           }}
           onSubmit={(values, { setSubmitting, setFieldError }) => {
             console.log(values);
+            changeStage();
             // loginUser(values, history, setFieldError, setSubmitting);
           }}
           validationSchema={Yup.object({
@@ -78,13 +81,13 @@ const BAnkAccountMethod = ({ setStage }) => {
               /> */}
 
               <div class="select">
-                <StyledTextSelectBankTransfer name="banks" id="standard-select">
+                <BankTranferDetailsTextInput name="banks" id="standard-select">
                   <option value="" disabled selected hidden>
                     Select Bank
                   </option>
                   <option value="Option 2">Option 2</option>
                   <option value="Option 3">Option 3</option>
-                </StyledTextSelectBankTransfer>
+                </BankTranferDetailsTextInput>
                 <span class="focus"></span>
               </div>
               <p
@@ -129,12 +132,7 @@ const BAnkAccountMethod = ({ setStage }) => {
 
               <ButtonGroup>
                 {!isSubmitting && (
-                  <StyledBankTransferFormButton
-                    type="submit"
-                    onClick={() => {
-                      setStage(5);
-                    }}
-                  >
+                  <StyledBankTransferFormButton type="submit">
                     Send
                   </StyledBankTransferFormButton>
                 )}
