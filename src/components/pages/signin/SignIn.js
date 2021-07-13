@@ -181,7 +181,7 @@ const SignIn = ({ login, user, ...props }) => {
           <ExtraText>
             Not yet an OVestor? <TextLink to="/signup">Register</TextLink>
           </ExtraText>
-          <p
+          {/* <p
             style={{
               fontFamily: "Inter",
               fontStyle: "normal",
@@ -199,7 +199,7 @@ const SignIn = ({ login, user, ...props }) => {
             <img src={fbcircle} className="formicon2" alt="fb-icon" />
             <img src={applecircle} className="formicon1" alt="apple-icon" />
             <img src={googlecircle} className="formicon1" alt="ggicon" />
-          </div>
+          </div> */}
         </StyledFormArea>
       </div>
     </StyledContainer>

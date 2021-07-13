@@ -1,29 +1,29 @@
 import React from "react";
-import Legal from "../Legal/Legal";
-import LegalTerms from "./../Legal/LegalTerms";
 import backicon from "../../../../../Assets/backicon.svg";
-import Faqs from "../Legal/Faqs";
+import VerificationDetails from "./Verification/VerificationDetails";
+import BankDetails from "./Verification/BankDetails";
+import Identification from "./Verification/Identification";
+import Residence from "./Verification/Residence";
 
-const LegalIndex = ({ section, setSection }) => {
+const VerificationIndex = ({ section, setSection }) => {
   let CurrentPage;
   switch (section) {
     case 0:
-      CurrentPage = <Legal setSection={setSection} />;
+      CurrentPage = <VerificationDetails setSection={setSection} />;
       break;
 
     case 1:
       CurrentPage = (
         <>
-          <a
-            href="#legalModal"
+          <button
             className="backicon"
             onClick={() => {
               setSection(0);
             }}
           >
             <img src={backicon} alt="back icon" className="back-icon" />
-          </a>
-          <LegalTerms setSection={setSection} />
+          </button>
+          <BankDetails setSection={setSection} />
         </>
       );
       break;
@@ -31,7 +31,22 @@ const LegalIndex = ({ section, setSection }) => {
       CurrentPage = (
         <>
           <a
-            href="#legalModal"
+            className="backicon"
+            onClick={() =>
+            {
+              setSection( 0 );
+            }}
+          >
+            <img src={backicon} alt="back icon" className="back-icon" />
+          </a>
+          <Identification setSection={setSection} />
+        </>
+      );
+      break;
+    case 3:
+      CurrentPage = (
+        <>
+          <a
             className="backicon"
             onClick={() => {
               setSection(0);
@@ -39,7 +54,7 @@ const LegalIndex = ({ section, setSection }) => {
           >
             <img src={backicon} alt="back icon" className="back-icon" />
           </a>
-          <Faqs setSection={setSection} />
+          <Residence setSection={setSection} />
         </>
       );
   }
@@ -47,4 +62,4 @@ const LegalIndex = ({ section, setSection }) => {
   return <div className="current-page">{CurrentPage}</div>;
 };
 
-export default LegalIndex;
+export default VerificationIndex;

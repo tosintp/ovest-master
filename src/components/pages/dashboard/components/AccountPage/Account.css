@@ -1,3 +1,4 @@
+/*Account Modal*/
 .account-modal {
   position: fixed;
   top: 0;
@@ -24,6 +25,8 @@
   width: 438px;
   height: 100vh;
 }
+
+/*About-modal*/
 .about-modal {
   position: fixed;
   top: 0;
@@ -43,6 +46,8 @@
   opacity: 1;
   pointer-events: auto;
 }
+
+/*Portfolio-modal*/
 .portfolio-modal {
   position: fixed;
   top: 0;
@@ -62,6 +67,8 @@
   opacity: 1;
   pointer-events: auto;
 }
+
+/* Legal-modal*/
 .legal-modal {
   position: fixed;
   top: 0;
@@ -77,6 +84,49 @@
 }
 
 .legal-modal:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* VERIFICATION-MODAL*/
+
+.verification-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(153, 153, 153, 0.48);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  z-index: 999;
+}
+
+.verification-modal:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* SETTINGS-MODAL*/
+.settings-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(153, 153, 153, 0.48);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  z-index: 999;
+}
+
+.settings-modal:target {
   visibility: visible;
   opacity: 1;
   pointer-events: auto;

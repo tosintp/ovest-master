@@ -1,0 +1,26 @@
+.information{
+  width: 90%;
+  margin: auto;
+  height: 90vh;
+}
+
+.information label{
+  font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 1.6rem;
+line-height: 19px;
+letter-spacing: 0.03em;
+color: #121212;
+margin-top: 20px;
+}
+
+
+.information input{
+  width: 389px;
+height: 48px;
+border: 1px solid #E5E5E5;
+box-sizing: border-box;
+border-radius: 4px;
+margin-top: 8px;
+}

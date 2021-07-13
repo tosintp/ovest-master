@@ -10,7 +10,7 @@ const AboutIndex = ({section,setSection}) =>
       CurrentPage = <AboutOvest setSection ={setSection}/>
   }
   return (
-    <div>
+    <div className="current-page">
       {CurrentPage}
     </div>
   )

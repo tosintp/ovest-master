@@ -1,8 +1,5 @@
 import React from "react";
 import PaymentOption from "../AccountDetails/PaymentOption";
-import AboutOvest from "../AccountDetails/AboutOvest";
-import Legal from "../../../components/AccountPage/Legal/Legal";
-import LegalTerms from "../Legal/LegalTerms";
 import "./AccountIndex.css";
 
 const AccountIndex = ({ section, setSection }) => {
