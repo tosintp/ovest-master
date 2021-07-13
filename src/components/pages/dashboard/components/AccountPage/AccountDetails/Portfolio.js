@@ -20,7 +20,7 @@ const Portfolio = () => {
       </div>
       <div className="portfolio-savest">
         <div className="portfolio-text">
-          <div className="wallets"></div>
+          <div className="wallets-color"></div>
           <p className="ml-3">Wallet</p>
         </div>
         <div className="portfolio-text ml-4">
@@ -28,7 +28,7 @@ const Portfolio = () => {
           <p className="ml-3">Savest</p>
         </div>
         <div className="portfolio-text ml-4">
-          <div className="invest"></div>
+          <div className="invest-color"></div>
           <p className="ml-3">Invest</p>
         </div>
       </div>

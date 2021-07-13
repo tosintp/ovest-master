@@ -3,17 +3,8 @@ import "./bank.css";
 import Loader from "react-loader-spinner";
 import { Formik, Form } from "formik";
 import {
-  // StyledContainer,
-  // StyledFormArea,
-  // StyledLabel,
-  // StyledTextInput,
-  // StyledFormButton,
-  // StyledTitle,
   ButtonGroup,
   StyledBankTransferFormButton,
-  // SubTitle,
-  // ExtraText,
-  // TextLink,
   colors,
 } from "../../../../../Syles/styles";
 import { BankTranferDetailsTextInput } from "../../../../Formik/BankDetailsInput";
@@ -88,7 +79,7 @@ const BankTransferDetails = ({ setStage }) => {
           <Form>
             <BankTranferDetailsTextInput
               name="amount"
-              type="number"
+              type="tel"
               placeholder="Enter Amount deposited"
             />
 

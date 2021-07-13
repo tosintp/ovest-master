@@ -11,7 +11,7 @@ import { makeStyles } from "@material-ui/core/styles";
 // import AccountBal from "./AccountBal";
 // import MainTitle from "./MainTitle";
 import download from "../../assets/Download.svg";
-import upload from "../../assets/Upload.svg";
+import uploadicon from "../../assets/upload-icon.svg";
 import MainCenL from "./MainCenL";
 import PackageWrap from "./PackageWrap";
 import apple from "../../assets/apple-btn.png";
@@ -122,7 +122,7 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
                         className="
                   wallet-icons-bg2"
                       >
-                        <img className="" src={upload} alt="" />
+                        <img className="" src={uploadicon} alt="" />
                       </div>
                     </div>
                   </div>
