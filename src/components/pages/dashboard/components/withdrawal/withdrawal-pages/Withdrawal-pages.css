@@ -275,6 +275,7 @@
   box-sizing: border-box;
   border-radius: 4px;
   padding: 9px 31px 2px 32px;
+  margin-top: 25px;
 }
 
 .bnm-notice > p {

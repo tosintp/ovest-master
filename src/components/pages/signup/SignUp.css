@@ -12,3 +12,7 @@
 .formicon2 {
   height: 33px;
 }
+
+.react-tel-input .form-control {
+  width: 100px !important;
+}

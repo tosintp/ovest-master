@@ -2,7 +2,7 @@ import React from "react";
 import "./Transaction.css";
 import DashboardLayout from "../../dashboardDefaultLayout/DashboardLayout";
 import TransactionHistory from "./TransactionHistory";
-import AllTransaction from "./AllTransaction/AllTransaction";
+import TransactionTab from "./TransactionTab/TransactionTab";
 
 const Transaction = () => {
   return (
@@ -16,7 +16,7 @@ const Transaction = () => {
               justifyContent: "center",
             }}
           >
-            <AllTransaction />
+            <TransactionTab />
           </div>
         </main>
       </DashboardLayout>

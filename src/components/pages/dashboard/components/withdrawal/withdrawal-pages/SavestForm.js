@@ -9,8 +9,12 @@ import {
   ButtonGroup,
   colors,
 } from "../../../../../Syles/styles";
+
 import { BankTranferDetailsTextInput } from "../../../../Formik/BankDetailsInput";
 const SavestForm = ({ setStage }) => {
+  const changeStage = () => {
+    setStage(2);
+  };
   return (
     <div>
       <div
@@ -32,6 +36,8 @@ const SavestForm = ({ setStage }) => {
           }}
           onSubmit={(values, { setSubmitting, setFieldError }) => {
             console.log(values);
+            changeStage();
+
             // loginUser(values, history, setFieldError, setSubmitting);
           }}
           validationSchema={Yup.object({
@@ -42,7 +48,7 @@ const SavestForm = ({ setStage }) => {
             <Form>
               <BankTranferDetailsTextInput
                 name="Amount"
-                type="number"
+                type="tel"
                 placeholder="NGN"
               />
 
@@ -52,12 +58,7 @@ const SavestForm = ({ setStage }) => {
 
               <ButtonGroup>
                 {!isSubmitting && (
-                  <StyledBankTransferFormButton
-                    type="submit"
-                    onClick={() => {
-                      setStage(2);
-                    }}
-                  >
+                  <StyledBankTransferFormButton type="submit">
                     Next
                   </StyledBankTransferFormButton>
                 )}

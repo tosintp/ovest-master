@@ -1,27 +1,22 @@
 import React from "react";
 import "./card.css";
+import Loader from "react-loader-spinner";
 import { Formik, Form } from "formik";
 // import { CardFundingTextInput } from "../../../../Formik/FormLib";
 import * as Yup from "yup";
 
 import {
-  // StyledContainer,
-  // StyledFormArea,
-  // StyledLabel,
-  // StyledTextInput,
-  // StyledFormButton,
-  // StyledTitle,
   ButtonGroup,
+  colors,
   StyledTextInputBankTransfer,
   StyledBankTransferFormButton,
-  // SubTitle,
-  // ExtraText,
-  // TextLink,
-  // colors,
-  // StyledTextInputCardFunding,
 } from "../../../../../Syles/styles.js";
+import { BankTranferDetailsTextInput } from "../../../../Formik/BankDetailsInput";
 
 const CardFunding = ({ setStage }) => {
+  const changeStage = () => {
+    setStage(6);
+  };
   return (
     <div className="card-funding">
       <div className="card-funding-header">
@@ -37,20 +32,17 @@ const CardFunding = ({ setStage }) => {
         }}
         onSubmit={(values, { setSubmitting, setFieldError }) => {
           console.log(values);
-          // loginUser(values, history, setFieldError, setSubmitting);
+          changeStage();
         }}
         validationSchema={Yup.object({
-          // phone: Yup.string()
-          //   .matches(phoneRegExp, "Phone number is not valid")
-          //   .required("Phone Number is Required"),
           amount: Yup.string().required("Amount deposited Field is Required"),
         })}
       >
         {({ isSubmitting }) => (
           <Form>
-            <StyledTextInputBankTransfer
+            <BankTranferDetailsTextInput
               name="amount"
-              type="number"
+              type="tel"
               placeholder="NGN"
             />
 
@@ -58,13 +50,19 @@ const CardFunding = ({ setStage }) => {
               {!isSubmitting && (
                 <StyledBankTransferFormButton
                   type="submit"
-                  onClick={() => {
-                    setStage(6);
-                  }}
                   style={{ marginTop: "136px" }}
                 >
                   Next
                 </StyledBankTransferFormButton>
+              )}
+
+              {isSubmitting && (
+                <Loader
+                  type="ThreeDots"
+                  color={colors.primary}
+                  height={49}
+                  width={100}
+                />
               )}
             </ButtonGroup>
           </Form>

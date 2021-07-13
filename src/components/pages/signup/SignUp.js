@@ -25,6 +25,9 @@ import fbcircle from "../../Assets/fb-circle.png";
 import googlecircle from "../../Assets/googlecircle.png";
 import { createUserAction } from "../../../store/user/user.action";
 import { Util } from "../../../helpers/util";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+import "./SignUp.css";
 
 const SignUp = ({ user, createUser, ...props }) => {
   const [showLoader, setShowLoader] = useState(false);
@@ -155,7 +158,19 @@ const SignUp = ({ user, createUser, ...props }) => {
                   type="text"
                   placeholder=" Username"
                 />
-                <TextInput type="tel" name="phone" placeholder="Phone Number" />{" "}
+                {/* <TextInput type="tel" name="phone" placeholder="Phone Number" />{" "} */}
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-around",
+                  }}
+                >
+                  {/* <FlagTextInput type="tel" name="flag" /> */}
+                  <PhoneInput country="de" regions={"europe"} />
+
+                  {/* <CodeTextInput type="tel" name="code" />
+                  <PhoneNumberTextInput type="tel" name="phone" /> */}
+                </div>
                 <TextInput
                   type="text"
                   name="referal"
