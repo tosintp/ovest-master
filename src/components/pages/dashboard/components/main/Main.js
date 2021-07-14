@@ -23,7 +23,7 @@ import {
 } from "../../../../../redux/actions/modal.action";
 import DashboardLayout from "../../dashboardDefaultLayout/DashboardLayout";
 // import { selectCurrentUser } from "../../../../../redux/selectors/auth.selector";
-import useAuth from "../../../../../hooks/useAuth";
+import { useUser } from "../../../../../hooks/use-user";
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -35,8 +35,8 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
   const classes = useStyles();
   // const [showModal, setShowModal] = useState(false);
   // const CurrentUser = useSelector(selectCurrentUser);
-  const { user } = useAuth();
-  const { lastname } = user.currentUser;
+  const user = useUser();
+  const { lastname } = user;
 
   // useEffect(() => {
   //   console.log("CurrentUser: ", user);

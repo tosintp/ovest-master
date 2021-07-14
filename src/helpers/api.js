@@ -5,11 +5,13 @@ import { store } from "../redux/store";
 const baseUrl = "https://ovest.paym.com.ng/api/user";
 
 function select(state) {
-  return state.user.token;
+  return state.user ? state.user.token : "";
 }
 
 function listener() {
   let token = select(store.getState());
+  // TODO: Store this in a cookie
+  localStorage.authToken = token;
   axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 }
 store.subscribe(listener);

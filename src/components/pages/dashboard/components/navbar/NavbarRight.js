@@ -9,7 +9,7 @@ import navlogout from "../../assets/navlogout.svg";
 import navprofile from "../../assets/navprofile.svg";
 import { Link } from "react-router-dom";
 import "./navleft.css";
-import useAuth from "../../../../../hooks/useAuth";
+import { useUser } from "../../../../../hooks/use-user";
 
 function NavRight(props) {
   return (
@@ -24,9 +24,9 @@ function NavRight(props) {
 
 function NavItem(props) {
   const [open, setOpen] = useState(false);
-  const [activeMenu, setActiveMenu] = useState("main");
-  const { user } = useAuth();
-  const { lastname, firstname } = user.currentUser;
+  // const [activeMenu, setActiveMenu] = useState("main");
+  const user = useUser();
+  const { lastname, firstname } = user;
 
   return (
     <>

@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { connect, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
-import { SignIn as DispatchSignIn } from "../../../redux/operators/auth.op";
+import React, { useState } from "react";
+import { connect } from "react-redux";
+import { Link, Redirect } from "react-router-dom";
 import * as Yup from "yup";
+import { pick, cloneDeep } from "lodash";
+import Loader from "react-loader-spinner";
+import { Form, Formik, Field } from "formik";
+
 import {
   StyledContainer,
   StyledFormArea,
@@ -14,7 +17,6 @@ import {
   TextLink,
   colors,
 } from "../../Syles/styles";
-
 import "./SignIn.css";
 import LogoIcon from "../../Logo/Logo";
 import { TextInput } from "../../pages/Formik/FormLib";
@@ -32,6 +34,8 @@ import {
   token,
 } from "../../../redux/selectors/auth.selector";
 import { Redirect } from "react-router-dom";
+import { login as LoginUserAction } from "../../../store/user/user.action";
+import { Util } from "../../../helpers/util";
 
 const SignIn = ({ error, success, loading, user, token }) => {
   const [showLoader, setShowLoader] = useState(false);
@@ -47,22 +51,33 @@ const SignIn = ({ error, success, loading, user, token }) => {
   //   [success]
   // );
 
-  useEffect(() => {
-    if (error) {
-      if (error.statusCode === 500) {
-        alert(error.message);
-      } else if (error.statusCode === 401) {
-        alert("Invalid email or Password");
-      }
+
+const SignIn = ({ login, user, ...props }) => {
+  const [showLoader, setShowLoader] = useState(false);
+  const [error, setError] = useState("");
+
+  const isLoggedIn = !!user;
+  if (isLoggedIn) {
+    const { continue_to } = Util.parseQueryString(props.location.search);
+    if (continue_to) {
+      window.location = continue_to;
+      return null;
     }
-  }, [error]);
-
-  // const phoneRegExp =
-  // /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
-
-  if (success) {
     return <Redirect to="/dashboard" />;
   }
+
+  const handleSubmit = async (credentials) => {
+    try {
+      setShowLoader(true);
+      setError("");
+      await login(credentials);
+    } catch (error) {
+      setError("Invalid login credentials");
+    } finally {
+      setShowLoader(false);
+    }
+  };
+
   return (
     <StyledContainer>
       <div className="Sign-in">
@@ -93,11 +108,7 @@ const SignIn = ({ error, success, loading, user, token }) => {
               password: "",
               checked: [],
             }}
-            onSubmit={(values, { setSubmitting, setFieldError }) => {
-              console.log(values);
-              dispatch(DispatchSignIn(values));
-              // loginUser(values, history, setFieldError, setSubmitting);
-            }}
+            onSubmit={handleSubmit}
             validationSchema={Yup.object({
               email: Yup.string()
                 .email("Must be a valid email")
@@ -114,6 +125,8 @@ const SignIn = ({ error, success, loading, user, token }) => {
           >
             {({ isSubmitting }) => (
               <Form>
+                {/* TODO: Get error state design for login form */}
+                <p style={{ fontSize: 14, color: "red" }}>{error}</p>
                 <TextInput name="email" type="email" placeholder="Email" />
 
                 <TextInput
@@ -219,12 +232,7 @@ const SignIn = ({ error, success, loading, user, token }) => {
   );
 };
 
-const mapStateToProps = createStructuredSelector({
-  error,
-  success,
-  loading: isLoading,
-  user: selectCurrentUser,
-  token,
-});
+const mapStateToProps = (state) => pick(cloneDeep(state), ["user"]);
+const mapDispatchToProps = { login: LoginUserAction };
 
-export default connect(mapStateToProps)(SignIn);
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn);

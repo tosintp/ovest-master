@@ -2,7 +2,8 @@ import { combineReducers } from "redux";
 import { persistReducer } from "redux-persist";
 // import { encryptTransform } from 'redux-persist-transform-encrypt';
 import storage from "redux-persist/lib/storage";
-import authReducer from "./reducers/auth.reducer";
+import user from "../store/user/user.reducer";
+// import authReducer from "./reducers/auth.reducer";
 import DashModalReducer from "./reducers/modal.reducer";
 
 // import { sessionReducer } from "redux-react-session";
@@ -17,18 +18,10 @@ import DashModalReducer from "./reducers/modal.reducer";
 const rootPersistConfig = {
   key: "root",
   storage,
-  blacklist: ["user"],
-};
-
-const authPersistConfig = {
-  key: "user",
-  storage,
-  // transforms: [encryptor],
-  whitelist: ["currentUser", "token"],
 };
 
 const rootReducer = combineReducers({
-  user: persistReducer(authPersistConfig, authReducer),
+  user,
   DashModalReducer,
   // WithdrawalModalReducer,
 });
