@@ -51,6 +51,13 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
     console.log("open redux");
   };
 
+  let myDate = new Date();
+  let hrs = myDate.getHours();
+  let greet;
+  if (hrs < 12) greet = " Morning";
+  else if (hrs >= 12 && hrs <= 17) greet = " Afternoon";
+  else if (hrs >= 17 && hrs <= 24) greet = " Evening";
+
   return (
     <>
       <DashboardLayout>
@@ -59,7 +66,9 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
             {/* <!-- MAIN TITLE STARTS HERE --> */}
             <div className="main__title" style={{ marginTop: "1.7rem" }}>
               <div className="main__greeting">
-                <h1>Morning, {lastname}</h1>
+                <h1>
+                  {greet} {lastname}
+                </h1>
 
                 <p>Welcome to your OVest account. View your progress</p>
               </div>

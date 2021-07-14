@@ -38,14 +38,14 @@ const SignIn = ({ error, success, loading, user, token }) => {
   const dispatch = useDispatch();
   // const history = useHistory();
 
-  useEffect(
-    () => {
-      setShowLoader(loading);
-      // console.log(success);
-    },
-    [loading],
-    [success]
-  );
+  // useEffect(
+  //   () => {
+  //     setShowLoader(loading);
+  //     // console.log(success);
+  //   },
+  //   [loading],
+  //   [success]
+  // );
 
   useEffect(() => {
     if (error) {
