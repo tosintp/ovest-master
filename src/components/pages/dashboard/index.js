@@ -18,6 +18,10 @@ const Dashboard = () => {
   const showWithdrawalModal = useSelector(showWithdrawalModalState);
   const user = useUser();
 
+  if (!user) {
+    return null;
+  }
+
   const isUnVerified = !user.email_verified_at;
   if (isUnVerified) {
     const {

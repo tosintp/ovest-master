@@ -20,37 +20,8 @@ import {
 import "./SignIn.css";
 import LogoIcon from "../../Logo/Logo";
 import { TextInput } from "../../pages/Formik/FormLib";
-import applecircle from "../../Assets/applecirlce.png";
-import fbcircle from "../../Assets/fb-circle.png";
-import googlecircle from "../../Assets/googlecircle.png";
-import Loader from "react-loader-spinner";
-import { Form, Formik, Field } from "formik";
-import { createStructuredSelector } from "reselect";
-import {
-  isLoading,
-  selectCurrentUser,
-  success,
-  error,
-  token,
-} from "../../../redux/selectors/auth.selector";
-import { Redirect } from "react-router-dom";
 import { login as LoginUserAction } from "../../../store/user/user.action";
 import { Util } from "../../../helpers/util";
-
-const SignIn = ({ error, success, loading, user, token }) => {
-  const [showLoader, setShowLoader] = useState(false);
-  const dispatch = useDispatch();
-  // const history = useHistory();
-
-  // useEffect(
-  //   () => {
-  //     setShowLoader(loading);
-  //     // console.log(success);
-  //   },
-  //   [loading],
-  //   [success]
-  // );
-
 
 const SignIn = ({ login, user, ...props }) => {
   const [showLoader, setShowLoader] = useState(false);
