@@ -51,11 +51,11 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
         <Link to="/dashboard/account">
           <SidebarContent image={accounts} title="Account" />
         </Link>
-        <div className="sidebar__logout">
+        <div onClick={Util.dispatchLogoutUser} className="sidebar__logout">
           <Link to="#">
             {" "}
             <img src={logout} alt="" />
-            <p onClick={Util.dispatchLogoutUser}>Logout</p>
+            <p>Logout</p>
           </Link>
         </div>
       </div>
