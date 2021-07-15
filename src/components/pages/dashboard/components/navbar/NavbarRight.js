@@ -1,15 +1,18 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect, useRef } from "react";
 import Avatar from "@material-ui/core/Avatar";
+import { CSSTransition } from "react-transition-group";
+import { Link } from "react-router-dom";
+
 import profile from "../../assets/profile.png";
 import caret from "../../assets/caret.svg";
 import notification from "../../assets/Notification.svg";
-import { CSSTransition } from "react-transition-group";
 import { ReactComponent as ArrowIcon } from "./assests/caret.svg";
 import navlogout from "../../assets/navlogout.svg";
 import navprofile from "../../assets/navprofile.svg";
-import { Link } from "react-router-dom";
 import "./navleft.css";
 import { useUser } from "../../../../../hooks/use-user";
+import { Util } from "../../../../../helpers/util";
 
 function NavRight(props) {
   return (
@@ -49,10 +52,7 @@ function NavItem(props) {
         />
       </li>
 
-      <li
-        className="nav-item"
-        onClick={() => setOpen(!open)}
-      >
+      <li className="nav-item" onClick={() => setOpen(!open)}>
         <a className="ml-3">
           {firstname} {lastname}
           <img width="10" className="ml-2" src={caret} alt="avatar" />
@@ -65,7 +65,7 @@ function NavItem(props) {
 
 function DropdownMenu() {
   const [activeMenu, setActiveMenu] = useState("main");
-  const [menuHeight, setMenuHeight] = useState(null);
+  const [, /* menuHeight */ setMenuHeight] = useState(null);
   const dropdownRef = useRef(null);
 
   useEffect(() => {
@@ -121,7 +121,7 @@ function DropdownMenu() {
             </Link>
           </DropdownItem>
 
-          <DropdownItem>
+          <DropdownItem onClick={Util.dispatchLogoutUser}>
             <img
               src={navlogout}
               alt="nav-logout-logo"

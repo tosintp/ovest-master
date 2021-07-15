@@ -39,7 +39,6 @@ export const getProfileAction = () => {
 export const logoutUserAction = () => {
   return async (dispatch) => {
     $api.updateRequestConfig({ headers: { Authorization: "" } });
-    delete localStorage.authToken;
 
     dispatch({ type: LOGOUT_USER });
   };

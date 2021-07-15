@@ -28,4 +28,8 @@ export class Util {
       return merge(acc, { [key]: decodeURIComponent(value) });
     }, {});
   }
+
+  static dispatchLogoutUser() {
+    Dispatcher.$dispatch({ type: LOGOUT_USER });
+  }
 }
