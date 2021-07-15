@@ -30,7 +30,6 @@ export class Util {
   }
 
   static dispatchLogoutUser() {
-    console.log("Put a little something something in her drink");
     Dispatcher.$dispatch({ type: LOGOUT_USER });
   }
 }
