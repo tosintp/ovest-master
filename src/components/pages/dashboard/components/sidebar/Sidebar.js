@@ -1,6 +1,7 @@
 import React from "react";
-import "./Sidebar.css";
 import { Link } from "react-router-dom";
+
+import "./Sidebar.css";
 // import { useRouteMatch } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 import dashboard from "../../assets/home-icon-whitr.png";
@@ -12,6 +13,7 @@ import accounts from "../../assets/6.svg";
 import logout from "../../../../Assets/Logout.svg";
 
 import SidebarContent from "./SidebarContent";
+import { Util } from "../../../../../helpers/util";
 
 const Sidebar = ({ sidebarOpen, closeSidebar }) => {
   // let match = useRouteMatch();
@@ -53,7 +55,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
           <Link to="#">
             {" "}
             <img src={logout} alt="" />
-            <p>Logout</p>
+            <p onClick={Util.dispatchLogoutUser}>Logout</p>
           </Link>
         </div>
       </div>
