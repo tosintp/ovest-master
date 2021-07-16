@@ -2,7 +2,8 @@ import React,{useState} from "react";
 import Account1 from "../../assets/account1.svg";
 import Arrowright from "../../assets/Arrowright.svg";
 import "./Account.css";
-import closemodalicon from "../../../../Assets/closemodalicon.svg";
+import backicon from "../../../../Assets/backicon.svg";
+
 import SettingsIndex from "../AccountPage/SettingsModal/SettingsIndex"; 
 
 const AccountSettings = () =>
@@ -32,12 +33,8 @@ const AccountSettings = () =>
         <div id="settingsModal" className="settings-modal">
           <div className="accountmodal-head">
             {section === 0 ? (
-              <a href="#" className="closemodalicon-btn">
-                <img
-                  src={closemodalicon}
-                  alt="close modal"
-                  className="closemodal"
-                />
+              <a href="#" className="backicon">
+                <img src={backicon} alt="back icon" className="back-icon" />
               </a>
             ) : null}
             <SettingsIndex {...{ section, setSection }} />

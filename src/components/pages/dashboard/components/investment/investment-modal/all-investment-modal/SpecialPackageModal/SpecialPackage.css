@@ -95,3 +95,29 @@ select {
   letter-spacing: 0.03em;
   color: #038830;
 }
+.roi-info {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(153, 153, 153, 0, 48);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  z-index: 999;
+}
+
+.roi-info :target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.roiInfo-head {
+  background-color: black;
+  margin-left: auto;
+  width: 438px;
+  height: 400px;
+}

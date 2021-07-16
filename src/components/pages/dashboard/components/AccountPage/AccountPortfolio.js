@@ -1,8 +1,9 @@
 import React,{useState} from 'react'
 import Portfolio from "../../assets/Portfolio.svg";
 import Arrowright from "../../assets/Arrowright.svg";
-import closemodalicon from "../../../../Assets/closemodalicon.svg";
 import PortfolioIndex from './PortfolioModal/PortfolioIndex';
+import backicon from "../../../../Assets/backicon.svg";
+
 import './Account.css'
 
 
@@ -33,12 +34,8 @@ const AccountPortfolio = () =>
         <div id="portfolioModal" className="portfolio-modal">
           <div className="accountmodal-head">
             {section === 0 ? (
-              <a href="#" className="closemodalicon-btn">
-                <img
-                  src={closemodalicon}
-                  alt="close modal"
-                  className="closemodal"
-                />
+              <a href="#" className="backicon">
+                <img src={backicon} alt="back icon" className="back-icon" />
               </a>
             ) : null}
             <PortfolioIndex {...{ section, setSection }} />

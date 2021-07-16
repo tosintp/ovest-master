@@ -30,7 +30,7 @@ const VerificationIndex = ({ section, setSection }) => {
     case 2:
       CurrentPage = (
         <>
-          <a
+          <button
             className="backicon"
             onClick={() =>
             {
@@ -38,7 +38,7 @@ const VerificationIndex = ({ section, setSection }) => {
             }}
           >
             <img src={backicon} alt="back icon" className="back-icon" />
-          </a>
+          </button>
           <Identification setSection={setSection} />
         </>
       );
@@ -46,14 +46,14 @@ const VerificationIndex = ({ section, setSection }) => {
     case 3:
       CurrentPage = (
         <>
-          <a
+          <button
             className="backicon"
             onClick={() => {
               setSection(0);
             }}
           >
             <img src={backicon} alt="back icon" className="back-icon" />
-          </a>
+          </button>
           <Residence setSection={setSection} />
         </>
       );
