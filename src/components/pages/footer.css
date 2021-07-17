@@ -84,8 +84,8 @@ li {
 }
 
 .containe {
-  max-width: 1240px;
-  margin: 10rem 6rem 2rem 6rem;
+  width: 94%;
+  margin: 10rem auto;
 }
 .footer-logo {
   display: flex;

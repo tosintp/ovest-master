@@ -9,8 +9,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 1.4rem;
-  padding: 39px 90px;
-  /* max-width: 1240px; */
+  width: 94%;
   margin: auto;
 }
 

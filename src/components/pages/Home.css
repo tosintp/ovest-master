@@ -4,7 +4,7 @@
 
 .dashboard1-wrapper {
   padding-top: 100px;
-  padding-left: 80px;
+  padding-left: 40px;
 }
 .dashboard1-wrapper .badge {
   border: none;
@@ -128,7 +128,11 @@
   background-size: 35vw;
   background-repeat: no-repeat;
   background-position: right;
-  background-image: linear-gradient(rgba(240, 246, 255, 0.836), rgba(240, 246, 255, 0.774)), url(../Assets/Ellipse2.png);
+  background-image: linear-gradient(
+      rgba(240, 246, 255, 0.836),
+      rgba(240, 246, 255, 0.774)
+    ),
+    url(../Assets/Ellipse2.png);
   height: 100%;
   width: auto;
   margin: 0;
@@ -167,7 +171,7 @@
 }
 .about-ses {
   /* padding: 10px 102px !important; */
-  padding: 5rem 9rem !important;
+  padding: 5rem 4rem !important;
 }
 .ovestor-why {
   margin-bottom: 5rem;
@@ -240,7 +244,7 @@
 }
 .who-we-are {
   /* margin-top: 160px !important; */
-  padding: 0px 102px 0rem 102px !important;
+  padding: 0px 40px 0rem 40px !important;
   display: flex;
   /* align-items: center; */
   justify-content: space-between;
@@ -252,7 +256,11 @@
   /* background-position: left;  */
   background-size: 40vw;
   background-repeat: no-repeat;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.664), rgba(255, 255, 255, 0.932)), url(../Assets/Ellipse.png);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.664),
+      rgba(255, 255, 255, 0.932)
+    ),
+    url(../Assets/Ellipse.png);
   height: 100%;
   width: auto;
   margin: 0;
@@ -694,7 +702,11 @@ div.hero-details > p {
   left: 893px;
   top: 100px;
   z-index: -2;
-  background: linear-gradient(0deg, rgba(244, 248, 253, 0.65), rgba(244, 248, 253, 0.65));
+  background: linear-gradient(
+    0deg,
+    rgba(244, 248, 253, 0.65),
+    rgba(244, 248, 253, 0.65)
+  );
 }
 .phone1 {
   height: 472.22px;
