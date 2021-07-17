@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import "./Main.css";
 // import hello from "../../assets/hello.svg";
@@ -24,6 +24,7 @@ import {
 import DashboardLayout from "../../dashboardDefaultLayout/DashboardLayout";
 // import { selectCurrentUser } from "../../../../../redux/selectors/auth.selector";
 import { useUser } from "../../../../../hooks/use-user";
+import { $api } from "../../../../../helpers/$api";
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -31,16 +32,80 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+export const DashboardCard = ({
+  title,
+  amount,
+  change,
+  hasActions = false,
+  returns,
+  color,
+  "footer-color": footerColor = "wallet-footer1",
+}) => {
+  return (
+    <div className="main__cards  ">
+      <div className={`w${color}`}>
+        <div className="card_inner1">
+          <p className="card-tit ">{title}</p>
+          <p className="amount ">&#36; {amount}</p>
+          {change && <p className="change">{change}% portfolio change today</p>}
+
+          {hasActions && (
+            <div className="wallet-icons mt-4 ">
+              <div className="wallet-icons-bg1">
+                <img className="" src={download} alt="" />
+              </div>
+              <div
+                className="
+                  wallet-icons-bg2"
+              >
+                <img className="" src={uploadicon} alt="" />
+              </div>
+            </div>
+          )}
+
+          {returns && (
+            <div className={footerColor}>
+              <p className="returns">Total Returns:</p>
+              <p className="amount">&#36; {returns}</p>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
   const classes = useStyles();
   // const [showModal, setShowModal] = useState(false);
   // const CurrentUser = useSelector(selectCurrentUser);
   const user = useUser();
+  const [balances, setBalances] = useState({
+    ovest: "0.00",
+    savest: {
+      total: "0.000",
+      percentageChane: "0.0",
+      totalReturns: "0",
+    },
+    investment: {
+      total: "0.00",
+      percentageChane: "0.0",
+      totalReturns: "0.00",
+    },
+  });
   const { lastname } = user;
 
-  // useEffect(() => {
-  //   console.log("CurrentUser: ", user);
-  // }, []);
+  useEffect(() => {
+    (async () => {
+      try {
+        const balances = await $api.user.getBalances();
+
+        setBalances(balances);
+      } catch (error) {
+        // error getting balances
+      }
+    })();
+  }, [setBalances]);
 
   const openModal = () => {
     toggleModalAppearance();
@@ -117,53 +182,28 @@ const Main = ({ toggleModalAppearance, toggleWithdrawalModalAppearance }) => {
             {/* <!-- MAIN TITLE ENDS HERE --> */}
             {/* <!-- MAIN CARDS STARTS HERE --> */}
             <div className=" wallet-card " style={{ marginTop: "10px" }}>
-              <div className="main__cards  ">
-                <div className=" w1">
-                  <div className="card_inner1">
-                    <p className="card-tit ">OVest Wallet Balance</p>
-                    <p className="amount ">&#36; 0.00</p>
+              <DashboardCard
+                title="OVest Wallet Balance"
+                amount={balances.ovest}
+                hasActions
+                color="1"
+              />
+              <DashboardCard
+                title="Savest Total Balance"
+                amount={balances.savest.total}
+                change={balances.savest.percentageChane}
+                returns={balances.savest.totalReturns}
+                color=" wallet w2"
+              />
 
-                    <div className="wallet-icons mt-4 ">
-                      <div className="wallet-icons-bg1">
-                        <img className="" src={download} alt="" />
-                      </div>
-                      <div
-                        className="
-                  wallet-icons-bg2"
-                      >
-                        <img className="" src={uploadicon} alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="main__cards ">
-                <div className="wallet w2">
-                  <div className="card_inner">
-                    <p className="card-tit">Savest Total Balance</p>
-                    <p className="amount">&#36; 0.00</p>
-                    <p className="change">0.0% portfolio change today</p>
-
-                    <div className="wallet-footer1">
-                      <p className="returns">Total Returns:</p>
-                      <p className="amount">&#36; 0.00</p>
-                    </div>
-                  </div>
-                </div>
-              </div>{" "}
-              <div className="main__cards">
-                <div className="wallet w3">
-                  <div className="card_inner">
-                    <p className="card-tit">Total Amount Invested</p>
-                    <p className="amount">&#36; 0.00</p>
-                    <p className="change">0.0% portfolio change today</p>
-                    <div className="wallet-footer2">
-                      <p className="returns">Total Returns:</p>
-                      <p className="amount">&#36; 0.00</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <DashboardCard
+                title="Total Amount Invested"
+                amount={balances.investment.total}
+                change={balances.investment.percentageChane}
+                returns={balances.investment.totalReturns}
+                color=" wallet w3"
+                footer-color="wallet-footer2"
+              />
             </div>
 
             <div className="main-center ">

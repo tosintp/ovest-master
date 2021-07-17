@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import verified from "../../../assets/verified.svg";
 import forward from "../../../assets/forward.svg";
 import "./Complete-setup.css";
+import { $api } from "../../../../../../helpers/$api";
+
 const CompleteSetup = () => {
+  const [setupComplete, setSetupComplete] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const setupStatus = await $api.user.verifyUserStatus();
+        if (setupStatus !== setupComplete) {
+          setSetupComplete(setupStatus);
+        }
+      } catch (error) {
+        // error!
+      }
+    })();
+  }, [setupComplete]);
+
+  if (setupComplete) {
+    return null;
+  }
+
   return (
     <div>
       <div className="popInfo">
