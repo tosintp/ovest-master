@@ -24,7 +24,9 @@ const PaymentMethod = ({ setPage }) => {
             <div className="paymentmethod-flex">
               <img src={cardicon} alt="" srcset="" className />
               <div>
-                <h5 className="mb-4 wallet-title">Savest Wallet</h5>
+                <h5 className="mb-4 wallet-title-wallet-title-silverinvestment">
+                  Savest Wallet
+                </h5>
                 <p className="investamount-balance mt-3">Balance: N0</p>
               </div>
               <img src={backtick} alt="" srcset="" />
