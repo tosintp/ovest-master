@@ -41,6 +41,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
       </div>
 
       <div className="sidebar__menu">
+
         <NavLink
           activeClassName="sidebar-menu-active"
           to="/dashboard"
