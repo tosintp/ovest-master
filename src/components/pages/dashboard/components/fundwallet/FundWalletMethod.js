@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import cardicon from "../../../../Assets/cardicon.svg";
 import tranfericon from "../../../../Assets/bankicon.svg";
 import nebbixicon from "../../../../Assets/nebbixicon.svg";
+import nebbixiconactive from "../../../../Assets/activecrypto-icon.svg";
 
 const FundWalletMethod = ({ setStage }) => {
+  const [isNotNigerian] = useState(false);
+
   return (
     <div>
       <div className="fundovestwallet">
@@ -12,16 +15,30 @@ const FundWalletMethod = ({ setStage }) => {
       </div>
 
       <div className="funding-method">
-        <div className="banktranfer" onClick={() => setStage(1)}>
+        <div
+          className="banktranfer active-fundwallet-method"
+          onClick={() => setStage(1)}
+        >
           <img src={tranfericon} alt="tranfer-icon" />
           <p>By Bank Transfer</p>
         </div>
-        <div className="cardtranfer" onClick={() => setStage(5)}>
+        <div
+          className="cardtranfer active-fundwallet-method"
+          onClick={() => setStage(5)}
+        >
           <img src={cardicon} alt=" card icon" />
           <p>By Card</p>
         </div>
-        <div className="cryptotranfer" onClick={() => setStage()}>
-          <img src={nebbixicon} alt=" nebbix icon" />
+        <div
+          className={`cryptotranfer ${
+            isNotNigerian ? "active-fundwallet-method" : ""
+          }`}
+          onClick={() => setStage()}
+        >
+          <img
+            src={isNotNigerian ? nebbixiconactive : nebbixicon}
+            alt=" nebbix icon"
+          />
           <p>
             By Nebbix <br /> ( Cryptocurrency)
           </p>
