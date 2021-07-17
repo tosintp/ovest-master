@@ -1,11 +1,16 @@
 import React from "react";
 import "./sidebarcontent.css";
-function SidebarContent({ image, title }) {
+function SidebarContent({ image, isActive, imageActive, title }) {
   return (
     <div>
       <div className="sidebarcontent">
         <div className="sidebar__link ">
-          <img className="iconsvg" src={image} alt="" />
+          {isActive ? (
+            <img className="iconsvg" src={imageActive} alt="" />
+          ) : (
+            <img className="iconsvg" src={image} alt="" />
+          )}
+
           <p>{title}</p>
         </div>
       </div>

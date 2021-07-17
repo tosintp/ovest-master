@@ -216,25 +216,6 @@ const SignUp = ({ user, createUser, ...props }) => {
           <ExtraText>
             Already an OVestor? <TextLink to="/signin  ">Login</TextLink>
           </ExtraText>
-          <p
-            style={{
-              fontFamily: "Inter",
-              fontStyle: "normal",
-              fontWeight: "normal",
-              fontSize: "16px",
-              lineHeight: "19px",
-              textAlign: "center",
-              padding: "10px",
-              color: "#121212",
-            }}
-          >
-            OR
-          </p>
-          <div className="form-icon">
-            <img src={fbcircle} className="formicon2" alt="fb-icon" />
-            <img src={applecircle} className="formicon1" alt="apple-icon" />
-            <img src={googlecircle} className="formicon1" alt="ggicon" />
-          </div>
         </StyledFormArea>
       </div>
     </StyledContainer>

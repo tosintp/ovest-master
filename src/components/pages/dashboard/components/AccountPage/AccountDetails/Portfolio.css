@@ -73,7 +73,7 @@
   color: #ffffff;
 }
 
-.wallets-color {
+.wallets {
   width: 17px;
   height: 17px;
   background: #cde1fe;
@@ -138,25 +138,26 @@
   padding-top: 15px;
 }
 
-.summary-details {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 19px;
-  letter-spacing: 0.03em;
-  color: #666666;
-  padding-top: 5px;
+.summary-details{
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 1.6rem;
+line-height: 19px;
+letter-spacing: 0.03em;
+color: #666666;
+padding-top: 5px;
+
 }
 
-.summary-detailss {
+.summary-detailss{
   font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 19px;
-  letter-spacing: 0.03em;
-  color: #666666;
-  padding-top: 5px;
-  padding-bottom: 20px;
+font-style: normal;
+font-weight: normal;
+font-size: 1.6rem;
+line-height: 19px;
+letter-spacing: 0.03em;
+color: #666666;
+padding-top: 5px;
+padding-bottom: 20px;
 }

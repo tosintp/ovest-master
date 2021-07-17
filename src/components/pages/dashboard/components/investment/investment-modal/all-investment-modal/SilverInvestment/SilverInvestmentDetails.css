@@ -1,3 +1,193 @@
+/* roi-modal */
+.silverinvestment__roi-info-bg {
+  /* position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(153, 153, 153, 0, 48);
+  /* visibility: hidden;
+  opacity: 0;
+  pointer-events: none; 
+
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.3s;
+  z-index: 999; */
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(153, 153, 153, 0.48);
+  transition: all 0.3s;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.show-roi-info {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.silverinvestment__roi-info-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  height: 370px;
+  background: #fff;
+}
+
+.profit-image {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3rem;
+}
+
+.profit-roi-modal {
+  width: 683px;
+  height: 370px;
+  background: #ffffff;
+  border-radius: 4px;
+}
+.profit-roi-header {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #0768f6;
+  margin-top: 8rem;
+}
+.profit-roi-textbody {
+  width: 80%;
+  margin: auto;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  color: #666666;
+  margin-top: 3rem;
+}
+
+/* success modal */
+.profit-roi-textbody span {
+  color: #fd740e;
+}
+.success-img-icon {
+  padding-top: 6rem;
+  text-align: center;
+}
+
+.go-to-dashboard {
+  text-align: center;
+  margin-top: 5rem;
+}
+.go-to-dashboard-btn {
+  width: 205px;
+  height: 52px;
+  background: #0768f6;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+}
+
+/* dryport/railway modal*/
+.dryport-modal {
+  /* width: 525px;
+  height: 444px; */
+}
+.dryport-body {
+  width: 70%;
+  margin: auto;
+  padding-top: 3rem;
+}
+.dryport-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.dryport-header h5 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #121212;
+}
+.railway-body {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+.railway-details {
+  width: 180px;
+  height: 64px;
+  border: 1px solid #dadada;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0.7rem 1rem 1rem 2.7rem;
+}
+.mini-header {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: #666666;
+}
+.duration-plan {
+  color: #fd740e;
+}
+.dryport-btn {
+  text-align: center;
+}
+
+/* claim property modal */
+.railway-icon-img {
+  text-align: center;
+  margin-top: 6rem;
+}
+.ovest-support-main h5 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #0768f6;
+  margin-top: 3.5rem;
+}
+.ovest-support-main p {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #666666;
+  margin: 2rem auto auto auto;
+  width: 50%;
+}
+.ovest-support-main span {
+  color: #fd740e;
+}
+
+/* silvest investment */
+
 .investpages {
   width: 438px;
   height: 100vh;
@@ -10,7 +200,6 @@
   height: 90vh;
   top: 0px;
   background: #fff;
-  float: right;
 }
 
 .silvestinvestment-body {
@@ -27,6 +216,10 @@
   text-align: left;
   letter-spacing: 0.03em;
   color: #121212;
+}
+.silvestheader-flex {
+  display: flex;
+  justify-content: space-between;
 }
 .silvestinvestment-p {
   font-family: Inter;
@@ -453,7 +646,7 @@
 .wallet-title {
   font-size: 16px;
   line-height: 24px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.03em;
   color: #666666;
 }

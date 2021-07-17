@@ -24,7 +24,7 @@ const SelectLocation = ({ setPage }) => {
           <div className="note-main">
             <p className="note">
               Location selected would determine landvest package that will be
-              displayed
+              diisplayed
             </p>
           </div>
           <button className="invest" onClick={() => setPage(2)}>

@@ -2,22 +2,20 @@
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
- 
 }
 .savestCard {
   width: 320px;
   max-height: 138px;
-  background:url("../../assets/green.png") ;
-  border-radius: 4px;
+  background: url("../../assets/green.png");
+  border-radius: 4px 4px 4px 0px;
   /* margin-right: 2rem; */
-  
 }
 
 .saveCard {
   width: 320px;
   max-height: 138px;
-  background:#ffffff;
-  border-radius: 4px;
+  background: #ffffff;
+  border-radius: 4px 4px 4px 0px;
   /* margin-top: 40px; */
   /* margin-left: 2rem; */
 }
@@ -26,7 +24,7 @@
   width: 320px;
   max-height: 138px;
   background: url("../../assets/green.png");
-  border-radius: 4px;
+  border-radius: 4px 4px 4px 0px;
   /* margin-right: 2rem; */
 }
 
@@ -114,56 +112,18 @@
   margin-left: 80px;
 }
 
-.savestRate {
-  display: flex;
-  justify-content: space-between;
+.create-savest {
+text-align: center;
+margin-top: 3.5rem;
 }
-
-.savestRate h6 {
-  margin-top: 20px;
-  margin-left: 24px;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.8rem;
-  line-height: 22px;
-  letter-spacing: 0.03em;
-  color: #666666;
-}
-.savestRate span {
+.create-savestplan {
+  margin-top: 2rem;
   font-family: Inter;
   font-style: normal;
   font-weight: 600;
-  font-size: 2.4rem;
-  line-height: 29px;
+  font-size: 16px;
+  line-height: 30px;
   text-align: center;
   letter-spacing: 0.03em;
   color: #0768f6;
-  margin-left: 24px;
-  position: relative;
-  top: 10px;
-}
-
-.savestRate p {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 19px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #666666;
-  margin-top: 30px;
-}
-
-.editPlan p {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.6rem;
-  line-height: 19px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #fd740e;
-  padding-right: 13px;
 }

@@ -77,12 +77,17 @@ function DropdownMenu() {
     setMenuHeight(height);
   }
   function DropdownItem(props) {
+    const handleClick = (...args) => {
+      if (props.gotoMenu) {
+        setActiveMenu(props.goToMenu);
+      }
+
+      if (props.onClick) {
+        props.onClick(...args);
+      }
+    };
     return (
-      <a
-        href="#"
-        className="menu-item"
-        onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}
-      >
+      <a href="#" className="menu-item" onClick={handleClick}>
         {/* <span className="icon-button">{props.leftIcon}</span> */}
         {props.children}
         {/* <span className="icon-right">{props.rightIcon}</span> */}

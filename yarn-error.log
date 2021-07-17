@@ -1,23 +1,20 @@
 Arguments: 
-  /Users/mac/.nvm/versions/node/v12.19.0/bin/node /Users/mac/.nvm/versions/node/v12.19.0/bin/yarn install
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-to-pdf
 
 PATH: 
-  /Users/mac/.nvm/versions/node/v12.19.0/bin:/Library/Frameworks/Python.framework/Versions/3.9/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mac/Documents/code/flutter/bin:/Library/Apple/usr/bin:/Library/Frameworks/Python.framework/Versions/3.9/bin
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Git\cmd;C:\Users\hp\AppData\Local\Microsoft\WindowsApps;C:\Users\hp\AppData\Roaming\npm;C:\Users\hp\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\hp\AppData\Local\Yarn\bin
 
 Yarn version: 
-  1.22.10
+  1.22.5
 
 Node version: 
-  12.19.0
+  14.17.0
 
 Platform: 
-  darwin x64
+  win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@testing-library/dom/-/dom-6.16.0.tgz: ETIMEDOUT
-      at Timeout._onTimeout (/Users/mac/.nvm/versions/node/v12.19.0/lib/node_modules/yarn/lib/cli.js:141322:19)
-      at listOnTimeout (internal/timers.js:554:17)
-      at processTimers (internal/timers.js:497:7)
+  Error: EPERM: operation not permitted, unlink 'C:\Users\hp\Desktop\contrib\OVest-master\node_modules\babel-jest\node_modules\@babel\core\node_modules\.bin'
 
 npm manifest: 
   {
@@ -48,6 +45,7 @@ npm manifest:
       "react-dom": "^16.13.1",
       "react-icons": "^4.2.0",
       "react-loader-spinner": "^4.0.0",
+      "react-phone-input-2": "^2.14.0",
       "react-redux": "^7.2.4",
       "react-router-dom": "^5.2.0",
       "react-scripts": "3.4.1",
@@ -3409,7 +3407,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/classlist-polyfill/-/classlist-polyfill-1.2.0.tgz#935bc2dfd9458a876b279617514638bcaa964a2e"
     integrity sha1-k1vC39lFiodrJ5YXUUY4vKqWSi4=
   
-  classnames@^2.2.3, classnames@^2.3.1:
+  classnames@^2.2.3, classnames@^2.2.6, classnames@^2.3.1:
     version "2.3.1"
     resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
     integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
@@ -7603,10 +7601,20 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
     integrity sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4=
   
+  lodash.reduce@^4.6.0:
+    version "4.6.0"
+    resolved "https://registry.yarnpkg.com/lodash.reduce/-/lodash.reduce-4.6.0.tgz#f1ab6b839299ad48f784abbf476596f03b914d3b"
+    integrity sha1-8atrg5KZrUj3hKu/R2WW8DuRTTs=
+  
   lodash.sortby@^4.7.0:
     version "4.7.0"
     resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
     integrity sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=
+  
+  lodash.startswith@^4.2.1:
+    version "4.2.1"
+    resolved "https://registry.yarnpkg.com/lodash.startswith/-/lodash.startswith-4.2.1.tgz#c598c4adce188a27e53145731cdc6c0e7177600c"
+    integrity sha1-xZjErc4YiiflMUVzHNxsDnF3YAw=
   
   lodash.template@^4.4.0:
     version "4.5.0"
@@ -9992,6 +10000,18 @@ Lockfile:
       prop-types "^15.7.2"
       uncontrollable "^7.2.1"
       warning "^4.0.3"
+  
+  react-phone-input-2@^2.14.0:
+    version "2.14.0"
+    resolved "https://registry.yarnpkg.com/react-phone-input-2/-/react-phone-input-2-2.14.0.tgz#75dff7ba503becc7a19e0e8ff5aa3d878265af77"
+    integrity sha512-gOY3jUpwO7ulryXPEdqzH7L6DPqI9RQxKfBxZbgqAwXyALGsmwLWFyi2RQwXlBLWN/EPPT4Nv6I9TESVY2YBcg==
+    dependencies:
+      classnames "^2.2.6"
+      lodash.debounce "^4.0.8"
+      lodash.memoize "^4.1.2"
+      lodash.reduce "^4.6.0"
+      lodash.startswith "^4.2.1"
+      prop-types "^15.7.2"
   
   react-popper@^1.3.6:
     version "1.3.11"

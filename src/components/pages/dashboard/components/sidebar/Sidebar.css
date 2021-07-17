@@ -5,7 +5,7 @@
   /* padding: 20px; */
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  width: 240px;
+  width: 260px;
   border-radius: 4px;
   margin-left: 10px;
   margin-top: 10px;
@@ -52,6 +52,11 @@
   margin-bottom: 5px;
   padding: 0 10px;
   font-weight: 700;
+}
+
+.sidebar-menu-active {
+  background: red;
+  color: black;
 }
 /* 
 .sidebar__link {
