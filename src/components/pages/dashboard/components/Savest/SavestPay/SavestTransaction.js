@@ -1,14 +1,12 @@
 import React from 'react'
-import SavestCard from '../SavestCard'
 import './SavesTransaction.css'
 import Tabs from "../SavestPay/Tabs";
-import TransactionCard from './Transactioncard';
+// import TransactionCard from './Transactioncard';
 // import Transactiondetails from './Transactiondetails'
 
 const SavestTransaction = () => {
   return (
     <div>
-      <SavestCard />
       <div className="transactionSession">
         <div className="transactionTitle">
           <p>Savest Transactions</p>
@@ -19,7 +17,7 @@ const SavestTransaction = () => {
           justifyContent: "space-between",
         }}>
           <Tabs />
-          <TransactionCard/>
+          {/* <TransactionCard/> */}
         </div>
         {/* <Transactiondetails/> */}
       </div>

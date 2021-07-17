@@ -1,16 +1,14 @@
-.transaction {
+.transactions {
   display: flex;
   justify-content: space-between;
 }
 
 .transactionDetails {
-  width: 675px;
+  width: 695px;
   height: 400px;
   background-color: #ffffff;
   margin-top: 35px;
-  /* margin-left: 20px; */
 }
-
 
 .trans-text {
   font-family: Inter;
@@ -50,113 +48,87 @@
   line-height: 22px;
   letter-spacing: 0.03em;
   color: #121212;
+  text-align: left;
 }
 
-.Savings {
+.tuitionandrent-main {
+  margin-top: 35px;
+}
+.tuition-main {
   display: flex;
   justify-content: space-between;
-  width: 345px;
-  height: 421px;
+  width: 320px;
+  height: 148px;
   background: #ffffff;
   border-radius: 4px;
-  margin-top: 25px;
-  margin-right: 2rem;
+  padding: 3rem;
 }
-.Savings-details {
-  margin-left: 24px;
-}
-
-.infoText {
+.tuition-fees {
   font-family: Inter;
   font-style: normal;
-  font-weight: 600;
-  margin-top: 34px;
-  font-size: 1.8rem;
-  line-height: 22px;
-  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
   letter-spacing: 0.03em;
-  color: #121212;
-}
-.start-text {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.8rem;
-  line-height: 22px;
-  letter-spacing: 0.03em;
-  color: #666666;
-  margin-top: 39px;
-}
-
-.withdraw-text {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.8rem;
-  line-height: 22px;
-  letter-spacing: 0.03em;
-  color: #666666;
-  margin-top: 40px;
-}
-
-.textNumber {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 1.6rem;
-  line-height: 22px;
-  letter-spacing: 0.03em;
-  margin-top: 14px;
   color: #0768f6;
 }
-.textMonth{
-  color: black;
+.dollar-amount {
   font-family: Inter;
   font-style: normal;
   font-weight: 600;
-  font-size: 1.6rem;
+  font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.03em;
-  margin-top: 12px;
+  color: #333333;
 }
-
-
-.activeText {
+.fixed-plan {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.03em;
+  color: #038830;
+}
+.rate-main {
+  padding-top: 2rem;
+}
+.interest-amount {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #666666;
+  padding-top: 3rem;
+}
+.percentage-interest {
   font-family: Inter;
   font-style: normal;
   font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-  color: #dd0707;
-  margin-top: 39px;
-  margin-left: 65px;
-}
-
-.withdraw-texts {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.8rem;
+  font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.03em;
-  color: #666666;
-  margin-top: 40px;
-  margin-right: 13px !important;
+  color: #0768f6;
 }
-
-.frequency-texts {
+.perannum {
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.8rem;
-  /* line-height: 22px;
-  letter-spacing: 0.03em; */
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.03em;
   color: #666666;
-  margin-top: 40px;
-  margin-left: 30px;
 }
-
-.sectionDetails img{
-margin-left: 115px;
+.rent-main {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  height: 148px;
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 1rem;
 }
