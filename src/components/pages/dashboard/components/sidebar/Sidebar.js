@@ -41,7 +41,6 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
       </div>
 
       <div className="sidebar__menu">
-
         <NavLink
           activeClassName="sidebar-menu-active"
           to="/dashboard"
@@ -125,7 +124,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
         <div className="sidebar__logout">
           <NavLink to="#">
             {" "}
-            <img src={logout} alt="" />
+            <img src={logout} alt="logout" />
             <p onClick={Util.dispatchLogoutUser}>Logout</p>
           </NavLink>
         </div>
