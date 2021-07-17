@@ -67,4 +67,8 @@ export class HTTPModule {
       Util.handleAxiosError(error, url);
     }
   }
+
+  async mockCall(resolve) {
+    return new Promise((res) => setTimeout(res, 200, resolve));
+  }
 }
