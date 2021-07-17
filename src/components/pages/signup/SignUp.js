@@ -19,7 +19,11 @@ import {
   colors,
 } from "../../Syles/styles";
 import LogoIcon from "../../Logo/Logo";
-import { TextInput } from "../../pages/Formik/FormLib";
+import {
+  TextInput,
+  CodeTextInput,
+  PhoneNumberTextInput,
+} from "../../pages/Formik/FormLib";
 import applecircle from "../../Assets/applecirlce.png";
 import fbcircle from "../../Assets/fb-circle.png";
 import googlecircle from "../../Assets/googlecircle.png";
@@ -88,6 +92,7 @@ const SignUp = ({ user, createUser, ...props }) => {
               password: "",
               password_confirmation: "",
               username: "",
+              phone_code: "",
             }}
             onSubmit={handleSubmit}
             validationSchema={Yup.object({
@@ -110,11 +115,11 @@ const SignUp = ({ user, createUser, ...props }) => {
                 .required("confirm_password is Required")
                 .oneOf([Yup.ref("password"), "Passwords must match"]),
               username: Yup.string().required("Username is Required"),
+              phone_code: Yup.string().required("Phone Code is Required"),
             })}
           >
             {({ isSubmitting, values, handleBlur, handleChange }) => (
               <Form>
-                {/* <TextInput name="country" type="text" placeholder=" Country" /> */}
                 <CountryDropdown
                   style={{
                     width: "458px",
@@ -158,24 +163,22 @@ const SignUp = ({ user, createUser, ...props }) => {
                   type="text"
                   placeholder=" Username"
                 />
-                <TextInput type="tel" name="phone" placeholder="Phone Number" />{" "}
+                {/* <TextInput type="tel" name="phone" placeholder="Phone Number" />{" "} */}
                 <div
                   style={{
                     display: "flex",
-                    justifyContent: "space-around",
+                    justifyContent: "space-between",
                   }}
                 >
-                  {/* <FlagTextInput type="tel" name="flag" /> */}
+                  <CodeTextInput type="tel" name="phone_code">
+                    <option value="ngn">+ 234</option>
+                  </CodeTextInput>
 
-                  {/* <PhoneInput
-                  
-                    inputProps={{
-                      name: "phone",
-                    }}
-                  /> */}
-
-                  {/* <CodeTextInput type="tel" name="code" />
-                  <PhoneNumberTextInput type="tel" name="phone" /> */}
+                  <PhoneNumberTextInput
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone Number"
+                  />
                 </div>
                 <TextInput
                   type="text"
@@ -213,25 +216,6 @@ const SignUp = ({ user, createUser, ...props }) => {
           <ExtraText>
             Already an OVestor? <TextLink to="/signin  ">Login</TextLink>
           </ExtraText>
-          <p
-            style={{
-              fontFamily: "Inter",
-              fontStyle: "normal",
-              fontWeight: "normal",
-              fontSize: "16px",
-              lineHeight: "19px",
-              textAlign: "center",
-              padding: "10px",
-              color: "#121212",
-            }}
-          >
-            OR
-          </p>
-          <div className="form-icon">
-            <img src={fbcircle} className="formicon2" alt="fb-icon" />
-            <img src={applecircle} className="formicon1" alt="apple-icon" />
-            <img src={googlecircle} className="formicon1" alt="ggicon" />
-          </div>
         </StyledFormArea>
       </div>
     </StyledContainer>

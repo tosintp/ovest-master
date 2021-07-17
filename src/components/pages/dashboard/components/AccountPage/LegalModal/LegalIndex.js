@@ -12,32 +12,6 @@ const LegalIndex = ({section,setSection}) =>
     case 0:
       CurrentPage = <Legal setSection={setSection} />;
       break;
-      
-    case 1:
-      CurrentPage = (
-        <>
-          <a href="#legalModal" className="backicon" onClick={() =>
-          {
-            setSection( 0 );
-          }}>
-            <img src={backicon} alt="back icon" className="back-icon" />
-          </a>
-          <LegalTerms setSection={setSection} />
-        </>
-      )
-      break;
-      case 2:
-        CurrentPage = (
-        <>
-          <a href="#legalModal" className="backicon" onClick={() =>
-          {
-            setSection( 0 );
-          }}>
-            <img src={backicon} alt="back icon" className="back-icon" />
-          </a>
-          <Faqs setSection={setSection} />
-        </>
-      )
     }
   
   return (

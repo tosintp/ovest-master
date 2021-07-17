@@ -4,6 +4,7 @@ import SpecialInvestDetails from "./SpecialInvestDetails";
 import IbadanLandvest from "./IbadanLandvest";
 import SpecialPackageInvestNow from "./SpecialPackageInvestNow";
 import backicon from "../../../../../../../Assets/backicon.svg";
+import InvestWithBalance from "../../all-investment-modal/SilverInvestment/InvestWithBalance";
 
 const SpecialPackageIndex = ({ page, setPage }) => {
   let currentPage;
@@ -55,6 +56,22 @@ const SpecialPackageIndex = ({ page, setPage }) => {
             <img src={backicon} alt="back icon" />
           </button>
           <SpecialPackageInvestNow setPage={setPage} />
+        </>
+      );
+      break;
+
+    case 4:
+      currentPage = (
+        <>
+          <button
+            className="backicon"
+            onClick={() => {
+              setPage(2);
+            }}
+          >
+            <img src={backicon} alt="back icon" />
+          </button>
+          <InvestWithBalance setPage={setPage} />
         </>
       );
       break;

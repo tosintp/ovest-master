@@ -16,7 +16,7 @@ const PaymentMethod = ({ setPage }) => {
                 <h5 className="mb-4 wallet-title">Ovest Wallet</h5>
                 <p className="investamount-balance mt-3">Balance: N0</p>
               </div>
-              <img src={backtick} alt="" srcset="" />
+              <img src={backtick} alt="" srcset="" onClick={() => setPage(5)} />
             </div>
           </div>
 

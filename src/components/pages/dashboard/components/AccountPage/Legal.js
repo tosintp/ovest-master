@@ -1,7 +1,8 @@
 import React,{useState} from "react";
 import Arrowright from "../../assets/Arrowright.svg";
 import Legal from "../../assets/Legal.svg";
-import closemodalicon from "../../../../Assets/closemodalicon.svg";
+import backicon from "../../../../Assets/backicon.svg";
+
 import LegalIndex from "./LegalModal/LegalIndex";
 
 const LegalAccount = () => {
@@ -30,12 +31,8 @@ const LegalAccount = () => {
         <div id="legalModal" className="legal-modal">
           <div className="accountmodal-head">
             {section === 0 ? (
-              <a href="#" className="closemodalicon-btn">
-                <img
-                  src={closemodalicon}
-                  alt="close modal"
-                  className="closemodal"
-                />
+              <a href="#" className="backicon">
+                <img src={backicon} alt="back icon" className="back-icon" />
               </a>
             ) : null}
             <LegalIndex {...{ section, setSection }} />

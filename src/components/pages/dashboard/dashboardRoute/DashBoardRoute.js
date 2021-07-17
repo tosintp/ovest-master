@@ -13,7 +13,7 @@ import Referral from "../components/Referral/ReferralSection";
 import Transaction from "../../dashboard/components/Transaction/Transaction";
 import Investment from "../../dashboard/components/investment/Investment";
 import Account from "../components/AccountPage/Account";
-
+import BankCardsAccount from "../components/AccountPage/BankCards/BankCardsAccount";
 const DashBoardRoute = ({ sidebarOpen, openSidebar, closeSidebar }) => {
   let match = useRouteMatch();
 
@@ -35,6 +35,7 @@ const DashBoardRoute = ({ sidebarOpen, openSidebar, closeSidebar }) => {
         <Route path={`${match.path}/referral`} exact component={Referral} />
 
         <Route path={`${match.path}/account`} exact component={Account} />
+        <Route path={`${match.path}/bankCardsAccount`} exact component={BankCardsAccount} />
       </Switch>
 
       {/* <Sidebar {...{sidebarOpen, closeSidebar, match}} /> */}

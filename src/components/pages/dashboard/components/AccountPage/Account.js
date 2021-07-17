@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React  from "react";
 import { connect } from "react-redux";
 import { showModal } from "../../../../../redux/actions/modal.action";
 import DashboardLayout from "../../dashboardDefaultLayout/DashboardLayout";
@@ -15,10 +15,12 @@ import Verfication from "./Verfication";
 import FundsTransfer from "./FundsTransfer";
 import AccountPortfolio from "./AccountPortfolio";
 import BankCard from "./BankCard";
+import BankCardsAccount from "./BankCards/BankCardsAccount";
 import Support from "./Support";
 import ReferralProgram from "./referralProgram";
 import AboutOvest from "./AboutOvest";
 import LegalAccount from "./Legal";
+import { Link } from "react-router-dom";
 
 const Account = ({ toggleModalAppearance }) => {
   const openModal = () => {
@@ -49,7 +51,9 @@ const Account = ({ toggleModalAppearance }) => {
             <Verfication />
             <FundsTransfer />
             <AccountPortfolio />
-            <BankCard />
+            <Link to="/dashboard/bankCardsAccount">
+              <BankCard />
+            </Link>
             <Support />
             <ReferralProgram />
             <AboutOvest />
@@ -79,10 +83,11 @@ const Account = ({ toggleModalAppearance }) => {
 
         {/* </div> */}
       </main>
-    </DashboardLayout>
+      
+    </DashboardLayout>  
   );
 };
-
+ 
 const mapDispatchToProps = (dispatch) => ({
   toggleModalAppearance: () => dispatch(showModal()),
   // toggleWithdrawalModalAppearance: () => dispatch(showWithdrawalModal()),

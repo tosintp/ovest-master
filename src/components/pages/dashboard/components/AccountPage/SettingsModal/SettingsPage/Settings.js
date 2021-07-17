@@ -85,23 +85,33 @@ const Settings = ({setSection}) =>
       </div>
       <div className="settings-page">
         <div
-          className="settings-details"  onClick={() =>
-      {
-        setSection( 1);
-      }}
+          className="settings-details"
+          onClick={() => {
+            setSection(1);
+          }}
         >
           <p>Personal Information</p>
           <img src={Arrowright} alt="" className="legal-arrow" />
         </div>
       </div>
       <div className="setting-page">
-        <div className="settings-details">
+        <div
+          className="settings-details "onClick={() =>
+          {
+            setSection( 4 );
+          }}
+        >
           <p>Security </p>
           <img src={Arrowright} alt="" className="legal-arrow" />
         </div>
       </div>
       <div className="setting-page">
-        <div className="settings-details">
+        <div
+          className="settings-details"
+          onClick={() => {
+            setSection(3);
+          }}
+        >
           <p>Next of Kin</p>
           <img src={Arrowright} alt="" className="legal-arrow" />
         </div>

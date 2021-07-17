@@ -52,10 +52,9 @@ export const StyledTextInput = styled.input`
 `;
 
 export const StyledPhoneTextInput = styled.input`
-  width: 300px;
+  width: 353px;
   height: 48px;
-  /* padding: 16px; */
-  padding-left: 16px;
+  padding-right: 16px;
   font-size: 12px;
   color: #c4c4c4;
   border: 1px solid #c4c4c4;
@@ -73,8 +72,8 @@ export const StyledPhoneTextInput = styled.input`
   }
 `;
 
-export const StyledCodeTextInput = styled.input`
-  width: 70px;
+export const StyledCodeTextInput = styled.select`
+  width: 90px;
   height: 48px;
   /* padding: 16px; */
   padding-left: 16px;

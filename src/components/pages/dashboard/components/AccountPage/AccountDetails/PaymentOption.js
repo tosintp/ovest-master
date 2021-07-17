@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./PaymentOption.css";
 import Transfer from "../../../assets/Transfer.svg";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
@@ -16,7 +16,7 @@ const PaymentOption = () => {
       width: 32,
       height: 20,
       padding: 0,
-      margin: theme.spacing( 1 ),
+      margin: theme.spacing(1),
       marginTop: "19px",
     },
     switchBase: {
@@ -67,10 +67,11 @@ const PaymentOption = () => {
     );
   });
 
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     checkedA: true,
     checkedB: true,
     checkedC: true,
+    checkedD: true,
   });
 
   const handleChange = (event) => {
@@ -94,9 +95,9 @@ const PaymentOption = () => {
             <FormControlLabel
               control={
                 <IOSSwitch
-                  checked={state.checkedB}
+                  checked={state.checkedA}
                   onChange={handleChange}
-                  name="checkedB"
+                  name="checkedA"
                 />
               }
             />
@@ -132,9 +133,9 @@ const PaymentOption = () => {
             <FormControlLabel
               control={
                 <IOSSwitch
-                  checked={state.checkedB}
+                  checked={state.checkedC}
                   onChange={handleChange}
-                  name="checkedB"
+                  name="checkedC"
                 />
               }
             />
@@ -151,9 +152,9 @@ const PaymentOption = () => {
             <FormControlLabel
               control={
                 <IOSSwitch
-                  checked={state.checkedB}
+                  checked={state.checkedD}
                   onChange={handleChange}
-                  name="checkedB"
+                  name="checkedD"
                 />
               }
             />
