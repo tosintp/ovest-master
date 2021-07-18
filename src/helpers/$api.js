@@ -1,4 +1,5 @@
 import { API_URL } from "./config";
+import { HttpException } from "./exceptions";
 import { HTTPModule } from "./http";
 import { Util } from "./util";
 import * as moment from "moment";
@@ -113,6 +114,22 @@ export class User extends HTTPModule {
           };
         })
     );
+  }
+
+  async bankTransfer(payload) {
+    const { status } = await this.post("/wallet/deposit/bank", payload);
+    if (!status.includes("succes")) {
+      throw new HttpException("bank transfer failed", 400);
+    }
+  }
+
+  async initiateCard(payload) {
+    const {
+      data: { link },
+    } = await this.post("/wallet/deposit/card", payload);
+    console.log(payload);
+
+    return link;
   }
 }
 

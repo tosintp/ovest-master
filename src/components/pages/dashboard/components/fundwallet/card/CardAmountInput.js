@@ -22,8 +22,23 @@ import {
 import cardlogo from "../../../../../Assets/cardlogo.svg";
 import cardcloseicon from "../../../../../Assets/cardcloseicon.svg";
 import "./card.css";
+import { useUser } from "../../../../../../hooks/use-user";
+import { $api } from "../../../../../../helpers/$api";
 
-const CardAmountInput = ({ setStage, toggleModalAppearance }) => {
+const CardAmountInput = ({ setStage, toggleModalAppearance, stageEmit }) => {
+  const [amount] = stageEmit;
+  const user = useUser();
+
+  const handleSubmit = async () => {
+    try {
+      const link = await $api.user.initiateCard({ amount });
+
+      window.location = link;
+    } catch (error) {
+      // failed to initiate card transaction
+    }
+  };
+
   return (
     <div className="cardpaymentinput">
       <div className="cardpaymentwrapper">
@@ -43,24 +58,21 @@ const CardAmountInput = ({ setStage, toggleModalAppearance }) => {
           </button>
         </div>
         <div className="cardpaymentinput-header">
-          <h5>N500,000.00</h5>
-          <small>David@xyz.com</small>
+          <h5>N{amount}</h5>
+          <small>{user.email}</small>
         </div>
         <Formik
           initialValues={{
             cardNumber: "",
           }}
-          onSubmit={(values, { setSubmitting, setFieldError }) => {
-            console.log(values);
-            // loginUser(values, history, setFieldError, setSubmitting);
-          }}
+          onSubmit={handleSubmit}
           validationSchema={Yup.object({
             // phone: Yup.string()
             //   .matches(phoneRegExp, "Phone number is not valid")
             //   .required("Phone Number is Required"),
-            cardNumber: Yup.string().required(
-              "Card Number deposited Field is Required"
-            ),
+            // cardNumber: Yup.string().required(
+            //   "Card Number deposited Field is Required"
+            // ),
           })}
         >
           {({ isSubmitting }) => (
@@ -99,12 +111,9 @@ const CardAmountInput = ({ setStage, toggleModalAppearance }) => {
                 {!isSubmitting && (
                   <StyledBankTransferFormButton
                     type="submit"
-                    onClick={() => {
-                      setStage(8);
-                    }}
                     style={{ marginTop: "-20px" }}
                   >
-                    Pay NGN500,000.00
+                    Pay NGN{amount}
                   </StyledBankTransferFormButton>
                 )}
               </ButtonGroup>

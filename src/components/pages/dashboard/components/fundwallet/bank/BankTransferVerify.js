@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./bank.css";
-import { Formik, Form } from "formik";
 import uploadfile from "../../../../../Assets/uploadfile.svg";
 import {
   // StyledContainer,
@@ -16,11 +15,11 @@ import {
   // TextLink,
   // colors,
 } from "../../../../../Syles/styles";
-import { apiPost } from "../../../../../../helpers";
+import { $api } from "../../../../../../helpers/$api";
+import { API_URL } from "../../../../../../helpers/config";
 
 const BankTranferVerify = ({ setStage }) => {
   const [selectedFile, setSelectedFile] = useState();
-  const [isFilePicked, setIsFilePicked] = useState(false);
   const changeHandler = (event) => {
     setSelectedFile(event.target.files[0]);
   };
@@ -28,34 +27,46 @@ const BankTranferVerify = ({ setStage }) => {
   const changeStage = () => {
     setStage(4);
   };
-  const handleSubmission = (e) => {
+  const handleSubmission = async (e) => {
     e.preventDefault();
-    console.log(selectedFile);
-    const formData = new FormData();
+    try {
+      const formData = new FormData();
+      formData.append("pop", selectedFile);
 
-    formData.append("File", selectedFile);
-    var pop = formData.get("File").name;
-    var new_pop = [pop];
-    console.log(new_pop);
-
-    apiPost(`wallet/bank/update/pop`, new_pop, {
-      "content-type": undefined,
-      Accept: "application/json",
-    })
-      // fetch("https://ovest.paym.com.ng/api/user/wallet/bank/update/pop", {
-      //   method: "POST",
-      //   body: formData,
-      // })
-      .then((data) => {
-        console.log(data);
-
-        if (data.status === "success") {
-          changeStage();
-        }
-      })
-      .catch((err) => {
-        console.log(err);
+      await $api.user.request({
+        method: "POST",
+        url: `${API_URL}/wallet/bank/update/pop`,
+        data: formData,
+        headers: { "Content-Type": "multipart/form-data" },
       });
+
+      changeStage();
+    } catch (error) {
+      console.debug(error);
+    }
+
+    // var pop = formData.get("File").name;
+    // var new_pop = [pop];
+    // console.log(new_pop);
+
+    // apiPost(`wallet/bank/update/pop`, new_pop, {
+    //   "content-type": undefined,
+    //   Accept: "application/json",
+    // })
+    //   // fetch("https://ovest.paym.com.ng/api/user/wallet/bank/update/pop", {
+    //   //   method: "POST",
+    //   //   body: formData,
+    //   // })
+    //   .then((data) => {
+    //     console.log(data);
+
+    //     if (data.status === "success") {
+    //       changeStage();
+    //     }
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
   };
   return (
     <div className="banktransferverify">
@@ -95,7 +106,7 @@ const BankTranferVerify = ({ setStage }) => {
 
         <form onSubmit={handleSubmission}>
           <div className="verify-payment-card">
-            <label for="upload" className="custom-file-upload">
+            <label htmlFor="upload" className="custom-file-upload">
               <img src={uploadfile} alt="Upload file" />
             </label>
             <input

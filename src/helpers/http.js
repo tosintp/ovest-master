@@ -12,6 +12,7 @@ export class HTTPModule {
     this.$axios = axios.create(this.config);
   }
   async request(config) {
+    console.log("custome request options", config);
     try {
       const { data } = await axios(config);
       return data;
