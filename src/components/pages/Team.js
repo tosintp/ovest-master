@@ -10,7 +10,7 @@ const Team = () => {
         <h2>Our Team</h2>
       </div>
 
-      <div className=" team-image container">
+      <div className=" team-image ">
         <div className="image-sec">
           <img src={team1} className="team-img" alt="" srcSet="" />
           <h3>Angela Titi</h3>
