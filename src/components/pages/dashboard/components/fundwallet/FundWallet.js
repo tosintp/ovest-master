@@ -8,7 +8,16 @@ import closemodalicon from "../../../../Assets/closemodalicon.svg";
 
 const FundWallet = ({ toggleModalAppearance }) => {
   const [stage, setStage] = useState(0);
+  const [stageEmit, setStageEmit] = useState([]);
   const dispatch = useDispatch();
+
+  const setStageWithEmit = (stage, ...emit) => {
+    if (emit.length) {
+      setStageEmit(emit);
+    }
+
+    setStage(stage);
+  };
 
   return (
     <div className="Fund-wallet-method">
@@ -30,7 +39,9 @@ const FundWallet = ({ toggleModalAppearance }) => {
             </button>
           ) : null}
 
-          <FundWalletLogic {...{ stage, setStage }} />
+          <FundWalletLogic
+            {...{ stage, setStage: setStageWithEmit, stageEmit }}
+          />
         </div>
       </div>
     </div>

@@ -1,11 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import cardicon from "../../../../Assets/cardicon.svg";
 import tranfericon from "../../../../Assets/bankicon.svg";
 import nebbixicon from "../../../../Assets/nebbixicon.svg";
 import nebbixiconactive from "../../../../Assets/activecrypto-icon.svg";
+import { useUser } from "../../../../../hooks/use-user";
 
 const FundWalletMethod = ({ setStage }) => {
-  const [isNotNigerian] = useState(false);
+  const user = useUser();
+  const [isNotNigerian, setIsNotNigerian] = useState(false);
+
+  useEffect(() => {
+    if (user) {
+      setIsNotNigerian(user.country !== "Nigeria");
+    }
+  }, [user]);
 
   return (
     <div>

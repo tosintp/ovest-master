@@ -14,7 +14,7 @@ import "./fundwallet.css";
 
 import backicon from "../../../../Assets/backicon.svg";
 
-const FundWalletLogic = ({ stage, setStage }) => {
+const FundWalletLogic = ({ stage, setStage, stageEmit }) => {
   let currentStage;
 
   switch (stage) {
@@ -122,13 +122,15 @@ const FundWalletLogic = ({ stage, setStage }) => {
           >
             <img src={backicon} alt="back icon" />
           </button>
-          <AddNewBankCard setStage={setStage} />
+          <AddNewBankCard setStage={setStage} stageEmit={stageEmit} />
         </>
       );
       break;
 
     case 7:
-      currentStage = <CardAmountInput setStage={setStage} />;
+      currentStage = (
+        <CardAmountInput setStage={setStage} stageEmit={stageEmit} />
+      );
       break;
 
     case 8:

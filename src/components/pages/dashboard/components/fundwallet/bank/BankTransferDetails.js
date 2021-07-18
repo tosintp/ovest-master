@@ -8,13 +8,10 @@ import {
   colors,
 } from "../../../../../Syles/styles";
 import { BankTranferDetailsTextInput } from "../../../../Formik/BankDetailsInput";
-import { apiPost } from "../../../../../../helpers";
-import useAuth from "../../../../../../hooks/useAuth";
 import * as Yup from "yup";
+import { $api } from "../../../../../../helpers/$api";
 
 const BankTransferDetails = ({ setStage }) => {
-  const { user } = useAuth();
-
   const changeStage = () => {
     setStage(3);
   };
@@ -50,18 +47,9 @@ const BankTransferDetails = ({ setStage }) => {
           account_no: "",
           bank: "",
         }}
-        onSubmit={(values, { setSubmitting, setFieldError }) => {
+        onSubmit={async (values, { setSubmitting, setFieldError }) => {
+          await $api.user.bankTransfer(values);
           changeStage();
-
-          apiPost(`wallet/deposit/bank`, values)
-            .then((data) => {
-              if (data.statusCode === 200) {
-                console.log(data);
-              }
-            })
-            .catch((err) => {
-              console.log(err);
-            });
 
           // loginUser(values, history, setFieldError, setSubmitting);
         }}

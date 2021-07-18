@@ -8,14 +8,14 @@ import * as Yup from "yup";
 import {
   ButtonGroup,
   colors,
-  StyledTextInputBankTransfer,
+  // StyledTextInputBankTransfer,
   StyledBankTransferFormButton,
 } from "../../../../../Syles/styles.js";
 import { BankTranferDetailsTextInput } from "../../../../Formik/BankDetailsInput";
 
 const CardFunding = ({ setStage }) => {
-  const changeStage = () => {
-    setStage(6);
+  const changeStage = (value) => {
+    setStage(6, value);
   };
   return (
     <div className="card-funding">
@@ -31,8 +31,7 @@ const CardFunding = ({ setStage }) => {
           amount: "",
         }}
         onSubmit={(values, { setSubmitting, setFieldError }) => {
-          console.log(values);
-          changeStage();
+          changeStage(values.amount);
         }}
         validationSchema={Yup.object({
           amount: Yup.string().required("Amount deposited Field is Required"),
