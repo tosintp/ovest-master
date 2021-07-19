@@ -85,9 +85,6 @@ const SignIn = ({ login, user, ...props }) => {
                 .email("Must be a valid email")
                 .max(255)
                 .required("Email is required"),
-              // phone: Yup.string()
-              //   .number("Invalid phone address")
-              //   .required("phone is Required"),
               password: Yup.string()
                 .min(8, "password is too short")
                 .max(30, "password is too long")

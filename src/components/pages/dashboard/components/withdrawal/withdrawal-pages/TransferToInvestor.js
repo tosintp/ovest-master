@@ -10,6 +10,10 @@ import {
 import { BankTranferDetailsTextInput } from "../../../../Formik/BankDetailsInput";
 
 const TransferToInvestor = ({ setStage }) => {
+  const setChange = () => {
+    setStage(5);
+  };
+
   return (
     <div>
       <div
@@ -32,17 +36,19 @@ const TransferToInvestor = ({ setStage }) => {
           }}
           onSubmit={(values, { setSubmitting, setFieldError }) => {
             console.log(values);
+            setChange();
             // loginUser(values, history, setFieldError, setSubmitting);
           }}
           validationSchema={Yup.object({
             Amount: Yup.string().required(" Amount Field is Required"),
+            email: Yup.string().required(" Email Field is Required"),
           })}
         >
           {({ isSubmitting }) => (
             <Form>
               <BankTranferDetailsTextInput
                 name="Amount"
-                type="number"
+                type="tel"
                 placeholder="NGN"
               />
 
@@ -68,12 +74,7 @@ const TransferToInvestor = ({ setStage }) => {
               />
               <ButtonGroup>
                 {!isSubmitting && (
-                  <StyledBankTransferFormButton
-                    type="submit"
-                    onClick={() => {
-                      setStage(5);
-                    }}
-                  >
+                  <StyledBankTransferFormButton type="submit">
                     Send
                   </StyledBankTransferFormButton>
                 )}

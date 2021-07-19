@@ -9,9 +9,12 @@ import {
 import { Formik, Form } from "formik";
 import Loader from "react-loader-spinner";
 import * as Yup from "yup";
-import { BankTranferDetailsTextInput } from "../../../../Formik/BankDetailsInput";
+import { TextInput } from "../../../../Formik/FormLib";
 
 const BankConfirmPassword = ({ setStage }) => {
+  const setChange = (e) => {
+    setStage(0);
+  };
   return (
     // <div>
     <div className="cardpaymentsuccess cardpassword">
@@ -27,27 +30,26 @@ const BankConfirmPassword = ({ setStage }) => {
           }}
           onSubmit={(values, { setSubmitting, setFieldError }) => {
             console.log(values);
-            // loginUser(values, history, setFieldError, setSubmitting);
+            setChange();
           }}
           validationSchema={Yup.object({
-            Amount: Yup.string().required(" Amount Field is Required"),
+            password: Yup.string()
+              .min(8, "password is too short")
+              .max(30, "password is too long")
+              .required("Password is Required"),
           })}
         >
           {({ isSubmitting }) => (
             <Form>
-              <BankTranferDetailsTextInput
+              <TextInput
+                style={{ width: "98%" }}
                 name="password"
                 type="password"
                 placeholder="Password"
               />
               <ButtonGroup>
                 {!isSubmitting && (
-                  <StyledBankTransferFormButton
-                    type="submit"
-                    onClick={() => {
-                      setStage(0);
-                    }}
-                  >
+                  <StyledBankTransferFormButton type="submit">
                     Proceed
                   </StyledBankTransferFormButton>
                 )}
