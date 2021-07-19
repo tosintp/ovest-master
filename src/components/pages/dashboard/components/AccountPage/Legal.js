@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Arrowright from "../../assets/Arrowright.svg";
 import Legal from "../../assets/Legal.svg";
 import backicon from "../../../../Assets/backicon.svg";

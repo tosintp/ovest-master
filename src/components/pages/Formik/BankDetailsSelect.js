@@ -3,8 +3,6 @@ import React, { useState } from "react";
 import { FiEyeOff, FiEye } from "react-icons/fi";
 
 import {
-  StyledTextInput,
-  StyledTextInputBankTransfer,
   StyledTextSelectBankTransfer,
   // StyledLabel,
   StyledIcon,
@@ -12,14 +10,14 @@ import {
   // StyledTextInputCardFunding,
 } from "../../Syles/styles";
 
-export const BankTranferDetailsTextInput = ({ icon, ...props }) => {
+const BankTranferDetailsSelect = ({ icon, ...props }) => {
   const [field, meta] = useField(props);
   const [show, setShow] = useState(false);
 
   return (
     <div style={{ position: "relative" }}>
       {props.type !== "password" && (
-        <StyledTextInputBankTransfer
+        <StyledTextSelectBankTransfer
           invalid={meta.touched && meta.error}
           {...field}
           {...props}
@@ -43,3 +41,5 @@ export const BankTranferDetailsTextInput = ({ icon, ...props }) => {
     </div>
   );
 };
+
+export default BankTranferDetailsSelect;
