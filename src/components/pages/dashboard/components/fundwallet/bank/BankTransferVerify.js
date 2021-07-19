@@ -35,7 +35,7 @@ const BankTranferVerify = ({ setStage }) => {
 
       await $api.user.request({
         method: "POST",
-        url: `${API_URL}/wallet/bank/update/pop`,
+        url: `${API_URL}/user/wallet/bank/update/pop`,
         data: formData,
         headers: { "Content-Type": "multipart/form-data" },
       });

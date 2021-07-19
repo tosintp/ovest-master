@@ -44,23 +44,6 @@ const StartInvestment = ({ setPage }) => {
           </Formik>
           <p className="minimum-amount">Minimum amount:N50,000</p>
         </div>
-        <div className="start-date">
-          <p className="amount-p">Start date</p>
-
-          <input
-            type="text"
-            className="startinvest-input"
-            placeholder="DD/MM/YYYY"
-          />
-          <div className="start-date">
-            <p className="amount-p">Maturity date</p>
-            <input
-              type="text"
-              className="startinvest-input"
-              placeholder="10,Jun 2021"
-            />
-          </div>
-        </div>
         <div className="radiobutton">
           <input
             type="radio"
