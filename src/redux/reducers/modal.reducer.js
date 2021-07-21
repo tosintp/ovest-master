@@ -1,8 +1,8 @@
 import modalActionTypes from "../types/modal.types";
 
 const INITIAL_STATE = {
-  showModal: true,
-  showWithdrawalModal: true,
+  showModal: false,
+  showWithdrawalModal: false,
   hideInvestModal: true,
   showInvestModal: false,
 };

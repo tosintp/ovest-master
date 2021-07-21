@@ -1,8 +1,9 @@
+import * as moment from "moment";
+
 import { API_URL } from "./config";
 import { HttpException } from "./exceptions";
 import { HTTPModule } from "./http";
 import { Util } from "./util";
-import * as moment from "moment";
 
 export class User extends HTTPModule {
   constructor() {
@@ -130,6 +131,45 @@ export class User extends HTTPModule {
     console.log(payload);
 
     return link;
+  }
+
+  async getInvestmentStats() {
+    return this.mockCall({
+      totalAmountInvested: Util.formatMoneyNumber(Math.random() * 100000),
+      totalInvestmentPackages: 4,
+      totalReturns: Util.formatMoneyNumber(Math.random() * 50000),
+      portfolioChange: 4.26,
+    });
+  }
+
+  async getUserInvestments() {
+    return this.mockCall(
+      Array(4)
+        .fill(null)
+        .map((_, id) => ({
+          status: Util.randomChoice(["matured", "in-progress"]),
+          duration: Math.floor(Math.random() * 5 + 1),
+          startDate: moment()
+            .subtract(Math.floor(Math.random() * 5 + 1), "months")
+            .toDate(),
+          interest: Math.floor(Math.random() * 10 + 1),
+          change: 13,
+          returns: Util.formatMoneyNumber(Math.random() * 100000),
+          payout: Util.formatMoneyNumber(Math.random() * 100000),
+          name: Util.randomChoice([
+            "Silvest Investment Plan",
+            "Goldest Investment Plan",
+            "Platinumest Investment Plan",
+          ]),
+          capital: Util.formatMoneyNumber(Math.random() * 100000),
+          balance: Util.formatMoneyNumber(Math.random() * 600000),
+          isSpecial: Util.randomChoice([true, false]),
+          investmentType: "Real Estate",
+          location: "Ibadan",
+          propertyName: "Moniya (DryPort/Railway)",
+          id,
+        }))
+    );
   }
 }
 
