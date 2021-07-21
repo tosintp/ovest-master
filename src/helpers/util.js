@@ -48,4 +48,8 @@ export class Util {
 
     return number;
   }
+
+  static randomChoice(options) {
+    return options[Math.floor(Math.random() * options.length)];
+  }
 }

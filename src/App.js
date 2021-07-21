@@ -7,9 +7,9 @@ import { pick, cloneDeep } from "lodash";
 import "./App.css";
 import { colors } from "./components/Syles/styles";
 import AppRoute from "./routes/route";
-import { getProfileAction } from "./store/user/user.action";
+import { getProfileAction, logoutUserAction } from "./store/user/user.action";
 
-function App({ user, getProfile }) {
+function App({ user, getProfile, logOut }) {
   const [isLoading, setIsLoading] = useState(true);
   const {
     location: { pathname, host, protocol, href },
@@ -32,16 +32,17 @@ function App({ user, getProfile }) {
       try {
         setIsLoading(true);
         if (isNotLoggedIn) {
-          console.log("getting user profile");
           await getProfile();
         }
       } catch (error) {
-        // do nothing
+        if (error.status === 401) {
+          logOut();
+        }
       } finally {
         setIsLoading(false);
       }
     })();
-  }, [getProfile, isNotLoggedIn]);
+  }, [getProfile, isNotLoggedIn, logOut]);
 
   if (isLoading) {
     return (
@@ -77,6 +78,9 @@ function App({ user, getProfile }) {
 }
 
 const mapStateToProps = (state) => pick(cloneDeep(state), ["user"]);
-const mapDispatchToProps = { getProfile: getProfileAction };
+const mapDispatchToProps = {
+  getProfile: getProfileAction,
+  logOut: logoutUserAction,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -1,23 +1,20 @@
-import React from 'react'
+import React from "react";
 // import backicon from "../../../../../../../Assets/backicon.svg";
-import MyInvestMoniya from './MyInvestMoniya';
+import MyInvestMoniya from "./MyInvestMoniya";
 
+const MaturedSpecialIndex = ({ page, setPage, investment }) => {
+  let currentPage;
+  switch (page) {
+    case 0:
+      currentPage = (
+        <MyInvestMoniya setPage={setPage} investment={investment} />
+      );
+      break;
+    default:
+    // Ovest...
+  }
 
-
-const MaturedSpecialIndex = ({page , setPage}) => {
-    let currentPage;
- switch (page){
-     case 0:
-         currentPage = <MyInvestMoniya setPage={setPage}  />
-         break;
-      
- }
-
-    return (
-        <div className="current-stage">
-            {currentPage}
-        </div>
-    )
-}
+  return <div className="current-stage">{currentPage}</div>;
+};
 
 export default MaturedSpecialIndex;
