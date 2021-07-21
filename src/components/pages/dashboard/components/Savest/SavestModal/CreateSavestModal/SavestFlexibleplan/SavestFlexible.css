@@ -1,0 +1,191 @@
+.create-flexible-plan {
+  height: 90vh;
+}
+
+.create-flexible-plan-main {
+  width: 90%;
+  margin: auto;
+}
+.create-flexible-h5 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  color: #fd740e;
+  margin-top: 2rem;
+}
+.create-flexible-p {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #666666;
+}
+.savest-amount-p {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  color: #000000;
+  margin-top: 3rem;
+}
+.savest-amount-p2 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+.savest-flexible-input {
+  width: 395px;
+  height: 48px;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.savest-plan-label {
+  color: #666666;
+  position: relative;
+  bottom: 0.2rem;
+  padding-left: 1rem;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+.savest-button {
+  width: 396px;
+  height: 52px;
+  background: #0768f6;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 4rem;
+}
+.flexible-plan-note {
+  width: 396px;
+  height: 108px;
+  background: #f4f8fd;
+  border: 1px solid #64a0f7;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-top: 3.4rem;
+}
+.flexible-plan-note-p {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #666666;
+  padding: 1rem;
+}
+.flexible-plan-note span {
+  color: #fd740e;
+}
+
+/* save now modal */
+.savest-balance {
+  display: flex;
+  justify-content: space-between;
+}
+
+.save-now-balance {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #dd0707;
+  margin-top: 1rem;
+}
+.save-now-with-balance {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #038830;
+  margin-top: 1rem;
+}
+.save-now-change-payment {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #0768f6;
+  margin-top: -1rem;
+}
+.select-cards {
+  margin-top: 3rem;
+}
+.select-cards-p {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: 0.03em;
+  color: #333333;
+}
+.card-selection {
+  display: flex;
+  margin-top: 2rem;
+}
+.payment-method-img {
+  margin-left: 13rem;
+  margin-top: 2rem;
+}
+.payment-radio {
+  margin-top: 2.3rem;
+}
+
+.payment-bank {
+  margin-left: 2rem;
+}
+.payment-bank-p1 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.03em;
+  color: #333333;
+}
+.payment-bank-p2 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.03em;
+  color: #666666;
+}
+.payment-bank-p3 {
+  width: 166px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  letter-spacing: 0.03em;
+  color: #666666;
+}
+hr {
+  width: 100%;
+  margin: auto;
+}

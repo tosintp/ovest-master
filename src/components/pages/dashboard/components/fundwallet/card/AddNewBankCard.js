@@ -29,7 +29,13 @@ const AddNewBankCard = ({ setStage, stageEmit }) => {
             <span> N{amount}</span>
           </p>
 
-          <div className="addcard">
+          <div
+            className="addcard"
+            onClick={() => setStage(7, amount)}
+            style={{
+              cursor: "pointer",
+            }}
+          >
             <img
               className="addcardicon"
               src={addcardicon}
@@ -39,13 +45,12 @@ const AddNewBankCard = ({ setStage, stageEmit }) => {
             <img className="plus" src={plusicon} alt=" plus icon" />
           </div>
         </div>
-        <StyledBankTransferFormButton
+        {/* <StyledBankTransferFormButton
           type="submit"
-          onClick={() => setStage(7, amount)}
           style={{ marginTop: "100px" }}
         >
           Confirm
-        </StyledBankTransferFormButton>
+        </StyledBankTransferFormButton> */}
       </div>
     </div>
   );

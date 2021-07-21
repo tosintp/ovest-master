@@ -66,8 +66,8 @@ const ConfirmInvestment = ({ setPage }) => {
             <span> OVest terms and conditions</span>
           </label>
         </div>
-        <button className="invest" onClick={() => setPage(3)}>
-          Invest
+        <button className="invest" onClick={() => setPage(5)}>
+          Proceed
         </button>
       </div>
     </div>

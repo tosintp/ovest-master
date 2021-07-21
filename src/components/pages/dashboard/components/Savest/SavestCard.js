@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Savest from "../../assets/saveImg2.svg";
 import Savest1 from "../../assets/savest.svg";
-import createsavesticon from "../../assets/createsavesticon.svg"
+import createsavesticon from "../../assets/createsavesticon.svg";
 import "./SavestCard.css";
+import closemodalicon from "../../../../Assets/closemodalicon.svg";
+import CreateSavestIndex from "./SavestModal/CreateSavestModal/CreateSavestIndex";
 
 const SavestCard = () => {
+  const [menu, setMenu] = useState(0);
+
   return (
     <div className="savestSesson">
       <div className="savestCard">
@@ -27,10 +31,35 @@ const SavestCard = () => {
       </div>
       <div className="saveCard">
         <div className="create-savest">
-        <img src={createsavesticon} alt="create-savest-icon" className="create-savestimg"/>
+          <a href="#maturedinvestmentmodal">
+            <img
+              src={createsavesticon}
+              alt="create-savest-icon"
+              className="create-savestimg"
+            />
+          </a>
         </div>
-       <p className="create-savestplan">Create a New Savest Plan</p>
+        <p className="create-savestplan">Create a New Savest Plan</p>
       </div>
+      <>
+        <div id="maturedinvestmentmodal" className="maturedinvestmentmodal">
+          <div className="investmodal-head">
+            {menu === 0 ? (
+              <a
+                href="#"
+                className="closemodalicon-btn"
+                onClick={() => {
+                  setMenu(0);
+                }}
+              >
+                <img src={closemodalicon} alt="" className="closemodal" />
+              </a>
+            ) : null}
+
+            <CreateSavestIndex {...{ menu, setMenu }} />
+          </div>
+        </div>
+      </>
     </div>
   );
 };

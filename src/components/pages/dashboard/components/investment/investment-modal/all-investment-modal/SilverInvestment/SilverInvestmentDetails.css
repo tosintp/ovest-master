@@ -596,6 +596,7 @@
   line-height: 16px;
   letter-spacing: 0.03em;
   color: #0768f6;
+  cursor: pointer;
 }
 .funds-p {
   font-size: 16px;
@@ -636,6 +637,7 @@
   display: flex;
   justify-content: space-around;
   padding: 3rem 2rem 2rem 2rem;
+  cursor: pointer;
 }
 .payment-cards {
   width: 370px;

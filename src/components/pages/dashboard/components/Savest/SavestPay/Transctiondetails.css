@@ -1,11 +1,10 @@
 .detailsSession {
-  /* margin-top: 3px; */
 }
 .detailsPage {
   display: flex;
   justify-content: space-between;
- position: relative;
- right: 10px;
+  position: relative;
+  right: 10px;
 }
 .transDetails {
   display: flex;
@@ -19,12 +18,12 @@
   left: -30px;
   margin-top: 15px;
   font-family: Inter;
-font-style: normal;
-font-weight: 500;
-font-size: 1.4rem;
-line-height: 17px;
-text-align: center;
-letter-spacing: 0.03em
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
 
 .detailsText {
@@ -47,6 +46,6 @@ letter-spacing: 0.03em
   color: #666666;
 }
 
-hr{
-  color:red;
+hr {
+  color: red;
 }

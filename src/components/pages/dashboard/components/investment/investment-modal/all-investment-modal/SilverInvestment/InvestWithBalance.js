@@ -3,6 +3,7 @@ import "./SilverInvestmentDetails.css";
 import backtick from "../../../../../assets/backtick.svg";
 import closemodalicon from "../../../../../assets/close-modal-icon.svg";
 import successicon from "../../../../../assets/success-icon.svg";
+import { Link } from "react-router-dom";
 
 const InvestNow = () => {
   const [showRoiInfo, setShowRoiInfo] = useState(false);
@@ -22,7 +23,17 @@ const InvestNow = () => {
             <div className="ovest-wallet">
               <p className="ovestwallet-main">Ovest Wallet</p>
               <div className="investamount">
-                <p className="now-matured mt-4">Balance: N20,000,000</p>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  {/* should be render conditionally */}
+                  <p className="investamount-balance mt-4">Balance: N0</p>
+                  <p className="now-matured mt-4">Balance: N20,000,000</p>
+                </div>
+
                 <p className="investamount-mini mb-2">
                   Change this{" "}
                   <span>
@@ -30,6 +41,9 @@ const InvestNow = () => {
                   </span>{" "}
                 </p>
               </div>
+              <p className="funds-p mt-5">
+                Insufficient funds. <span>Fund wallet</span>
+              </p>
             </div>
           </div>
         </div>
@@ -46,6 +60,7 @@ const InvestNow = () => {
             <span> OVest terms and conditions</span>
           </label>
         </div>
+        <button className="claim-property">Securely Invest N50,000</button>
         <button className="invest" onClick={() => setShowRoiInfo(true)}>
           Securely Invest 50.000
         </button>
@@ -71,7 +86,11 @@ const InvestNow = () => {
                 <span> N50,000 </span> debited from your OVest wallet
               </p>
               <div className="go-to-dashboard">
-                <button className="go-to-dashboard-btn">Go to Dashboard</button>
+                <Link to="/dashboard">
+                  <button className="go-to-dashboard-btn">
+                    Go to Dashboard
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

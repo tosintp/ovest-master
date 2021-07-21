@@ -6,7 +6,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import TransactionDetails from "../SavestPay/Transactiondetails";
+import SavestTransactionDetails from "../SavestPay/SavestTransactiondetails";
 import "./Tabs.css";
 import Debitransaction from "./DebitTransaction";
 import Creditransaction from "./Creditransaction";
@@ -57,12 +57,12 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "300px",
   },
   tabs: {
-    borderBottom: `1px solid ${ theme.palette.divider }`,
+    borderBottom: `1px solid ${theme.palette.divider}`,
     width: "670px",
   },
 }));
 
-export default function  ScrollableTabsButtonAuto() {
+export default function ScrollableTabsButtonAuto() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -121,17 +121,17 @@ export default function  ScrollableTabsButtonAuto() {
       </Tabs>
       <TabPanel value={value} index={0}>
         {/* <div className="mr-5 transaction"> */}
-          <TransactionDetails />
+        <SavestTransactionDetails />
         {/* </div> */}
       </TabPanel>
       <TabPanel value={value} index={1}>
         {/* <div className="transaction"> */}
-          <Creditransaction />
+        <Creditransaction />
         {/* </div> */}
       </TabPanel>
       <TabPanel value={value} index={2}>
         {/* <div className="transaction"> */}
-          <Debitransaction />
+        <Debitransaction />
         {/* </div> */}
       </TabPanel>
     </div>

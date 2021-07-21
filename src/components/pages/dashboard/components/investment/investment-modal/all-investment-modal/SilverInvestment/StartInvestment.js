@@ -79,8 +79,8 @@ const StartInvestment = ({ setPage }) => {
             <p>50%</p>
           </div>
         </div>
-        <button className="invest" onClick={() => setPage(3)}>
-          Invest
+        <button type="submit" className="invest" onClick={() => setPage(2)}>
+          Proceed
         </button>
       </div>
     </div>

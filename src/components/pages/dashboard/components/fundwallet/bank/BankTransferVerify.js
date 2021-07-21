@@ -39,7 +39,6 @@ const BankTranferVerify = ({ setStage }) => {
         data: formData,
         headers: { "Content-Type": "multipart/form-data" },
       });
-
       changeStage();
     } catch (error) {
       console.debug(error);

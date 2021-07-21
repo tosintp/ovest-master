@@ -78,7 +78,7 @@ const BankTransferDetails = ({ setStage }) => {
             />
             <BankTranferDetailsTextInput
               name="account_no"
-              type="number"
+              type="tel"
               placeholder="Account Number sent from"
             />
             <BankTranferDetailsTextInput

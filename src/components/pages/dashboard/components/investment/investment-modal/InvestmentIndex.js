@@ -65,7 +65,7 @@ const InvestmentIndex = ({ page, setPage }) => {
           <button
             className="backicon"
             onClick={() => {
-              setPage(2);
+              setPage(3);
             }}
           >
             <img src={backicon} alt="back icon" />
@@ -81,7 +81,7 @@ const InvestmentIndex = ({ page, setPage }) => {
           <button
             className="backicon"
             onClick={() => {
-              setPage(2);
+              setPage(4);
             }}
           >
             <img src={backicon} alt="back icon" />
