@@ -1,6 +1,5 @@
 import { merge } from "lodash";
-
-import { $api } from "../../helpers/$api";
+import axios from "axios";
 
 import {
   GET_PROFILE_SUCCESS,
@@ -15,16 +14,12 @@ export default function user(state = null, action) {
     case SIGNUP_SUCCESS:
     case GET_PROFILE_SUCCESS:
       const { token } = action.payload;
-      $api.updateRequestConfig({
-        headers: { authorization: `Bearer ${token}` },
-      });
+      axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
       localStorage.authToken = token;
       return merge({}, state, action.payload);
     case LOGOUT_USER:
       delete localStorage.authToken;
-      $api.updateRequestConfig({
-        headers: { authorization: "" },
-      });
+      axios.defaults.headers.common["Authorization"] = "";
       return null;
     default:
       return state;
