@@ -1,15 +1,14 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Account1 from "../../assets/account1.svg";
 import Arrowright from "../../assets/Arrowright.svg";
 import "./Account.css";
 import backicon from "../../../../Assets/backicon.svg";
 
-import SettingsIndex from "../AccountPage/SettingsModal/SettingsIndex"; 
+import SettingsIndex from "../AccountPage/SettingsModal/SettingsIndex";
 
-const AccountSettings = () =>
-{
+const AccountSettings = () => {
   const [section, setSection] = useState(0);
-  
+
   return (
     <div>
       <a href="#settingsModal">

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import ProfileImage from "../../../../assets/Profileimage.svg";
 import Arrowright from "../../../../assets/Arrowright.svg";
 import "../SettingsModal.css";
@@ -8,8 +8,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 import FormGroup from "@material-ui/core/FormGroup";
 
-const Settings = ({setSection}) =>
-{
+const Settings = ({ setSection }) => {
   //Material-ui Button Styles//
   const IOSSwitch = withStyles((theme) => ({
     root: {
@@ -81,7 +80,23 @@ const Settings = ({setSection}) =>
     <div className="settings-section">
       <div className="settings-header">
         <h1>Account Settings</h1>
-        <img src={ProfileImage} alt="" className="settings-image" />
+
+        <label
+          htmlFor="input"
+          style={{
+            display: "flex",
+            cursor: "pointer",
+          }}
+        >
+          <img src={ProfileImage} alt="" className="settings-image" />
+        </label>
+        <input
+          type="file"
+          id="input"
+          style={{
+            visibility: "hidden",
+          }}
+        />
       </div>
       <div className="settings-page">
         <div
@@ -96,9 +111,9 @@ const Settings = ({setSection}) =>
       </div>
       <div className="setting-page">
         <div
-          className="settings-details "onClick={() =>
-          {
-            setSection( 4 );
+          className="settings-details "
+          onClick={() => {
+            setSection(4);
           }}
         >
           <p>Security </p>
@@ -136,6 +151,6 @@ const Settings = ({setSection}) =>
       </div>
     </div>
   );
-}
+};
 
-export default Settings
+export default Settings;

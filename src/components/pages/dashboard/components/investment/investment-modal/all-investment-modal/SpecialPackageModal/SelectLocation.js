@@ -27,8 +27,8 @@ const SelectLocation = ({ setPage }) => {
               diisplayed
             </p>
           </div>
-          <button className="invest" onClick={() => setPage(2)}>
-            Invest
+          <button className="invest" onClick={() => setPage(2)} type="submit">
+            Proceed
           </button>
         </div>
       </div>

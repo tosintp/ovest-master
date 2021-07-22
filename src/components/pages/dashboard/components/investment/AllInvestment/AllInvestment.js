@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as moment from "moment";
-import SilverInvestment from "./SilverInvestment";
+import AllInvestmentPlan from "./AllInvestmentPlan";
 import MyInvestment from "./MyInvestment";
 import NoInvestment from "./NoInvestment";
 import MaturedInvest from "./MaturedInvest";
@@ -141,7 +141,7 @@ export default function FullWidthTabs() {
       </Tabs>
 
       <TabPanel value={value} index={0} style={{}}>
-        <SilverInvestment />
+        <AllInvestmentPlan />
       </TabPanel>
       <TabPanel value={value} index={1} dir={theme.direction}>
         {/* <NoInvestment/> */}

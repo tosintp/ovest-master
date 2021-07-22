@@ -9,6 +9,8 @@ export class HTTPModule {
   }
   updateRequestConfig(config) {
     this.config = merge(this.config, config);
+    console.log("checking");
+    console.log(this.config);
     this.$axios = axios.create(this.config);
   }
   async request(config) {

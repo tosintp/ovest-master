@@ -8,8 +8,8 @@ const IbadanLandvest = ({ setPage }) => {
   const [showRoiInfo, setShowRoiInfo] = useState(false);
 
   return (
-    <div>
-      <div className="silvestinvestment">
+    <div className="silvestinvestment">
+      <div>
         <div className="silvestinvestment-body">
           <div className="silvestinvestment-main">
             <h5 className="silvestinvestment-h5 mb-3">Ibadan LandVest Plan</h5>

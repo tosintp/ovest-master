@@ -118,6 +118,7 @@ export class User extends HTTPModule {
   }
 
   async bankTransfer(payload) {
+    alert(JSON.stringify(this.config));
     const { status } = await this.post("/wallet/deposit/bank", payload);
     if (!status.includes("succes")) {
       throw new HttpException("bank transfer failed", 400);
@@ -175,6 +176,7 @@ export class User extends HTTPModule {
 
 export class $api {
   static updateRequestConfig(config) {
+    console.log(config);
     $api.user.updateRequestConfig(config);
   }
 

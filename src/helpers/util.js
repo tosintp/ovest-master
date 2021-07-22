@@ -10,7 +10,7 @@ export class Util {
     const message = data.message || "";
 
     if (url !== "/login" && status === 401) {
-      Dispatcher.$dispatch({ type: LOGOUT_USER });
+      // Dispatcher.$dispatch({ type: LOGOUT_USER });
     }
 
     const exception = new HttpException(message, status, data.errors);

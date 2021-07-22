@@ -11,7 +11,7 @@ import Rectangle66 from "../../../assets/Rectangle 66.svg";
 import { showModal } from "../../../../../../redux/actions/modal.action";
 // import { showInvestmentModalState } from '../../../../../../redux/selectors/modal.selector'
 
-const SilverInvestment = () => {
+const AllInvestmentPlan = () => {
   const [page, setPage] = useState(0);
 
   return (
@@ -66,7 +66,10 @@ const SilverInvestment = () => {
         <div className="special-package">
           <img src={Rectangle66} alt="" className="silverinvestment-img" />
           <div className="silver-investmentchild">
-            <h6 className="silverinvestment-h6">Silvest Investment Plan</h6>
+            <div className="investmentplan-header">
+              <h6 className="silverinvestment-h6">Special Package Plan</h6>
+              <em>50% Interest Rate</em>
+            </div>
             <p className="silverinvestment-p">
               Lock-away funds safely in our Silvest investment plan for
               <span> 3 months</span> with at least <span>NGN50,000.</span>
@@ -146,4 +149,4 @@ const mapDispatchToProps = (dispatch) => ({
   toggleSpecialPackageModalApperance: () => dispatch(showModal()),
 });
 
-export default connect(null, mapDispatchToProps)(SilverInvestment);
+export default connect(null, mapDispatchToProps)(AllInvestmentPlan);
