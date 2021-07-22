@@ -9,6 +9,8 @@ import {
   StyledFlagTextInput,
   StyledIcon,
   ErrorMsg,
+  SecurityStyledTextInput,
+  SecurityStyledIcon,
 } from "../../Syles/styles";
 
 import { FiEyeOff, FiEye } from "react-icons/fi";
@@ -42,6 +44,45 @@ export const TextInput = ({ icon, ...props }) => {
           {show && <FiEye />}
           {!show && <FiEyeOff />}
         </StyledIcon>
+      )}
+
+      {meta.touched && meta.error ? (
+        <ErrorMsg>{meta.error}</ErrorMsg>
+      ) : (
+        <ErrorMsg style={{ display: "none" }}>.</ErrorMsg>
+      )}
+    </div>
+  );
+};
+export const SecurityTextInput = ({ icon, ...props }) => {
+  const [field, meta] = useField(props);
+  const [show, setShow] = useState(false);
+
+  return (
+    <div style={{ position: "relative" }}>
+      {props.type !== "password" && (
+        <SecurityStyledTextInput
+          invalid={meta.touched && meta.error}
+          {...field}
+          {...props}
+        />
+      )}
+      <StyledIcon>{icon}</StyledIcon>
+
+      {props.type === "password" && (
+        <SecurityStyledTextInput
+          invalid={meta.touched && meta.error}
+          {...field}
+          {...props}
+          type={show ? "text" : "password"}
+        />
+      )}
+
+      {props.type === "password" && (
+        <SecurityStyledIcon onClick={() => setShow(!show)} left>
+          {show && <FiEye />}
+          {!show && <FiEyeOff />}
+        </SecurityStyledIcon>
       )}
 
       {meta.touched && meta.error ? (
