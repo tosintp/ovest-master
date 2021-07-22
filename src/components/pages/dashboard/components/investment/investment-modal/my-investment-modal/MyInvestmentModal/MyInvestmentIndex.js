@@ -26,7 +26,7 @@ const SpecialPackageIndex = ({ page, setPage, investment }) => {
           >
             <img src={backicon} alt="back icon" />
           </button>
-          <Earning setPage={setPage} />
+          <Earning setPage={setPage} transactions={investment.transactions} />
         </>
       );
       break;

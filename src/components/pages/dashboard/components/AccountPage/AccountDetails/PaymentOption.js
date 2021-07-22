@@ -9,6 +9,8 @@ import wallet from "../../../assets/wallet.svg";
 import Switch from "@material-ui/core/Switch";
 import { withStyles } from "@material-ui/core/styles";
 import FormGroup from "@material-ui/core/FormGroup";
+import { Util } from "../../../../../../helpers/util";
+import { $api } from "../../../../../../helpers/$api";
 
 const PaymentOption = () => {
   const IOSSwitch = withStyles((theme) => ({
@@ -70,12 +72,29 @@ const PaymentOption = () => {
   const [state, setState] = useState({
     checkedA: true,
     checkedB: true,
-    checkedC: true,
-    checkedD: true,
+    crypto: false,
+    usd: false,
   });
 
-  const handleChange = (event) => {
-    setState({ ...state, [event.target.name]: event.target.checked });
+  const handleChange = async (event) => {
+    const { name } = event.target;
+    try {
+      switch (name) {
+        case "crypto": {
+          await $api.user.activateCryptoAccount();
+          break;
+        }
+        case "usd": {
+          await $api.user.activateDollarAccount();
+          break;
+        }
+        default:
+        // DRY
+      }
+      setState({ ...state, [name]: true });
+    } catch (error) {
+      // error activating option
+    }
   };
   return (
     <div className="payment-page">
@@ -96,7 +115,7 @@ const PaymentOption = () => {
               control={
                 <IOSSwitch
                   checked={state.checkedA}
-                  onChange={handleChange}
+                  onChange={Util.noop}
                   name="checkedA"
                 />
               }
@@ -115,7 +134,7 @@ const PaymentOption = () => {
               control={
                 <IOSSwitch
                   checked={state.checkedB}
-                  onChange={handleChange}
+                  onChange={Util.noop}
                   name="checkedB"
                 />
               }
@@ -133,9 +152,9 @@ const PaymentOption = () => {
             <FormControlLabel
               control={
                 <IOSSwitch
-                  checked={state.checkedC}
+                  checked={state.crypto}
                   onChange={handleChange}
-                  name="checkedC"
+                  name="crypto"
                 />
               }
             />
@@ -152,9 +171,9 @@ const PaymentOption = () => {
             <FormControlLabel
               control={
                 <IOSSwitch
-                  checked={state.checkedD}
+                  checked={state.usd}
                   onChange={handleChange}
-                  name="checkedD"
+                  name="usd"
                 />
               }
             />
