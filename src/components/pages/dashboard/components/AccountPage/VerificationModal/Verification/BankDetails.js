@@ -1,5 +1,5 @@
-import React from 'react'
-import './BankDetails.css'
+import React from "react";
+import "./BankDetails.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 
@@ -9,10 +9,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const BankDetails = () =>
-{
+const BankDetails = () => {
   const classes = useStyles();
-  
+
   return (
     <div className="bank-section">
       <div className="bankDetails-header">
@@ -34,7 +33,7 @@ const BankDetails = () =>
       </div>
       <div className="bank-btns">
         <Button
-          // onClick={openModal}
+          type="submit"
           variant="contained"
           color="#"
           className={classes.button}
@@ -53,11 +52,11 @@ const BankDetails = () =>
             marginTop: "26px",
           }}
         >
-          Update Profile
+          Add Account
         </Button>
       </div>
     </div>
   );
-}
+};
 
-export default BankDetails
+export default BankDetails;

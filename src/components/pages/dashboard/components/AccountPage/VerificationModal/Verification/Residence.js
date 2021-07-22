@@ -24,40 +24,56 @@ const Residence = () => {
           residence certificate.
         </p>
       </div>
-      <div className="proof-section">
-        <div className="proof-residence">
-          <div className="residence-text">
-            <div>
-              <img src={ResidenceImage} alt="" className="residence-image" />
+      <label
+        htmlFor="input"
+        style={{
+          cursor: "pointer",
+        }}
+      >
+        <div className="proof-section">
+          <div className="proof-residence">
+            <div className="residence-text">
+              <div>
+                <img src={ResidenceImage} alt="" className="residence-image" />
+              </div>
+              <div>
+                <p>Scan/photo of POR</p>
+              </div>
             </div>
-            <div>
-              <p>Scan/photo of POR</p>
+
+            <div
+              style={{
+                backgroundColor: "#0768F6",
+                color: "white",
+                width: "82px",
+                height: "30px",
+                textTransform: "capitalize",
+                fontSize: "1rem",
+                fontWeight: "500",
+                lineHeight: "30px",
+                borderRadius: "4px 4px 4px 0px",
+                border: "none",
+                outline: "none",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginTop: "10px",
+                marginRight: "10px",
+              }}
+            >
+              Browse
             </div>
           </div>
-          <Button
-            // onClick={openModal}
-            variant="contained"
-            color="#"
-            className={classes.button}
-            style={{
-              backgroundColor: "#0768F6",
-              color: "white",
-              width: "82px",
-              height: "30px",
-              textTransform: "capitalize",
-              fontSize: "1rem",
-              fontWeight: "500",
-              lineHeight: "30px",
-              borderRadius: "4px 4px 4px 0px",
-              position: "relative",
-              right: "8px",
-            }}
-          >
-            Browse
-          </Button>
         </div>
-      </div>
-      <p className="pt-3 file-text">Max. file size: 25MB</p>
+      </label>
+      <input
+        type="file"
+        id="input"
+        style={{
+          visibility: "hidden",
+        }}
+      />
+      <p className=" file-text">Max. file size: 25MB</p>
       <div className="document-text">
         <p>
           Is the Proof of Residence document you are submitting issued in your
@@ -70,7 +86,7 @@ const Residence = () => {
         <input
           type="radio"
           id="daily"
-          name=""
+          name="Enquiry"
           value="HTML"
           className="residence-input"
         />
