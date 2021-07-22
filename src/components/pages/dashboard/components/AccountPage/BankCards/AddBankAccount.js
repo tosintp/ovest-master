@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Loader from "react-loader-spinner";
 import { Formik, Form } from "formik";
 import Info from "../../../assets/info.svg";
@@ -8,48 +8,110 @@ import {
   colors,
 } from "../../../../../Syles/styles";
 import { BankTranferDetailsTextInput } from "./../../../../Formik/BankDetailsInput";
+import { TextInput } from "./../../../../Formik/FormLib";
 import * as Yup from "yup";
-import'./BankCard.css'
+import "./BankCard.css";
+import { $api } from "../../../../../../helpers/$api";
 
-const AddBankAccount = ({setSection}) => {
+const AddBankAccount = ({ setSection, pageEmit }) => {
+  const [banks, setBanks] = useState([]);
+  const [bank] = pageEmit || [];
+  const [values, setValues] = useState(
+    bank || {
+      account_name: "",
+      account_no: "",
+      bank_name: "",
+    }
+  );
+
+  const handleValue = (event) => {
+    const { name, value } = event.target;
+
+    setValues({ ...values, [name]: value });
+  };
+
+  const handleSubmit = (_, { setSubmitting, setFieldError }) => {
+    const entries = Object.entries(values);
+    let hasError = false;
+    entries.forEach((entry) => {
+      const [field, value] = entry;
+      if (!value) {
+        setFieldError(
+          field,
+          `${field.replace("_", " ").replace("no", "number")} is required`
+        );
+
+        hasError = true;
+      }
+    });
+    setSubmitting(false);
+    if (!hasError) {
+      setSection(1, values);
+    }
+  };
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const banks = await $api.user.getBanks();
+
+        setBanks(banks);
+      } catch (error) {
+        // error getting banks
+      }
+    })();
+  }, [setBanks]);
+
   return (
     <div className="addbank-page">
       <p className="bank_text">Add Bank Account</p>
       <div className="formSection">
         <Formik
           initialValues={{
-            account_number: "",
+            account_no: "",
+            account_name: "",
+            bank_name: "",
           }}
-          onSubmit={(values, { setSubmitting, setFieldError }) => {
-            console.log(values);
-          }}
-          validationSchema={Yup.object({
-            account_number: Yup.string().required("account number is required"),
-          })}
+          onSubmit={handleSubmit}
         >
           {({ isSubmitting }) => (
             <Form className="crypto-form">
               <BankTranferDetailsTextInput
-                name="account_number"
+                onChange={handleValue}
+                value={values.account_name}
+                name="account_name"
+                type="tel"
+                placeholder="Enter Account Name"
+              />
+
+              <BankTranferDetailsTextInput
+                onChange={handleValue}
+                value={values.account_no}
+                name="account_no"
                 type="tel"
                 placeholder="Enter Account Number"
               />
               <div>
-                <select className="bank-select ml-5">
-                  <option value="" key="">
-                    Select Bank
+                <select
+                  name="bank_name"
+                  onChange={handleValue}
+                  initialValues={values.bank_name}
+                  className="bank-select ml-5"
+                >
+                  <option value={values.bank_name} key={values.bank_name}>
+                    {values.bank_name || "Select Bank"}
                   </option>
-                  <option value="" key="">
-                    First Bank
-                  </option>
+
+                  {banks.map((bank) => {
+                    return (
+                      <option value={bank.name} key={bank.id}>
+                        {bank.name}
+                      </option>
+                    );
+                  })}
                 </select>
               </div>
-              <ButtonGroup
-                className="button-group"
-                onClick={() => {
-                  setSection(1);
-                }}
-              >
+              <ButtonGroup className="button-group">
                 {!isSubmitting && (
                   <StyledBankTransferFormButton type="submit">
                     Confirm Bank Account

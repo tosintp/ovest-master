@@ -21,8 +21,11 @@ import ReferralProgram from "./referralProgram";
 import AboutOvest from "./AboutOvest";
 import LegalAccount from "./Legal";
 import { Link } from "react-router-dom";
+import { useUser } from "../../../../../hooks/use-user";
 
 const Account = ({ toggleModalAppearance }) => {
+  const user = useUser();
+  const name = `${user.firstname} ${user.lastname}`;
   const openModal = () => {
     toggleModalAppearance();
     console.log("open redux");
@@ -36,7 +39,7 @@ const Account = ({ toggleModalAppearance }) => {
           <div>
             <div className="account-page">
               <h1>My Account</h1>
-              <p>Angela Daniel</p>
+              <p>{name}</p>
             </div>
             <div
               className="AccountPage"

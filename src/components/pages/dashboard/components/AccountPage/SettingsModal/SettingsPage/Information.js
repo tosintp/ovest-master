@@ -1,4 +1,6 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
+import { connect } from "react-redux";
+import { merge } from "lodash";
 import "./Information.css";
 import Loader from "react-loader-spinner";
 import { Formik, Form } from "formik";
@@ -11,21 +13,35 @@ import {
 import { BankTranferDetailsTextInput } from "./../../../../../Formik/BankDetailsInput";
 import * as Yup from "yup";
 import closemodalicon from "../../../../../../Assets/closemodalicon.svg";
+import { updateUserAction } from "../../../../../../../store/user/user.action";
+import { useUser } from "../../../../../../../hooks/use-user";
 
-
-const Information = () => {
+const Information = ({ updateUser }) => {
   const [showSuccess, setShowSuccess] = useState(false);
+  const user = useUser();
+
+  const handleSubmit = async (values, { setSubmitting }) => {
+    const update = merge({}, user, values);
+    try {
+      setSubmitting(true);
+      await updateUser(update);
+    } catch (error) {
+      alert(error.message);
+      // use toast or error reporting here
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
     <div className="information">
       <div>
-       
-          <img
-            src={Info}
-            alt="Info"
-            className="info-image"
-            onClick={() => setShowSuccess(true)}
-          />
+        <img
+          src={Info}
+          alt="Info"
+          className="info-image"
+          onClick={() => setShowSuccess(true)}
+        />
       </div>
       <p>Personal Information</p>
       <div className="formSection">
@@ -40,65 +56,53 @@ const Information = () => {
             country: "",
             state: "",
           }}
-          onSubmit={(values, { setsubmitting, setFieldError }) => {
-            console.log(values);
-          }}
-          validationSchema={Yup.object({
-            firstname: Yup.string().required("Firstname is required"),
-            lastname: Yup.string().required("Lastname is required"),
-            username: Yup.string().required("Username is required"),
-            gender: Yup.string().required("Gender is required"),
-            email: Yup.string().required("email is required"),
-            phonenumber: Yup.string().required("Phonenumber id required"),
-            country: Yup.string().required("country is required"),
-            state: Yup.string().required("state is required"),
-          })}
+          onSubmit={handleSubmit}
         >
           {({ isSubmitting }) => (
             <Form>
               <BankTranferDetailsTextInput
                 name="firstname"
                 type="tel"
-                placeholder="Firstname"
+                placeholder={user.firstname}
               />
 
               <BankTranferDetailsTextInput
                 name="lastname"
                 type="tel"
-                placeholder="Lastname"
+                placeholder={user.lastname}
               />
 
               <BankTranferDetailsTextInput
                 name="username"
                 type="tel"
-                placeholder="Username"
+                placeholder={user.username}
               />
 
               <BankTranferDetailsTextInput
                 name="gender"
                 type="tel"
-                placeholder="Gender"
+                placeholder={user.gender}
               />
               <BankTranferDetailsTextInput
                 name="email"
                 type="tel"
-                placeholder="Email"
+                placeholder={user.email}
               />
 
               <BankTranferDetailsTextInput
                 name="phonenumber"
                 type="tel"
-                placeholder="Phonenumber"
+                placeholder={user.phonenumber}
               />
               <BankTranferDetailsTextInput
                 name="country"
                 type="tel"
-                placeholder="Country"
+                placeholder={user.country}
               />
               <BankTranferDetailsTextInput
                 name="state"
                 type="tel"
-                placeholder="State"
+                placeholder={user.state}
               />
 
               <ButtonGroup className="button-group">
@@ -151,4 +155,6 @@ const Information = () => {
   );
 };
 
-export default Information;
+const mapDispatchToProps = { updateUser: updateUserAction };
+
+export default connect(null, mapDispatchToProps)(Information);

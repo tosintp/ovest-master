@@ -67,6 +67,8 @@ const SettingsIndex = ({ section, setSection }) => {
         </>
       );
       break;
+    default:
+    // default case...
   }
 
   return <div className="current-page">{CurrentPage}</div>;

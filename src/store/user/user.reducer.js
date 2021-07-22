@@ -6,6 +6,7 @@ import {
   LOGIN_SUCCESS,
   LOGOUT_USER,
   SIGNUP_SUCCESS,
+  UPDATE_USER_SUCCESS,
 } from "./user.constants";
 
 export default function user(state = null, action) {
@@ -13,10 +14,14 @@ export default function user(state = null, action) {
     case LOGIN_SUCCESS:
     case SIGNUP_SUCCESS:
     case GET_PROFILE_SUCCESS:
-      const { token } = action.payload;
+    case UPDATE_USER_SUCCESS:
+      const newState = merge({}, state, action.payload);
+
+      const { token } = newState;
       axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
       localStorage.authToken = token;
-      return merge({}, state, action.payload);
+
+      return newState;
     case LOGOUT_USER:
       delete localStorage.authToken;
       axios.defaults.headers.common["Authorization"] = "";

@@ -5,6 +5,7 @@ import {
   LOGIN_SUCCESS,
   SIGNUP_SUCCESS,
   LOGOUT_USER,
+  UPDATE_USER_SUCCESS,
 } from "./user.constants";
 
 export const login = (credentials) => {
@@ -22,6 +23,14 @@ export const createUserAction = (credentials) => {
     const payload = await $api.user.register(credentials);
 
     dispatch({ type: SIGNUP_SUCCESS, payload });
+  };
+};
+
+export const updateUserAction = (update) => {
+  return async (dispatch) => {
+    const payload = await $api.user.updateUserProfile(update);
+
+    dispatch({ type: UPDATE_USER_SUCCESS, payload });
   };
 };
 

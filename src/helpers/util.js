@@ -52,4 +52,6 @@ export class Util {
   static randomChoice(options) {
     return options[Math.floor(Math.random() * options.length)];
   }
+
+  static noop(..._) {}
 }

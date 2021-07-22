@@ -32,26 +32,28 @@ const AccountIndex = ({ section, setSection }) => {
     //         <img src={backicon} alt="back icon" className="back-icon" />
     //       </a>
     //       <p>
-    //         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+    //         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     //       </p>
     //     </>
     //   );
     //   // case 4:
-      //   CurrentPage = (
-      //     <>
-      //       <a
-      //         href="#"
-      //         className="backicon"
-      //         onClick={() => {
-      //           setSection(4);
-      //         }}
-      //       >
-      //         <img src={backicon} alt="back icon" className="back-icon" />
-      //       </a>
-      //       <LegalTerms setSection={setSection} />
-      //     </>
-      //   );
-      break;
+    //   CurrentPage = (
+    //     <>
+    //       <a
+    //         href="#"
+    //         className="backicon"
+    //         onClick={() => {
+    //           setSection(4);
+    //         }}
+    //       >
+    //         <img src={backicon} alt="back icon" className="back-icon" />
+    //       </a>
+    //       <LegalTerms setSection={setSection} />
+    //     </>
+    //   );
+    // break;
+    default:
+    // finesse...
   }
   return <div className="current-page">{CurrentPage}</div>;
 };

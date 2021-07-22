@@ -70,7 +70,9 @@ export class User extends HTTPModule {
   }
 
   async getBanks() {
-    const { data } = await this.get("/banks");
+    const {
+      data: [data],
+    } = await this.get("/banks");
 
     return data;
   }
@@ -168,9 +170,47 @@ export class User extends HTTPModule {
           investmentType: "Real Estate",
           location: "Ibadan",
           propertyName: "Moniya (DryPort/Railway)",
+          transactions: Array(60)
+            .fill(null)
+            .map((_, index) => {
+              const date = moment().subtract(index, "days").toDate();
+              const earning = 200;
+
+              return { date, earning };
+            }),
           id,
         }))
     );
+  }
+
+  async activateCryptoAccount() {
+    const { status } = await this.post("/cryptodeposit/activate");
+
+    return status === "success";
+  }
+
+  async activateDollarAccount() {
+    const { data } = await this.post("/dollarwallet/activate");
+
+    return data;
+  }
+
+  async updateUserProfile(payload) {
+    const {
+      message: { data },
+    } = await this.post("/profile/update", payload);
+
+    return data;
+  }
+
+  async addBankAccount(payload) {
+    const {
+      data: [
+        { account_no: accountNumber, account_name: name, bank_name: bank },
+      ],
+    } = await this.post("/add/bank", payload);
+
+    return { bank, accountNumber, name };
   }
 }
 

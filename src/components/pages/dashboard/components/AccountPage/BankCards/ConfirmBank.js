@@ -3,27 +3,52 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import banksuccess from "../../../assets/banksucess.svg";
 import closemodalicon from "../../../../../Assets/closemodalicon.svg";
+import { $api } from "../../../../../../helpers/$api";
 
 const useStyles = makeStyles((theme) => ({
   button: {
     margin: theme.spacing(1),
   },
 }));
-const ConfirmBank = () => {
+const ConfirmBank = ({ pageEmit, addBank }) => {
   const [showSuccess, setShowSuccess] = useState(false);
+  const [error, setError] = useState("");
   const classes = useStyles();
+  // const [bank] = pageEmit;
+  const [bank = {}] = pageEmit || [];
+
+  const handleAddClick = async () => {
+    try {
+      const addedBank = await $api.user.addBankAccount(bank);
+      addBank(addedBank);
+      setShowSuccess(true);
+    } catch (error) {
+      setError(error.message);
+      /**
+       * Remove this bit when BE dev returns
+       * right status on successful card add.
+       */
+      addBank({
+        name: bank.account_name,
+        accountNumber: bank.account_no,
+        bank: bank.bank_name,
+      });
+      // toast/report error
+    }
+  };
 
   return (
     <div className="confirm-section">
       <p className="confirm-text">Confirm Bank Account</p>
+      <center style={{ color: "red" }}>{error}</center>
       <div className="confirm-details">
-        <h6>RIANAT OLUWATOSIN ABBAS</h6>
-        <p className="confirm-texts">0100536914</p>
-        <p className="confirm-access">Access Bank</p>
+        <h6>{bank.account_name}</h6>
+        <p className="confirm-texts">{bank.account_no}</p>
+        <p className="confirm-access">{bank.bank_name}</p>
       </div>
       <div className="bank-btns">
         <Button
-          onClick={() => setShowSuccess(true)}
+          onClick={handleAddClick}
           // onClick={openModal}
           variant="contained"
           color="#"
@@ -64,13 +89,14 @@ const ConfirmBank = () => {
             </button>
           </div>
           <div>
-          <img src={banksuccess} alt="bankSuccess" className="bank-image" />
+            <img src={banksuccess} alt="bankSuccess" className="bank-image" />
           </div>
           <p className="bank-success-text">Bank Added Successfully</p>
           <Button
             variant="contained"
             color="#"
             className={classes.button}
+            onClick={() => setShowSuccess(false)}
             style={{
               backgroundColor: "#0768F6",
               color: "white",
@@ -84,7 +110,7 @@ const ConfirmBank = () => {
               display: "block",
               marginRight: "auto",
               marginLeft: "auto",
-              marginTop:"33px"
+              marginTop: "33px",
             }}
           >
             Ok
