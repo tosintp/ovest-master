@@ -1,8 +1,7 @@
 import React from "react";
-import "./SavestFlexible.css";
 import backtick from "../../../../../assets/backtick.svg";
 
-const InvestNow = ({ setMenu }) => {
+const SaveNowFixed = ({ setMenu }) => {
   return (
     <div className="startinvestment-body">
       <div className="startinvestment-main">
@@ -22,7 +21,7 @@ const InvestNow = ({ setMenu }) => {
                   Balance: N20,000,000
                 </p>
                 <p
-                  onClick={() => setMenu(5)}
+                  onClick={() => setMenu(11)}
                   className="save-now-change-payment"
                 >
                   Change this{" "}
@@ -48,7 +47,7 @@ const InvestNow = ({ setMenu }) => {
             method(s) on OVest.
           </p>
         </div>
-        <button onClick={() => setMenu(6)} className="savest-button">
+        <button onClick={() => setMenu(12)} className="savest-button">
           Save now
         </button>
         {/* <button className="claim-property">Save N500</button> */}
@@ -57,4 +56,4 @@ const InvestNow = ({ setMenu }) => {
   );
 };
 
-export default InvestNow;
+export default SaveNowFixed;

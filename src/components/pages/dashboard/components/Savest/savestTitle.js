@@ -11,6 +11,9 @@ import savestinactive from "../../assets/withdraw-savest-inactive.svg";
 import savestactive from "../../assets/withdraw-savest-active.svg";
 import { FiPlus } from "react-icons/fi";
 import { color } from "@material-ui/system";
+import closemodalicon from "../../../../Assets/closemodalicon.svg";
+import WithdrawSavestIndex from "./SavestModal/WithdrawSavestModal/WithdrawSavestIndex";
+// import CreateSavestIndex from "./SavestModal/CreateSavestModal/CreateSavestIndex"
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -18,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const SavestTitle = ({ toggleModalAppearance }) => {
+  const [menu, setMenu] = useState(0);
   const [savestTransactionActive] = useState(false);
   const classes = useStyles();
   const openModal = () => {
@@ -60,6 +64,7 @@ const SavestTitle = ({ toggleModalAppearance }) => {
 
             <p>Save now</p>
           </div>
+            <a href="#maturedspecialindex">
           <div
             className={`savestbtn-inactive ${
               savestTransactionActive ? "savestwithdraw-active" : ""
@@ -71,8 +76,29 @@ const SavestTitle = ({ toggleModalAppearance }) => {
             />
             <p>Withdraw</p>
           </div>
+          </a>
+
         </div>
       </div>
+       <>
+        <div id="maturedspecialindex" className="maturedspecialindex">
+          <div className="investmodal-head">
+            {menu === 0 ? (
+              <a
+                href="#"
+                className="closemodalicon-btn"
+                onClick={() => {
+                  setMenu(0);
+                }}
+              >
+                <img src={closemodalicon} alt="" className="closemodal" />
+              </a>
+            ) : null}
+
+            <WithdrawSavestIndex {...{ menu, setMenu }} />
+          </div>
+        </div>
+      </>
     </div>
   );
 };

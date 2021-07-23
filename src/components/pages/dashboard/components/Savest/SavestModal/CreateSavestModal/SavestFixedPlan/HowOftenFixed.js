@@ -1,5 +1,4 @@
 import React from "react";
-import "./SavestFlexible.css";
 import { Formik, Form } from "formik";
 import {
   ButtonGroup,
@@ -9,12 +8,12 @@ import {
 import { BankTranferDetailsTextInput } from "../../../../../../Formik/BankDetailsInput";
 import * as Yup from "yup";
 
-const CreateFlexible = ({ setMenu }) => {
+const HowOftenFixed = ({ setMenu }) => {
   return (
     <div className="create-flexible-plan">
       <div className="create-flexible-plan-main">
         <div className="create-flexible-header">
-          <h5 className="create-flexible-h5">Create Flexible Plan</h5>
+          <h5 className="create-flexible-h5">Create Fixed Plan</h5>
           <p className="create-flexible-p">
             Save strictly for emergencies and earn up to 3.5% every 15 days.
           </p>
@@ -65,7 +64,7 @@ const CreateFlexible = ({ setMenu }) => {
               console.log(values);
             }}
             validationSchema={Yup.object({
-              amount: Yup.string().required("Payment date Field is required"),
+              amount: Yup.string().required("Payment Date Field is required"),
             })}
           >
             {({ isSubmitting }) => (
@@ -89,7 +88,7 @@ const CreateFlexible = ({ setMenu }) => {
               console.log(values);
             }}
             validationSchema={Yup.object({
-              amount: Yup.string().required("Date deposited Field is required"),
+              amount: Yup.string().required("Date Field is required"),
             })}
           >
             {({ isSubmitting }) => (
@@ -102,8 +101,60 @@ const CreateFlexible = ({ setMenu }) => {
               </Form>
             )}
           </Formik>
+          {/* <input type="text" name="" id="" className="savest-flexible-input" /> */}
         </div>
-        <button onClick={() => setMenu(3)} className="savest-button">
+
+        <div className="savest-amount-tosave">
+          <p className="savest-amount-p">
+            How long would you like to save for this plan?
+          </p>
+          <input
+            type="radio"
+            id="html"
+            name="fav_language"
+            value="HTML"
+            className=" mt-3"
+          />
+          <label htmlFor="" className="savest-plan-label">
+            3 months
+          </label>
+          <br />
+          <input
+            type="radio"
+            id="html"
+            name="fav_language"
+            value="HTML"
+            className=" mt-4"
+          />
+          <label htmlFor="" className="savest-plan-label">
+            6 months
+          </label>
+
+          <br />
+          <input
+            type="radio"
+            id="html"
+            name="fav_language"
+            value="HTML"
+            className=" mt-4"
+          />
+          <label htmlFor="" className="savest-plan-label">
+            1 year
+          </label>
+          <br />
+          <input
+            type="radio"
+            id="html"
+            name="fav_language"
+            value="HTML"
+            className=" mt-4"
+          />
+          <label htmlFor="" className="savest-plan-label">
+            Custom Preferred Duration
+          </label>
+        </div>
+
+        <button onClick={() => setMenu(9)} className="savest-button">
           Next
         </button>
       </div>
@@ -111,4 +162,4 @@ const CreateFlexible = ({ setMenu }) => {
   );
 };
 
-export default CreateFlexible;
+export default HowOftenFixed;

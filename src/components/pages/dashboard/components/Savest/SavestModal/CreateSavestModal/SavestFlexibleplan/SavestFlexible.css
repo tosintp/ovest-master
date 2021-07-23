@@ -130,6 +130,7 @@
   letter-spacing: 0.03em;
   color: #0768f6;
   margin-top: -1rem;
+  cursor: pointer;
 }
 .select-cards {
   margin-top: 3rem;
@@ -188,4 +189,13 @@
 hr {
   width: 100%;
   margin: auto;
+}
+.earninterest-savest {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #666666;
+  padding-left: 0.8rem;
 }
