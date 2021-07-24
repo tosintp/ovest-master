@@ -5,6 +5,8 @@ import "./Information.css";
 import Loader from "react-loader-spinner";
 import { Formik, Form } from "formik";
 import Info from "../../../../assets/info.svg";
+import { CountryDropdown } from "react-country-region-selector";
+
 import {
   ButtonGroup,
   StyledBankTransferFormButton,
@@ -43,7 +45,7 @@ const Information = ({ updateUser }) => {
           onClick={() => setShowSuccess(true)}
         />
       </div>
-      <p>Personal Information</p>
+      <p className="information-para">Personal Information</p>
       <div className="formSection">
         <Formik
           initialValues={{
@@ -53,52 +55,81 @@ const Information = ({ updateUser }) => {
             gender: "",
             Email: "",
             phonenumber: "",
-            country: "",
+            country: user.country,
             state: "",
           }}
           onSubmit={handleSubmit}
         >
-          {({ isSubmitting }) => (
+          {({ isSubmitting, handleChange, values, handleBlur }) => (
             <Form>
+              <p className="info-label">First Name</p>
               <BankTranferDetailsTextInput
                 name="firstname"
                 type="tel"
                 placeholder={user.firstname}
               />
 
+              <p className="info-label">Last Name</p>
               <BankTranferDetailsTextInput
                 name="lastname"
                 type="tel"
                 placeholder={user.lastname}
               />
 
+              <p className="info-label">Username</p>
               <BankTranferDetailsTextInput
                 name="username"
                 type="tel"
                 placeholder={user.username}
               />
 
+              <p className="info-label">Gender</p>
               <BankTranferDetailsTextInput
                 name="gender"
                 type="tel"
                 placeholder={user.gender}
               />
+
+              <p className="info-label">Email </p>
               <BankTranferDetailsTextInput
                 name="email"
                 type="tel"
                 placeholder={user.email}
               />
 
+              <p className="info-label">Phone Number</p>
               <BankTranferDetailsTextInput
                 name="phonenumber"
                 type="tel"
                 placeholder={user.phonenumber}
               />
-              <BankTranferDetailsTextInput
+
+              <p className="info-label">Country</p>
+              <CountryDropdown
+                style={{
+                  width: "380px",
+                  height: "48px",
+                  borderRadius: "4px",
+                  color: "#757575",
+                  border: " 1px solid #c4c4c4",
+                  fontSize: "12px",
+                  display: "block",
+                  outline: "none",
+                  transition: "ease-in-out 0.3s",
+                  margin: "19px auto 10px auto",
+                  paddingLeft: "16px",
+                  "&:focus": {
+                    backgroundColor: "#fcf5f5",
+                    color: "black",
+                  },
+                }}
                 name="country"
-                type="tel"
-                placeholder={user.country}
+                value={values.country}
+                onChange={(_, e) => handleChange(e)}
+                onBlur={handleBlur}
               />
+
+              <p className="info-label">State</p>
               <BankTranferDetailsTextInput
                 name="state"
                 type="tel"

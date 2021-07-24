@@ -32,14 +32,14 @@ export const StyledContainer = styled.div`
 export const StyledTextInput = styled.input`
   width: 458px;
   height: 48px;
-  /* padding: 16px; */
-  padding-left: 16px;
+  padding: 16px o;
+  /* padding-left: 16px; */
   font-size: 12px;
   color: #c4c4c4;
   border: 1px solid #c4c4c4;
   border-radius: 4px;
   display: block;
-  margin: 19px auto 10px auto;
+  margin: 19px 0 10px 0;
   transition: ease-in-out 0.3s;
   outline: none;
   /* background-color: #fcf5f5; */
@@ -53,8 +53,8 @@ export const StyledTextInput = styled.input`
 export const SecurityStyledTextInput = styled.input`
   width: 380px;
   height: 48px;
-  /* padding: 16px; */
-  padding-left: 16px;
+  padding: 16px 10px;
+  /* padding-left: 16px; */
   font-size: 12px;
   color: #c4c4c4;
   border: 1px solid #c4c4c4;
@@ -75,7 +75,8 @@ export const SecurityStyledTextInput = styled.input`
 export const StyledPhoneTextInput = styled.input`
   width: 353px;
   height: 48px;
-  padding-right: 16px;
+  /* padding-right: 16px; */
+  padding: 16px 10px;
   font-size: 12px;
   color: #c4c4c4;
   border: 1px solid #c4c4c4;
@@ -96,8 +97,8 @@ export const StyledPhoneTextInput = styled.input`
 export const StyledCodeTextInput = styled.select`
   width: 90px;
   height: 48px;
-  /* padding: 16px; */
-  padding-left: 16px;
+  padding: 16px 10px;
+  /* padding-left: 16px; */
   font-size: 12px;
   color: #c4c4c4;
   border: 1px solid #c4c4c4;
@@ -117,8 +118,8 @@ export const StyledCodeTextInput = styled.select`
 export const StyledFlagTextInput = styled.input`
   width: 70px;
   height: 48px;
-  /* padding: 16px; */
-  padding-left: 16px;
+  padding: 16px 10px;
+  /* padding-left: 16px; */
   font-size: 12px;
   color: #c4c4c4;
   border: 1px solid #c4c4c4;
@@ -138,8 +139,8 @@ export const StyledFlagTextInput = styled.input`
 export const StyledEmailVerifyTextInput = styled.input`
   width: 158px;
   height: 48px;
-  /* padding: 16px; */
-  padding-left: 16px;
+  padding: 16px 10px;
+  /* padding-left: 16px; */
   font-size: 18px;
   color: #c4c4c4;
   border: 1px solid #c4c4c4;
@@ -158,14 +159,14 @@ export const StyledEmailVerifyTextInput = styled.input`
 `;
 export const StyledTextInputBankTransfer = styled.input`
   width: 380px;
-  padding: 16px;
-  padding-left: 16px;
+  padding: 16px 10px;
+  /* padding-left: 16px;/ */
   font-size: 12px;
   color: #c4c4c4;
   border: 1px solid #e5e5e5;
   border-radius: 4px;
   display: block;
-  margin: 19px auto 19px auto;
+  margin: 10px auto 19px auto;
   transition: ease-in-out 0.3s;
   outline: none;
   box-sizing: border-box;
@@ -178,8 +179,8 @@ export const StyledTextInputBankTransfer = styled.input`
 `;
 export const StyledTextSelectBankTransfer = styled.select`
   width: 380px;
-  padding: 16px;
-  padding-left: 16px;
+  padding: 16px 0;
+  /* padding-left: 16px; */
   font-size: 12px;
   color: #c4c4c4;
   border: 1px solid #e5e5e5;
@@ -198,7 +199,7 @@ export const StyledTextSelectBankTransfer = styled.select`
 `;
 export const StyledTextInputCardFunding = styled.input`
   /* width: 380px; */
-  padding: 16px;
+  padding: 16px 10px;
   /* padding-left: 16px; */
   font-size: 12px;
   color: #c4c4c4;

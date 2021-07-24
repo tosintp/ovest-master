@@ -21,7 +21,21 @@ const AllInvestmentPlan = () => {
         <div className="silver-investment mt-3">
           <img src={Rectangle64} alt="" className="silverinvestment-img" />
           <div className="silver-investmentchild">
-            <h6 className="silverinvestment-h6">Silvest Investment Plan</h6>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <h6 className="silverinvestment-h6">Silvest Investment Plan</h6>
+              <em
+                style={{
+                  marginTop: ".5rem",
+                }}
+              >
+                50% Interest Rate
+              </em>
+            </div>
             <p className="silverinvestment-p">
               Lock-away funds safely in our Silvest investment plan for
               <span> 3 months</span> with at least <span>NGN50,000.</span>
@@ -54,10 +68,31 @@ const AllInvestmentPlan = () => {
         <div className="gold-investment">
           <img src={Rectangle68} alt="" className="silverinvestment-img" />
           <div className="silver-investmentchild">
-            <h6 className="silverinvestment-h6">Silvest Investment Plan</h6>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <h6
+                className="silverinvestment-h6"
+                style={{
+                  color: "#281BB6",
+                }}
+              >
+                Gold Investment Plan
+              </h6>
+              <em
+                style={{
+                  marginTop: ".5rem",
+                }}
+              >
+                125% Interest Rate
+              </em>
+            </div>
             <p className="silverinvestment-p">
-              Lock-away funds safely in our Silvest investment plan for
-              <span> 3 months</span> with at least <span>NGN50,000.</span>
+              Lock-away funds safely in our Gold investment plan for
+              <span> 6 months</span> with at least <span>NGN100,000.</span>
             </p>
             <button className="silverinvestment-button">View Details</button>
           </div>
@@ -67,12 +102,18 @@ const AllInvestmentPlan = () => {
           <img src={Rectangle66} alt="" className="silverinvestment-img" />
           <div className="silver-investmentchild">
             <div className="investmentplan-header">
-              <h6 className="silverinvestment-h6">Special Package Plan</h6>
-              <em>50% Interest Rate</em>
+              <h6
+                className="silverinvestment-h6"
+                style={{
+                  color: "#FD740E",
+                }}
+              >
+                Special Package Plan
+              </h6>
             </div>
             <p className="silverinvestment-p">
-              Lock-away funds safely in our Silvest investment plan for
-              <span> 3 months</span> with at least <span>NGN50,000.</span>
+              Lock-away funds safely in our Special packages by investing in
+              OHouse Estate.
             </p>
             <div>
               <a href="#specialinvestmentmodal">

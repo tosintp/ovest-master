@@ -1,5 +1,5 @@
-.information-modal{
-   position: fixed;
+.information-modal {
+  position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
@@ -25,38 +25,42 @@
   height: 100vh;
 }
 
-.information{
+.information {
   height: 90vh;
 }
 
-
-.info-image{
+.info-image {
   float: right;
   margin-top: -50px;
   cursor: pointer;
-  margin-right:25px ;
+  margin-right: 25px;
 }
-.button-group{
+.button-group {
   padding-bottom: 40px;
 }
 
-.information p{
+.information-para {
   font-family: Inter;
-font-style: normal;
-font-weight: 500;
-font-size: 1.8rem;
-line-height: 30px;
-letter-spacing: 0.03em;
-color: #121212;
-margin-top: 27px;
-margin-left: 26px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  color: #121212;
+  margin-top: 10px;
+  margin-left: 26px;
 }
 
-.formSection{
+.formSection {
   margin-top: 19px;
 }
 
-
-.security-input{
+.security-input {
   width: 40%;
+}
+
+.info-label {
+  font-size: 1.2rem;
+  color: #121212;
+  margin-left: 25px;
 }
