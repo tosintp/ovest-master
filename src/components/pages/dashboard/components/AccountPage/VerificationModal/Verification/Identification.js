@@ -33,7 +33,7 @@ const Identification = () => {
       <div className="identification-upload">
         <div>
           <label
-            htmlFor="input"
+            htmlFor="upload"
             style={{
               display: "flex",
               cursor: "pointer",
@@ -43,12 +43,14 @@ const Identification = () => {
           </label>
           <input
             type="file"
-            id="input"
+            id="upload"
             onChange={(event) => {
               const [file] = event.target.files;
               setFilename(file.name);
               console.log(event, event.target.value, event.target.files);
             }}
+            required
+            style={{ display: "none" }}
           />
           <p
             style={{

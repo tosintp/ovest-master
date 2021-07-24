@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Residence.css";
 import ResidenceImage from "../../../../assets/residenceimage.svg";
 import { makeStyles } from "@material-ui/core/styles";
@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Residence = () => {
   const classes = useStyles();
+  const [filename, setFilename] = useState("Scan/photo of POR");
 
   return (
     <div className="residence-section">
@@ -25,7 +26,7 @@ const Residence = () => {
         </p>
       </div>
       <label
-        htmlFor="input"
+        htmlFor="upload"
         style={{
           cursor: "pointer",
         }}
@@ -37,7 +38,7 @@ const Residence = () => {
                 <img src={ResidenceImage} alt="" className="residence-image" />
               </div>
               <div>
-                <p>Scan/photo of POR</p>
+                <p>{filename}</p>
               </div>
             </div>
 
@@ -68,10 +69,16 @@ const Residence = () => {
       </label>
       <input
         type="file"
-        id="input"
-        style={{
-          visibility: "hidden",
+        id="upload"
+        onChange={(event) => {
+          const [file] = event.target.files;
+          setFilename(file.name);
+          console.log(event, event.target.value, event.target.files);
         }}
+        style={{
+          display: "none",
+        }}
+        required
       />
       <p className=" file-text">Max. file size: 25MB</p>
       <div className="document-text">
@@ -81,7 +88,7 @@ const Residence = () => {
         </p>
       </div>
       <div className="mt-2">
-        <input type="radio" id="html" name="Enquiry" value="HTML" /> {" "}
+        <input type="radio" id="html" name="Enquiry" value="HTML" />
         <label className="residence-label">Yes</label>
         <input
           type="radio"

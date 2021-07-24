@@ -8,18 +8,24 @@ import {
   // StyledTextInput,
   // StyledFormButton,
   // StyledTitle,
-  // ButtonGroup,
+  ButtonGroup,
   StyledBankTransferFormButton,
   // SubTitle,
   // ExtraText,
   // TextLink,
-  // colors,
+  colors,
 } from "../../../../../Syles/styles";
 import { $api } from "../../../../../../helpers/$api";
 import { API_URL } from "../../../../../../helpers/config";
+import Loader from "react-loader-spinner";
 
 const BankTranferVerify = ({ setStage }) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [selectedFile, setSelectedFile] = useState();
+  const [filename, setFilename] = useState(
+    "Upload a scanned copy or photo of your details to verify your payment."
+  );
+
   const changeHandler = (event) => {
     setSelectedFile(event.target.files[0]);
   };
@@ -28,6 +34,7 @@ const BankTranferVerify = ({ setStage }) => {
     setStage(4);
   };
   const handleSubmission = async (e) => {
+    setIsSubmitting(true);
     e.preventDefault();
     try {
       const formData = new FormData();
@@ -39,6 +46,7 @@ const BankTranferVerify = ({ setStage }) => {
         data: formData,
         headers: { "Content-Type": "multipart/form-data" },
       });
+      console.log("hello there");
       changeStage();
     } catch (error) {
       console.debug(error);
@@ -112,15 +120,17 @@ const BankTranferVerify = ({ setStage }) => {
               type="file"
               id="upload"
               name="upload"
-              className="inputfile"
-              onChange={changeHandler}
+              // onChange={changeHandler}
               required
+              style={{ display: "none" }}
+              onChange={(event) => {
+                const [file] = event.target.files;
+                setFilename(file.name);
+                console.log(event, event.target.value, event.target.files);
+              }}
             />
 
-            <p>
-              Upload a scanned copy or photo of your details to verify your
-              payment.
-            </p>
+            <p>{filename}</p>
           </div>
 
           <div className="verify-payment-footer">
@@ -129,9 +139,23 @@ const BankTranferVerify = ({ setStage }) => {
               will inform you via email.
             </p>
           </div>
-          <StyledBankTransferFormButton type="submit">
-            Verify
-          </StyledBankTransferFormButton>
+
+          <ButtonGroup>
+            {!isSubmitting && (
+              <StyledBankTransferFormButton type="submit">
+                Verify
+              </StyledBankTransferFormButton>
+            )}
+
+            {isSubmitting && (
+              <Loader
+                type="ThreeDots"
+                color={colors.primary}
+                height={49}
+                width={100}
+              />
+            )}
+          </ButtonGroup>
         </form>
       </div>
     </div>
