@@ -30,7 +30,7 @@ const Earning = ({ transactions, setPage }) => {
             <p className="date-p">Earnings</p>
           </div>
           <hr />
-          {transactions.map(({ date, earning }) => {
+          {(transactions || []).map(({ date, earning }) => {
             return <SingleEarningItem date={date} price={earning} />;
           })}
         </div>

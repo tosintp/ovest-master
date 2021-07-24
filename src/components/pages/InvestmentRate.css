@@ -1,0 +1,514 @@
+@media (max-width: 992px) {
+  .invest-rate-image {
+    display: none;
+  }
+  .invest-text {
+    width: 196px;
+    height: 40px;
+    background: rgba(239, 210, 171, 0.39);
+    border-radius: 4px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 22px;
+    text-align: center;
+    padding-top: 10px;
+    letter-spacing: -0.02em;
+    color: #fd740e;
+  }
+
+  .invest-texts {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 32px;
+    color: #121212;
+    width: 80%;
+  }
+  .vl {
+    border-left: 2px solid rgba(159, 191, 237, 0.68);
+    height: 60px;
+    margin-left: 30px;
+  }
+
+  .investment-rate-section {
+    display: flex;
+    margin-top: 34px;
+    /* justify-content: space-between; */
+  }
+  .invest-section-text {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 24px;
+    color: #121212;
+    width: 80%;
+  }
+
+  .invest-rate-body {
+    padding-left: 20px;
+    margin-top: 21px;
+  }
+}
+
+@media (min-width: 992px) {
+  .investment-rate-section {
+    display: flex;
+    /* justify-content: space-between; */
+  }
+  .vl {
+    border-left: 2px solid rgba(159, 191, 237, 0.68);
+    height: 134px;
+    margin-left: 30px;
+  }
+
+  .invest-rate {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 40px;
+  }
+
+  .invest-rate-image {
+    margin-top: 200px;
+    width: 35vw;
+  }
+
+  .invest-rate-body {
+    padding-left: 200px;
+  }
+  .invest-details {
+    padding-top: 97px;
+  }
+
+  .invest-text {
+    width: 196px;
+    height: 40px;
+    background: rgba(239, 210, 171, 0.39);
+    border-radius: 4px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 22px;
+    text-align: center;
+    padding-top: 10px;
+    letter-spacing: -0.02em;
+    color: #fd740e;
+  }
+
+  .invest-texts {
+    font-size: 3rem;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50px;
+    color: #121212;
+    width: 90%;
+  }
+
+  .invest-section-text {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 24px;
+    color: #121212;
+    width: 80%;
+  }
+}
+
+/*SAVEST BALANCE */
+@media (min-width: 992px) {
+  .savest-details-balance {
+    width: 70%;
+  }
+  .savest-balance {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+    margin-left: 40px;
+  }
+
+  .savest-balance-text {
+    width: 196px;
+    height: 40px;
+    background: rgba(239, 210, 171, 0.39);
+    border-radius: 4px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #fd740e;
+    padding-top: 10px;
+    margin-top: 70px;
+  }
+
+  .savest-balance-header {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.6rem;
+    line-height: 50px;
+    color: #121212;
+    width: 50%;
+    margin-top: 33px;
+  }
+
+  .portfolio-percent {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 22px;
+    color: #fd740e;
+  }
+
+  .savest-paragraph {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 28px;
+    color: #666666;
+    width: 80%;
+    padding-top: 32px;
+  }
+
+  .savest-balance-card {
+    width: 536px;
+    height: 525px;
+    background: #ffffff;
+    box-shadow: 0px 0px 80px rgba(235, 235, 235, 0.78);
+    border-radius: 4px;
+    margin-right: 40px;
+    width: 40%;
+  }
+  .savest-balance-card img {
+    margin-top: 47px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .savest-balance-card p {
+    text-align: center;
+    /* margin-top: 43px; */
+  }
+  .savest-balance-paragraph {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4.8rem;
+    line-height: 29px;
+    letter-spacing: -0.02em;
+    color: #121212;
+  }
+  .invest-rate-button {
+    display: flex;
+    flex-direction: column;
+    /* padding-left: 70px; */
+    align-items: center;
+  }
+  .get-button {
+    width: 322px;
+    height: 52px;
+    margin-top: 36px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    background: #0768f6;
+    border: none;
+  }
+  .button-withdraw {
+    width: 322px;
+    height: 52px;
+    background: rgba(214, 222, 233, 0.31);
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #0768f6;
+    border: none;
+    margin-top: 27px;
+  }
+
+  .savest-balance-paragraph {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+    padding-top: 20px;
+    align-items: flex-end;
+    letter-spacing: -0.02em;
+    color: #121212;
+  }
+}
+
+@media (min-width: 768px) {
+  .savest-details-balance {
+    width: 50%;
+    margin-bottom: 10%;
+  }
+  .savest-balance {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+    margin-left: 40px;
+  }
+
+  .savest-balance-text {
+    width: 196px;
+    height: 40px;
+    background: rgba(239, 210, 171, 0.39);
+    border-radius: 4px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #fd740e;
+    padding-top: 10px;
+    margin-top: 70px;
+  }
+ .savest-balance-paragraph {
+    font-family: Inter;
+font-style: normal;
+font-weight: 600;
+font-size: 2.4rem;
+line-height: 58px;
+color: #121212;
+  }
+  .portfolio-percent {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 22px;
+    color: #fd740e;
+  }
+  .savest-balance-header {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 32px;
+  }
+  .portfolio-percent {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 22px;
+    color: #fd740e;
+  }
+  .savest-paragraph {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 28px;
+    color: #666666;
+    width: 80%;
+    padding-top: 32px;
+  }
+
+  .savest-balance-card {
+    width: 500px;
+    height: 525px;
+    background: #ffffff;
+    box-shadow: 0px 0px 80px rgba(235, 235, 235, 0.78);
+    border-radius: 4px;
+    margin-right: 40px;
+    width: 40%;
+    margin-top: 40px;
+  }
+  .savest-balance-card img {
+    margin-top: 47px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .savest-balance-card p {
+    text-align: center;
+    /* margin-top: 43px; */
+  }
+
+  .invest-rate-button {
+    display: flex;
+    flex-direction: column;
+    /* padding-left: 70px; */
+    align-items: center;
+  }
+
+  .get-button {
+    width: 200px;
+    height: 52px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    background: #0768f6;
+    border: none;
+    margin-top: 27px;
+  }
+  .button-withdraw {
+    width: 200px;
+    height: 52px;
+    background: rgba(214, 222, 233, 0.31);
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #0768f6;
+    border: none;
+    margin-top: 27px;
+  }
+}
+@media (max-width: 768px) {
+  .savest-balance {
+    display: block;
+    /* margin-top: 200px; */
+    margin-left: 20px;
+    margin-bottom: 20%;
+  }
+
+  .savest-balance-text {
+    width: 196px;
+    height: 40px;
+    background: rgba(239, 210, 171, 0.39);
+    border-radius: 4px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #fd740e;
+    padding-top: 10px;
+    margin-top: 70px;
+  }
+
+  .savest-balance-header {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    width: 70%;
+  }
+
+  .savest-paragraph {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 28px;
+    color: #666666;
+    width: 90vw;
+    padding-top: 20px;
+  }
+ .portfolio-percent {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 22px;
+    color: #fd740e;
+  }
+  .savest-balance-card {
+    width: 80%;
+    /* padding-top: 20px; */
+    height: 420px;
+    background: #ffffff;
+    box-shadow: 0px 0px 80px rgba(235, 235, 235, 0.78);
+    border-radius: 4px;
+    margin-left: 8%;
+    margin-right: 30%;
+    margin-top: 20px;
+  }
+  .savest-balance-card img {
+    padding-top: 29px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .savest-balance-card p {
+    text-align: center;
+    margin-top: 17px;
+  }
+
+  .invest-rate-button {
+    display: flex;
+    flex-direction: column;
+    /* padding-left: 70px; */
+    align-items: center;
+  }
+
+  .get-button {
+    width: 178px;
+    height: 44px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    background: #0768f6;
+    border: none;
+  }
+  .button-withdraw {
+    width: 178px;
+    height: 44px;
+    background: rgba(214, 222, 233, 0.31);
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #0768f6;
+    border: none;
+    margin-top: 27px;
+  }
+
+  .savest-balance-paragraph {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.02em;
+    color: #121212;
+  }
+}

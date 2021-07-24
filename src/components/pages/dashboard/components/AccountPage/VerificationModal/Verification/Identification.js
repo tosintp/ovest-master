@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Identification.css";
 import Upload from "../../../../assets/Upload.svg";
 import { makeStyles } from "@material-ui/core/styles";
@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Identification = () => {
   const classes = useStyles();
+  const [filename, setFilename] = useState("Upload Valid ID");
 
   return (
     <div className="identification-section">
@@ -43,8 +44,10 @@ const Identification = () => {
           <input
             type="file"
             id="input"
-            style={{
-              visibility: "hidden",
+            onChange={(event) => {
+              const [file] = event.target.files;
+              setFilename(file.name);
+              console.log(event, event.target.value, event.target.files);
             }}
           />
           <p
@@ -52,7 +55,7 @@ const Identification = () => {
               marginTop: "10px",
             }}
           >
-            Upload Valid ID
+            {filename}
           </p>
         </div>
       </div>

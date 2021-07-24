@@ -42,65 +42,92 @@
   border: none;
   border-radius: 4px 4px 4px 0;
 }
-@media (max-width: 375px) {
-    .tele-members > img {
+/* @media (max-width: 375px) {
+  .tele-members > img {
     width: 60px;
     margin: 10px;
   }
-  /* .tele-txt {
-    margin-left: 30px;
-    font-size: 18px;
-    
-  } */
-}
 
-@media (max-width: 420px) {
-  .tele-members > img {
-    width: 60px;
+  .tele-member1 {
+    display: none;
   }
-  .tele-txt {
-    /* width: 60%; */
-    /* margin-left: 30px; */
-    font-size: 15px !important;
-    line-height: 25px;
-  }
-  .tele-div {
-    /* margin-left: 30px; */
-  }
-  /* .tele-btn {
-    margin-left: 30px;
-  } */
-  .dashboard1-store-wrapper {
-    /* margin-left: 30px; */
-  }
-  .dashboard1-launching {
-    margin-left: 30px;
-  }
-}
+} */
 
-@media screen and (min-width: 420px) and (max-width: 960px) {
-  .TelegramContainer {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  .tele-members > img {
-    margin-left: -34px !important;
-    width: 170px !important;
-  }
+/*  */
 
-  .tele-div {
-    margin-left: 15px;
-  }
-
-  .tele-txt {
-    font-size: 15px;
-    line-height: 35px;
-  }
-}
-
-@media (max-width: 376px) {
+@media screen and (max-width: 400px) {
   .tele-member1 {
     display: none !important;
+  }
+
+  .TelegramContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tele-txt {
+    font-size: 1.8rem;
+  }
+
+  .tele-div {
+    margin-left: 30px;
+  }
+  .tele-members > img {
+    align-items: center;
+    margin: 0;
+    width: 60px;
+  }
+
+  .tele-image1 {
+    position: relative;
+    right: 50px;
+  }
+
+  .tele-image2 {
+  }
+
+  .tele-image3 {
+    position: relative;
+    left: 50px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 768px) {
+  .tele-member1 {
+    display: none;
+  }
+
+  .TelegramContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tele-txt {
+    font-size: 1.8rem;
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .tele-div {
+    margin-left: 30px;
+  }
+  .tele-members > img {
+    align-items: center;
+    margin: 0;
+    width: 70px;
+    margin-top: 27px;
+  }
+
+  .tele-image1 {
+    position: relative;
+    right: 30px;
+  }
+
+  .tele-image2 {
+  }
+
+  .tele-image3 {
+    position: relative;
+    left: 30px;
   }
 }

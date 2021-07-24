@@ -6,6 +6,7 @@ import upgreen from "../../../assets/upgreen.svg";
 import downred from "../../../assets/downred.svg";
 import TransactionDetails from "./../TransactionDetails";
 import { Util } from "../../../../../../helpers/util";
+import { Link } from "react-router-dom";
 
 const RecentTransaction = ({ transactions }) => {
   return (
@@ -18,7 +19,9 @@ const RecentTransaction = ({ transactions }) => {
         <div className="">
           <div className="recentT">
             <p className="recentP">Recent Transactions</p>
-            <p className="vAll">View all</p>
+            <Link to="/dashboard/transaction">
+              <p className="vAll">View all</p>
+            </Link>
           </div>
         </div>
         {transactions.map((item) => {

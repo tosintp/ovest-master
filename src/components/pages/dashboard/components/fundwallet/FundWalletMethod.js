@@ -11,7 +11,9 @@ const FundWalletMethod = ({ setStage }) => {
 
   useEffect(() => {
     if (user) {
-      setIsNotNigerian(user.country !== "Nigeria");
+      const country = user.country || "";
+
+      setIsNotNigerian(country.toLowerCase() !== "nigeria");
     }
   }, [user]);
 

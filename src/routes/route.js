@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Services from "../components/pages/Services";
 import AboutUs from "../components/pages/AboutUs";
 import ContactUs from "../components/pages/ContactUs";
+import Invest from "../components/pages/Invest";
 import SignIn from "../components/pages/signin/SignIn";
 import EmailVerification from "../components/pages/signup-verify/EmailVerification";
 import SignUp from "../components/pages/signup/SignUp";
@@ -23,7 +24,7 @@ const AppRoute = () => {
         <Route path="/" exact component={Home} />
         <Route path="/services" component={Services} />
         <Route path="/AboutUs" component={AboutUs} />
-        <Route path="/contact-us" component={ContactUs} />
+        <Route path="/Invest" component={Invest} />
         {/* <Route path="/sign-up" component={SignUp} /> */}
         <Route path="/marketing" component={Marketing} />
         <Route path="/consulting" component={Consulting} />

@@ -19,8 +19,8 @@ import {
   // colors,
   // StyledTextInputCardFunding,
 } from "../../../../../Syles/styles.js";
-import cardlogo from "../../../../../Assets/cardlogo.svg";
-import cardcloseicon from "../../../../../Assets/cardcloseicon.svg";
+import cardlogo from "../../../../../../../Assets/cardlogo.svg";
+import cardcloseicon from "../../../../../../../Assets/cardcloseicon.svg";
 import "./card.css";
 
 const CardAmountInput = ({ setStage, toggleModalAppearance }) => {
@@ -94,7 +94,8 @@ const CardAmountInput = ({ setStage, toggleModalAppearance }) => {
                 name="CVV"
                 type="number"
                 placeholder="CVV"
-              
+              />
+
               <ButtonGroup>
                 {!isSubmitting && (
                   <StyledBankTransferFormButton
