@@ -10,6 +10,7 @@ import SavestTransactionDetails from "../SavestPay/SavestTransactiondetails";
 import "./Tabs.css";
 import Debitransaction from "./DebitTransaction";
 import Creditransaction from "./Creditransaction";
+import NoDebitTransaction from "./NoDebitTransaction";
 // import TransactionDetails from './../../main/TransactionDetails';
 
 function TabPanel(props) {
@@ -120,19 +121,14 @@ export default function ScrollableTabsButtonAuto() {
         />
       </Tabs>
       <TabPanel value={value} index={0}>
-        {/* <div className="mr-5 transaction"> */}
         <SavestTransactionDetails />
-        {/* </div> */}
       </TabPanel>
       <TabPanel value={value} index={1}>
-        {/* <div className="transaction"> */}
         <Creditransaction />
-        {/* </div> */}
       </TabPanel>
       <TabPanel value={value} index={2}>
-        {/* <div className="transaction"> */}
         <Debitransaction />
-        {/* </div> */}
+        <NoDebitTransaction />
       </TabPanel>
     </div>
   );

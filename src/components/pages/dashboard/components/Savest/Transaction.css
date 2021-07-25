@@ -1,6 +1,5 @@
 .transactions {
   display: flex;
-  justify-content: space-between;
 }
 
 .transactionDetails {
@@ -51,7 +50,7 @@
   text-align: left;
 }
 
-.tuitionandrent-main {
+.savestplan-details {
   margin-top: 35px;
 }
 .tuition-main {

@@ -9,8 +9,10 @@ const Transaction = () => {
   return (
     <div className="TransactionSection">
       <div className="transactions">
-        <NoSavestTransacttion />
-        <div className="tuitionandrent-main">
+        <div className="transaction">
+          <NoSavestTransacttion />
+        </div>
+        <div className="savestplan-details">
           <SavestPlanDetails
             img={savestfeeicon}
             title={"Tuition Fees"}
