@@ -15,6 +15,7 @@ const AccountSettings = () => {
         <div className="Account-section">
           <div style={{ display: "flex" }}>
             <div>
+           
               <img src={Account1} alt="" className="imageAccount" />
             </div>
             <div>

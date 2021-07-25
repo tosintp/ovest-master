@@ -1,9 +1,9 @@
 import React from "react";
 import DashboardLayout from "../../dashboardDefaultLayout/DashboardLayout";
-import SavestTitle from "../Savest/savestTitle";
+import SavestTitle from "./savestTitle";
 import SavestCard from "../Savest/SavestCard";
 import SavestTransaction from "./SavestPay/SavestTransaction";
-// import Transaction from "../Savest/Transaction";
+import Transaction from "../Savest/Transaction";
 import "./savest.css";
 
 const Savest = () => {
@@ -14,7 +14,7 @@ const Savest = () => {
           <div className="savest">
             <SavestTitle />
             <SavestCard />
-            {/* <Transaction /> */}
+            <Transaction />
             <SavestTransaction />
           </div>
         </main>

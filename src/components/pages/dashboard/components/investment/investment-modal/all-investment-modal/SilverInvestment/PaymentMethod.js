@@ -10,17 +10,17 @@ const PaymentMethod = ({ setPage }) => {
         <div className="paymentmethod-main">
           <h5 className="paymentmethod-header">Payment Method</h5>
           <div className="payment-cards">
-            <div className="paymentmethod-flex">
+            <div className="paymentmethod-flex" onClick={() => setPage(5)}>
               <img src={cardicon} alt="" srcset="" className />
               <div>
                 <h5 className="mb-4 wallet-title">Ovest Wallet</h5>
                 <p className="investamount-balance mt-3">Balance: N0</p>
               </div>
-              <img src={backtick} alt="" srcset="" onClick={() => setPage(5)} />
+              <img src={backtick} alt="" srcset="" />
             </div>
           </div>
 
-          <div className="payment-cards">
+          {/* <div className="payment-cards">
             <div className="paymentmethod-flex">
               <img src={cardicon} alt="" srcset="" className />
               <div>
@@ -31,7 +31,7 @@ const PaymentMethod = ({ setPage }) => {
               </div>
               <img src={backtick} alt="" srcset="" />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

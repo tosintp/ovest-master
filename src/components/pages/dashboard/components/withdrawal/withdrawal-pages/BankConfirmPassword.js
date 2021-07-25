@@ -41,11 +41,11 @@ const BankConfirmPassword = ({ setStage }) => {
         >
           {({ isSubmitting }) => (
             <Form>
+              
               <TextInput
                 style={{ width: "98%" }}
                 name="password"
                 type="password"
-                placeholder="Password"
               />
               <ButtonGroup>
                 {!isSubmitting && (

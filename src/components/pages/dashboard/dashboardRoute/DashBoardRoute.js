@@ -8,7 +8,7 @@ import {
 import Main from "../components/main/Main";
 // import Navbar from "../components/navbar/Navbar";
 // import Sidebar from "../components/sidebar/Sidebar";
-import Savest from "../components/Savest/savest";
+import Savest from "../components/Savest/Savest";
 import Referral from "../components/Referral/ReferralSection";
 import Transaction from "../../dashboard/components/Transaction/Transaction";
 import Investment from "../../dashboard/components/investment/Investment";
