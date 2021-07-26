@@ -11,10 +11,10 @@ import {
   colors,
   TextLink,
   ExtraText,
-} from "../../../Syles/styles";
-import "../../signin/SignIn.css";
-import LogoIcon from "../../../Logo/Logo";
-import { TextInput } from "../../../pages/Formik/FormLib";
+} from "../../Syles/styles";
+import "../signin/SignIn.css";
+import LogoIcon from "../../Logo/Logo";
+import { TextInput } from "../Formik/FormLib";
 import * as Yup from "yup";
 
 const ForgetPassword = () => {

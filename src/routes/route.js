@@ -16,9 +16,10 @@ import Consulting from "../components/pages/Consulting";
 // import Founder from "../components/pages/Founder";
 
 import Dashboard from "../components/pages/dashboard/index";
-import ForgetPassword from "../components/pages/dashboard/forgetpassword/ForgetPassword";
-import ResetPassword from "../components/pages/dashboard/forgetpassword/RessetPassword";
+import ForgetPassword from "../components/pages/forgetpassword/ForgetPassword";
+import ResetPassword from "../components/pages/forgetpassword/RessetPassword";
 import Faqs from "./../components/pages/Faqs";
+import ErrPage from "../components/404Page/404Page";
 
 const AppRoute = () => {
   return (
@@ -42,6 +43,9 @@ const AppRoute = () => {
         <Route path="/resetpassword" component={ResetPassword} />
 
         <Route path="/signup" component={SignUp} />
+        <Route>
+          <ErrPage />
+        </Route>
         {/* <Route path="/founder" component={Founder} /> */}
       </Switch>
       {/* <FooterContainer /> */}

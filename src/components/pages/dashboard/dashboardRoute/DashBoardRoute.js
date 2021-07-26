@@ -14,6 +14,8 @@ import Transaction from "../../dashboard/components/Transaction/Transaction";
 import Investment from "../../dashboard/components/investment/Investment";
 import Account from "../components/AccountPage/Account";
 import BankCardsAccount from "../components/AccountPage/BankCards/BankCardsAccount";
+import ErrPage from "../../../404Page/404Page";
+import DashboardErrPage from "../dashboard404/DashboardErrPage";
 const DashBoardRoute = ({ sidebarOpen, openSidebar, closeSidebar }) => {
   let match = useRouteMatch();
 
@@ -40,7 +42,9 @@ const DashBoardRoute = ({ sidebarOpen, openSidebar, closeSidebar }) => {
           exact
           component={BankCardsAccount}
         />
-        <Route>404</Route>
+        <Route>
+          <DashboardErrPage />
+        </Route>
       </Switch>
 
       {/* <Sidebar {...{sidebarOpen, closeSidebar, match}} /> */}

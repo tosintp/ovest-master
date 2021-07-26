@@ -1,0 +1,25 @@
+.errpage1 {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  flex-direction: column;
+}
+
+.errpage1 > p {
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  color: #121212;
+  text-align: center;
+}
+
+.err-image1 {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.err-image1 > img {
+  margin: 40px;
+}

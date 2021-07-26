@@ -1,0 +1,22 @@
+.errpage {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  flex-direction: column;
+}
+
+.errpage > p {
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  color: #121212;
+  text-align: center;
+}
+
+.err-image {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
