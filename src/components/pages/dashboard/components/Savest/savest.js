@@ -14,7 +14,7 @@ const Savest = () => {
           <div className="savest">
             <SavestTitle />
             <SavestCard />
-            <Transaction />
+            {/* <Transaction /> */}
             <SavestTransaction />
           </div>
         </main>

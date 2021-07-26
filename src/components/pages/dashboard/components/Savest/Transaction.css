@@ -2,8 +2,16 @@
   display: flex;
 }
 
+.no-savest-transaction {
+  flex: 0.7 1;
+}
+.savestplan-details {
+  flex: 0.3 1;
+}
+
 .transactionDetails {
-  width: 695px;
+  padding: 20px;
+  width: 92%;
   height: 400px;
   background-color: #ffffff;
   margin-top: 35px;

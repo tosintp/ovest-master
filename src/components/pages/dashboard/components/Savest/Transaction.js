@@ -9,7 +9,7 @@ const Transaction = () => {
   return (
     <div className="TransactionSection">
       <div className="transactions">
-        <div className="transaction">
+        <div className="no-savest-transaction">
           <NoSavestTransacttion />
         </div>
         <div className="savestplan-details">
