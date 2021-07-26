@@ -40,6 +40,7 @@ const DashBoardRoute = ({ sidebarOpen, openSidebar, closeSidebar }) => {
           exact
           component={BankCardsAccount}
         />
+        <Route>404</Route>
       </Switch>
 
       {/* <Sidebar {...{sidebarOpen, closeSidebar, match}} /> */}

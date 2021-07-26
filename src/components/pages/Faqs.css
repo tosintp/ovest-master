@@ -1,0 +1,251 @@
+@media (max-width: 400px) {
+  .faqs-body {
+    background: #f0f6ff;
+    height: 397px;
+  }
+
+  .questions-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+  }
+
+  .questions-details h1 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 58px;
+    letter-spacing: -0.02em;
+    color: #121212;
+    padding-top: 100px;
+  }
+
+  .questions-details p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 15px;
+    color: #666666;
+    padding-top: 12px;
+  }
+
+  .questions-input {
+    width: 331px;
+    height: 52px;
+    background: #ffffff;
+    border-radius: 4px;
+    margin-top: 29px;
+    margin-right: 60px;
+    border: none;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 19px;
+    color: #666666;
+    padding-left: 60px;
+  }
+
+  .questions-search img {
+    position: relative;
+    top: 65px;
+    left: 30px;
+  }
+  .telegram-faq {
+    margin-top: 7px;
+  }
+}
+@media (min-width: 400px) {
+  .faqs-body {
+    background: #f0f6ff;
+    width: 100vw;
+    height: 397px;
+  }
+
+  .questions-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+  }
+
+  .questions-details h1 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 58px;
+    letter-spacing: -0.02em;
+    color: #121212;
+    padding-top: 100px;
+  }
+
+  .questions-details p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 15px;
+    color: #666666;
+    padding-top: 12px;
+  }
+  .questions-search {
+    margin-right: 300px;
+  }
+  .questions-input {
+    width: 331px;
+    height: 52px;
+    background: #ffffff;
+    border-radius: 4px;
+    margin-top: 29px;
+    margin-right: 60px;
+    border: none;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 19px;
+    color: #666666;
+    padding-left: 60px;
+  }
+
+  .questions-search img {
+    position: relative;
+    top: 65px;
+    left: 30px;
+  }
+  .telegram-faq {
+    margin-top: 97px;
+  }
+}
+@media (min-width: 600px) {
+  .faqs-body {
+    background: #f0f6ff;
+    width: 100vw;
+    height: 397px;
+  }
+
+  .questions-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .questions-details h1 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.6rem;
+    line-height: 58px;
+    letter-spacing: -0.02em;
+    color: #121212;
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  .questions-details p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 15px;
+    color: #666666;
+    padding-top: 12px;
+    text-align: center;
+  }
+  .questions-search {
+    margin: 0;
+  }
+  .questions-input {
+    width: 331px;
+    height: 52px;
+    background: #ffffff;
+    border-radius: 4px;
+    margin-top: 29px;
+    border: none;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 19px;
+    color: #666666;
+  }
+
+  .questions-search img {
+    position: relative;
+    left: 36px;
+    top: -2px;
+  }
+
+  .telegram-faq {
+    margin-top: 97px;
+  }
+}
+
+@media (min-width: 992px) {
+  .faqs-body {
+    background: #f0f6ff;
+    height: 691px;
+  }
+
+  .questions-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .questions-details h1 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4.8rem;
+    line-height: 58px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #121212;
+    padding-top: 255px;
+  }
+
+  .questions-details p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 22px;
+    text-align: center;
+    color: #666666;
+    padding-top: 20px;
+  }
+
+  .questions-input {
+    width: 542px;
+    height: 52px;
+    background: #ffffff;
+    border-radius: 4px;
+    margin-top: 59px;
+    border: none;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #666666;
+  }
+
+  .questions-input :hover {
+    border: none;
+  }
+  .questions-search img {
+    position: relative;
+    left: 50px;
+  }
+
+  .telegram-faq {
+    margin-top: 97px;
+  }
+}

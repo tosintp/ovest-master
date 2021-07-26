@@ -1,5 +1,6 @@
 import React from "react";
 import "./Withdrawal-pages.css";
+import { Link } from "react-router-dom";
 
 const InvestPlan = () => {
   return (
@@ -30,10 +31,13 @@ const InvestPlan = () => {
             Lock-away funds safely in our Silvest investment plan for{" "}
             <span>3 months</span> with at least <span>NGN50,000.</span>
           </p>
-          <footer>
-            View details
-            <i class="fas fa-angle-double-right"></i>
-          </footer>
+
+          <Link to="">
+            <footer>
+              View details
+              <i class="fas fa-angle-double-right"></i>
+            </footer>
+          </Link>
         </div>
       </div>
 

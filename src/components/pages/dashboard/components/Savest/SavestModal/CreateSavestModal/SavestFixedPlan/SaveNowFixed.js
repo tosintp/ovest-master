@@ -15,7 +15,7 @@ const SaveNowFixed = ({ setMenu }) => {
           <div className="silverplan-flex">
             <div className="ovest-wallet">
               <p className="ovestwallet-main">Ovest Wallet</p>
-              <div className="savest-balance">
+              <div className="savestflexible-balance">
                 {/* <p className="save-now-balance mt-3">Balance: N0</p> */}
                 <p className="save-now-with-balance mt-3">
                   Balance: N20,000,000

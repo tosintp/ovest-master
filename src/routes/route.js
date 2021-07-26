@@ -18,6 +18,7 @@ import Consulting from "../components/pages/Consulting";
 import Dashboard from "../components/pages/dashboard/index";
 import ForgetPassword from "../components/pages/dashboard/forgetpassword/ForgetPassword";
 import ResetPassword from "../components/pages/dashboard/forgetpassword/RessetPassword";
+import Faqs from "./../components/pages/Faqs";
 
 const AppRoute = () => {
   return (
@@ -33,6 +34,9 @@ const AppRoute = () => {
         {/* <Route path="/dashboard" component={Dashboard} /> */}
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/signin" component={SignIn} />
+        <Route path="/signin" component={SignIn} />
+        <Route path="/faqs" component={Faqs} />
+
         <Route path="/signupverify" component={EmailVerification} />
         <Route path="/forgetpassword" component={ForgetPassword} />
         <Route path="/resetpassword" component={ResetPassword} />

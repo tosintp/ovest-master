@@ -1,0 +1,292 @@
+@media (max-width: 400px) {
+  .General-section {
+    width: 90%;
+    margin: auto;
+    /* display: flex;
+    flex-direction: column; */
+  }
+  .General-section h1 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 48px;
+    color: #fd740e;
+    padding-top: 30px;
+  }
+
+  .General-background {
+    height: 48px;
+    border-radius: 4px;
+    width: 335px;
+    background: #ffffff;
+    box-shadow: 0px 0px 30px rgba(230, 230, 230, 0.41);
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: 105px; */
+  }
+
+  .General-background-one {
+    height: 54px;
+    border-radius: 4px;
+    width: 335px;
+    background: #ffffff;
+    box-shadow: 0px 0px 30px rgba(230, 230, 230, 0.41);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+  }
+  .General-background-one p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 22px;
+    color: #121212;
+    padding-top: 10px;
+    padding-left: 32px;
+  }
+
+  .General-background-one img {
+    padding-top: 17px;
+    padding-right: 33px;
+    padding-bottom: 20px;
+  }
+  .General-background p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 22px;
+    color: #121212;
+    padding-top: 15px;
+    padding-left: 33px;
+    /* padding-bottom: 19px; */
+  }
+
+  .General-background img {
+    padding-top: 17px;
+    padding-right: 33px;
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 400px) {
+  .General-section {
+    width: 90%;
+    margin: auto;
+    /* display: flex;
+    flex-direction: column; */
+  }
+  .General-section h1 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 48px;
+    color: #fd740e;
+    padding-top: 30px;
+  }
+
+  .General-background {
+    height: 48px;
+    border-radius: 4px;
+    width: 375px;
+    background: #ffffff;
+    box-shadow: 0px 0px 30px rgba(230, 230, 230, 0.41);
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: 105px; */
+  }
+
+  .General-background-one {
+    height: 54px;
+    border-radius: 4px;
+    width: 375px;
+    background: #ffffff;
+    box-shadow: 0px 0px 30px rgba(230, 230, 230, 0.41);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+  }
+  .General-background-one p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 22px;
+    color: #121212;
+    padding-top: 10px;
+    padding-left: 32px;
+  }
+
+  .General-background-one img {
+    padding-top: 17px;
+    padding-right: 33px;
+    padding-bottom: 20px;
+  }
+  .General-background p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 22px;
+    color: #121212;
+    padding-top: 15px;
+    padding-left: 33px;
+    /* padding-bottom: 19px; */
+  }
+
+  .General-background img {
+    padding-top: 17px;
+    padding-right: 33px;
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .General-section {
+    width: 90%;
+    margin: auto;
+  }
+  .General-section h1 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 48px;
+    color: #fd740e;
+    padding-top: 30px;
+  }
+
+  .General-background {
+    height: 60px;
+    border-radius: 4px;
+    width: 600px;
+    background: #ffffff;
+    box-shadow: 0px 0px 30px rgba(230, 230, 230, 0.41);
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: 105px; */
+  }
+
+  .General-background-one {
+    height: 60px;
+    border-radius: 4px;
+    width: 600px;
+    background: #ffffff;
+    box-shadow: 0px 0px 30px rgba(230, 230, 230, 0.41);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+  }
+  .General-background-one p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 22px;
+    color: #121212;
+    padding-top: 19px;
+    padding-left: 32px;
+  }
+
+  .General-background-one img {
+    padding-top: 17px;
+    padding-right: 33px;
+    padding-bottom: 20px;
+  }
+  .General-background p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 22px;
+    color: #121212;
+    padding-top: 19px;
+    padding-left: 33px;
+    /* padding-bottom: 19px; */
+  }
+
+  .General-background img {
+    padding-top: 17px;
+    padding-right: 33px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .General-page {
+    width: 100%;
+    margin: auto;
+  }
+
+  .General-section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .General-background {
+    height: 60px;
+    border-radius: 4px;
+    width: 70vw;
+    background: #ffffff;
+    box-shadow: 0px 0px 30px rgba(230, 230, 230, 0.41);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 105px;
+  }
+  .General-section h1 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.6rem;
+    line-height: 48px;
+    color: #fd740e;
+    padding-top: 105px;
+  }
+
+  .General-background p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 22px;
+    color: #121212;
+    padding-top: 19px;
+    padding-left: 55px;
+    padding-bottom: 19px;
+  }
+
+  .General-background img {
+    padding-top: 20px;
+    padding-right: 60px;
+    padding-bottom: 20px;
+  }
+
+  .General-background-one {
+    height: 60px;
+    border-radius: 4px;
+    width: 70vw;
+    background: #ffffff;
+    box-shadow: 0px 0px 30px rgba(230, 230, 230, 0.41);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .General-background-one p {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 22px;
+    color: #121212;
+    padding-top: 19px;
+    padding-left: 55px;
+    padding-bottom: 19px;
+  }
+
+  .General-background-one img {
+    padding-top: 20px;
+    padding-right: 60px;
+    padding-bottom: 20px;
+  }
+}
