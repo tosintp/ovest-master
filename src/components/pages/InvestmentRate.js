@@ -36,7 +36,9 @@ const InvestmentRate = () => {
               <div className="vl"></div>
             </div>
             <p className="invest-section-text ml-3">
-              Choose your preferred plan(s): With OVest you can invest in as
+            <strong>  Choose your preferred plan(s): </strong>
+            
+             With OVest you can invest in as
               many as possible investment plans you want for 3 or 6 months.
             </p>
           </div>
@@ -46,7 +48,7 @@ const InvestmentRate = () => {
               <div className="vl"></div>
             </div>
             <p className="invest-section-text ml-3">
-              Invest from OVest Wallet: Fund your OVest wallet using our methods
+              <strong> Invest from OVest Wallet: </strong> Fund your OVest wallet using our methods
               of payment designed to suit you. Fund your investment from your
               OVest wallet.
             </p>
@@ -56,8 +58,7 @@ const InvestmentRate = () => {
               <img src={invest3} alt="" />
             </div>
             <p className="invest-section-text ml-3">
-              Choose your preferred plan(s): With OVest you can invest in as
-              many as possible investment plans you want for 3 or 6 months.
+           <strong>   Watch your money grow while we do the work: </strong> All withdrawal (ROI and or Capital) requests are automated ensuring there is no dilatory in the transactions once your investment reaches the maturity period.
             </p>
           </div>
         </div>

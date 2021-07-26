@@ -14,7 +14,7 @@ const NoCreditTransaction = () => {
           }}
         >
           <p className="detailsText">No Credit Transactions</p>
-          <img src={TransImage} alt="" className="centerImage" />
+          <img src={TransImage} alt="TransImage" className="centerImage" />
           <p className="trans-text">No Credit transactions yet</p>
         </div>
       </div>

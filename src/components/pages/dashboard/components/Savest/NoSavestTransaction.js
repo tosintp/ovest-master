@@ -5,7 +5,6 @@ import TransImage from "../../assets/Transaction.svg";
 const NoSavestTransaction = () => {
   return (
     <div className="TransactionSection">
-      <div className="">
         <div className="transactionDetails">
           <p className="detailsText">Recent Transactions</p>
           <img src={TransImage} alt="" className="centerImage" />
@@ -15,7 +14,6 @@ const NoSavestTransaction = () => {
           </p>
         </div>
       </div>
-    </div>
   );
 };
 
