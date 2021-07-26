@@ -23,6 +23,8 @@ function App({ user, getProfile, logOut }) {
     "/consulting",
     "/signin",
     "/signup",
+    "/forgetpassword",
+    "/resetpassword",
   ];
   const isProtectedPage = unProtectedPages.every((page) => page !== pathname);
   const isNotLoggedIn = !user;

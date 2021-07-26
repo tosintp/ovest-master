@@ -9,6 +9,8 @@ import {
   ButtonGroup,
   SubTitle,
   colors,
+  TextLink,
+  ExtraText,
 } from "../../../Syles/styles";
 import "../../signin/SignIn.css";
 import LogoIcon from "../../../Logo/Logo";
@@ -70,7 +72,7 @@ const ForgetPassword = () => {
 
                 <ButtonGroup>
                   {!showLoader && (
-                    <StyledFormButton type="submit">Verify</StyledFormButton>
+                    <StyledFormButton type="submit">Send</StyledFormButton>
                   )}
 
                   {showLoader && (
@@ -85,6 +87,9 @@ const ForgetPassword = () => {
               </Form>
             )}
           </Formik>
+          <ExtraText>
+            Already reset? <TextLink to="/signin">Login</TextLink>
+          </ExtraText>
         </StyledFormArea>
       </div>
     </StyledContainer>
