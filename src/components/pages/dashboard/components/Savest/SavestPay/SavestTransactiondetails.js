@@ -1,64 +1,45 @@
 import React from "react";
-import uppink from "../../../assets/Uppink.svg";
+import * as moment from "moment";
+// import uppink from "../../../assets/Uppink.svg";
 import upgreen from "../../../assets/upgreen.svg";
 import downred from "../../../assets/downred.svg";
 import "./Transctiondetails.css";
 import TransactionDetails from "../../main/TransactionDetails";
+import { Util } from "../../../../../../helpers/util";
 
-const Transactiondetails = () => {
+const Transactiondetails = ({ transactions, transactionTypeAllowed }) => {
   return (
     <div className="deposit-main">
-      <TransactionDetails
-        icon={upgreen}
-        title={"Savest deposit"}
-        date={"Mar 30, 2021"}
-        amount={"+ $10,000.00"}
-        style={{ color: "#038830" }}
-      />
-      <div className="hr"></div>
-      <TransactionDetails
-        icon={downred}
-        title={"Withdraw to Ovest wallet"}
-        date={"Mar 30, 2021"}
-        amount={"- $10,000.00"}
-        style={{ color: "#ee5253" }}
-      />
-      <div className="hr"></div>
+      {transactions.map((transaction) => {
+        const { prev_balance, avail_balance, created_at } = transaction;
+        const isCreditTransaction = prev_balance - avail_balance < 0;
+        const icon = isCreditTransaction ? upgreen : downred;
+        const sign = isCreditTransaction ? "+" : "-";
+        const color = isCreditTransaction ? "#038830" : "#ee5253";
 
-      <TransactionDetails
-        icon={uppink}
-        title={"Savest deposit"}
-        date={"Mar 30, 2021"}
-        amount={"+ $10,000.00"}
-        style={{ color: "#ea8e03" }}
-      />
-      <div className="hr"></div>
+        if (transactionTypeAllowed) {
+          if (transactionTypeAllowed === "credit" && !isCreditTransaction) {
+            return null;
+          }
 
-      <TransactionDetails
-        icon={upgreen}
-        title={"Withdraw to Ovest wallet"}
-        date={"Mar 30, 2021"}
-        amount={"- $10,000.00"}
-        style={{ color: "#038830" }}
-      />
-      <div className="hr"></div>
-      <TransactionDetails
-        icon={downred}
-        title={"Savest deposit"}
-        date={"Mar 30, 2021"}
-        amount={"+ $10,000.00"}
-        style={{ color: "#ee5253" }}
-      />
-      <div className="hr"></div>
+          if (transactionTypeAllowed === "debit" && isCreditTransaction) {
+            return null;
+          }
+        }
 
-      <TransactionDetails
-        icon={uppink}
-        title={"Withdraw to Ovest wallet"}
-        date={"Mar 30, 2021"}
-        amount={"- $10,000.00"}
-        style={{ color: "#ea8e03" }}
-      />
-      <div className="hr"></div>
+        return (
+          <>
+            <TransactionDetails
+              icon={icon}
+              title={"No DESC"}
+              date={moment(created_at).format("MMM DD, YYYY")}
+              amount={`${sign} $${Util.formatMoneyNumber(avail_balance)}`}
+              style={{ color }}
+            />
+            <div className="hr"></div>
+          </>
+        );
+      })}
     </div>
   );
 };

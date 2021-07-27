@@ -57,6 +57,14 @@ export class User extends HTTPModule {
     return message.includes("active");
   }
 
+  async getUserStatus() {
+    const {
+      0: { data },
+    } = await this.get("/status");
+
+    return data;
+  }
+
   async getCountries() {
     const { data } = await this.get("/countries");
 
@@ -84,19 +92,22 @@ export class User extends HTTPModule {
   }
 
   async getBalances() {
-    return this.mockCall({
-      ovest: Util.formatMoneyNumber(10234),
+    const { data } = await this.get("/balances");
+
+    return {
+      ...data,
+      ovest: Util.formatMoneyNumber(data.wallet_balance),
       savest: {
-        total: Util.formatMoneyNumber(2242),
+        total: Util.formatMoneyNumber(data.savest_total_balance),
         percentageChane: 0.3,
-        totalReturns: 200,
+        totalReturns: Util.formatMoneyNumber(data.total_savest_return),
       },
       investment: {
-        total: Util.formatMoneyNumber(8000),
+        total: Util.formatMoneyNumber(data.total_amount_invested),
         percentageChane: 2,
-        totalReturns: Util.formatMoneyNumber(1234),
+        totalReturns: Util.formatMoneyNumber(data.total_investment_return),
       },
-    });
+    };
   }
 
   async getTransactions() {
@@ -120,7 +131,6 @@ export class User extends HTTPModule {
   }
 
   async bankTransfer(payload) {
-    // alert(JSON.stringify(this.config));
     const { status } = await this.post("/wallet/deposit/bank", payload);
     if (!status.includes("succes")) {
       throw new HttpException("bank transfer failed", 400);
@@ -204,13 +214,28 @@ export class User extends HTTPModule {
   }
 
   async addBankAccount(payload) {
-    const {
-      data: [
-        { account_no: accountNumber, account_name: name, bank_name: bank },
-      ],
-    } = await this.post("/add/bank", payload);
+    const { data, status, message } = await this.post("/bank/add", payload);
+    if (status !== "success") {
+      throw new HttpException(message, 400);
+    }
 
-    return { bank, accountNumber, name };
+    return data;
+  }
+
+  async getSavedBanks() {
+    const { data } = await this.get("/saved_banks");
+
+    return data;
+  }
+
+  async deleteBankAccount(id) {
+    await this.post(`/bank_account/delete/${id}`);
+  }
+
+  async getSavestTransactions() {
+    const { data } = await this.get("/savest/transactions");
+
+    return data;
   }
 }
 

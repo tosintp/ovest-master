@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { pick } from "lodash";
 import "./PaymentOption.css";
 import Transfer from "../../../assets/Transfer.svg";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
@@ -72,19 +73,40 @@ const PaymentOption = () => {
   const [state, setState] = useState({
     checkedA: true,
     checkedB: true,
-    crypto: false,
-    usd: false,
+    is_crypto: false,
+    is_dollar: false,
   });
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await $api.user.getUserStatus();
+        const data = pick(res, ["is_crypto", "is_dollar"]);
+
+        setState((i) => ({
+          ...i,
+          ...{
+            is_crypto: data.is_crypto === 1,
+            is_dollar: data.is_dollar === 1,
+          },
+        }));
+      } catch (error) {
+        // error
+      }
+    })();
+  }, [setState]);
 
   const handleChange = async (event) => {
     const { name } = event.target;
+    if (state[name]) return;
+
     try {
       switch (name) {
-        case "crypto": {
+        case "is_crypto": {
           await $api.user.activateCryptoAccount();
           break;
         }
-        case "usd": {
+        case "is_dollar": {
           await $api.user.activateDollarAccount();
           break;
         }
@@ -152,9 +174,9 @@ const PaymentOption = () => {
             <FormControlLabel
               control={
                 <IOSSwitch
-                  checked={state.crypto}
+                  checked={state.is_crypto}
                   onChange={handleChange}
-                  name="crypto"
+                  name="is_crypto"
                 />
               }
             />
@@ -171,9 +193,9 @@ const PaymentOption = () => {
             <FormControlLabel
               control={
                 <IOSSwitch
-                  checked={state.usd}
+                  checked={state.is_dollar}
                   onChange={handleChange}
-                  name="usd"
+                  name="is_dollar"
                 />
               }
             />

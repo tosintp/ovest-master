@@ -24,15 +24,6 @@ const ConfirmBank = ({ pageEmit, addBank }) => {
       setShowSuccess(true);
     } catch (error) {
       setError(error.message);
-      /**
-       * Remove this bit when BE dev returns
-       * right status on successful card add.
-       */
-      addBank({
-        name: bank.account_name,
-        accountNumber: bank.account_no,
-        bank: bank.bank_name,
-      });
       // toast/report error
     }
   };
@@ -43,8 +34,8 @@ const ConfirmBank = ({ pageEmit, addBank }) => {
       <center style={{ color: "red" }}>{error}</center>
       <div className="confirm-details">
         <h6>{bank.account_name}</h6>
-        <p className="confirm-texts">{bank.account_no}</p>
-        <p className="confirm-access">{bank.bank_name}</p>
+        <p className="confirm-texts">{bank.account_number}</p>
+        <p className="confirm-access">{bank.bank}</p>
       </div>
       <div className="bank-btns">
         <Button

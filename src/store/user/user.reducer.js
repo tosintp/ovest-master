@@ -5,6 +5,7 @@ import {
   GET_PROFILE_SUCCESS,
   LOGIN_SUCCESS,
   LOGOUT_USER,
+  SET_PROFILE_IMAGE_SUCCESS,
   SIGNUP_SUCCESS,
   UPDATE_USER_SUCCESS,
 } from "./user.constants";
@@ -15,6 +16,7 @@ export default function user(state = null, action) {
     case SIGNUP_SUCCESS:
     case GET_PROFILE_SUCCESS:
     case UPDATE_USER_SUCCESS:
+    case SET_PROFILE_IMAGE_SUCCESS:
       const newState = merge({}, state, action.payload);
 
       const { token } = newState;
