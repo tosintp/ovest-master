@@ -13,6 +13,7 @@ import navprofile from "../../assets/navprofile.svg";
 import "./navleft.css";
 import { useUser } from "../../../../../hooks/use-user";
 import { Util } from "../../../../../helpers/util";
+import { PRFIMGBASE } from "../../../../../helpers/config";
 
 function NavRight(props) {
   return (
@@ -31,6 +32,8 @@ function NavItem(props) {
   const user = useUser();
   const { lastname, firstname } = user;
 
+  if (!user) return null;
+
   return (
     <>
       <li className="nav-item">
@@ -44,7 +47,7 @@ function NavItem(props) {
       <li className="nav-item">
         <Avatar
           alt="Travis Howard"
-          src={profile}
+          src={user.img ? `${PRFIMGBASE}/${user.img}` : profile}
           style={{
             border: "5px solid #fec59a",
             // padding: "px",

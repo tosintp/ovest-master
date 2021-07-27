@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { connect } from "react-redux";
 import ProfileImage from "../../../../assets/Profileimage.svg";
 import Arrowright from "../../../../assets/Arrowright.svg";
 import "../SettingsModal.css";
@@ -7,8 +8,11 @@ import { withStyles } from "@material-ui/core/styles";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 import FormGroup from "@material-ui/core/FormGroup";
+import { updateProfileImageAction } from "../../../../../../../store/user/user.action";
+import { useUser } from "../../../../../../../hooks/use-user";
+import { PRFIMGBASE } from "../../../../../../../helpers/config";
 
-const Settings = ({ setSection }) => {
+const Settings = ({ setSection, updateProfileImage }) => {
   //Material-ui Button Styles//
   const IOSSwitch = withStyles((theme) => ({
     root: {
@@ -66,16 +70,31 @@ const Settings = ({ setSection }) => {
       />
     );
   });
+  const user = useUser();
+  let prfImage = ProfileImage;
 
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     checkedA: true,
     checkedB: true,
     checkedC: true,
   });
 
+  if (!user) {
+    return null;
+  }
+
   const handleChange = (event) => {
     setState({ ...state, [event.target.name]: event.target.checked });
   };
+  const fileInputChangeHandler = (event) => {
+    const file = event.target.files[0];
+    updateProfileImage(file);
+  };
+
+  if (user.img) {
+    prfImage = `${PRFIMGBASE}/${user.img}`;
+  }
+
   return (
     <div className="settings-section">
       <div className="settings-header">
@@ -88,11 +107,17 @@ const Settings = ({ setSection }) => {
             cursor: "pointer",
           }}
         >
-          <img src={ProfileImage} alt="" className="settings-image" />
+          <img
+            src={prfImage}
+            alt=""
+            style={{ width: 80, height: 80, borderRadius: "50%" }}
+            className="settings-image"
+          />
         </label>
         <input
           type="file"
           id="input"
+          onChange={fileInputChangeHandler}
           style={{
             visibility: "hidden",
           }}
@@ -153,4 +178,6 @@ const Settings = ({ setSection }) => {
   );
 };
 
-export default Settings;
+const mapDispatchToProps = { updateProfileImage: updateProfileImageAction };
+
+export default connect(null, mapDispatchToProps)(Settings);

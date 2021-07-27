@@ -1,4 +1,5 @@
 import { $api } from "../../helpers/$api";
+import { API_URL } from "../../helpers/config";
 import { Dispatcher } from "../../helpers/dipatcher";
 import {
   GET_PROFILE_SUCCESS,
@@ -6,6 +7,7 @@ import {
   SIGNUP_SUCCESS,
   LOGOUT_USER,
   UPDATE_USER_SUCCESS,
+  SET_PROFILE_IMAGE_SUCCESS,
 } from "./user.constants";
 
 export const login = (credentials) => {
@@ -50,5 +52,27 @@ export const logoutUserAction = () => {
     $api.updateRequestConfig({ headers: { Authorization: "" } });
 
     dispatch({ type: LOGOUT_USER });
+  };
+};
+
+export const updateProfileImageAction = (file) => {
+  return async (dispatch) => {
+    try {
+      const formData = new FormData();
+      formData.append("image", file);
+
+      const {
+        message: { data: payload },
+      } = await $api.user.request({
+        method: "POST",
+        url: `${API_URL}/user/profile/update`,
+        data: formData,
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+
+      dispatch({ type: SET_PROFILE_IMAGE_SUCCESS, payload });
+    } catch (error) {
+      console.debug(error);
+    }
   };
 };

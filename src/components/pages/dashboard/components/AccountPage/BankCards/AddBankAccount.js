@@ -19,8 +19,8 @@ const AddBankAccount = ({ setSection, pageEmit }) => {
   const [values, setValues] = useState(
     bank || {
       account_name: "",
-      account_no: "",
-      bank_name: "",
+      account_number: "",
+      bank: "",
     }
   );
 
@@ -68,9 +68,9 @@ const AddBankAccount = ({ setSection, pageEmit }) => {
       <div className="formSection">
         <Formik
           initialValues={{
-            account_no: "",
+            account_number: "",
             account_name: "",
-            bank_name: "",
+            bank: "",
           }}
           onSubmit={handleSubmit}
         >
@@ -86,16 +86,16 @@ const AddBankAccount = ({ setSection, pageEmit }) => {
 
               <BankTranferDetailsTextInput
                 onChange={handleValue}
-                value={values.account_no}
-                name="account_no"
+                value={values.account_number}
+                name="account_number"
                 type="tel"
                 placeholder="Enter Account Number"
               />
               <div>
                 <select
-                  name="bank_name"
+                  name="bank"
                   onChange={handleValue}
-                  initialValues={values.bank_name}
+                  initialValues={values.bank}
                   className="bank-select ml-5"
                 >
                   <option value={values.bank_name} key={values.bank_name}>

@@ -115,7 +115,7 @@ const SignUp = ({ user, createUser, ...props }) => {
                 .required("confirm_password is Required")
                 .oneOf([Yup.ref("password"), "Passwords must match"]),
               username: Yup.string().required("Username is Required"),
-              phone_code: Yup.string().required("Phone Code is Required"),
+              // phone_code: Yup.string().required("Phone Code is Required"),
             })}
           >
             {({ isSubmitting, values, handleBlur, handleChange }) => (

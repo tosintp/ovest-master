@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 // import AppBar from "@material-ui/core/AppBar";
@@ -12,6 +12,8 @@ import Debitransaction from "./DebitTransaction";
 import Creditransaction from "./Creditransaction";
 import NoDebitTransaction from "./NoDebitTransaction";
 import NoCreditTransaction from "./NoCreditTransaction";
+// import Debitransaction from "./DebitTransaction";
+// import Creditransaction from "./Creditransaction";
 // import TransactionDetails from './../../main/TransactionDetails';
 
 function TabPanel(props) {
@@ -64,9 +66,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ScrollableTabsButtonAuto() {
+export default function ScrollableTabsButtonAuto({ transactions }) {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

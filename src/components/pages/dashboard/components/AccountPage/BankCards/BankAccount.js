@@ -1,12 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AddIcon from "../../../assets/AddBankIcon.svg";
 import "./BankCard.css";
 import BankModalIndex from "./BankModal/BankModalIndex";
 import ATM from "../../../assets/ATM.svg";
 import deleteIcon from "../../../assets/delete-icon.svg";
 import backicon from "../../../../../Assets/backicon.svg";
+import { $api } from "../../../../../../helpers/$api";
 
-const BankItem = ({ name, bank, accountNumber, onDeleteClick }) => {
+const BankItem = ({
+  Account_name: name,
+  Bank_Name: bank,
+  Account_number: accountNumber,
+  onDeleteClick,
+}) => {
   return (
     <div className="bank-item">
       <div className="delete-screen">
@@ -31,14 +37,33 @@ const BankAccount = () => {
   const [section, setSection] = useState(0);
   const [banks, setBanks] = useState([]);
 
-  const handleBankItemDelete = (id) => {
+  useEffect(() => {
+    (async () => {
+      try {
+        const banks = await $api.user.getSavedBanks();
+
+        setBanks(banks);
+      } catch (error) {
+        // error getting banks
+      }
+    })();
+  }, [setBanks]);
+
+  const handleBankItemDelete = async (id) => {
     // eslint-disable-next-line no-restricted-globals
     const continueWithDelete = confirm(
       "Are you sure you want to delete this bank account?"
     );
     if (continueWithDelete) {
+      const oldBanks = [...banks];
       const newBanks = banks.filter((bank) => bank.id !== id);
       setBanks(newBanks);
+      try {
+        await $api.user.deleteBankAccount(id);
+      } catch (error) {
+        setBanks(oldBanks);
+        //toast error.message
+      }
     }
   };
 

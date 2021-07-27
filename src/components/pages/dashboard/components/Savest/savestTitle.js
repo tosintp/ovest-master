@@ -1,41 +1,48 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import AddIcon from "@material-ui/icons/Add";
-import BackupOutlinedIcon from "@material-ui/icons/BackupOutlined";
-import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
+// import AddIcon from "@material-ui/icons/Add";
+// import BackupOutlinedIcon from "@material-ui/icons/BackupOutlined";
+// import { makeStyles } from "@material-ui/core/styles";
+// import Button from "@material-ui/core/Button";
 import "./SavestTitle.css";
 import { showModal } from "../../../../../redux/actions/modal.action";
-import useAuth from "../../../../../hooks/useAuth";
+// import useAuth from "../../../../../hooks/useAuth";
 import savestinactive from "../../assets/withdraw-savest-inactive.svg";
 import savestactive from "../../assets/withdraw-savest-active.svg";
 import { FiPlus } from "react-icons/fi";
-import { color } from "@material-ui/system";
+// import { color } from "@material-ui/system";
 import closemodalicon from "../../../../Assets/closemodalicon.svg";
 import WithdrawSavestIndex from "./SavestModal/WithdrawSavestModal/WithdrawSavestIndex";
+import { useUser } from "../../../../../hooks/use-user";
 // import CreateSavestIndex from "./SavestModal/CreateSavestModal/CreateSavestIndex"
 
-const useStyles = makeStyles((theme) => ({
-  button: {
-    margin: theme.spacing(1),
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   button: {
+//     margin: theme.spacing(1),
+//   },
+// }));
 const SavestTitle = ({ toggleModalAppearance }) => {
   const [menu, setMenu] = useState(0);
+  const user = useUser();
   const [savestTransactionActive] = useState(false);
-  const classes = useStyles();
-  const openModal = () => {
-    toggleModalAppearance();
-    console.log("open redux");
-  };
-  const { user } = useAuth();
+  // const classes = useStyles();
+  // const openModal = () => {
+  //   toggleModalAppearance();
+  //   console.log("open redux");
+  // };
+
+  if (!user) {
+    return null;
+  }
 
   return (
     <div className="savest">
       <div className="savestPage">
         <div className="SavestHeader">
           <h1>Savest</h1>
-          <p className="">Hi angela , let’s help you save towards a goal</p>
+          <p className="">
+            Hi {user.firstname}, let’s help you save towards a goal
+          </p>
         </div>
         <div className="buttonSection">
           {/* <Button
@@ -64,28 +71,27 @@ const SavestTitle = ({ toggleModalAppearance }) => {
 
             <p>Save now</p>
           </div>
-            <a href="#maturedspecialindex">
-          <div
-            className={`savestbtn-inactive ${
-              savestTransactionActive ? "savestwithdraw-active" : ""
-            }`}
-          >
-            <img
-              src={savestTransactionActive ? savestactive : savestinactive}
-              alt="save now"
-            />
-            <p>Withdraw</p>
-          </div>
+          <a href="#maturedspecialindex">
+            <div
+              className={`savestbtn-inactive ${
+                savestTransactionActive ? "savestwithdraw-active" : ""
+              }`}
+            >
+              <img
+                src={savestTransactionActive ? savestactive : savestinactive}
+                alt="save now"
+              />
+              <p>Withdraw</p>
+            </div>
           </a>
-
         </div>
       </div>
-       <>
+      <>
         <div id="maturedspecialindex" className="maturedspecialindex">
           <div className="investmodal-head">
             {menu === 0 ? (
               <a
-                href="#"
+                href="#dummy"
                 className="closemodalicon-btn"
                 onClick={() => {
                   setMenu(0);

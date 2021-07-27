@@ -1,13 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Savest from "../../assets/saveImg2.svg";
 import Savest1 from "../../assets/savest.svg";
 import createsavesticon from "../../assets/createsavesticon.svg";
 import "./SavestCard.css";
 import closemodalicon from "../../../../Assets/closemodalicon.svg";
 import CreateSavestIndex from "./SavestModal/CreateSavestModal/CreateSavestIndex";
+import { $api } from "../../../../../helpers/$api";
 
 const SavestCard = () => {
   const [menu, setMenu] = useState(0);
+  const [cardData, setCardData] = useState({
+    total: 0,
+    totalReturns: 0,
+    percentageChane: "0.0",
+  });
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const { savest } = await $api.user.getBalances();
+
+        setCardData(savest);
+      } catch (error) {
+        // error getting card data.
+      }
+    })();
+  }, [setCardData]);
 
   return (
     <div className="savestSesson">
@@ -16,7 +34,7 @@ const SavestCard = () => {
           <img src={Savest} alt="" className="saveImage" width="27px" />
         </div>
         <h6>Total Amount Saved</h6>
-        <p>$0.00</p>
+        <p>${cardData.total}</p>
       </div>
       <div
         className="savestCard1
@@ -26,8 +44,10 @@ const SavestCard = () => {
           <img src={Savest1} alt="" className="saveImg" width="27px" />
         </div>
         <h6>Total Returns</h6>
-        <p>$0.00</p>
-        <span className="portfolioText">0.0% portfoilo change today</span>
+        <p>${cardData.totalReturns}</p>
+        <span className="portfolioText">
+          {cardData.percentageChane}% portfoilo change today
+        </span>
       </div>
       <div className="saveCard">
         <div className="create-savest">
@@ -46,7 +66,7 @@ const SavestCard = () => {
           <div className="investmodal-head">
             {menu === 0 ? (
               <a
-                href="#"
+                href="#dummy"
                 className="closemodalicon-btn"
                 onClick={() => {
                   setMenu(0);

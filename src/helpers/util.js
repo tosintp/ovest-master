@@ -53,5 +53,27 @@ export class Util {
     return options[Math.floor(Math.random() * options.length)];
   }
 
+  static generateRandomString(
+    length = 10,
+    factory = "abcdefghijklmnopqrstuvwxyz"
+  ) {
+    let string = "";
+
+    while (string.length < length) {
+      string += Util.randomChoice(factory.split());
+    }
+
+    return string;
+  }
+
+  static getFlutterCurrencyAndCountryFromUserCountry(country) {
+    switch (country && country.toLowerCase()) {
+      case "nigeria":
+        return { currency: "NGN", country: "NG" };
+      default:
+        return {};
+    }
+  }
+
   static noop(..._) {}
 }
