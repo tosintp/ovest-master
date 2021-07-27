@@ -75,6 +75,7 @@ const SpecialPackageIndex = ({ page, setPage }) => {
         </>
       );
       break;
+    default:
   }
 
   return <div className="current-stage">{currentPage}</div>;

@@ -58,7 +58,7 @@ const Crypto = () => {
         <div id="CryptoModal" className="crypto-modal">
           <div className="accountmodal-head">
             {section === 0 ? (
-              <a href="#" className="backicon">
+              <a href="!#" className="backicon">
                 <img src={backicon} alt="back icon" className="back-icon" />
               </a>
             ) : null}

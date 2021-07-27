@@ -44,6 +44,7 @@ const LegalIndex = ({ section, setSection }) => {
         </>
       );
       break;
+    default:
   }
 
   return <div className="current-page">{CurrentPage}</div>;

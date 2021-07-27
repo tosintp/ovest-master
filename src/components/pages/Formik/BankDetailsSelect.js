@@ -1,6 +1,5 @@
 import { useField } from "formik";
-import React, { useState } from "react";
-import { FiEyeOff, FiEye } from "react-icons/fi";
+import React from "react";
 
 import {
   StyledTextSelectBankTransfer,
@@ -12,7 +11,6 @@ import {
 
 const BankTranferDetailsSelect = ({ icon, ...props }) => {
   const [field, meta] = useField(props);
-  const [show, setShow] = useState(false);
 
   return (
     <div style={{ position: "relative" }}>

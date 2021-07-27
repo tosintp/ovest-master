@@ -147,7 +147,7 @@ const AllInvestmentPlan = () => {
           <div className="investmodal-head">
             {page === 0 ? (
               <a
-                href="#"
+                href="!#"
                 className="closemodalicon-btn"
                 onClick={() => {
                   setPage(0);
@@ -167,7 +167,7 @@ const AllInvestmentPlan = () => {
           <div className="investmodal-head ">
             {page === 0 ? (
               <a
-                href="#"
+                href="!#"
                 className="closemodalicon-btn"
                 onClick={() => {
                   setPage(0);

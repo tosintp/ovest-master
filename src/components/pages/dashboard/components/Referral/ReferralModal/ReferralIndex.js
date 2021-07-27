@@ -5,8 +5,9 @@ const ReferralIndex = ({ section, setSection }) => {
   let CurrentPage;
   switch (section) {
     case 0:
-      CurrentPage = <ReferralWithdraw setSection={ setSection}/>
+      CurrentPage = <ReferralWithdraw setSection={setSection} />;
       break;
+    default:
   }
   return <div>{CurrentPage}</div>;
 };

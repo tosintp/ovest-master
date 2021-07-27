@@ -1,6 +1,5 @@
 import React from "react";
 import Mark from "../../../../assets/mark.svg";
-import Arrowright from "../../../../assets/Arrowright.svg";
 import "./VerificationDetails.css";
 import check from "../../../../assets/check.svg";
 

@@ -1,7 +1,6 @@
 import React from "react";
 import "../../App.css";
 import "./ContactUs.css";
-import Footer from "./footer";
 import DefaultLayout from "../../layouts/DefaultLayout";
 import community from "../Assets/community.svg";
 import send from "../Assets/send.svg";

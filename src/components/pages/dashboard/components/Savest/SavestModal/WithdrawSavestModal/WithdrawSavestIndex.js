@@ -1,8 +1,7 @@
 import React from "react";
-import SavestWithdraw from "./SavestWithdraw"
-import ConfirmDetails from "./ConfirmDetails"
+import SavestWithdraw from "./SavestWithdraw";
+import ConfirmDetails from "./ConfirmDetails";
 import backicon from "../../../../../../Assets/backicon.svg";
-
 
 const WithdrawSavestIndex = ({ menu, setMenu }) => {
   let currentModal;
@@ -11,7 +10,7 @@ const WithdrawSavestIndex = ({ menu, setMenu }) => {
       currentModal = <SavestWithdraw setMenu={setMenu} />;
       break;
 
-       case 1:
+    case 1:
       currentModal = (
         <>
           <button
@@ -26,9 +25,7 @@ const WithdrawSavestIndex = ({ menu, setMenu }) => {
         </>
       );
       break;
-
-
-   
+    default:
   }
 
   return <div className="current-stage">{currentModal}</div>;

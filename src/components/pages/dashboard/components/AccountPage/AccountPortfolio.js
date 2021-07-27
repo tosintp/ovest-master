@@ -1,16 +1,14 @@
-import React,{useState} from 'react'
+import React, { useState } from "react";
 import Portfolio from "../../assets/Portfolio.svg";
 import Arrowright from "../../assets/Arrowright.svg";
-import PortfolioIndex from './PortfolioModal/PortfolioIndex';
+import PortfolioIndex from "./PortfolioModal/PortfolioIndex";
 import backicon from "../../../../Assets/backicon.svg";
 
-import './Account.css'
+import "./Account.css";
 
-
-const AccountPortfolio = () =>
-{
+const AccountPortfolio = () => {
   const [section, setSection] = useState(0);
-  
+
   return (
     <div>
       <a href="#portfolioModal">
@@ -34,7 +32,7 @@ const AccountPortfolio = () =>
         <div id="portfolioModal" className="portfolio-modal">
           <div className="accountmodal-head">
             {section === 0 ? (
-              <a href="#" className="backicon">
+              <a href="!#" className="backicon">
                 <img src={backicon} alt="back icon" className="back-icon" />
               </a>
             ) : null}
@@ -44,6 +42,6 @@ const AccountPortfolio = () =>
       </>
     </div>
   );
-}
+};
 
-export default AccountPortfolio
+export default AccountPortfolio;

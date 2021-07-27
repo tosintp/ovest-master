@@ -18,8 +18,8 @@ import { TextInput } from "../Formik/FormLib";
 import * as Yup from "yup";
 
 const ForgetPassword = () => {
-  const [showLoader, setShowLoader] = useState(false);
-  const [error, setError] = useState("");
+  const [showLoader] = useState(false);
+  const [error] = useState("");
 
   return (
     <StyledContainer>

@@ -7,7 +7,6 @@ import downred from "../../../assets/downred.svg";
 import backicon from "../../../../../Assets/backicon.svg";
 import { InvestmentTransactionIndex } from "../transaction-modal/transactionIndex";
 
-
 const InvestmentTransaction = () => {
   const [Transac, setTransac] = useState(0);
 
@@ -63,7 +62,7 @@ const InvestmentTransaction = () => {
         <div className="alltransaction-head">
           {Transac === 0 ? (
             <a
-              href="#"
+              href="!#"
               className="closemodalicon-btn"
               onClick={() => {
                 setTransac(0);

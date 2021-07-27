@@ -1,16 +1,13 @@
-import React,{useState} from 'react'
+import React, { useState } from "react";
 import Arrowright from "../../assets/Arrowright.svg";
 import closemodalicon from "../../../../Assets/closemodalicon.svg";
 import About from "../../assets/About.svg";
 import "./Account.css";
-import AboutIndex from './AboutModal/AboutIndex';
+import AboutIndex from "./AboutModal/AboutIndex";
 
-
-
-const Aboutovest = () =>
-{
+const Aboutovest = () => {
   const [section, setSection] = useState(0);
-  
+
   return (
     <div>
       <a href="#aboutModal">
@@ -38,7 +35,7 @@ const Aboutovest = () =>
         <div id="aboutModal" className="about-modal">
           <div className="accountmodal-head">
             {section === 0 ? (
-              <a href="#" className="closemodalicon-btn">
+              <a href="!#" className="closemodalicon-btn">
                 <img
                   src={closemodalicon}
                   alt="close modal"
@@ -52,6 +49,6 @@ const Aboutovest = () =>
       </>
     </div>
   );
-}
+};
 
-export default Aboutovest
+export default Aboutovest;

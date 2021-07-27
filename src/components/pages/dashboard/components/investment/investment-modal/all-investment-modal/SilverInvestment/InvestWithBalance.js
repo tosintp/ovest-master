@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./SilverInvestmentDetails.css";
 import backtick from "../../../../../assets/backtick.svg";
-import closemodalicon from "../../../../../assets/close-modal-icon.svg";
 import successicon from "../../../../../assets/success-icon.svg";
 import { Link } from "react-router-dom";
 

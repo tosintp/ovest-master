@@ -21,14 +21,14 @@ import Loader from "react-loader-spinner";
 
 const BankTranferVerify = ({ setStage }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [selectedFile, setSelectedFile] = useState();
+  const [selectedFile] = useState();
   const [filename, setFilename] = useState(
     "Upload a scanned copy or photo of your details to verify your payment."
   );
 
-  const changeHandler = (event) => {
-    setSelectedFile(event.target.files[0]);
-  };
+  // const changeHandler = (event) => {
+  //   setSelectedFile(event.target.files[0]);
+  // };
 
   const changeStage = () => {
     setStage(4);

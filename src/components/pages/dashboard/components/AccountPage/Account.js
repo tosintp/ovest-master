@@ -15,7 +15,6 @@ import Verfication from "./Verfication";
 import FundsTransfer from "./FundsTransfer";
 import AccountPortfolio from "./AccountPortfolio";
 import BankCard from "./BankCard";
-import BankCardsAccount from "./BankCards/BankCardsAccount";
 import Support from "./Support";
 import ReferralProgram from "./referralProgram";
 import AboutOvest from "./AboutOvest";
@@ -26,10 +25,10 @@ import { useUser } from "../../../../../hooks/use-user";
 const Account = ({ toggleModalAppearance }) => {
   const user = useUser();
   const name = `${user.firstname} ${user.lastname}`;
-  const openModal = () => {
-    toggleModalAppearance();
-    console.log("open redux");
-  };
+  // const openModal = () => {
+  //   toggleModalAppearance();
+  //   console.log("open redux");
+  // };
 
   //Material-ui button styles ends//
   return (

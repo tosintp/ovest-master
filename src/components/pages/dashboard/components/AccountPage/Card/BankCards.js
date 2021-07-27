@@ -3,8 +3,7 @@ import AddIcon from "../../../assets/AddBankIcon.svg";
 import backicon from "../../../../../Assets/backicon.svg";
 import "../Card/CardModal/CardIndex";
 import "../BankCards/BankCard.css";
-import CardIndex from './CardModal/CardIndex';
-import cardatm from "../../../assets/cardATM.svg";
+import CardIndex from "./CardModal/CardIndex";
 
 const BankCards = () => {
   const [section, setSection] = useState(0);
@@ -22,7 +21,7 @@ const BankCards = () => {
             <p className="bank-text">Add cards</p>
           </div>
         </a>
-{/* 
+        {/* 
         <div className="atm-card">
             <img src={cardatm} alt="" className="mt-1" />
           </div> */}
@@ -32,7 +31,7 @@ const BankCards = () => {
         <div id="CardModal" className="bankcard-modal">
           <div className="accountmodal-head">
             {section === 0 ? (
-              <a href="#" className="backicon">
+              <a href="!#" className="backicon">
                 <img src={backicon} alt="back icon" className="back-icon" />
               </a>
             ) : null}

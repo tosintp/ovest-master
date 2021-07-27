@@ -1,7 +1,6 @@
 import React from "react";
 import Loader from "react-loader-spinner";
 import { Formik, Form } from "formik";
-import Info from "../../../../assets/info.svg";
 import {
   ButtonGroup,
   StyledBankTransferFormButton,

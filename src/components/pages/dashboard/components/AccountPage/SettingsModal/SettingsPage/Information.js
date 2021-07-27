@@ -13,7 +13,6 @@ import {
   colors,
 } from "../../../../../../Syles/styles";
 import { BankTranferDetailsTextInput } from "./../../../../../Formik/BankDetailsInput";
-import * as Yup from "yup";
 import closemodalicon from "../../../../../../Assets/closemodalicon.svg";
 import { updateUserAction } from "../../../../../../../store/user/user.action";
 import { useUser } from "../../../../../../../hooks/use-user";

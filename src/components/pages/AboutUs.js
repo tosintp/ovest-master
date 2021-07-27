@@ -9,7 +9,6 @@ import mission3 from "../Assets/misson3.svg";
 import angel1 from "../Assets/angel1.png";
 import TelegramCommunity from "./TelegramCommunity";
 import mastercard from "../Assets/mastercard.png";
-import Footer from "./footer";
 import DefaultLayout from "../../layouts/DefaultLayout";
 
 const AboutUs = () => {

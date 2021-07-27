@@ -5,7 +5,6 @@ import specialrate from "../Assets/specialrate.svg";
 import "./OvestInvestPlan.css";
 import Testimony from "./Testimony";
 import TelegramCommunity from "./TelegramCommunity";
-import Footer from "./footer";
 
 const OvestInvestPlan = () => {
   return (
@@ -107,7 +106,7 @@ const OvestInvestPlan = () => {
       <div className="telegram-component">
         <TelegramCommunity />
       </div>
-      <div className="footer-component">{/* <Footer /> */}</div>
+      <div className="footer-component"></div>
     </div>
   );
 };

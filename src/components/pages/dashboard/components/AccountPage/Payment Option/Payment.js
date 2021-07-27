@@ -1,12 +1,11 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
 import Arrowright from "../../../assets/Arrowright.svg";
-import closemodalicon from "../../../../../Assets/closemodalicon.svg"
-import AccountIndex from '../AccountModal/AccountIndex';
+import closemodalicon from "../../../../../Assets/closemodalicon.svg";
+import AccountIndex from "../AccountModal/AccountIndex";
 
-const Payment = () =>
-{
+const Payment = () => {
   const [section, setSection] = useState(0);
-  
+
   return (
     <div>
       <a href="#accountModal">
@@ -30,7 +29,7 @@ const Payment = () =>
         <div id="accountModal" className="account-modal">
           <div className="accountmodal-head">
             {section === 0 ? (
-              <a href="#" className="closemodalicon-btn">
+              <a href="!#" className="closemodalicon-btn">
                 <img
                   src={closemodalicon}
                   alt="close modal"
@@ -44,6 +43,6 @@ const Payment = () =>
       </>
     </div>
   );
-}
+};
 
 export default Payment;

@@ -8,7 +8,6 @@ import SafetySecurity from "./SafetySecurity";
 import Faqswithdrawal from "./Faqswithdrawal";
 import FaqsPeople from "./FaqsPeople";
 import TelegramCommunity from "./TelegramCommunity";
-import Footer from "./footer";
 
 import "./Faqs.css";
 

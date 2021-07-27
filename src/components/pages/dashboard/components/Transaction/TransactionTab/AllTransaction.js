@@ -83,7 +83,7 @@ const AllTransaction = () => {
           <div className="alltransaction-head">
             {Transac === 0 ? (
               <a
-                href="#"
+                href="!#"
                 className="closemodalicon-btn"
                 onClick={() => {
                   setTransac(0);

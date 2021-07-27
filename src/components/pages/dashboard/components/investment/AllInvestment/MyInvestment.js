@@ -89,7 +89,7 @@ const MyInvestment = ({ investments }) => {
           <div className="investmodal-head">
             {page === 0 ? (
               <a
-                href="#"
+                href="!#"
                 className="closemodalicon-btn"
                 onClick={() => {
                   setPage(0);
@@ -109,7 +109,7 @@ const MyInvestment = ({ investments }) => {
           <div className="investmodal-head">
             {page === 0 ? (
               <a
-                href="#"
+                href="!#"
                 className="closemodalicon-btn"
                 onClick={() => {
                   setPage(0);

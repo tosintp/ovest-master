@@ -2,12 +2,8 @@ import React, { useState, useEffect } from "react";
 import * as moment from "moment";
 import AllInvestmentPlan from "./AllInvestmentPlan";
 import MyInvestment from "./MyInvestment";
-import NoInvestment from "./NoInvestment";
-import MaturedInvest from "./MaturedInvest";
-import NoMatured from "./NoMatured";
 import PropTypes from "prop-types";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
@@ -82,9 +78,9 @@ export default function FullWidthTabs() {
     setValue(newValue);
   };
 
-  const handleChangeIndex = (index) => {
-    setValue(index);
-  };
+  // const handleChangeIndex = (index) => {
+  //   setValue(index);
+  // };
 
   const maturedInvestments = investments.filter(({ startDate, duration }) => {
     const hasMatured = moment(startDate)
@@ -112,7 +108,6 @@ export default function FullWidthTabs() {
             fontSize: "15px",
             textTransform: "none",
             fontWeight: "500",
-            fontSize: "18px",
             paddingTop: "40px",
           }}
         />
@@ -123,7 +118,6 @@ export default function FullWidthTabs() {
             fontSize: "15px",
             textTransform: "none",
             fontWeight: "500",
-            fontSize: "18px",
             paddingTop: "40px",
           }}
         />
@@ -134,7 +128,6 @@ export default function FullWidthTabs() {
             fontSize: "15px",
             textTransform: "none",
             fontWeight: "500",
-            fontSize: "18px",
             paddingTop: "40px",
           }}
         />

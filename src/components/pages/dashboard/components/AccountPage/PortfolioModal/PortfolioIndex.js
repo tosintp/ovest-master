@@ -6,6 +6,8 @@ const PortfolioIndex = ({ section, setSection }) => {
   switch (section) {
     case 0:
       CurrentPage = <Portfolio setSection={setSection} />;
+      break;
+    default:
   }
   return <div className="current-page">{CurrentPage}</div>;
 };

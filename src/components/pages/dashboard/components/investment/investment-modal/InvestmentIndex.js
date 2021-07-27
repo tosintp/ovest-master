@@ -90,6 +90,7 @@ const InvestmentIndex = ({ page, setPage }) => {
         </>
       );
       break;
+    default:
   }
 
   return <div className="current-stage">{currentPage}</div>;

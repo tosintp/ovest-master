@@ -8,10 +8,10 @@ import ReferralIndex from "../Referral/ReferralModal/ReferralIndex";
 const Referral = ({ toggleModalAppearance }) => {
   const [section, setSection] = useState(0);
 
-  const openModal = () => {
-    toggleModalAppearance();
-    console.log("open redux");
-  };
+  // const openModal = () => {
+  //   toggleModalAppearance();
+  //   console.log("open redux");
+  // };
   // const { user } = useAuth();
   return (
     <>
@@ -38,7 +38,7 @@ const Referral = ({ toggleModalAppearance }) => {
         <div id="referalModal" className="referral-modal">
           <div className="referralmodal-head">
             {section === 0 ? (
-              <a href="#" className="closemodalicon-btn">
+              <a href="!#" className="closemodalicon-btn">
                 <img
                   src={closemodalicon}
                   alt="close modal"

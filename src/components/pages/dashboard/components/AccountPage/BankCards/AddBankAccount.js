@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Loader from "react-loader-spinner";
 import { Formik, Form } from "formik";
-import Info from "../../../assets/info.svg";
 import {
   ButtonGroup,
   StyledBankTransferFormButton,
   colors,
 } from "../../../../../Syles/styles";
 import { BankTranferDetailsTextInput } from "./../../../../Formik/BankDetailsInput";
-import { TextInput } from "./../../../../Formik/FormLib";
-import * as Yup from "yup";
 import "./BankCard.css";
 import { $api } from "../../../../../../helpers/$api";
 

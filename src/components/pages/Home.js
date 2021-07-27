@@ -17,7 +17,6 @@ import Typewriter from "typewriter-effect";
 import Testimony from "./Testimony";
 import TelegramCommunity from "./TelegramCommunity";
 import TextSlide from "./TextSlide";
-import Footer from "./footer";
 import DefaultLayout from "../../layouts/DefaultLayout";
 
 export default function Home() {

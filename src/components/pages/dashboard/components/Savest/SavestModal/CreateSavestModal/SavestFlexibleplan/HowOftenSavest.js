@@ -1,11 +1,7 @@
 import React from "react";
 import "./SavestFlexible.css";
 import { Formik, Form } from "formik";
-import {
-  ButtonGroup,
-  StyledBankTransferFormButton,
-  colors,
-} from "../../../../../../../Syles/styles";
+
 import { BankTranferDetailsTextInput } from "../../../../../../Formik/BankDetailsInput";
 import * as Yup from "yup";
 

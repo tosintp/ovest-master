@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import AddIcon from "../../../assets/AddBankIcon.svg";
 import "./BankCard.css";
 import BankModalIndex from "./BankModal/BankModalIndex";
-import ATM from "../../../assets/ATM.svg";
 import deleteIcon from "../../../assets/delete-icon.svg";
 import backicon from "../../../../../Assets/backicon.svg";
 import { $api } from "../../../../../../helpers/$api";
@@ -92,7 +91,7 @@ const BankAccount = () => {
         <div id="AddBankModal" className="addbank-modal">
           <div className="accountmodal-head">
             {section === 0 ? (
-              <a href="#" className="backicon">
+              <a href="!#" className="backicon">
                 <img src={backicon} alt="back icon" className="back-icon" />
               </a>
             ) : null}

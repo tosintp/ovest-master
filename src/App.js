@@ -25,6 +25,7 @@ function App({ user, getProfile, logOut }) {
     "/signup",
     "/forgetpassword",
     "/resetpassword",
+    "/contact",
   ];
   const isProtectedPage = unProtectedPages.every((page) => page !== pathname);
   const isNotLoggedIn = !user;

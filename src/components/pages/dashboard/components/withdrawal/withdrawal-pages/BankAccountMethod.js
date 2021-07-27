@@ -7,7 +7,6 @@ import {
   StyledBankTransferFormButton,
   ButtonGroup,
   colors,
-  StyledTextSelectBankTransfer,
 } from "../../../../../Syles/styles";
 import { BankTranferDetailsTextInput } from "../../../../Formik/BankDetailsInput";
 import BankTranferDetailsSelect from "../../../../Formik/BankDetailsSelect";

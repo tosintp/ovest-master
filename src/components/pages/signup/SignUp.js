@@ -24,12 +24,9 @@ import {
   CodeTextInput,
   PhoneNumberTextInput,
 } from "../../pages/Formik/FormLib";
-import applecircle from "../../Assets/applecirlce.png";
-import fbcircle from "../../Assets/fb-circle.png";
-import googlecircle from "../../Assets/googlecircle.png";
+
 import { createUserAction } from "../../../store/user/user.action";
 import { Util } from "../../../helpers/util";
-import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import "./SignUp.css";
 

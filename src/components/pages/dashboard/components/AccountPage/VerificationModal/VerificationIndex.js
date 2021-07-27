@@ -32,9 +32,8 @@ const VerificationIndex = ({ section, setSection }) => {
         <>
           <button
             className="backicon"
-            onClick={() =>
-            {
-              setSection( 0 );
+            onClick={() => {
+              setSection(0);
             }}
           >
             <img src={backicon} alt="back icon" className="back-icon" />
@@ -57,6 +56,8 @@ const VerificationIndex = ({ section, setSection }) => {
           <Residence setSection={setSection} />
         </>
       );
+      break;
+    default:
   }
 
   return <div className="current-page">{CurrentPage}</div>;

@@ -1,12 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Navbar.css";
 // import { makeStyles } from "@material-ui/core/styles";
 // import Avatar from "@material-ui/core/Avatar";
-import profile from "../../assets/profile.png";
-import caret from "../../assets/caret.svg";
 
-import notification from "../../assets/Notification.svg";
-import useAuth from "../../../../../hooks/useAuth";
 import NavLeft from "./NavbarRight";
 
 // const useStyles = makeStyles((theme) => ({

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink, Nav } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import "./Sidebar.css";
 // import { useRouteMatch } from "react-router-dom";

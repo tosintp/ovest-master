@@ -234,6 +234,7 @@ const CreateSavestIndex = ({ menu, setMenu }) => {
         </>
       );
       break;
+    default:
   }
 
   return <div className="current-stage">{currentModal}</div>;

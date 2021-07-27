@@ -15,7 +15,6 @@ const AccountSettings = () => {
         <div className="Account-section">
           <div style={{ display: "flex" }}>
             <div>
-           
               <img src={Account1} alt="" className="imageAccount" />
             </div>
             <div>
@@ -33,7 +32,7 @@ const AccountSettings = () => {
         <div id="settingsModal" className="settings-modal">
           <div className="accountmodal-head">
             {section === 0 ? (
-              <a href="#" className="backicon">
+              <a href="!#" className="backicon">
                 <img src={backicon} alt="back icon" className="back-icon" />
               </a>
             ) : null}
