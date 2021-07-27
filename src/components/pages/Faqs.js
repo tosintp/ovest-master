@@ -41,9 +41,7 @@ const Faqs = () => {
           <div className="telegram-faq">
             <TelegramCommunity />
           </div>
-          <div className="footer-component">
-            <Footer />
-          </div>
+          <div className="footer-component">{/* <Footer /> */}</div>
         </div>
       </DefaultLayout>
     </>

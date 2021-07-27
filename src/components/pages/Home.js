@@ -189,7 +189,7 @@ export default function Home() {
           <Testimony />
           <TextSlide />
           <TelegramCommunity />
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </DefaultLayout>
     </>

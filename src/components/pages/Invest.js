@@ -6,7 +6,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import InvestmentRate from "./InvestmentRate";
 
-
 const useStyles = makeStyles((theme) => ({
   button: {
     margin: theme.spacing(1),
@@ -62,8 +61,8 @@ const Invest = () => {
               </div>
             </div>
           </div>
-          <InvestmentRate/>
-          </div>
+          <InvestmentRate />
+        </div>
       </DefaultLayout>
     </>
   );

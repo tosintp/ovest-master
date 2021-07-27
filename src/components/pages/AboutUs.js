@@ -147,7 +147,7 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <Footer />
+        {/* <Footer /> */}
       </DefaultLayout>
     </>
   );

@@ -107,9 +107,7 @@ const OvestInvestPlan = () => {
       <div className="telegram-component">
         <TelegramCommunity />
       </div>
-      <div className="footer-component">
-        <Footer />
-      </div>
+      <div className="footer-component">{/* <Footer /> */}</div>
     </div>
   );
 };

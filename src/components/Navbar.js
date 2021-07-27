@@ -3,29 +3,33 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "./Assets/Vector.svg";
 // import Logo from "./Logo/Logo";
+import Dropdown from "./Dropdown";
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  // const [dropdown, setDropdown] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  // const onMouseEnter = () => {
-  //   if (window.innerWidth < 960) {
-  //     setDropdown(false);
-  //   } else {
-  //     setDropdown(true);
-  //   }
-  // };
+  const onMouseEnter = () => {
+    console.log("hello therr");
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(true);
+    }
+  };
 
-  // const onMouseLeave = () => {
-  //   if (window.innerWidth < 960) {
-  //     setDropdown(false);
-  //   } else {
-  //     setDropdown(false);
-  //   }
-  // };
+  const onMouseLeave = () => {
+    console.log("hello here");
+
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(false);
+    }
+  };
 
   const showNavBar = () => {
     let currUrl = window.location.pathname;
@@ -65,13 +69,13 @@ function Navbar() {
             </li>
             <li
               className="nav-item"
-              // onMouseEnter={onMouseEnter}
-              // onMouseLeave={onMouseLeave}
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
             >
               <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                 Company <i className="fas fa-caret-down" />
               </Link>
-              {/* {dropdown && <Dropdown />} */}
+              {dropdown && <Dropdown />}
             </li>
             <li className="nav-item">
               <Link to="/faqs" className="nav-links" onClick={closeMobileMenu}>
