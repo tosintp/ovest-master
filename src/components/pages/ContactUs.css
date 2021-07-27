@@ -1,0 +1,313 @@
+.contactus {
+  background-color: #f0f6ff !important;
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+}
+.contactus-main {
+  width: 86.8%;
+  margin: auto;
+  top: 27.5%;
+  position: relative;
+}
+.contactus-header-h5 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 4.7rem;
+  line-height: 5.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #121212;
+}
+.contactus-header-p {
+  width: 100%;
+  margin: auto;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #666666;
+  margin-top: 3rem;
+}
+.contactus-major-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 75px;
+}
+.have-a-question {
+  width: 35.9rem;
+  height: 40.9rem;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 0px 40px rgba(218, 218, 218, 0.52);
+}
+.have-a-question-main {
+  width: 88%;
+  margin: auto;
+}
+.have-question-img {
+  margin-top: 4.8rem;
+}
+.have-a-question-h5 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.2rem;
+  line-height: 2.9rem;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  color: #000000;
+  margin-top: 3rem;
+}
+.checkout-faq {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 2.8rem;
+  display: flex;
+  align-items: flex-end;
+  color: #666666;
+  margin-top: 2rem;
+}
+.drop-a-message {
+  width: 35.9rem;
+  height: 40.9rem;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 0px 40px rgba(218, 218, 218, 0.52);
+}
+.ask-the-community {
+  width: 35.9rem;
+  height: 40.9rem;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 0px 40px rgba(218, 218, 218, 0.52);
+}
+.visit-the-faq {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  color: #0768f6;
+  margin-top: 3rem;
+}
+.visit-the-faq span {
+  margin-left: 0.6rem;
+}
+.drop-visit-the-faq span {
+  margin-left: 0.6rem;
+}
+.drop-visit-the-faq {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  color: #0768f6;
+  margin-top: 6rem;
+}
+.join-our-community-faq {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  color: #0768f6;
+  margin-top: 6rem;
+}
+.join-our-community-faq span {
+  margin-left: 0.6rem;
+}
+.the-telegram-community {
+  background-color: #fff;
+  margin-top: 30rem;
+}
+
+/* media query */
+@media only screen and (max-width: 420px) {
+  .contactus {
+    background-color: #f0f6ff !important;
+    height: 100%;
+    background-size: cover;
+    padding-bottom: 40px;
+  }
+  .contactus-main {
+    width: 86.8%;
+    margin: auto;
+    top: 2%;
+    position: relative;
+  }
+  .contactus-header-h5 {
+    font-weight: 600;
+    font-size: 2.5rem;
+  }
+  .contactus-header-p {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #666666;
+    margin-top: 1rem;
+  }
+  .contactus-major-cards {
+    margin-top: 10px;
+    display: block;
+  }
+  .have-a-question {
+    width: 97%;
+    height: 40.9rem;
+  }
+  .have-question-img {
+    padding-top: 2rem;
+  }
+  .drop-a-message {
+    width: 97%;
+    height: 40.9rem;
+  }
+  .ask-the-community {
+    width: 97%;
+    height: 40.9rem;
+  }
+  .have-a-question-h5 {
+    font-size: 1.8rem;
+  }
+  .checkout-faq {
+    font-size: 1.45rem;
+  }
+  .visit-the-faq {
+    margin-top: 3rem;
+  }
+  .drop-visit-the-faq {
+    margin-top: 3rem;
+  }
+  .join-our-community-faq {
+    margin-top: 3rem;
+  }
+  .the-telegram-community {
+    margin-top: 15rem;
+  }
+}
+
+@media only screen and (min-width: 420px) and (max-width: 798px) {
+  .contactus {
+    background-color: #f0f6ff !important;
+    height: 100%;
+    background-size: cover;
+    padding-bottom: 40px;
+  }
+  .contactus-main {
+    width: 86.8%;
+    margin: auto;
+    top: 6%;
+    position: relative;
+  }
+  .contactus-header-h5 {
+    font-weight: 600;
+    font-size: 3.6rem;
+  }
+  .contactus-header-p {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #666666;
+    margin-top: 1.5rem;
+  }
+  .contactus-major-cards {
+    margin-top: 10px;
+    display: block;
+  }
+  .have-a-question {
+    width: 97%;
+    height: 40.9rem;
+  }
+  .have-question-img {
+    padding-top: 6rem;
+  }
+  .drop-a-message {
+    width: 97%;
+    height: 40.9rem;
+  }
+  .ask-the-community {
+    width: 97%;
+    height: 40.9rem;
+  }
+  .have-a-question-h5 {
+    font-size: 1.8rem;
+  }
+  .checkout-faq {
+    font-size: 1.45rem;
+  }
+  .visit-the-faq {
+    margin-top: 3rem;
+  }
+  .drop-visit-the-faq {
+    margin-top: 3rem;
+  }
+  .join-our-community-faq {
+    margin-top: 3rem;
+  }
+  .the-telegram-community {
+    margin-top: 10rem;
+  }
+}
+
+@media only screen and (min-width: 798px) and (max-width: 1300px) {
+  .contactus {
+    background-color: #f0f6ff !important;
+    height: 100%;
+    background-size: cover;
+    padding-bottom: 40px;
+  }
+  .contactus-header-h5 {
+    padding-top: 5rem;
+    font-weight: 600;
+    font-size: 3.6rem;
+  }
+  .have-a-question {
+    width: 32%;
+    height: 44.9rem;
+  }
+  .have-a-question-h5 {
+    font-size: 1.8rem;
+  }
+  .drop-a-message {
+    width: 32%;
+    height: 44.9rem;
+  }
+  .ask-the-community {
+    width: 32%;
+    height: 44.9rem;
+  }
+  .join-our-community-faq {
+    margin-top: 2rem;
+  }
+  .the-telegram-community {
+    margin-top: 5rem;
+  }
+}

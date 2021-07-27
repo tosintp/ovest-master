@@ -31,6 +31,7 @@ const AppRoute = () => {
         <Route path="/Invest" component={Invest} />
         {/* <Route path="/sign-up" component={SignUp} /> */}
         <Route path="/marketing" component={Marketing} />
+        <Route path="/contact" component={ContactUs} />
         <Route path="/consulting" component={Consulting} />
         {/* <Route path="/dashboard" component={Dashboard} /> */}
         <Route path="/dashboard" component={Dashboard} />
